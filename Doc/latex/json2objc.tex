@@ -1,0 +1,7 @@
+J\-S\-O\-N is mapped to Objective-\/\-C types in the following way\-:
+
+\begin{DoxyItemize}
+\item null -\/$>$ N\-S\-Null \item string -\/$>$ N\-S\-String \item array -\/$>$ N\-S\-Mutable\-Array \item object -\/$>$ N\-S\-Mutable\-Dictionary \item true -\/$>$ N\-S\-Number's -\/number\-With\-Bool\-:Y\-E\-S \item false -\/$>$ N\-S\-Number's -\/number\-With\-Bool\-:N\-O \item integer up to 19 digits -\/$>$ N\-S\-Number's -\/number\-With\-Long\-Long\-: \item all other numbers -\/$>$ N\-S\-Decimal\-Number\end{DoxyItemize}
+Since Objective-\/\-C doesn't have a dedicated class for boolean values, these turns into N\-S\-Number instances. However, since these are initialised with the -\/init\-With\-Bool\-: method they round-\/trip back to J\-S\-O\-N properly. In other words, they won't silently suddenly become 0 or 1; they'll be represented as 'true' and 'false' again.
+
+As an optimisation integers up to 19 digits in length (the max length for signed long long integers) turn into N\-S\-Number instances, while complex ones turn into N\-S\-Decimal\-Number instances. We can thus avoid any loss of precision as J\-S\-O\-N allows ridiculously large numbers. 

@@ -1,0 +1,219 @@
+\hypertarget{interface_s_b_json_stream_writer}{\section{S\-B\-Json\-Stream\-Writer Class Reference}
+\label{interface_s_b_json_stream_writer}\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}}
+}
+
+
+The Stream Writer class.  
+
+
+
+
+{\ttfamily \#import $<$S\-B\-Json\-Stream\-Writer.\-h$>$}
+
+Inheritance diagram for S\-B\-Json\-Stream\-Writer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_s_b_json_stream_writer}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_a561990f7d890ffdafdc3f682cacc7211}{write\-Object\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_a781a94592da7317105844dfc8c6706cc}{write\-Array\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_ab9ff056f3f9f3ad5614163bcf194bbec}{write\-Object\-Open}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_a5d5dae8a7c4c4bf8dd2780afa68cd251}{write\-Object\-Close}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_aafa9f94cb852d1feda150e327ead8214}{write\-Array\-Open}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_afc0ed996a7782780750202e639ce9846}{write\-Array\-Close}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_a1e8475e49f5d0077d24c270e733f1841}{write\-Null}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_ae15932d9181ad5276806adad55c7dc53}{write\-Bool\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_a888ca10428bf36470a4abe767cbec6e3}{write\-Number\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_s_b_json_stream_writer_a9acd747325bacc643f4830619d4c1139}{write\-String\-:}
+\item 
+\hypertarget{interface_s_b_json_stream_writer_ad07ba844e4c471660daf9b5dfcb43e8e}{(B\-O\-O\-L) -\/ {\bfseries write\-Value\-:}}\label{interface_s_b_json_stream_writer_ad07ba844e4c471660daf9b5dfcb43e8e}
+
+\item 
+\hypertarget{interface_s_b_json_stream_writer_a27c7af220a32b2dedd15106e435a7df9}{(void) -\/ {\bfseries append\-Bytes\-:length\-:}}\label{interface_s_b_json_stream_writer_a27c7af220a32b2dedd15106e435a7df9}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_s_b_json_stream_writer_a6ffa204ce430d6d2d6566d3267ccf085}{N\-S\-Mutable\-Dictionary $\ast$ {\bfseries cache}}\label{interface_s_b_json_stream_writer_a6ffa204ce430d6d2d6566d3267ccf085}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_s_b_json_stream_writer_a7f36b32ca0655d336ea779d833c73cbf}{\hyperlink{interface_s_b_json_stream_writer_state}{S\-B\-Json\-Stream\-Writer\-State} $\ast$ {\bfseries state}}\label{interface_s_b_json_stream_writer_a7f36b32ca0655d336ea779d833c73cbf}
+
+\item 
+\hypertarget{interface_s_b_json_stream_writer_aea566328c0381c818d49b656890819eb}{N\-S\-Mutable\-Array $\ast$ {\bfseries state\-Stack}}\label{interface_s_b_json_stream_writer_aea566328c0381c818d49b656890819eb}
+
+\item 
+\hypertarget{interface_s_b_json_stream_writer_a28dc79aeee865687fafdf84836c1444d}{id$<$ \hyperlink{protocol_s_b_json_stream_writer_delegate-p}{S\-B\-Json\-Stream\-Writer\-Delegate} $>$ \hyperlink{interface_s_b_json_stream_writer_a28dc79aeee865687fafdf84836c1444d}{delegate}}\label{interface_s_b_json_stream_writer_a28dc79aeee865687fafdf84836c1444d}
+
+\begin{DoxyCompactList}\small\item\em delegate to receive J\-S\-O\-N output Delegate that will receive messages with output. \end{DoxyCompactList}\item 
+N\-S\-U\-Integer \hyperlink{interface_s_b_json_stream_writer_a146e7e950ab74a0e766ffd860e454fc9}{max\-Depth}
+\begin{DoxyCompactList}\small\item\em The maximum recursing depth. \end{DoxyCompactList}\item 
+B\-O\-O\-L \hyperlink{interface_s_b_json_stream_writer_af43e8bd7170d6128480515f532b7b791}{human\-Readable}
+\begin{DoxyCompactList}\small\item\em Whether we are generating human-\/readable (multiline) J\-S\-O\-N. \end{DoxyCompactList}\item 
+B\-O\-O\-L \hyperlink{interface_s_b_json_stream_writer_ab206c6844a0fd20307b5dfe881e17bf2}{sort\-Keys}
+\begin{DoxyCompactList}\small\item\em Whether or not to sort the dictionary keys in the output. \end{DoxyCompactList}\item 
+\hypertarget{interface_s_b_json_stream_writer_a7b4739905d4f23e82e5efd14b8acabea}{N\-S\-String $\ast$ \hyperlink{interface_s_b_json_stream_writer_a7b4739905d4f23e82e5efd14b8acabea}{error}}\label{interface_s_b_json_stream_writer_a7b4739905d4f23e82e5efd14b8acabea}
+
+\begin{DoxyCompactList}\small\item\em Contains the error description after an error has occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Stream Writer class. 
+
+Accepts a stream of messages and writes J\-S\-O\-N of these to its delegate object.
+
+This class provides a range of high-\/, mid-\/ and low-\/level methods. You can mix and match calls to these. For example, you may want to call -\/write\-Array\-Open to start an array and then repeatedly call -\/write\-Object\-: with various objects before finishing off with a -\/write\-Array\-Close call.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{json2objc}{J\-S\-O\-N to Objective-\/\-C} 
+\end{DoxySeeAlso}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_s_b_json_stream_writer_a781a94592da7317105844dfc8c6706cc}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Array\-:@{write\-Array\-:}}
+\index{write\-Array\-:@{write\-Array\-:}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Array\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Array\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Array $\ast$)}]{array}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_a781a94592da7317105844dfc8c6706cc}
+Write an N\-S\-Array to the J\-S\-O\-N stream. \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_afc0ed996a7782780750202e639ce9846}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Array\-Close@{write\-Array\-Close}}
+\index{write\-Array\-Close@{write\-Array\-Close}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Array\-Close}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Array\-Close 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_afc0ed996a7782780750202e639ce9846}
+Close the current Array being written \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_aafa9f94cb852d1feda150e327ead8214}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Array\-Open@{write\-Array\-Open}}
+\index{write\-Array\-Open@{write\-Array\-Open}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Array\-Open}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Array\-Open 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_aafa9f94cb852d1feda150e327ead8214}
+Start writing an Array to the stream \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_ae15932d9181ad5276806adad55c7dc53}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Bool\-:@{write\-Bool\-:}}
+\index{write\-Bool\-:@{write\-Bool\-:}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Bool\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Bool\-: 
+\begin{DoxyParamCaption}
+\item[{(B\-O\-O\-L)}]{x}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_ae15932d9181ad5276806adad55c7dc53}
+Write a boolean to the stream \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_a1e8475e49f5d0077d24c270e733f1841}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Null@{write\-Null}}
+\index{write\-Null@{write\-Null}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Null}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Null 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_a1e8475e49f5d0077d24c270e733f1841}
+Write a null to the stream \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_a888ca10428bf36470a4abe767cbec6e3}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Number\-:@{write\-Number\-:}}
+\index{write\-Number\-:@{write\-Number\-:}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Number\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Number\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Number$\ast$)}]{n}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_a888ca10428bf36470a4abe767cbec6e3}
+Write a Number to the stream \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_a561990f7d890ffdafdc3f682cacc7211}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Object\-:@{write\-Object\-:}}
+\index{write\-Object\-:@{write\-Object\-:}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Object\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Object\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary$\ast$)}]{dict}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_a561990f7d890ffdafdc3f682cacc7211}
+Write an N\-S\-Dictionary to the J\-S\-O\-N stream. \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_a5d5dae8a7c4c4bf8dd2780afa68cd251}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Object\-Close@{write\-Object\-Close}}
+\index{write\-Object\-Close@{write\-Object\-Close}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Object\-Close}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Object\-Close 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_a5d5dae8a7c4c4bf8dd2780afa68cd251}
+Close the current object being written \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_ab9ff056f3f9f3ad5614163bcf194bbec}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-Object\-Open@{write\-Object\-Open}}
+\index{write\-Object\-Open@{write\-Object\-Open}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-Object\-Open}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-Object\-Open 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_ab9ff056f3f9f3ad5614163bcf194bbec}
+Start writing an Object to the stream \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+\hypertarget{interface_s_b_json_stream_writer_a9acd747325bacc643f4830619d4c1139}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!write\-String\-:@{write\-String\-:}}
+\index{write\-String\-:@{write\-String\-:}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{write\-String\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) write\-String\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_stream_writer_a9acd747325bacc643f4830619d4c1139}
+Write a String to the stream \begin{DoxyReturn}{Returns}
+Y\-E\-S if successful, or N\-O on failure 
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_s_b_json_stream_writer_af43e8bd7170d6128480515f532b7b791}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!human\-Readable@{human\-Readable}}
+\index{human\-Readable@{human\-Readable}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{human\-Readable}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) human\-Readable\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}}}\label{interface_s_b_json_stream_writer_af43e8bd7170d6128480515f532b7b791}
+
+
+Whether we are generating human-\/readable (multiline) J\-S\-O\-N. 
+
+Set whether or not to generate human-\/readable J\-S\-O\-N. The default is N\-O, which produces J\-S\-O\-N without any whitespace between tokens. If set to Y\-E\-S, generates human-\/readable J\-S\-O\-N with linebreaks after each array value and dictionary key/value pair, indented two spaces per nesting level. \hypertarget{interface_s_b_json_stream_writer_a146e7e950ab74a0e766ffd860e454fc9}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!max\-Depth@{max\-Depth}}
+\index{max\-Depth@{max\-Depth}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{max\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) max\-Depth\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}}}\label{interface_s_b_json_stream_writer_a146e7e950ab74a0e766ffd860e454fc9}
+
+
+The maximum recursing depth. 
+
+Defaults to 512. If the input is nested deeper than this the input will be deemed to be malicious and the parser returns nil, signalling an error. (\char`\"{}\-Nested too deep\char`\"{}.) You can turn off this security feature by setting the max\-Depth value to 0. \hypertarget{interface_s_b_json_stream_writer_ab206c6844a0fd20307b5dfe881e17bf2}{\index{S\-B\-Json\-Stream\-Writer@{S\-B\-Json\-Stream\-Writer}!sort\-Keys@{sort\-Keys}}
+\index{sort\-Keys@{sort\-Keys}!SBJsonStreamWriter@{S\-B\-Json\-Stream\-Writer}}
+\subsubsection[{sort\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) sort\-Keys\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}}}\label{interface_s_b_json_stream_writer_ab206c6844a0fd20307b5dfe881e17bf2}
+
+
+Whether or not to sort the dictionary keys in the output. 
+
+If this is set to Y\-E\-S, the dictionary keys in the J\-S\-O\-N output will be in sorted order. (This is useful if you need to compare two structures, for example.) The default is N\-O. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/\-Dumitras\-Vlad/\-V2\-Wrapper/\-I\-O\-S/\-Constant\-Contact/\-Constant\-Contact/\-C\-T\-C\-T\-Wrapper/\-Utilities/\-S\-B\-Json/S\-B\-Json\-Stream\-Writer.\-h\item 
+/\-Users/\-Dumitras\-Vlad/\-V2\-Wrapper/\-I\-O\-S/\-Constant\-Contact/\-Constant\-Contact/\-C\-T\-C\-T\-Wrapper/\-Utilities/\-S\-B\-Json/S\-B\-Json\-Stream\-Writer.\-m\end{DoxyCompactItemize}

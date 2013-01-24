@@ -1,0 +1,145 @@
+\hypertarget{interface_s_b_json_writer}{\section{S\-B\-Json\-Writer Class Reference}
+\label{interface_s_b_json_writer}\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}}
+}
+
+
+The J\-S\-O\-N writer class.  
+
+
+
+
+{\ttfamily \#import $<$S\-B\-Json\-Writer.\-h$>$}
+
+Inheritance diagram for S\-B\-Json\-Writer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_s_b_json_writer}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_s_b_json_writer_a9018ceff9753092b310a43782c5083ed}{string\-With\-Object\-:}
+\begin{DoxyCompactList}\small\item\em Return J\-S\-O\-N representation for the given object. \end{DoxyCompactList}\item 
+(N\-S\-Data $\ast$) -\/ \hyperlink{interface_s_b_json_writer_ad16f43f23b20d93983dae3441675a028}{data\-With\-Object\-:}
+\begin{DoxyCompactList}\small\item\em Return J\-S\-O\-N representation for the given object. \end{DoxyCompactList}\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_s_b_json_writer_a41cfe2a66c774790785a841633cc0bc4}{string\-With\-Object\-:error\-:}
+\begin{DoxyCompactList}\small\item\em Return J\-S\-O\-N representation (or fragment) for the given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_s_b_json_writer_a283b4f65ab4d3e1a8112b37dea432689}{max\-Depth}
+\begin{DoxyCompactList}\small\item\em The maximum recursing depth. \end{DoxyCompactList}\item 
+N\-S\-String $\ast$ \hyperlink{interface_s_b_json_writer_abc3f1e7299df08c56837d6c8ad135421}{error}
+\begin{DoxyCompactList}\small\item\em Return an error trace, or nil if there was no errors. \end{DoxyCompactList}\item 
+B\-O\-O\-L \hyperlink{interface_s_b_json_writer_a16ca84860a2ee76a03b567dc5181a851}{human\-Readable}
+\begin{DoxyCompactList}\small\item\em Whether we are generating human-\/readable (multiline) J\-S\-O\-N. \end{DoxyCompactList}\item 
+B\-O\-O\-L \hyperlink{interface_s_b_json_writer_af25807a58a322b56cb5d3593532228e5}{sort\-Keys}
+\begin{DoxyCompactList}\small\item\em Whether or not to sort the dictionary keys in the output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The J\-S\-O\-N writer class. 
+
+This uses \hyperlink{interface_s_b_json_stream_writer}{S\-B\-Json\-Stream\-Writer} internally.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{json2objc}{J\-S\-O\-N to Objective-\/\-C} 
+\end{DoxySeeAlso}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_s_b_json_writer_ad16f43f23b20d93983dae3441675a028}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!data\-With\-Object\-:@{data\-With\-Object\-:}}
+\index{data\-With\-Object\-:@{data\-With\-Object\-:}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{data\-With\-Object\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Data $\ast$) data\-With\-Object\-: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{value}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_writer_ad16f43f23b20d93983dae3441675a028}
+
+
+Return J\-S\-O\-N representation for the given object. 
+
+Returns an N\-S\-Data object containing J\-S\-O\-N represented as U\-T\-F8 text, or nil on error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & any instance that can be represented as J\-S\-O\-N text. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_s_b_json_writer_a9018ceff9753092b310a43782c5083ed}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!string\-With\-Object\-:@{string\-With\-Object\-:}}
+\index{string\-With\-Object\-:@{string\-With\-Object\-:}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{string\-With\-Object\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) string\-With\-Object\-: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{value}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_writer_a9018ceff9753092b310a43782c5083ed}
+
+
+Return J\-S\-O\-N representation for the given object. 
+
+Returns a string containing J\-S\-O\-N representation of the passed in value, or nil on error. If nil is returned and {\ttfamily error} is not N\-U\-L\-L, {\ttfamily $\ast$error} can be interrogated to find the cause of the error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & any instance that can be represented as J\-S\-O\-N text. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_s_b_json_writer_a41cfe2a66c774790785a841633cc0bc4}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!string\-With\-Object\-:error\-:@{string\-With\-Object\-:error\-:}}
+\index{string\-With\-Object\-:error\-:@{string\-With\-Object\-:error\-:}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{string\-With\-Object\-:error\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) {\bf string\-With\-Object\-:} 
+\begin{DoxyParamCaption}
+\item[{(id)}]{value}
+\item[{error:(N\-S\-Error$\ast$$\ast$)}]{error}
+\end{DoxyParamCaption}
+}}\label{interface_s_b_json_writer_a41cfe2a66c774790785a841633cc0bc4}
+
+
+Return J\-S\-O\-N representation (or fragment) for the given object. 
+
+Returns a string containing J\-S\-O\-N representation of the passed in value, or nil on error. If nil is returned and {\ttfamily error} is not N\-U\-L\-L, {\ttfamily $\ast$error} can be interrogated to find the cause of the error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & any instance that can be represented as a J\-S\-O\-N fragment \\
+\hline
+{\em error} & pointer to object to be populated with N\-S\-Error on failure \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_s_b_json_writer_abc3f1e7299df08c56837d6c8ad135421}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!error@{error}}
+\index{error@{error}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) error\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}}\label{interface_s_b_json_writer_abc3f1e7299df08c56837d6c8ad135421}
+
+
+Return an error trace, or nil if there was no errors. 
+
+Note that this method returns the trace of the last method that failed. You need to check the return value of the call you're making to figure out if the call actually failed, before you know call this method. \hypertarget{interface_s_b_json_writer_a16ca84860a2ee76a03b567dc5181a851}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!human\-Readable@{human\-Readable}}
+\index{human\-Readable@{human\-Readable}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{human\-Readable}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) human\-Readable\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}}}\label{interface_s_b_json_writer_a16ca84860a2ee76a03b567dc5181a851}
+
+
+Whether we are generating human-\/readable (multiline) J\-S\-O\-N. 
+
+Set whether or not to generate human-\/readable J\-S\-O\-N. The default is N\-O, which produces J\-S\-O\-N without any whitespace. (Except inside strings.) If set to Y\-E\-S, generates human-\/readable J\-S\-O\-N with linebreaks after each array value and dictionary key/value pair, indented two spaces per nesting level. \hypertarget{interface_s_b_json_writer_a283b4f65ab4d3e1a8112b37dea432689}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!max\-Depth@{max\-Depth}}
+\index{max\-Depth@{max\-Depth}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{max\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) max\-Depth\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}}}\label{interface_s_b_json_writer_a283b4f65ab4d3e1a8112b37dea432689}
+
+
+The maximum recursing depth. 
+
+Defaults to 32. If the input is nested deeper than this the input will be deemed to be malicious and the parser returns nil, signalling an error. (\char`\"{}\-Nested too deep\char`\"{}.) You can turn off this security feature by setting the max\-Depth value to 0. \hypertarget{interface_s_b_json_writer_af25807a58a322b56cb5d3593532228e5}{\index{S\-B\-Json\-Writer@{S\-B\-Json\-Writer}!sort\-Keys@{sort\-Keys}}
+\index{sort\-Keys@{sort\-Keys}!SBJsonWriter@{S\-B\-Json\-Writer}}
+\subsubsection[{sort\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) sort\-Keys\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}}}\label{interface_s_b_json_writer_af25807a58a322b56cb5d3593532228e5}
+
+
+Whether or not to sort the dictionary keys in the output. 
+
+If this is set to Y\-E\-S, the dictionary keys in the J\-S\-O\-N output will be in sorted order. (This is useful if you need to compare two structures, for example.) The default is N\-O. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/\-Dumitras\-Vlad/\-V2\-Wrapper/\-I\-O\-S/\-Constant\-Contact/\-Constant\-Contact/\-C\-T\-C\-T\-Wrapper/\-Utilities/\-S\-B\-Json/S\-B\-Json\-Writer.\-h\item 
+/\-Users/\-Dumitras\-Vlad/\-V2\-Wrapper/\-I\-O\-S/\-Constant\-Contact/\-Constant\-Contact/\-C\-T\-C\-T\-Wrapper/\-Utilities/\-S\-B\-Json/S\-B\-Json\-Writer.\-m\end{DoxyCompactItemize}

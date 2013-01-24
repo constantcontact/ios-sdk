@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>login</key>
+	<dict>
+		<key>base_url</key>
+		<string>https://login.constantcontact.com/login/</string>
+		<key>login_endpoint</key>
+		<string>oauth/login</string>
+		<key>host</key>
+		<string>login.constantcontact.com</string>
+	</dict>
+	<key>endpoints</key>
+	<dict>
+		<key>base_url</key>
+		<string>https://api.constantcontact.com/v2/</string>
+		<key>contact</key>
+		<string>contacts/%d</string>
+		<key>contacts</key>
+		<string>contacts</string>
+		<key>list</key>
+		<string>lists/%@</string>
+		<key>lists</key>
+		<string>lists</string>
+		<key>contact_list</key>
+		<string>contacts/%d/lists/%@</string>
+		<key>contact_lists</key>
+		<string>contacts/%d/lists</string>
+	</dict>
+	<key>auth</key>
+	<dict>
+		<key>base_url</key>
+		<string>https://oauth2.constantcontact.com/oauth2/</string>
+		<key>response_type_code</key>
+		<string>code</string>
+		<key>response_type_token</key>
+		<string>token</string>
+		<key>authorization_code_grant_type</key>
+		<string>authorization_code</string>
+		<key>authorization_endpoint</key>
+		<string>oauth/siteowner/authorize</string>
+		<key>token_endpoint</key>
+		<string>oauth/token</string>
+	</dict>
+	<key>errors</key>
+	<dict>
+		<key>contact_orId</key>
+		<string>Only an interger or Contact object are allowed for this method.</string>
+		<key>list_orId</key>
+		<string>Only an interger or ContactList object are allowed for this method.</string>
+	</dict>
+</dict>
+</plist>

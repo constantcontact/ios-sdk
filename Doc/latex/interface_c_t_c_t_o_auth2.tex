@@ -1,0 +1,135 @@
+\hypertarget{interface_c_t_c_t_o_auth2}{\section{C\-T\-C\-T\-O\-Auth2 Class Reference}
+\label{interface_c_t_c_t_o_auth2}\index{C\-T\-C\-T\-O\-Auth2@{C\-T\-C\-T\-O\-Auth2}}
+}
+Inheritance diagram for C\-T\-C\-T\-O\-Auth2\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_c_t_c_t_o_auth2}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_c_t_c_t_o_auth2_a1a64c838f79fef55b95e8188231a7170}{init\-With\-Client\-I\-D\-:redirect\-U\-R\-I\-:user\-Name\-:password\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_t_c_t_o_auth2_a864691177dd38e1133e6886f49cc34a8}{authorization\-U\-R\-L\-From\-Server\-:}
+\item 
+(N\-S\-Dictionary $\ast$) -\/ \hyperlink{interface_c_t_c_t_o_auth2_aaa02738a263ad8efd776e3f340fa9edf}{acces\-Token\-With\-Code\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_t_c_t_o_auth2_a9c60aebf316abf0cefb44b5c2ce5379b}{access\-Token}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_t_c_t_o_auth2_ae3cefb0d226f2d440566735db3ae0fa4}{user\-Name\-For\-App\-Owner\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_t_c_t_o_auth2_a756424e92592c2e597cae4abf66a5dbf}{N\-S\-Array $\ast$ {\bfseries cookies\-Array}}\label{interface_c_t_c_t_o_auth2_a756424e92592c2e597cae4abf66a5dbf}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_t_c_t_o_auth2_a75f9c43e46c0e2a29aff0f5700333350}{N\-S\-String $\ast$ {\bfseries client\-I\-D}}\label{interface_c_t_c_t_o_auth2_a75f9c43e46c0e2a29aff0f5700333350}
+
+\item 
+\hypertarget{interface_c_t_c_t_o_auth2_a3464540928fb8ce836be08d0af7f0c56}{N\-S\-String $\ast$ {\bfseries client\-Secret}}\label{interface_c_t_c_t_o_auth2_a3464540928fb8ce836be08d0af7f0c56}
+
+\item 
+\hypertarget{interface_c_t_c_t_o_auth2_a229512d13b72cb8f3072d6b89ff365bb}{N\-S\-String $\ast$ {\bfseries redirect\-U\-R\-I}}\label{interface_c_t_c_t_o_auth2_a229512d13b72cb8f3072d6b89ff365bb}
+
+\item 
+\hypertarget{interface_c_t_c_t_o_auth2_a538043b0054903e74e04840050e9b5f8}{N\-S\-String $\ast$ {\bfseries user\-Name}}\label{interface_c_t_c_t_o_auth2_a538043b0054903e74e04840050e9b5f8}
+
+\item 
+\hypertarget{interface_c_t_c_t_o_auth2_acd171fa7b02be0836618bd68177c7a1c}{N\-S\-String $\ast$ {\bfseries password}}\label{interface_c_t_c_t_o_auth2_acd171fa7b02be0836618bd68177c7a1c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_c_t_c_t_o_auth2_a9c60aebf316abf0cefb44b5c2ce5379b}{\index{C\-T\-C\-T\-O\-Auth2@{C\-T\-C\-T\-O\-Auth2}!access\-Token@{access\-Token}}
+\index{access\-Token@{access\-Token}!CTCTOAuth2@{C\-T\-C\-T\-O\-Auth2}}
+\subsubsection[{access\-Token}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) access\-Token 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_t_c_t_o_auth2_a9c60aebf316abf0cefb44b5c2ce5379b}
+Function is used to obtain an access token;
+
+\begin{DoxyReturn}{Returns}
+N\-S\-String$\ast$ -\/ access token returned from constant contact after a user has granted access to their account; 
+\end{DoxyReturn}
+\hypertarget{interface_c_t_c_t_o_auth2_aaa02738a263ad8efd776e3f340fa9edf}{\index{C\-T\-C\-T\-O\-Auth2@{C\-T\-C\-T\-O\-Auth2}!acces\-Token\-With\-Code\-:@{acces\-Token\-With\-Code\-:}}
+\index{acces\-Token\-With\-Code\-:@{acces\-Token\-With\-Code\-:}!CTCTOAuth2@{C\-T\-C\-T\-O\-Auth2}}
+\subsubsection[{acces\-Token\-With\-Code\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Dictionary $\ast$) acces\-Token\-With\-Code\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{code}
+\end{DoxyParamCaption}
+}}\label{interface_c_t_c_t_o_auth2_aaa02738a263ad8efd776e3f340fa9edf}
+Function that returns the access token from the site when the user gives a intermediary code;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & code -\/ code sent to site and obtained at login;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary$\ast$ -\/ a dictinary that contains the acces\-Token; 
+\end{DoxyReturn}
+\hypertarget{interface_c_t_c_t_o_auth2_a864691177dd38e1133e6886f49cc34a8}{\index{C\-T\-C\-T\-O\-Auth2@{C\-T\-C\-T\-O\-Auth2}!authorization\-U\-R\-L\-From\-Server\-:@{authorization\-U\-R\-L\-From\-Server\-:}}
+\index{authorization\-U\-R\-L\-From\-Server\-:@{authorization\-U\-R\-L\-From\-Server\-:}!CTCTOAuth2@{C\-T\-C\-T\-O\-Auth2}}
+\subsubsection[{authorization\-U\-R\-L\-From\-Server\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) authorization\-U\-R\-L\-From\-Server\-: 
+\begin{DoxyParamCaption}
+\item[{(B\-O\-O\-L)}]{server}
+\end{DoxyParamCaption}
+}}\label{interface_c_t_c_t_o_auth2_a864691177dd38e1133e6886f49cc34a8}
+Function forms the U\-R\-L at which the user can authenticate and authorize the requesting application;
+
+
+\begin{DoxyParams}{Parameters}
+{\em B\-O\-O\-L} & server -\/ paramater that determines if the response type;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-String$\ast$ -\/ U\-R\-L at which the user can authenticate and authorize the requesting application; 
+\end{DoxyReturn}
+\hypertarget{interface_c_t_c_t_o_auth2_a1a64c838f79fef55b95e8188231a7170}{\index{C\-T\-C\-T\-O\-Auth2@{C\-T\-C\-T\-O\-Auth2}!init\-With\-Client\-I\-D\-:redirect\-U\-R\-I\-:user\-Name\-:password\-:@{init\-With\-Client\-I\-D\-:redirect\-U\-R\-I\-:user\-Name\-:password\-:}}
+\index{init\-With\-Client\-I\-D\-:redirect\-U\-R\-I\-:user\-Name\-:password\-:@{init\-With\-Client\-I\-D\-:redirect\-U\-R\-I\-:user\-Name\-:password\-:}!CTCTOAuth2@{C\-T\-C\-T\-O\-Auth2}}
+\subsubsection[{init\-With\-Client\-I\-D\-:redirect\-U\-R\-I\-:user\-Name\-:password\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Client\-I\-D\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{client\-I\-D}
+\item[{redirectURI:(N\-S\-String$\ast$)}]{redirect\-U\-R\-I}
+\item[{userName:(N\-S\-String$\ast$)}]{user\-Name}
+\item[{password:(N\-S\-String$\ast$)}]{password}
+\end{DoxyParamCaption}
+}}\label{interface_c_t_c_t_o_auth2_a1a64c838f79fef55b95e8188231a7170}
+Function that initializes a \hyperlink{interface_c_t_c_t_o_auth2}{C\-T\-C\-T\-O\-Auth2} object with the user information;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & client\-I\-D -\/ the id of the user selected app;  N\-S\-String$\ast$ redirect\-U\-R\-I -\/ the redirect uri related to the client\-Id;  N\-S\-String$\ast$ user\-Name -\/ the name of the user;  N\-S\-String$\ast$ password -\/ the password of the user; \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_c_t_c_t_o_auth2_ae3cefb0d226f2d440566735db3ae0fa4}{\index{C\-T\-C\-T\-O\-Auth2@{C\-T\-C\-T\-O\-Auth2}!user\-Name\-For\-App\-Owner\-:@{user\-Name\-For\-App\-Owner\-:}}
+\index{user\-Name\-For\-App\-Owner\-:@{user\-Name\-For\-App\-Owner\-:}!CTCTOAuth2@{C\-T\-C\-T\-O\-Auth2}}
+\subsubsection[{user\-Name\-For\-App\-Owner\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) user\-Name\-For\-App\-Owner\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{token}
+\end{DoxyParamCaption}
+}}\label{interface_c_t_c_t_o_auth2_ae3cefb0d226f2d440566735db3ae0fa4}
+Function is used to return the username of the user who authorized the application;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-String$\ast$ -\/ the user\-Name of the user authenthicated by the token; 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-T\-C\-T\-Wrapper/\-Auth/C\-T\-C\-T\-O\-Auth2.\-h\item 
+C\-T\-C\-T\-Wrapper/\-Auth/C\-T\-C\-T\-O\-Auth2.\-m\end{DoxyCompactItemize}

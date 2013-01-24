@@ -1,0 +1,84 @@
+\hypertarget{interface_lists_collection}{\section{Lists\-Collection Class Reference}
+\label{interface_lists_collection}\index{Lists\-Collection@{Lists\-Collection}}
+}
+Inheritance diagram for Lists\-Collection\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_lists_collection}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-Array $\ast$) + \hyperlink{interface_lists_collection_a0f8c52c5fe31334adc47fe9eda725eab}{lists\-With\-Access\-Token\-:}
+\item 
+(\hyperlink{interface_contact_list}{Contact\-List} $\ast$) + \hyperlink{interface_lists_collection_aee455d56035cf11041a4677a47172369}{add\-List\-:with\-Access\-Token\-:}
+\item 
+(\hyperlink{interface_contact_list}{Contact\-List} $\ast$) + \hyperlink{interface_lists_collection_a35b616d645a1c36c90e1d85505280f35}{list\-With\-Access\-Token\-:and\-List\-Id\-:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_lists_collection_aee455d56035cf11041a4677a47172369}{\index{Lists\-Collection@{Lists\-Collection}!add\-List\-:with\-Access\-Token\-:@{add\-List\-:with\-Access\-Token\-:}}
+\index{add\-List\-:with\-Access\-Token\-:@{add\-List\-:with\-Access\-Token\-:}!ListsCollection@{Lists\-Collection}}
+\subsubsection[{add\-List\-:with\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact\-List} $\ast$) add\-List\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf Contact\-List}$\ast$)}]{list}
+\item[{withAccessToken:(N\-S\-String$\ast$)}]{access\-Token}
+\end{DoxyParamCaption}
+}}\label{interface_lists_collection_aee455d56035cf11041a4677a47172369}
+Function that adds a contact list to a user identified by a token;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login; \\
+\hline
+{\em Contact\-List$\ast$} & list -\/ the list to be added to the users list collection;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Contact\-List$\ast$ -\/ the function returns the added contact list in case of succes; 
+\end{DoxyReturn}
+\hypertarget{interface_lists_collection_a0f8c52c5fe31334adc47fe9eda725eab}{\index{Lists\-Collection@{Lists\-Collection}!lists\-With\-Access\-Token\-:@{lists\-With\-Access\-Token\-:}}
+\index{lists\-With\-Access\-Token\-:@{lists\-With\-Access\-Token\-:}!ListsCollection@{Lists\-Collection}}
+\subsubsection[{lists\-With\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Array $\ast$) lists\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{access\-Token}
+\end{DoxyParamCaption}
+}}\label{interface_lists_collection_a0f8c52c5fe31334adc47fe9eda725eab}
+Function that gets a array of lists of a user identified by a token;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Array$\ast$ -\/ the function returns the array of contact lists belonging to the user authenthicated by the token; 
+\end{DoxyReturn}
+\hypertarget{interface_lists_collection_a35b616d645a1c36c90e1d85505280f35}{\index{Lists\-Collection@{Lists\-Collection}!list\-With\-Access\-Token\-:and\-List\-Id\-:@{list\-With\-Access\-Token\-:and\-List\-Id\-:}}
+\index{list\-With\-Access\-Token\-:and\-List\-Id\-:@{list\-With\-Access\-Token\-:and\-List\-Id\-:}!ListsCollection@{Lists\-Collection}}
+\subsubsection[{list\-With\-Access\-Token\-:and\-List\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact\-List} $\ast$) list\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{access\-Token}
+\item[{andListId:(N\-S\-String$\ast$)}]{list\-Id}
+\end{DoxyParamCaption}
+}}\label{interface_lists_collection_a35b616d645a1c36c90e1d85505280f35}
+Function that gets a specific contact list from the user identified by a token;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login; \\
+\hline
+{\em N\-S\-String$\ast$} & list\-I\-D -\/ the id of the list you wish to obtain;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Contact\-List$\ast$ -\/ the function returns the contact list who is identified by list\-I\-D; 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-T\-C\-T\-Wrapper/\-Collections/Lists\-Collection.\-h\item 
+C\-T\-C\-T\-Wrapper/\-Collections/Lists\-Collection.\-m\end{DoxyCompactItemize}

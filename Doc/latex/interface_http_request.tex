@@ -1,0 +1,145 @@
+\hypertarget{interface_http_request}{\section{Http\-Request Class Reference}
+\label{interface_http_request}\index{Http\-Request@{Http\-Request}}
+}
+Inheritance diagram for Http\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_http_request}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_http_request_a1ae12eb2fe0943578e33d645455113b4}{get\-With\-Url\-:and\-Headers\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_http_request_a4fb7defdba3c2490817e4681ca3f242f}{post\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_http_request_a3b6f1e02bf117ae3070a325d67269292}{put\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_http_request_a5d5d64affbbf1bcc97bfe17ddbbd3300}{delete\-With\-Url\-:and\-Headers\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_http_request_a29d989afc4c26854a63bedddeee98288}{http\-Request\-With\-Url\-:and\-Method\-:and\-Headers\-:and\-String\-Data\-:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_http_request_a5d5d64affbbf1bcc97bfe17ddbbd3300}{\index{Http\-Request@{Http\-Request}!delete\-With\-Url\-:and\-Headers\-:@{delete\-With\-Url\-:and\-Headers\-:}}
+\index{delete\-With\-Url\-:and\-Headers\-:@{delete\-With\-Url\-:and\-Headers\-:}!HttpRequest@{Http\-Request}}
+\subsubsection[{delete\-With\-Url\-:and\-Headers\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) delete\-With\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{url}
+\item[{andHeaders:(N\-S\-Array$\ast$)}]{headers}
+\end{DoxyParamCaption}
+}}\label{interface_http_request_a5d5d64affbbf1bcc97bfe17ddbbd3300}
+Function is used to make a Http D\-E\-L\-E\-T\-E request;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & Url -\/ the request url for the call; \\
+\hline
+{\em N\-S\-Array$\ast$} & Headers -\/ a array of all http headers to send; \\
+\hline
+{\em N\-S\-String$\ast$} & string\-Data -\/ aditional data to send with request;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary$\ast$ -\/\-The function returns a dictionary that contains the calls returned value; 
+\end{DoxyReturn}
+\hypertarget{interface_http_request_a1ae12eb2fe0943578e33d645455113b4}{\index{Http\-Request@{Http\-Request}!get\-With\-Url\-:and\-Headers\-:@{get\-With\-Url\-:and\-Headers\-:}}
+\index{get\-With\-Url\-:and\-Headers\-:@{get\-With\-Url\-:and\-Headers\-:}!HttpRequest@{Http\-Request}}
+\subsubsection[{get\-With\-Url\-:and\-Headers\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-With\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{url}
+\item[{andHeaders:(N\-S\-Array$\ast$)}]{headers}
+\end{DoxyParamCaption}
+}}\label{interface_http_request_a1ae12eb2fe0943578e33d645455113b4}
+Function is used to make a Http G\-E\-T request;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & Url -\/ the request url for the call; \\
+\hline
+{\em N\-S\-Array$\ast$} & Headers -\/ a array of all http headers to send;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary$\ast$ -\/\-The function returns a dictionary that contains the calls returned value; 
+\end{DoxyReturn}
+\hypertarget{interface_http_request_a29d989afc4c26854a63bedddeee98288}{\index{Http\-Request@{Http\-Request}!http\-Request\-With\-Url\-:and\-Method\-:and\-Headers\-:and\-String\-Data\-:@{http\-Request\-With\-Url\-:and\-Method\-:and\-Headers\-:and\-String\-Data\-:}}
+\index{http\-Request\-With\-Url\-:and\-Method\-:and\-Headers\-:and\-String\-Data\-:@{http\-Request\-With\-Url\-:and\-Method\-:and\-Headers\-:and\-String\-Data\-:}!HttpRequest@{Http\-Request}}
+\subsubsection[{http\-Request\-With\-Url\-:and\-Method\-:and\-Headers\-:and\-String\-Data\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) http\-Request\-With\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{url}
+\item[{andMethod:(N\-S\-String$\ast$)}]{method}
+\item[{andHeaders:(N\-S\-Array$\ast$)}]{headers}
+\item[{andStringData:(N\-S\-String$\ast$)}]{string\-Data}
+\end{DoxyParamCaption}
+}}\label{interface_http_request_a29d989afc4c26854a63bedddeee98288}
+Function is used to make a Http request;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & Url -\/ the request url for the call; \\
+\hline
+{\em N\-S\-Array$\ast$} & Headers -\/ a array of all http headers to send; \\
+\hline
+{\em N\-S\-String$\ast$} & String\-Data -\/ aditional data to send with request; \\
+\hline
+{\em N\-S\-String$\ast$} & Method -\/ the method type of the request ( P\-U\-T, G\-E\-T, D\-E\-L\-E\-T\-E, etc.);\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary$\ast$ -\/\-The function returns a dictionary that contains the calls returned value; 
+\end{DoxyReturn}
+\hypertarget{interface_http_request_a4fb7defdba3c2490817e4681ca3f242f}{\index{Http\-Request@{Http\-Request}!post\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:@{post\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}}
+\index{post\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:@{post\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}!HttpRequest@{Http\-Request}}
+\subsubsection[{post\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) post\-With\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{url}
+\item[{andHeaders:(N\-S\-Array$\ast$)}]{headers}
+\item[{andStringData:(N\-S\-String$\ast$)}]{string\-Data}
+\end{DoxyParamCaption}
+}}\label{interface_http_request_a4fb7defdba3c2490817e4681ca3f242f}
+Function is used to make a Http P\-O\-S\-T request;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & Url -\/ the request url for the call; \\
+\hline
+{\em N\-S\-Array$\ast$} & Headers -\/ a array of all http headers to send; \\
+\hline
+{\em N\-S\-String$\ast$} & string\-Data -\/ aditional data to send with request;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary$\ast$ -\/\-The function returns a dictionary that contains the calls returned value; 
+\end{DoxyReturn}
+\hypertarget{interface_http_request_a3b6f1e02bf117ae3070a325d67269292}{\index{Http\-Request@{Http\-Request}!put\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:@{put\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}}
+\index{put\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:@{put\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}!HttpRequest@{Http\-Request}}
+\subsubsection[{put\-With\-Url\-:and\-Headers\-:and\-String\-Data\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) put\-With\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{url}
+\item[{andHeaders:(N\-S\-Array$\ast$)}]{headers}
+\item[{andStringData:(N\-S\-String$\ast$)}]{string\-Data}
+\end{DoxyParamCaption}
+}}\label{interface_http_request_a3b6f1e02bf117ae3070a325d67269292}
+Function is used to make a Http P\-U\-T request;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & Url -\/ the request url for the call; \\
+\hline
+{\em N\-S\-Array$\ast$} & Headers -\/ a array of all http headers to send; \\
+\hline
+{\em N\-S\-String$\ast$} & string\-Data -\/ aditional data to send with request;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary$\ast$ -\/\-The function returns a dictionary that contains the calls returned value; 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-T\-C\-T\-Wrapper/Http\-Request.\-h\item 
+C\-T\-C\-T\-Wrapper/Http\-Request.\-m\end{DoxyCompactItemize}
