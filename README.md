@@ -26,11 +26,10 @@ In order to use the Constant Contact SDK you have to follow these steps:
 
 2) Create a authentication object with your user credentials:
 
-###### Instantiate your credentials in local variables
-```NSString *clId = @"yourID"; ```<br>
-```NSString *uri = @"your redirect uri";```<br>
-```NSString *name = @"your user name";```<br>
-``` NSString *pass = @"your password";```<br>
+###### Put your SDK access credentials in Config.plist file under Config
+```api_key```<br>
+```consumer_secret```<br>
+```redirect_uri```<br>
 
 ######Store the values in a "CTCTOAuth2" object 
 ```
