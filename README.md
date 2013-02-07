@@ -27,9 +27,9 @@ In order to use the Constant Contact SDK you have to follow these steps:
 2) Create a authentication object with your user credentials:
 
 ###### Put your SDK access credentials in Config.plist file under Config
-```api_key```<br>
-```consumer_secret```<br>
-```redirect_uri```<br>
+`api_key`<br>
+`consumer_secret`<br>
+`redirect_uri`<br>
 
 ######Store the values in a "CTCTOAuth2" object 
 ```
