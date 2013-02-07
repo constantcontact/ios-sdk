@@ -6,7 +6,7 @@
 //
 
 #import "Contact.h"
-#import "NSObject+SBJson.h"
+#import <Foundation/Foundation.h>
 
 @implementation Contact
 
@@ -180,18 +180,43 @@
     [_addresses addObject:address];
 }
 
+- (NSArray*)emailAddressesForJson
+{
+    NSMutableArray *emailAddresses = [[NSMutableArray alloc] initWithCapacity:self.emailAddresses.count];
+    
+    for (EmailAddress *email in self.emailAddresses)
+    {
+        [emailAddresses addObject:[email proxyForJson]];
+    }
+    
+    return emailAddresses;
+}
+
 -(id) proxyForJson
 {
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd";
     NSDate* serverDate = [dateFormatter dateFromString:_lastUpdateTime];
     
-    return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:_id ], @"id", _status, @"status", _firstName, @"first_name", _middleName, @"middle_name", _lastName, @"last_name", _emailAddresses, @"email_addresses", _prefixName, @"prefix_name", _jobTitle, @"job_title", _departmentName, @"department_name", _addresses, @"addresses", _companyName, @"company_name", _homePhone, @"home_phone", _workPhone, @"work_phone", _cellPhone, @"cell_phone", _fax, @"fax", _customFields, @"custom_fields", serverDate, @"last_update_time", _lists, @"lists", _sourceDetails, @"source_details",[NSNumber numberWithBool:_sourceIsUrl], @"source_is_url", _actionBy, @"action_by", _webUrl, @"web_url", nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:_id ], @"id", _status, @"status", _firstName, @"first_name", _middleName, @"middle_name", _lastName, @"last_name", [self emailAddressesForJson], @"email_addresses", _prefixName, @"prefix_name", _jobTitle, @"job_title", _departmentName, @"department_name", _addresses, @"addresses", _companyName, @"company_name", _homePhone, @"home_phone", _workPhone, @"work_phone", _cellPhone, @"cell_phone", _fax, @"fax", _customFields, @"custom_fields", serverDate, @"last_update_time", _lists, @"lists", _sourceDetails, @"source_details",[NSNumber numberWithBool:_sourceIsUrl], @"source_is_url", _actionBy, @"action_by", _webUrl, @"web_url", nil];
 }
 
 -(NSString*) toJson
 {
-    return [self JSONRepresentation];
+    NSString *jsonDict = [self proxyForJson];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    NSString *jsonString = @"";
+    
+    if (!jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    
+    return jsonString;
 }
 
 @end

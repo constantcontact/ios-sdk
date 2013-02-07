@@ -13,7 +13,7 @@
 {
     NSString *value;
     
-    NSString *configPath = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"];
+    NSString *configPath = [[NSBundle mainBundle] pathForResource:@"Config" ofType:@"plist"];
     NSDictionary *configDict = [NSDictionary dictionaryWithContentsOfFile:configPath];
     NSDictionary *typeDict = [configDict objectForKey:type];
     

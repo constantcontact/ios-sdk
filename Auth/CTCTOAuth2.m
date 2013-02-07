@@ -115,7 +115,7 @@
             [urlRequest setValue:[NSString stringWithFormat:@"%@",cookieee] forHTTPHeaderField:@"Cookies"];
     }
 
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
     int responseStatusCode = [httpResponse statusCode];
     NSString *responseURL = [NSString stringWithFormat:@"%@", [httpResponse URL]];

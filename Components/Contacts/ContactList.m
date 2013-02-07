@@ -6,7 +6,6 @@
 //
 
 #import "ContactList.h"
-#import "NSObject+SBJson.h"
 
 @implementation ContactList
 
@@ -44,7 +43,20 @@
 
 -(NSString*) toJson
 {
-     return [self JSONRepresentation];
+    NSString *jsonDict = [self proxyForJson];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    NSString *jsonString = @"";
+    
+    if (!jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    
+    return jsonString;
 }
 
 @end

@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "Component.h"
 
-@interface EmailAddress : NSObject
+@interface EmailAddress : NSObject ;
 
 @property (nonatomic, assign) NSString *confirmStatus;
 @property (nonatomic, assign) NSString *emailAddress;
@@ -20,5 +20,6 @@
 -(id)initWithEmailAddress:(NSString *)emailAddress;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 +(EmailAddress*)addressWithDictionary:(NSDictionary *)dictionary;
+-(id) proxyForJson;
 
 @end

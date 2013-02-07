@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>config</key>
+	<dict>
+		<key>api_key</key>
+		<string></string>
+		<key>consumer_secret</key>
+		<string></string>
+		<key>redirect_uri</key>
+		<string></string>
+	</dict>
 	<key>login</key>
 	<dict>
 		<key>base_url</key>
