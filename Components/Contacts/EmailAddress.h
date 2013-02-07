@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "Component.h"
 
-@interface EmailAddress : NSObject ;
+@interface EmailAddress : NSObject
 
 @property (nonatomic, assign) NSString *confirmStatus;
 @property (nonatomic, assign) NSString *emailAddress;
