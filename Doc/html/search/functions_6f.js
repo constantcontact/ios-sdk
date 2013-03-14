@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['objectwithdata_3a',['objectWithData:',['../interface_s_b_json_parser.html#a66d7be591cdf0d9ee85c21c863ef5cbf',1,'SBJsonParser']]],
-  ['objectwithstring_3a',['objectWithString:',['../interface_s_b_json_parser.html#a1ec40b986576044d58d30172b141c74c',1,'SBJsonParser']]],
-  ['objectwithstring_3aerror_3a',['objectWithString:error:',['../interface_s_b_json_parser.html#a7a7fff47f41a08fa0defc4f628846e15',1,'SBJsonParser']]]
+  ['openactivitywithdictionary_3a',['openActivityWithDictionary:',['../interface_open_activity.html#a04d10328efbeaff52a6f4aa76ea61284',1,'OpenActivity']]],
+  ['optoutwithdictionary_3a',['optOutWithDictionary:',['../interface_opt_out_activity.html#a9d8e44cf828be654d4cef63adb976679',1,'OptOutActivity']]]
 ];

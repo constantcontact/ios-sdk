@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['stringwithobject_3a',['stringWithObject:',['../interface_s_b_json_writer.html#a9018ceff9753092b310a43782c5083ed',1,'SBJsonWriter']]],
-  ['stringwithobject_3aerror_3a',['stringWithObject:error:',['../interface_s_b_json_writer.html#a41cfe2a66c774790785a841633cc0bc4',1,'SBJsonWriter']]]
+  ['schedulewithdictionary_3a',['scheduleWithDictionary:',['../interface_schedule.html#a31637536928d47ae9683bcb1943bfaf2',1,'Schedule']]],
+  ['sendactivitywithdictionary_3a',['sendActivityWithDictionary:',['../interface_send_activity.html#ac0ba4d4355530e716db91583af9f262d',1,'SendActivity']]],
+  ['sendtestwithaccestoken_3acampaignid_3aandtestsend_3a',['sendTestWithAccesToken:campaignId:andTestSend:',['../interface_campaign_schedule_service.html#a0fab6423c51267419688c55ed82d6eb8',1,'CampaignScheduleService']]]
 ];

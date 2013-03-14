@@ -1,0 +1,160 @@
+\hypertarget{interface_activity_service}{\section{Activity\-Service Class Reference}
+\label{interface_activity_service}\index{Activity\-Service@{Activity\-Service}}
+}
+
+
+{\ttfamily \#import $<$Activity\-Service.\-h$>$}
+
+Inheritance diagram for Activity\-Service\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_activity_service}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_activity_service_aa21c8cebdb28154a3fff38f2c077176e}{get\-Activites\-With\-Token\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_activity_service_abb535e31f9c15248ef3f2324fc5905ce}{get\-Activity\-With\-Token\-:and\-Activity\-Id\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_activity_service_ab53b151e202d2f6c414cd6e1abc88abb}{create\-Add\-Contacts\-Activity\-With\-Token\-:and\-Contacts\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_activity_service_a0b50191767ce7b7e84b6df4514db79f7}{add\-Clear\-List\-Activity\-With\-Token\-:and\-Lists\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_activity_service_ac8c4a5d0c7e678bca210420261f0742f}{add\-Export\-Contacts\-Activity\-With\-Token\-:and\-Export\-Contacts\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_activity_service_a9d9b6883bacc95cbd324f61ddeebf54f}{add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-:email\-Addresses\-:and\-Lists\-:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Performs all actions pertaining to scheduling Constant \hyperlink{interface_contact}{Contact} Activities 
+
+\subsection{Method Documentation}
+\hypertarget{interface_activity_service_a0b50191767ce7b7e84b6df4514db79f7}{\index{Activity\-Service@{Activity\-Service}!add\-Clear\-List\-Activity\-With\-Token\-:and\-Lists\-:@{add\-Clear\-List\-Activity\-With\-Token\-:and\-Lists\-:}}
+\index{add\-Clear\-List\-Activity\-With\-Token\-:and\-Lists\-:@{add\-Clear\-List\-Activity\-With\-Token\-:and\-Lists\-:}!ActivityService@{Activity\-Service}}
+\subsubsection[{add\-Clear\-List\-Activity\-With\-Token\-:and\-Lists\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) add\-Clear\-List\-Activity\-With\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{andLists:(N\-S\-Array $\ast$)}]{lists}
+\end{DoxyParamCaption}
+}}\label{interface_activity_service_a0b50191767ce7b7e84b6df4514db79f7}
+Create a Clear Lists \hyperlink{interface_activity}{Activity}
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-Array} & $\ast$clear\-Lists -\/ Array of list id's to be cleared\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the specific \hyperlink{interface_activity}{Activity} created 
+\end{DoxyReturn}
+\hypertarget{interface_activity_service_ac8c4a5d0c7e678bca210420261f0742f}{\index{Activity\-Service@{Activity\-Service}!add\-Export\-Contacts\-Activity\-With\-Token\-:and\-Export\-Contacts\-:@{add\-Export\-Contacts\-Activity\-With\-Token\-:and\-Export\-Contacts\-:}}
+\index{add\-Export\-Contacts\-Activity\-With\-Token\-:and\-Export\-Contacts\-:@{add\-Export\-Contacts\-Activity\-With\-Token\-:and\-Export\-Contacts\-:}!ActivityService@{Activity\-Service}}
+\subsubsection[{add\-Export\-Contacts\-Activity\-With\-Token\-:and\-Export\-Contacts\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) add\-Export\-Contacts\-Activity\-With\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{andExportContacts:({\bf Export\-Contacts} $\ast$)}]{export\-Contacts}
+\end{DoxyParamCaption}
+}}\label{interface_activity_service_ac8c4a5d0c7e678bca210420261f0742f}
+Create an Export Contacts \hyperlink{interface_activity}{Activity}
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em \hyperlink{interface_export_contacts}{Export\-Contacts}} & $\ast$export\-Contacts -\/ the contacts that need exported\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the specific \hyperlink{interface_activity}{Activity} created 
+\end{DoxyReturn}
+\hypertarget{interface_activity_service_a9d9b6883bacc95cbd324f61ddeebf54f}{\index{Activity\-Service@{Activity\-Service}!add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-:email\-Addresses\-:and\-Lists\-:@{add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-:email\-Addresses\-:and\-Lists\-:}}
+\index{add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-:email\-Addresses\-:and\-Lists\-:@{add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-:email\-Addresses\-:and\-Lists\-:}!ActivityService@{Activity\-Service}}
+\subsubsection[{add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-:email\-Addresses\-:and\-Lists\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) add\-Remove\-Contacts\-From\-Lists\-Activity\-With\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{emailAddresses:(N\-S\-Array $\ast$)}]{email\-Addresses}
+\item[{andLists:(N\-S\-Array $\ast$)}]{lists}
+\end{DoxyParamCaption}
+}}\label{interface_activity_service_a9d9b6883bacc95cbd324f61ddeebf54f}
+Create a Remove Contacts From Lists \hyperlink{interface_activity}{Activity}
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-Array} & $\ast$email\-Addressed -\/ the array of email addresses to specify which contacts will be removed \\
+\hline
+{\em N\-S\-Array} & $\ast$lists -\/ the list from which to remove the contacts\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the specific \hyperlink{interface_activity}{Activity} created 
+\end{DoxyReturn}
+\hypertarget{interface_activity_service_ab53b151e202d2f6c414cd6e1abc88abb}{\index{Activity\-Service@{Activity\-Service}!create\-Add\-Contacts\-Activity\-With\-Token\-:and\-Contacts\-:@{create\-Add\-Contacts\-Activity\-With\-Token\-:and\-Contacts\-:}}
+\index{create\-Add\-Contacts\-Activity\-With\-Token\-:and\-Contacts\-:@{create\-Add\-Contacts\-Activity\-With\-Token\-:and\-Contacts\-:}!ActivityService@{Activity\-Service}}
+\subsubsection[{create\-Add\-Contacts\-Activity\-With\-Token\-:and\-Contacts\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) create\-Add\-Contacts\-Activity\-With\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{andContacts:({\bf Add\-Contacts} $\ast$)}]{add\-Contacts}
+\end{DoxyParamCaption}
+}}\label{interface_activity_service_ab53b151e202d2f6c414cd6e1abc88abb}
+Create an Add Contacts \hyperlink{interface_activity}{Activity}
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em \hyperlink{interface_add_contacts}{Add\-Contacts}} & $\ast$add\-Contact -\/ the contacts that will be added with the activity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the specific \hyperlink{interface_activity}{Activity} created 
+\end{DoxyReturn}
+\hypertarget{interface_activity_service_aa21c8cebdb28154a3fff38f2c077176e}{\index{Activity\-Service@{Activity\-Service}!get\-Activites\-With\-Token\-:@{get\-Activites\-With\-Token\-:}}
+\index{get\-Activites\-With\-Token\-:@{get\-Activites\-With\-Token\-:}!ActivityService@{Activity\-Service}}
+\subsubsection[{get\-Activites\-With\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Activites\-With\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\end{DoxyParamCaption}
+}}\label{interface_activity_service_aa21c8cebdb28154a3fff38f2c077176e}
+Get an array of activities
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a Array of all Activity\-Summary\-Reports 
+\end{DoxyReturn}
+\hypertarget{interface_activity_service_abb535e31f9c15248ef3f2324fc5905ce}{\index{Activity\-Service@{Activity\-Service}!get\-Activity\-With\-Token\-:and\-Activity\-Id\-:@{get\-Activity\-With\-Token\-:and\-Activity\-Id\-:}}
+\index{get\-Activity\-With\-Token\-:and\-Activity\-Id\-:@{get\-Activity\-With\-Token\-:and\-Activity\-Id\-:}!ActivityService@{Activity\-Service}}
+\subsubsection[{get\-Activity\-With\-Token\-:and\-Activity\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Activity\-With\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{andActivityId:(N\-S\-String $\ast$)}]{activity\-Id}
+\end{DoxyParamCaption}
+}}\label{interface_activity_service_abb535e31f9c15248ef3f2324fc5905ce}
+Get an specific activity
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$activity\-Id -\/ \hyperlink{interface_activity}{Activity} id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the specific \hyperlink{interface_activity}{Activity} referenced by the parameter id 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Services/\hyperlink{_activity_service_8h}{Activity\-Service.\-h}\item 
+Services/\hyperlink{_activity_service_8m}{Activity\-Service.\-m}\end{DoxyCompactItemize}

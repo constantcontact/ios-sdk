@@ -1,0 +1,110 @@
+\hypertarget{interface_test_send}{\section{Test\-Send Class Reference}
+\label{interface_test_send}\index{Test\-Send@{Test\-Send}}
+}
+
+
+{\ttfamily \#import $<$Test\-Send.\-h$>$}
+
+Inheritance diagram for Test\-Send\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_test_send}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_test_send_a0c64e5cfc992ca613ffc0fa160ecf62d}{init\-With\-Dictionary\-:}
+\item 
+(void) -\/ \hyperlink{interface_test_send_a12b6ea779bb944f98e57997a140d65d3}{add\-Email\-To\-Email\-Addresses\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_test_send_a3bf9c87e917acc970e349b02ead13a15}{to\-Json}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_test_send}{Test\-Send} $\ast$) + \hyperlink{interface_test_send_a4c6865254eeb50999c7bdc5deb392a05}{test\-Send\-With\-Dictionary\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_test_send_a9b8f331d88f602bfb6281faaaa1640f0}{format}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_test_send_ae45669f79ceeb6e5b3ec4c47fa7471fc}{personal\-Message}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_test_send_ae3149637744140d9ce2eadea8d3acd80}{email\-Addresses}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a campaign Test Send in Constant \hyperlink{interface_contact}{Contact} 
+
+\subsection{Method Documentation}
+\hypertarget{interface_test_send_a12b6ea779bb944f98e57997a140d65d3}{\index{Test\-Send@{Test\-Send}!add\-Email\-To\-Email\-Addresses\-:@{add\-Email\-To\-Email\-Addresses\-:}}
+\index{add\-Email\-To\-Email\-Addresses\-:@{add\-Email\-To\-Email\-Addresses\-:}!TestSend@{Test\-Send}}
+\subsubsection[{add\-Email\-To\-Email\-Addresses\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) add\-Email\-To\-Email\-Addresses\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{email\-Address}
+\end{DoxyParamCaption}
+}}\label{interface_test_send_a12b6ea779bb944f98e57997a140d65d3}
+Add an email address to the set of addresses to send the test send too
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_test_send_a0c64e5cfc992ca613ffc0fa160ecf62d}{\index{Test\-Send@{Test\-Send}!init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}}
+\index{init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}!TestSend@{Test\-Send}}
+\subsubsection[{init\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_test_send_a0c64e5cfc992ca613ffc0fa160ecf62d}
+Factory method to create a \hyperlink{interface_test_send}{Test\-Send} object from an dictionary
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-Dictionary} & $\ast$dictionary -\/ associative dictionary of initial properties to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interface_test_send}{Test\-Send} $\ast$ 
+\end{DoxyReturn}
+\hypertarget{interface_test_send_a4c6865254eeb50999c7bdc5deb392a05}{\index{Test\-Send@{Test\-Send}!test\-Send\-With\-Dictionary\-:@{test\-Send\-With\-Dictionary\-:}}
+\index{test\-Send\-With\-Dictionary\-:@{test\-Send\-With\-Dictionary\-:}!TestSend@{Test\-Send}}
+\subsubsection[{test\-Send\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Test\-Send} $\ast$) test\-Send\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_test_send_a4c6865254eeb50999c7bdc5deb392a05}
+\hypertarget{interface_test_send_a3bf9c87e917acc970e349b02ead13a15}{\index{Test\-Send@{Test\-Send}!to\-Json@{to\-Json}}
+\index{to\-Json@{to\-Json}!TestSend@{Test\-Send}}
+\subsubsection[{to\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) to\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_test_send_a3bf9c87e917acc970e349b02ead13a15}
+Create json used for a P\-O\-S\-T/\-P\-U\-T request, also handles removing attributes that will cause errors if sent
+
+\begin{DoxyReturn}{Returns}
+N\-S\-String 
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_test_send_ae3149637744140d9ce2eadea8d3acd80}{\index{Test\-Send@{Test\-Send}!email\-Addresses@{email\-Addresses}}
+\index{email\-Addresses@{email\-Addresses}!TestSend@{Test\-Send}}
+\subsubsection[{email\-Addresses}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) email\-Addresses\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_test_send_ae3149637744140d9ce2eadea8d3acd80}
+\hypertarget{interface_test_send_a9b8f331d88f602bfb6281faaaa1640f0}{\index{Test\-Send@{Test\-Send}!format@{format}}
+\index{format@{format}!TestSend@{Test\-Send}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) format\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_test_send_a9b8f331d88f602bfb6281faaaa1640f0}
+\hypertarget{interface_test_send_ae45669f79ceeb6e5b3ec4c47fa7471fc}{\index{Test\-Send@{Test\-Send}!personal\-Message@{personal\-Message}}
+\index{personal\-Message@{personal\-Message}!TestSend@{Test\-Send}}
+\subsubsection[{personal\-Message}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) personal\-Message\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_test_send_ae45669f79ceeb6e5b3ec4c47fa7471fc}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Components/\-Email\-Campaigns/\hyperlink{_test_send_8h}{Test\-Send.\-h}\item 
+Components/\-Email\-Campaigns/\hyperlink{_test_send_8m}{Test\-Send.\-m}\end{DoxyCompactItemize}

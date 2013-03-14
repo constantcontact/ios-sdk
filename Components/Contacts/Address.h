@@ -10,17 +10,19 @@
 
 @interface Address : NSObject
 
-@property (nonatomic, assign) NSString *addressType;
-@property (nonatomic, assign) NSString *city;
-@property (nonatomic, assign) NSString *countryCode;
-@property (nonatomic, assign) NSString *line1;
-@property (nonatomic, assign) NSString *line2;
-@property (nonatomic, assign) NSString *line3;
-@property (nonatomic, assign) NSString *postalCode;
-@property (nonatomic, assign) NSString *stateCode;
-@property (nonatomic, assign) NSString *subPostalCode;
+@property (nonatomic, strong) NSString *addressType;
+@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) NSString *countryCode;
+@property (nonatomic, strong) NSString *line1;
+@property (nonatomic, strong) NSString *line2;
+@property (nonatomic, strong) NSString *line3;
+@property (nonatomic, strong) NSString *postalCode;
+@property (nonatomic, strong) NSString *stateCode;
+@property (nonatomic, strong) NSString *subPostalCode;
+@property (nonatomic, strong) NSString *stateProvince;
 
--(id)initWithDictionary:(NSDictionary *)dictionary;
-+(Address*)addressWithDictionary:(NSDictionary *)dictionary;
-
+- (id)initWithDictionary:(NSDictionary *)dictionary;
++ (Address *)addressWithDictionary:(NSDictionary *)dictionary;
+-(id) proxyForJson;
+- (NSString *) toJson;
 @end

@@ -11,12 +11,14 @@
 @interface ContactList : NSObject
 
 @property (nonatomic, readwrite) int contactCount;
-@property (nonatomic, assign) int id;
-@property (nonatomic, assign) NSString *name;
-@property (nonatomic, assign) BOOL optInDefault;
-@property (nonatomic, assign) NSString *status;
+@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *status;
 
--(id)initWithDictionary:(NSDictionary *)dictionary;
--(NSString*) toJson;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
++ (ContactList *)contactListWithDictionary:(NSDictionary *)dictionary;
 
+- (NSString *) toJson;
+- (NSString *) toJsonCampaigns;
+- (id) proxyForJson;
 @end

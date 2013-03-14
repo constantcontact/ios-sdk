@@ -1,0 +1,63 @@
+\hypertarget{interface_result_set}{\section{Result\-Set Class Reference}
+\label{interface_result_set}\index{Result\-Set@{Result\-Set}}
+}
+
+
+{\ttfamily \#import $<$Result\-Set.\-h$>$}
+
+Inheritance diagram for Result\-Set\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_result_set}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_result_set_a61d6e01648a2ab1d98971fd802e16af7}{init\-Result\-Set\-With\-Results\-:and\-Meta\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-Array $\ast$ \hyperlink{interface_result_set_a90ae624da4ec426d7315490ee4abcbb3}{results}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_result_set_a92b714dd2c4499ae5be35a527f51aed2}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container for a get on a collection, such as Contacts, Campaigns, or Tracking\-Data. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_result_set_a61d6e01648a2ab1d98971fd802e16af7}{\index{Result\-Set@{Result\-Set}!init\-Result\-Set\-With\-Results\-:and\-Meta\-:@{init\-Result\-Set\-With\-Results\-:and\-Meta\-:}}
+\index{init\-Result\-Set\-With\-Results\-:and\-Meta\-:@{init\-Result\-Set\-With\-Results\-:and\-Meta\-:}!ResultSet@{Result\-Set}}
+\subsubsection[{init\-Result\-Set\-With\-Results\-:and\-Meta\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-Result\-Set\-With\-Results\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Array $\ast$)}]{results}
+\item[{andMeta:(N\-S\-Dictionary $\ast$)}]{meta}
+\end{DoxyParamCaption}
+}}\label{interface_result_set_a61d6e01648a2ab1d98971fd802e16af7}
+Constructor to create a \hyperlink{interface_result_set}{Result\-Set} from the results/meta response when performing a get on a collection
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-Array} & $\ast$results -\/ results array from request \\
+\hline
+{\em N\-S\-Dictionary} & $\ast$meta -\/ meta dictionary from request \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_result_set_a92b714dd2c4499ae5be35a527f51aed2}{\index{Result\-Set@{Result\-Set}!next@{next}}
+\index{next@{next}!ResultSet@{Result\-Set}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) next\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_result_set_a92b714dd2c4499ae5be35a527f51aed2}
+\hypertarget{interface_result_set_a90ae624da4ec426d7315490ee4abcbb3}{\index{Result\-Set@{Result\-Set}!results@{results}}
+\index{results@{results}!ResultSet@{Result\-Set}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array$\ast$) results\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_result_set_a90ae624da4ec426d7315490ee4abcbb3}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Components/\hyperlink{_result_set_8h}{Result\-Set.\-h}\item 
+Components/\hyperlink{_result_set_8m}{Result\-Set.\-m}\end{DoxyCompactItemize}

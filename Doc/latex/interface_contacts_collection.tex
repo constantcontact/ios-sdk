@@ -1,6 +1,10 @@
 \hypertarget{interface_contacts_collection}{\section{Contacts\-Collection Class Reference}
 \label{interface_contacts_collection}\index{Contacts\-Collection@{Contacts\-Collection}}
 }
+
+
+{\ttfamily \#import $<$Contacts\-Collection.\-h$>$}
+
 Inheritance diagram for Contacts\-Collection\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +14,13 @@ Inheritance diagram for Contacts\-Collection\-:\begin{figure}[H]
 \subsection*{Class Methods}
 \begin{DoxyCompactItemize}
 \item 
-(N\-S\-Array $\ast$) + \hyperlink{interface_contacts_collection_ab8c91f486116cb12ded815bac299ce4c}{contacts\-With\-Access\-Token\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_contacts_collection_a30f6142c5cbab3b9b31b164d37b8af02}{contacts\-With\-Access\-Token\-:}
 \item 
-(\hyperlink{interface_contact}{Contact} $\ast$) + \hyperlink{interface_contacts_collection_abd0ad20e87015e8284f8717ef296dc7c}{contact\-With\-Access\-Token\-:and\-Id\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_contacts_collection_a264e1670ea3126d92e80644f85ecd176}{contact\-With\-Access\-Token\-:and\-Id\-:}
 \item 
-(N\-S\-Array $\ast$) + \hyperlink{interface_contacts_collection_a2bd4bd65ff939e81c705915cfc2cb011}{contacts\-With\-Access\-Token\-:and\-Email\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_contacts_collection_a6d3c05c35c1b7333880c2ddbbe78b82c}{contacts\-With\-Access\-Token\-:and\-Email\-:}
 \item 
-(\hyperlink{interface_contact}{Contact} $\ast$) + \hyperlink{interface_contacts_collection_a72905faace2d74b337183dfe665fec6d}{add\-Contact\-:with\-Access\-Token\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_contacts_collection_a74d2efb3feb7bc7576ca32abb3aa7ce9}{add\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}
 \item 
 (B\-O\-O\-L) + \hyperlink{interface_contacts_collection_a0a9e3924034dd059a7d6697f826aa974}{delete\-Contact\-With\-Access\-Token\-:and\-Contact\-Id\-:}
 \item 
@@ -24,19 +28,20 @@ Inheritance diagram for Contacts\-Collection\-:\begin{figure}[H]
 \item 
 (B\-O\-O\-L) + \hyperlink{interface_contacts_collection_a38a710134be4cdb3d34d1f619a626d30}{delete\-Contact\-From\-List\-With\-Access\-Token\-:and\-Contact\-Id\-:and\-List\-Id\-:}
 \item 
-(\hyperlink{interface_contact}{Contact} $\ast$) + \hyperlink{interface_contacts_collection_a70de81543370507661b6df7c586c3a36}{update\-Contact\-:with\-Access\-Token\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_contacts_collection_a4e61d6013999c298b76ea10fc128caf6}{update\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}
 \end{DoxyCompactItemize}
 
 
 \subsection{Method Documentation}
-\hypertarget{interface_contacts_collection_a72905faace2d74b337183dfe665fec6d}{\index{Contacts\-Collection@{Contacts\-Collection}!add\-Contact\-:with\-Access\-Token\-:@{add\-Contact\-:with\-Access\-Token\-:}}
-\index{add\-Contact\-:with\-Access\-Token\-:@{add\-Contact\-:with\-Access\-Token\-:}!ContactsCollection@{Contacts\-Collection}}
-\subsubsection[{add\-Contact\-:with\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact} $\ast$) add\-Contact\-: 
+\hypertarget{interface_contacts_collection_a74d2efb3feb7bc7576ca32abb3aa7ce9}{\index{Contacts\-Collection@{Contacts\-Collection}!add\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:@{add\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}}
+\index{add\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:@{add\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}!ContactsCollection@{Contacts\-Collection}}
+\subsubsection[{add\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) add\-Contact\-: 
 \begin{DoxyParamCaption}
 \item[{({\bf Contact}$\ast$)}]{contact}
 \item[{withAccessToken:(N\-S\-String$\ast$)}]{access\-Token}
+\item[{actionByVisitor:(B\-O\-O\-L)}]{action}
 \end{DoxyParamCaption}
-}}\label{interface_contacts_collection_a72905faace2d74b337183dfe665fec6d}
+}}\label{interface_contacts_collection_a74d2efb3feb7bc7576ca32abb3aa7ce9}
 Function adds a new contact to the Constant \hyperlink{interface_contact}{Contact} account belonging to the user identified by the token;
 
 
@@ -47,15 +52,15 @@ Function adds a new contact to the Constant \hyperlink{interface_contact}{Contac
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Contact$\ast$ -\/ The function returns the information related to the added contact if action was successful; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with \hyperlink{interface_contact}{Contact} with the information related to the added contact if action was successful; 
 \end{DoxyReturn}
-\hypertarget{interface_contacts_collection_ab8c91f486116cb12ded815bac299ce4c}{\index{Contacts\-Collection@{Contacts\-Collection}!contacts\-With\-Access\-Token\-:@{contacts\-With\-Access\-Token\-:}}
+\hypertarget{interface_contacts_collection_a30f6142c5cbab3b9b31b164d37b8af02}{\index{Contacts\-Collection@{Contacts\-Collection}!contacts\-With\-Access\-Token\-:@{contacts\-With\-Access\-Token\-:}}
 \index{contacts\-With\-Access\-Token\-:@{contacts\-With\-Access\-Token\-:}!ContactsCollection@{Contacts\-Collection}}
-\subsubsection[{contacts\-With\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Array $\ast$) contacts\-With\-Access\-Token\-: 
+\subsubsection[{contacts\-With\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) contacts\-With\-Access\-Token\-: 
 \begin{DoxyParamCaption}
 \item[{(N\-S\-String$\ast$)}]{access\-Token}
 \end{DoxyParamCaption}
-}}\label{interface_contacts_collection_ab8c91f486116cb12ded815bac299ce4c}
+}}\label{interface_contacts_collection_a30f6142c5cbab3b9b31b164d37b8af02}
 Function gets all contacts belonging to the user identified by the token;
 
 
@@ -64,16 +69,16 @@ Function gets all contacts belonging to the user identified by the token;
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-N\-S\-Array$\ast$ -\/ The function returns a array of all contacts belonging to the user identified by the token; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a array of all contacts belonging to the user identified by the token; 
 \end{DoxyReturn}
-\hypertarget{interface_contacts_collection_a2bd4bd65ff939e81c705915cfc2cb011}{\index{Contacts\-Collection@{Contacts\-Collection}!contacts\-With\-Access\-Token\-:and\-Email\-:@{contacts\-With\-Access\-Token\-:and\-Email\-:}}
+\hypertarget{interface_contacts_collection_a6d3c05c35c1b7333880c2ddbbe78b82c}{\index{Contacts\-Collection@{Contacts\-Collection}!contacts\-With\-Access\-Token\-:and\-Email\-:@{contacts\-With\-Access\-Token\-:and\-Email\-:}}
 \index{contacts\-With\-Access\-Token\-:and\-Email\-:@{contacts\-With\-Access\-Token\-:and\-Email\-:}!ContactsCollection@{Contacts\-Collection}}
-\subsubsection[{contacts\-With\-Access\-Token\-:and\-Email\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Array $\ast$) {\bf contacts\-With\-Access\-Token\-:} 
+\subsubsection[{contacts\-With\-Access\-Token\-:and\-Email\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) {\bf contacts\-With\-Access\-Token\-:} 
 \begin{DoxyParamCaption}
 \item[{(N\-S\-String$\ast$)}]{access\-Token}
 \item[{andEmail:(N\-S\-String$\ast$)}]{email}
 \end{DoxyParamCaption}
-}}\label{interface_contacts_collection_a2bd4bd65ff939e81c705915cfc2cb011}
+}}\label{interface_contacts_collection_a6d3c05c35c1b7333880c2ddbbe78b82c}
 Function gets the contacts with a specified email address, belonging to the user identified by the token;
 
 
@@ -84,16 +89,16 @@ Function gets the contacts with a specified email address, belonging to the user
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-N\-S\-Array$\ast$ -\/ The function returns a array containing all the contacts that have the given e-\/mail address; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a array containing all the Contacts that have the given e-\/mail address; 
 \end{DoxyReturn}
-\hypertarget{interface_contacts_collection_abd0ad20e87015e8284f8717ef296dc7c}{\index{Contacts\-Collection@{Contacts\-Collection}!contact\-With\-Access\-Token\-:and\-Id\-:@{contact\-With\-Access\-Token\-:and\-Id\-:}}
+\hypertarget{interface_contacts_collection_a264e1670ea3126d92e80644f85ecd176}{\index{Contacts\-Collection@{Contacts\-Collection}!contact\-With\-Access\-Token\-:and\-Id\-:@{contact\-With\-Access\-Token\-:and\-Id\-:}}
 \index{contact\-With\-Access\-Token\-:and\-Id\-:@{contact\-With\-Access\-Token\-:and\-Id\-:}!ContactsCollection@{Contacts\-Collection}}
-\subsubsection[{contact\-With\-Access\-Token\-:and\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact} $\ast$) contact\-With\-Access\-Token\-: 
+\subsubsection[{contact\-With\-Access\-Token\-:and\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) contact\-With\-Access\-Token\-: 
 \begin{DoxyParamCaption}
 \item[{(N\-S\-String$\ast$)}]{access\-Token}
 \item[{andId:(int)}]{contact\-Id}
 \end{DoxyParamCaption}
-}}\label{interface_contacts_collection_abd0ad20e87015e8284f8717ef296dc7c}
+}}\label{interface_contacts_collection_a264e1670ea3126d92e80644f85ecd176}
 Function gets the contact details for a specific contact, belonging to the user identified by the token;
 
 
@@ -104,7 +109,7 @@ Function gets the contact details for a specific contact, belonging to the user 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Contact$\ast$ -\/ The function returns the information related to the contact with the given id; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_contact}{Contact} that has the information related to the contact with the given id; 
 \end{DoxyReturn}
 \hypertarget{interface_contacts_collection_af8199d98c27b451dddf6141900c468ab}{\index{Contacts\-Collection@{Contacts\-Collection}!delete\-Contact\-From\-Lists\-With\-Access\-Token\-:and\-Contact\-Id\-:@{delete\-Contact\-From\-Lists\-With\-Access\-Token\-:and\-Contact\-Id\-:}}
 \index{delete\-Contact\-From\-Lists\-With\-Access\-Token\-:and\-Contact\-Id\-:@{delete\-Contact\-From\-Lists\-With\-Access\-Token\-:and\-Contact\-Id\-:}!ContactsCollection@{Contacts\-Collection}}
@@ -173,14 +178,15 @@ Function deletes the contact details for a specific contact belonging to the use
 \begin{DoxyReturn}{Returns}
 B\-O\-O\-L$\ast$ -\/ The function returns 1 or 0 depending on the success or failure of the delete action; 
 \end{DoxyReturn}
-\hypertarget{interface_contacts_collection_a70de81543370507661b6df7c586c3a36}{\index{Contacts\-Collection@{Contacts\-Collection}!update\-Contact\-:with\-Access\-Token\-:@{update\-Contact\-:with\-Access\-Token\-:}}
-\index{update\-Contact\-:with\-Access\-Token\-:@{update\-Contact\-:with\-Access\-Token\-:}!ContactsCollection@{Contacts\-Collection}}
-\subsubsection[{update\-Contact\-:with\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact} $\ast$) update\-Contact\-: 
+\hypertarget{interface_contacts_collection_a4e61d6013999c298b76ea10fc128caf6}{\index{Contacts\-Collection@{Contacts\-Collection}!update\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:@{update\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}}
+\index{update\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:@{update\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}!ContactsCollection@{Contacts\-Collection}}
+\subsubsection[{update\-Contact\-:with\-Access\-Token\-:action\-By\-Visitor\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) update\-Contact\-: 
 \begin{DoxyParamCaption}
 \item[{({\bf Contact}$\ast$)}]{contact}
 \item[{withAccessToken:(N\-S\-String$\ast$)}]{access\-Token}
+\item[{actionByVisitor:(B\-O\-O\-L)}]{action}
 \end{DoxyParamCaption}
-}}\label{interface_contacts_collection_a70de81543370507661b6df7c586c3a36}
+}}\label{interface_contacts_collection_a4e61d6013999c298b76ea10fc128caf6}
 Function updates the contact details for a specific contact, belonging to the user identified by the token;
 
 
@@ -191,11 +197,11 @@ Function updates the contact details for a specific contact, belonging to the us
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Contact$\ast$ -\/ The function returns the information related to the updated contact if update is successful; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_contact}{Contact} with the information related to the updated contact if update is successful; 
 \end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-C\-T\-C\-T\-Wrapper/\-Collections/Contacts\-Collection.\-h\item 
-C\-T\-C\-T\-Wrapper/\-Collections/Contacts\-Collection.\-m\end{DoxyCompactItemize}
+Collections/\hyperlink{_contacts_collection_8h}{Contacts\-Collection.\-h}\item 
+Collections/\hyperlink{_contacts_collection_8m}{Contacts\-Collection.\-m}\end{DoxyCompactItemize}

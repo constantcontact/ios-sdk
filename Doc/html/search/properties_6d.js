@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['maxdepth',['maxDepth',['../interface_s_b_json_parser.html#a0378b4ce99a1caeddc4a05da37ca4ffa',1,'SBJsonParser::maxDepth()'],['../interface_s_b_json_stream_parser.html#a1c6f49cb5dd676452994d96498bb5a3f',1,'SBJsonStreamParser::maxDepth()'],['../interface_s_b_json_stream_writer.html#a146e7e950ab74a0e766ffd860e454fc9',1,'SBJsonStreamWriter::maxDepth()'],['../interface_s_b_json_writer.html#a283b4f65ab4d3e1a8112b37dea432689',1,'SBJsonWriter::maxDepth()']]]
+  ['message',['message',['../interface_activity_error.html#a77ba32bbb23300ae5b6fdf6f88b75826',1,'ActivityError']]],
+  ['messagefooter',['messageFooter',['../interface_email_campaign.html#a4772d3418e667984de66395ebac53fbe',1,'EmailCampaign']]],
+  ['middlename',['middleName',['../interface_add_contacts_import_data.html#a9b2b6cb080ea28ad7fab14029efcadbc',1,'AddContactsImportData::middleName()'],['../interface_contact.html#aa42ef7503bc45638d581c61208b7f63e',1,'Contact::middleName()']]],
+  ['modifieddate',['modifiedDate',['../interface_email_campaign.html#abe927838b66aa3df26c10ad15ff049b9',1,'EmailCampaign']]]
 ];

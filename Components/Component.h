@@ -9,6 +9,6 @@
 
 @interface Component : NSObject
 
-+(NSString*)valueForDictionary:(NSDictionary*)dictionary withKey:(NSString*)key;
++ (NSString *)valueForDictionary:(NSDictionary*)dictionary withKey:(NSString*)key;
 
 @end

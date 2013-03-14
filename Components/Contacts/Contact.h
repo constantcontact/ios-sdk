@@ -14,34 +14,31 @@
 
 @interface Contact : NSObject
 
-@property (nonatomic, assign) NSString *actionBy;
 @property (nonatomic, strong) NSMutableArray *addresses;
-@property (nonatomic, assign) NSString *cellPhone;
-@property (nonatomic, assign) NSString *companyName;
+@property (nonatomic, strong) NSString *cellPhone;
+@property (nonatomic, strong) NSString *companyName;
 @property (nonatomic, strong) NSMutableArray *customFields;
-@property (nonatomic, assign) NSString *departmentName;
 @property (nonatomic, strong) NSMutableArray *emailAddresses;
-@property (nonatomic, assign) NSString *fax;
-@property (nonatomic, assign) NSString *firstName;
-@property (nonatomic, assign) NSString *homePhone;
-@property (nonatomic, assign) int id;
-@property (nonatomic, assign) NSString *jobTitle;
-@property (nonatomic, assign) NSString *lastName;
-@property (nonatomic, assign) NSString *lastUpdateTime;
+@property (nonatomic, strong) NSString *fax;
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *homePhone;
+@property (nonatomic, readwrite) int id;
+@property (nonatomic, strong) NSString *jobTitle;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *lastUpdateDate;
 @property (nonatomic, strong) NSMutableArray *lists;
-@property (nonatomic, assign) NSString *middleName;
-@property (nonatomic, assign) NSString *prefixName;
-@property (nonatomic, assign) NSString *sourceDetails;
-@property (nonatomic, assign) BOOL sourceIsUrl;
-@property (nonatomic, assign) NSString *status;
-@property (nonatomic, assign) NSString *webUrl;
-@property (nonatomic, assign) NSString *workPhone;
+@property (nonatomic, strong) NSString *middleName;
+@property (nonatomic, strong) NSString *prefixName;
+@property (nonatomic, strong) NSString *sourceDetails;
+@property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSString *workPhone;
 
--(id)initWithDictionary:(NSDictionary *)dictionary;
--(void) addList:(ContactList*)contactList;
--(void) addEmailAddress:(EmailAddress*)emailAddress;
--(void) addAddress:(Address*)address;
--(NSString*) toJson;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+- (void) addList:(ContactList*)contactList;
+- (void) addEmailAddress:(EmailAddress*)emailAddress;
+- (void) addAddress:(Address*)address;
+- (NSString *) toJson;
+- (NSString *) toJsonForContact;
 
 
 +(Contact*)contactWithDictionary:(NSDictionary *)dictionary;

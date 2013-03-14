@@ -9,7 +9,7 @@
 
 @implementation Component
 
-+(NSString*)valueForDictionary:(NSDictionary*)dictionary withKey:(NSString*)key
++ (NSString *)valueForDictionary:(NSDictionary*)dictionary withKey:(NSString*)key
 {
     return [dictionary objectForKey:key];
 }

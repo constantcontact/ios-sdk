@@ -4,60 +4,187 @@
 <dict>
 	<key>config</key>
 	<dict>
-		<key>api_key</key>
-		<string></string>
 		<key>consumer_secret</key>
-		<string></string>
+		<string>9886d7d656a44f1daac4b5f42c95dda3</string>
 		<key>redirect_uri</key>
-		<string></string>
+		<string>http://www.constantcontact.com/index.jsp</string>
+		<key>api_key</key>
+		<string>4d6f1e55-8673-47fb-88df-3945e2d94781</string>
+	</dict>
+	<key>errors</key>
+	<dict>
+		<key>list_orId</key>
+		<string>Only an interger or ContactList object are allowed for this method.</string>
+		<key>contact_orId</key>
+		<string>Only an interger or Contact object are allowed for this method.</string>
+	</dict>
+	<key>activities_columns</key>
+	<dict>
+		<key>custom_field_13</key>
+		<string>CUSTOM FIELD 13</string>
+		<key>custom_field_7</key>
+		<string>CUSTOM FIELD 7</string>
+		<key>postal_code</key>
+		<string>ZIP/POSTAL CODE</string>
+		<key>work_phone</key>
+		<string>WORK PHONE</string>
+		<key>country</key>
+		<string>COUNTRY</string>
+		<key>custom_field_4</key>
+		<string>CUSTOM FIELD 4</string>
+		<key>company_name</key>
+		<string>COMPANY NAME</string>
+		<key>custom_field_1</key>
+		<string>CUSTOM FIELD 1</string>
+		<key>custom_field_14</key>
+		<string>CUSTOM FIELD 14</string>
+		<key>custom_field_10</key>
+		<string>CUSTOM FIELD 10</string>
+		<key>home_phone</key>
+		<string>HOME PHONE</string>
+		<key>middle_name</key>
+		<string>MIDDLE NAME</string>
+		<key>address1</key>
+		<string>ADDRESS LINE 1</string>
+		<key>city</key>
+		<string>CITY</string>
+		<key>sub_postal_code</key>
+		<string>SUB ZIP/POSTAL CODE</string>
+		<key>last_name</key>
+		<string>LAST NAME</string>
+		<key>state_province</key>
+		<string>US STATE/CA PROVINCE</string>
+		<key>custom_field_6</key>
+		<string>CUSTOM FIELD 6</string>
+		<key>state</key>
+		<string>STATE</string>
+		<key>custom_field_3</key>
+		<string>CUSTOM FIELD 3</string>
+		<key>custom_field_9</key>
+		<string>CUSTOM FIELD 9</string>
+		<key>custom_field_11</key>
+		<string>CUSTOM FIELD 11</string>
+		<key>custom_field_15</key>
+		<string>CUSTOM FIELD 15</string>
+		<key>address2</key>
+		<string>ADDRESS LINE 2</string>
+		<key>email</key>
+		<array>
+			<string>EMAIL</string>
+		</array>
+		<key>custom_field_8</key>
+		<string>CUSTOM FIELD 8</string>
+		<key>custom_field_5</key>
+		<string>CUSTOM FIELD 5</string>
+		<key>custom_field_12</key>
+		<string>CUSTOM FIELD 12</string>
+		<key>job_title</key>
+		<string>JOB TITLE</string>
+		<key>custom_field_2</key>
+		<string>CUSTOM FIELD 2</string>
+		<key>address3</key>
+		<string>ADDRESS LINE 3</string>
+		<key>first_name</key>
+		<string>FIRST NAME</string>
+	</dict>
+	<key>endpoints</key>
+	<dict>
+		<key>membership_list</key>
+		<string>lists/%@/contacts</string>
+		<key>verified_email</key>
+		<string>account/verifiedemailaddresses</string>
+		<key>contact_tracking_forwards</key>
+		<string>contacts/%@/tracking/forwards</string>
+		<key>contact_lists</key>
+		<string>contacts/%d/lists</string>
+		<key>contact_tracking_sends</key>
+		<string>contacts/%@/tracking/sends</string>
+		<key>base_url</key>
+		<string>https://api.constantcontact.com/v2/</string>
+		<key>campaign_tracking_clicks</key>
+		<string>emailcampaigns/%@/tracking/clicks</string>
+		<key>campaign_tracking_unsubscribes</key>
+		<string>emailcampaigns/%@/tracking/unsubscribes</string>
+		<key>contact_tracking_summary</key>
+		<string>contacts/%@/tracking/reports/summary</string>
+		<key>add_contacts_activity</key>
+		<string>activities/addcontacts</string>
+		<key>contact_list</key>
+		<string>contacts/%d/lists/%@</string>
+		<key>campaign_tracking_sends</key>
+		<string>emailcampaigns/%@/tracking/sends</string>
+		<key>contact</key>
+		<string>contacts/%d</string>
+		<key>clear_lists_activity</key>
+		<string>activities/clearlists</string>
+		<key>contact_tracking_bounces</key>
+		<string>contacts/%@/tracking/bounces</string>
+		<key>campaign</key>
+		<string>emailcampaigns/%@</string>
+		<key>campaign_schedules</key>
+		<string>emailcampaigns/%@/schedules</string>
+		<key>campaign_schedule</key>
+		<string>emailcampaigns/%@/schedules/%d</string>
+		<key>campaign_test_sends</key>
+		<string>emailcampaigns/%@/tests</string>
+		<key>campaign_tracking_opens</key>
+		<string>emailcampaigns/%@/tracking/opens</string>
+		<key>list</key>
+		<string>lists/%@</string>
+		<key>activities</key>
+		<string>activities</string>
+		<key>remove_from_lists_activity</key>
+		<string>activities/removefromlists</string>
+		<key>contact_tracking_unsubscribes</key>
+		<string>contacts/%@/tracking/unsubscribes</string>
+		<key>contacts</key>
+		<string>contacts</string>
+		<key>campaigns</key>
+		<string>emailcampaigns</string>
+		<key>contact_tracking_opens</key>
+		<string>contacts/%@/tracking/opens</string>
+		<key>campaign_tracking_summary</key>
+		<string>emailcampaigns/%@/tracking/reports/summary</string>
+		<key>activity</key>
+		<string>activities/%@</string>
+		<key>contact_tracking_clicks</key>
+		<string>contacts/%@/tracking/clicks</string>
+		<key>campaign_tracking_link</key>
+		<string>emailcampaigns/%@/tracking/clicks/%@</string>
+		<key>export_contacts_activity</key>
+		<string>activities/exportcontacts</string>
+		<key>lists</key>
+		<string>lists</string>
+		<key>campaign_tracking_bounces</key>
+		<string>emailcampaigns/%@/tracking/bounces</string>
+		<key>campaign_tracking_forwards</key>
+		<string>emailcampaigns/%@/tracking/forwards</string>
+		<key>contact_tracking_link</key>
+		<string>contacts/%@/tracking/clicks/%@</string>
+	</dict>
+	<key>auth</key>
+	<dict>
+		<key>response_type_token</key>
+		<string>token</string>
+		<key>token_endpoint</key>
+		<string>oauth/token</string>
+		<key>base_url</key>
+		<string>https://oauth2.constantcontact.com/oauth2/</string>
+		<key>response_type_code</key>
+		<string>code</string>
+		<key>authorization_code_grant_type</key>
+		<string>authorization_code</string>
+		<key>authorization_endpoint</key>
+		<string>oauth/siteowner/authorize</string>
 	</dict>
 	<key>login</key>
 	<dict>
 		<key>base_url</key>
 		<string>https://login.constantcontact.com/login/</string>
-		<key>login_endpoint</key>
-		<string>oauth/login</string>
 		<key>host</key>
 		<string>login.constantcontact.com</string>
-	</dict>
-	<key>endpoints</key>
-	<dict>
-		<key>base_url</key>
-		<string>https://api.constantcontact.com/v2/</string>
-		<key>contact</key>
-		<string>contacts/%d</string>
-		<key>contacts</key>
-		<string>contacts</string>
-		<key>list</key>
-		<string>lists/%@</string>
-		<key>lists</key>
-		<string>lists</string>
-		<key>contact_list</key>
-		<string>contacts/%d/lists/%@</string>
-		<key>contact_lists</key>
-		<string>contacts/%d/lists</string>
-	</dict>
-	<key>auth</key>
-	<dict>
-		<key>base_url</key>
-		<string>https://oauth2.constantcontact.com/oauth2/</string>
-		<key>response_type_code</key>
-		<string>code</string>
-		<key>response_type_token</key>
-		<string>token</string>
-		<key>authorization_code_grant_type</key>
-		<string>authorization_code</string>
-		<key>authorization_endpoint</key>
-		<string>oauth/siteowner/authorize</string>
-		<key>token_endpoint</key>
-		<string>oauth/token</string>
-	</dict>
-	<key>errors</key>
-	<dict>
-		<key>contact_orId</key>
-		<string>Only an interger or Contact object are allowed for this method.</string>
-		<key>list_orId</key>
-		<string>Only an interger or ContactList object are allowed for this method.</string>
+		<key>login_endpoint</key>
+		<string>oauth/login</string>
 	</dict>
 </dict>
 </plist>

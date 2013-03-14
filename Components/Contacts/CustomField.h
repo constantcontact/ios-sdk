@@ -10,10 +10,10 @@
 
 @interface CustomField : NSObject
 
-@property (nonatomic, assign) NSString *name;
-@property (nonatomic, assign) NSString *value;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *value;
 
--(id)initWithDictionary:(NSDictionary *)dictionary;
-+(CustomField*)customFieldWithDictionary:(NSDictionary *)dictionary;
-
+- (id)initWithDictionary:(NSDictionary *)dictionary;
++ (CustomField *)customFieldWithDictionary:(NSDictionary *)dictionary;
+- (id) proxyForJson;
 @end

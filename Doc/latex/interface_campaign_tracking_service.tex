@@ -1,0 +1,228 @@
+\hypertarget{interface_campaign_tracking_service}{\section{Campaign\-Tracking\-Service Class Reference}
+\label{interface_campaign_tracking_service}\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}}
+}
+
+
+{\ttfamily \#import $<$Campaign\-Tracking\-Service.\-h$>$}
+
+Inheritance diagram for Campaign\-Tracking\-Service\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_campaign_tracking_service}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_a5af06e3167b484b9e8b23b52b6cf85b1}{get\-Bounces\-With\-Access\-Token\-:campaign\-I\-D\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_a932afb9c5c513a5659a33df03fd586d0}{get\-Clicks\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_a31e3988fa79178cd49105cc1f39ee7ea}{get\-Forwards\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_aa631a5089b65012afd55613611389b4b}{get\-Opens\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_aec1825fba92343e0b0ed256b28a1d261}{get\-Sends\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_a8a10f5113dcbba7d2b65d77ac2cb5b32}{get\-Opt\-Outs\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_a320807f0a7923d1321259480d28fbbd1}{get\-Clicks\-By\-Linkwith\-Access\-Token\-:campaign\-Id\-:link\-Id\-:and\-Params\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_campaign_tracking_service_a6521f96834632a43e7f8ad4a6a17f17c}{get\-Summary\-With\-Access\-Token\-:and\-Campaign\-Id\-:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Performs all actions pertaining to Constant \hyperlink{interface_contact}{Contact} Campaign Tracking 
+
+\subsection{Method Documentation}
+\hypertarget{interface_campaign_tracking_service_a5af06e3167b484b9e8b23b52b6cf85b1}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Bounces\-With\-Access\-Token\-:campaign\-I\-D\-:and\-Params\-:@{get\-Bounces\-With\-Access\-Token\-:campaign\-I\-D\-:and\-Params\-:}}
+\index{get\-Bounces\-With\-Access\-Token\-:campaign\-I\-D\-:and\-Params\-:@{get\-Bounces\-With\-Access\-Token\-:campaign\-I\-D\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Bounces\-With\-Access\-Token\-:campaign\-I\-D\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Bounces\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignID:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_a5af06e3167b484b9e8b23b52b6cf85b1}
+Get a result set of bounces for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a Results\-Set of Bounce\-Activityes 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_a320807f0a7923d1321259480d28fbbd1}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Clicks\-By\-Linkwith\-Access\-Token\-:campaign\-Id\-:link\-Id\-:and\-Params\-:@{get\-Clicks\-By\-Linkwith\-Access\-Token\-:campaign\-Id\-:link\-Id\-:and\-Params\-:}}
+\index{get\-Clicks\-By\-Linkwith\-Access\-Token\-:campaign\-Id\-:link\-Id\-:and\-Params\-:@{get\-Clicks\-By\-Linkwith\-Access\-Token\-:campaign\-Id\-:link\-Id\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Clicks\-By\-Linkwith\-Access\-Token\-:campaign\-Id\-:link\-Id\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Clicks\-By\-Linkwith\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{linkId:(N\-S\-String $\ast$)}]{link\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_a320807f0a7923d1321259480d28fbbd1}
+Get clicks for a specific link for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request \\
+\hline
+{\em N\-S\-String} & $\ast$link\-Id -\/ the id of the specific link you want\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_result_set}{Result\-Set} of all the Clicks on a specific link; 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_a932afb9c5c513a5659a33df03fd586d0}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Clicks\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Clicks\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}}
+\index{get\-Clicks\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Clicks\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Clicks\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Clicks\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_a932afb9c5c513a5659a33df03fd586d0}
+Get clicks for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_result_set}{Result\-Set} of Click\-Activityes 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_a31e3988fa79178cd49105cc1f39ee7ea}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Forwards\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Forwards\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}}
+\index{get\-Forwards\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Forwards\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Forwards\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Forwards\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_a31e3988fa79178cd49105cc1f39ee7ea}
+Get forwards for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_result_set}{Result\-Set} of Forward\-Activityes 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_aa631a5089b65012afd55613611389b4b}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Opens\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Opens\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}}
+\index{get\-Opens\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Opens\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Opens\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Opens\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_aa631a5089b65012afd55613611389b4b}
+Get opens for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_result_set}{Result\-Set} of Open\-Activityes 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_a8a10f5113dcbba7d2b65d77ac2cb5b32}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Opt\-Outs\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Opt\-Outs\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}}
+\index{get\-Opt\-Outs\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Opt\-Outs\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Opt\-Outs\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Opt\-Outs\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_a8a10f5113dcbba7d2b65d77ac2cb5b32}
+Get opt outs for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_result_set}{Result\-Set} of Opt\-Out\-Activityes; 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_aec1825fba92343e0b0ed256b28a1d261}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Sends\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Sends\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}}
+\index{get\-Sends\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:@{get\-Sends\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Sends\-With\-Access\-Token\-:campaign\-Id\-:and\-Params\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Sends\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{campaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\item[{andParams:(N\-S\-String $\ast$)}]{params}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_aec1825fba92343e0b0ed256b28a1d261}
+Get sends for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service \\
+\hline
+{\em N\-S\-String} & $\ast$param -\/ query param to be appended to request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a \hyperlink{interface_result_set}{Result\-Set} of Send\-Activityes 
+\end{DoxyReturn}
+\hypertarget{interface_campaign_tracking_service_a6521f96834632a43e7f8ad4a6a17f17c}{\index{Campaign\-Tracking\-Service@{Campaign\-Tracking\-Service}!get\-Summary\-With\-Access\-Token\-:and\-Campaign\-Id\-:@{get\-Summary\-With\-Access\-Token\-:and\-Campaign\-Id\-:}}
+\index{get\-Summary\-With\-Access\-Token\-:and\-Campaign\-Id\-:@{get\-Summary\-With\-Access\-Token\-:and\-Campaign\-Id\-:}!CampaignTrackingService@{Campaign\-Tracking\-Service}}
+\subsubsection[{get\-Summary\-With\-Access\-Token\-:and\-Campaign\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Summary\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{access\-Token}
+\item[{andCampaignId:(N\-S\-String $\ast$)}]{campaign\-Id}
+\end{DoxyParamCaption}
+}}\label{interface_campaign_tracking_service_a6521f96834632a43e7f8ad4a6a17f17c}
+Get a summary of reporting data for a given campaign
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String} & $\ast$access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token \\
+\hline
+{\em N\-S\-String} & $\ast$campaign\-Id -\/ id of the Campaign to which we want to see the tracking service\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interface_tracking_summary}{Tracking\-Summary} $\ast$ -\/ the summary of all the tracking services related to the campaign 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Services/\hyperlink{_campaign_tracking_service_8h}{Campaign\-Tracking\-Service.\-h}\item 
+Services/\hyperlink{_campaign_tracking_service_8m}{Campaign\-Tracking\-Service.\-m}\end{DoxyCompactItemize}

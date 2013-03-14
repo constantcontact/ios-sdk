@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['listswithaccesstoken_3a',['listsWithAccessToken:',['../interface_lists_collection.html#a0f8c52c5fe31334adc47fe9eda725eab',1,'ListsCollection']]],
-  ['listwithaccesstoken_3aandlistid_3a',['listWithAccessToken:andListId:',['../interface_lists_collection.html#a35b616d645a1c36c90e1d85505280f35',1,'ListsCollection']]]
+  ['listswithaccesstoken_3a',['listsWithAccessToken:',['../interface_lists_collection.html#a1d59e04e11816254c3280befb94be15c',1,'ListsCollection']]],
+  ['listwithaccesstoken_3aandlistid_3a',['listWithAccessToken:andListId:',['../interface_lists_collection.html#a7e2ee804f245c4a2f5254f7c9337db1d',1,'ListsCollection']]]
 ];

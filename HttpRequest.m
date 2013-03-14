@@ -82,6 +82,13 @@
     [urlRequest setHTTPMethod:method];
     [urlRequest setValue:[NSString stringWithFormat:@"%d", [postData length]] forHTTPHeaderField:@"Content-Length"];
     [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    if(headers.count > 0)
+    {
+        NSString *authorization = [NSString stringWithFormat:@"Bearer %@",[headers objectAtIndex:0]];
+        [urlRequest setValue:authorization forHTTPHeaderField:@"Authorization"];
+    }
+    
     [urlRequest setHTTPBody:postData];
     
     NSData *responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
@@ -96,18 +103,20 @@
     NSMutableDictionary *resultDictionary = nil;
     if([responseJSON isKindOfClass:[NSArray class]])
     {
-        if([[responseJSON objectAtIndex:0] objectForKey:@"error_key"])
+        if([responseJSON count] > 0)
         {
-            NSLog(@"ErrorKey: %@ - ErrorMessage: %@", [[responseJSON objectAtIndex:0] objectForKey:@"error_key"], [[responseJSON objectAtIndex:0] objectForKey:@"error_message"]);
-            return nil;
-        }
-        
-        int i=0;
-        resultDictionary = [[NSMutableDictionary alloc]init];
-        for (NSDictionary *dict in responseJSON)
-        {
-            [resultDictionary setValue:dict forKey:[NSString stringWithFormat:@"DictNr%d",i]];
-            i++;
+            if([[responseJSON objectAtIndex:0] objectForKey:@"error_key"])
+            {
+                NSLog(@"ErrorKey: %@ - ErrorMessage: %@", [[responseJSON objectAtIndex:0] objectForKey:@"error_key"], [[responseJSON objectAtIndex:0] objectForKey:@"error_message"]);
+                
+                resultDictionary = [[NSMutableDictionary alloc]init];
+                [resultDictionary setObject:[responseJSON objectAtIndex:0] forKey:@"ERROR"];
+                
+                return resultDictionary;
+            }
+            
+            resultDictionary = [[NSMutableDictionary alloc]init];
+            [resultDictionary setObject:responseJSON forKey:@"result"];
         }
     }
     if ([responseJSON isKindOfClass:[NSDictionary class]])
@@ -115,6 +124,12 @@
        if([responseJSON objectForKey:@"error_key"])
        {
          NSLog(@"ErrorKey: %@ - ErrorMessage: %@", [responseJSON objectForKey:@"error_key"], [responseJSON objectForKey:@"error_message"]);
+           
+           resultDictionary = [[NSMutableDictionary alloc]init];
+           [resultDictionary setObject:[responseJSON objectAtIndex:0] forKey:@"ERROR"];
+           
+           return resultDictionary;
+           
          return nil;
        }
         resultDictionary = responseJSON;

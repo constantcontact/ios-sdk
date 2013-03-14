@@ -1,8 +1,0 @@
-Objective-\/\-C types are mapped to J\-S\-O\-N types in the following way\-:
-
-\begin{DoxyItemize}
-\item N\-S\-Null -\/$>$ null \item N\-S\-String -\/$>$ string \item N\-S\-Array -\/$>$ array \item N\-S\-Dictionary -\/$>$ object \item N\-S\-Number's -\/init\-With\-Bool\-:Y\-E\-S -\/$>$ true \item N\-S\-Number's -\/init\-With\-Bool\-:N\-O -\/$>$ false \item N\-S\-Number -\/$>$ number\end{DoxyItemize}
-\begin{DoxyNote}{Note}
-In J\-S\-O\-N the keys of an object must be strings. N\-S\-Dictionary keys need not be, but attempting to convert an N\-S\-Dictionary with non-\/string keys into J\-S\-O\-N will throw an exception.
-\end{DoxyNote}
-N\-S\-Number instances created with the -\/number\-With\-Bool\-: method are converted into the J\-S\-O\-N boolean \char`\"{}true\char`\"{} and \char`\"{}false\char`\"{} values, and vice versa. Any other N\-S\-Number instances are converted to a J\-S\-O\-N number the way you would expect. 

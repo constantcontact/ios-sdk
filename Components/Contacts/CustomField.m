@@ -20,7 +20,7 @@
     return self;
 }
 
--(id)initWithDictionary:(NSDictionary *)dictionary
+- (id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init])
     {
@@ -31,9 +31,10 @@
     return self;
 }
 
-+(CustomField*)customFieldWithDictionary:(NSDictionary *)dictionary
++ (CustomField *)customFieldWithDictionary:(NSDictionary *)dictionary
 {
     CustomField *customField = [[CustomField alloc] init];
+    
     customField.name = [dictionary objectForKey:@"name"];
     customField.value = [dictionary objectForKey:@"value"];
     
@@ -41,7 +42,7 @@
 }
 
 
--(id) proxyForJson
+- (id) proxyForJson
 {
     return [NSDictionary dictionaryWithObjectsAndKeys:_name, @"name", _value, @"value", nil];
 }

@@ -13,37 +13,73 @@
 {
     if (self = [super init])
     {
-        _id = 0;
+        _id = @"";
         _name = @"";
         _status = @"";
-        _optInDefault = NO;
         _contactCount = 0;
     }
     
     return self;
 }
 
--(id)initWithDictionary:(NSDictionary *)dictionary
+- (id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init])
     {
-        _id = [[Component valueForDictionary:dictionary withKey:@"id"]intValue];
+        _id = [Component valueForDictionary:dictionary withKey:@"id"];
         _name = [Component valueForDictionary:dictionary withKey:@"name"];
         _status = [Component valueForDictionary:dictionary withKey:@"status"];
-        _optInDefault = [[Component valueForDictionary:dictionary withKey:@"opt_in_default"] boolValue];
         _contactCount = [[Component valueForDictionary:dictionary withKey:@"contact_count"] intValue];
     }
     return self;
 }
 
--(id) proxyForJson
++ (ContactList *)contactListWithDictionary:(NSDictionary *)dictionary
 {
-    return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:_id ], @"id", _name, @"name", _status, @"status", [NSNumber numberWithBool:_optInDefault], @"opt_in_default",[NSNumber numberWithInt: _contactCount], @"contact_count", nil];
+    ContactList *contactList = [[ContactList alloc] init];
+    
+    contactList.id = [Component valueForDictionary:dictionary withKey:@"id"];
+    contactList.name = [Component valueForDictionary:dictionary withKey:@"name"];
+    contactList.status = [Component valueForDictionary:dictionary withKey:@"status"];
+    contactList.contactCount = [[Component valueForDictionary:dictionary withKey:@"contact_count"] intValue];
+    
+    return contactList;
 }
 
--(NSString*) toJson
+- (id) proxyForJson
+{
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_id, @"id",nil];// _name, @"name", _status, @"status", [NSNumber numberWithInt: _contactCount], @"contact_count", nil];
+
+    return dict;
+}
+
+- (NSString *) toJson
 {
     NSString *jsonDict = [self proxyForJson];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    NSString *jsonString = @"";
+    
+    if (!jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    
+    return jsonString;
+}
+- (id) proxyForJsonLists
+{
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_id, @"id", _name, @"name", _status, @"status", [NSNumber numberWithInt: _contactCount], @"contact_count", nil];
+    
+    return dict;
+}
+
+- (NSString *) toJsonCampaigns
+{
+    NSString *jsonDict = [self proxyForJsonLists];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted

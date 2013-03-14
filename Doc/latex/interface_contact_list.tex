@@ -1,6 +1,10 @@
 \hypertarget{interface_contact_list}{\section{Contact\-List Class Reference}
 \label{interface_contact_list}\index{Contact\-List@{Contact\-List}}
 }
+
+
+{\ttfamily \#import $<$Contact\-List.\-h$>$}
+
 Inheritance diagram for Contact\-List\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,33 +14,86 @@ Inheritance diagram for Contact\-List\-:\begin{figure}[H]
 \subsection*{Instance Methods}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interface_contact_list_a2d39e69823679158bf8ea9d360d0ced0}{(id) -\/ {\bfseries init\-With\-Dictionary\-:}}\label{interface_contact_list_a2d39e69823679158bf8ea9d360d0ced0}
-
+(\hyperlink{interface_contact_list_a49c285eb7e79510df7174dc7dc98cfb3}{id}) -\/ \hyperlink{interface_contact_list_a2d39e69823679158bf8ea9d360d0ced0}{init\-With\-Dictionary\-:}
 \item 
-\hypertarget{interface_contact_list_af70b04480731d9a36c88af1455aabfba}{(N\-S\-String $\ast$) -\/ {\bfseries to\-Json}}\label{interface_contact_list_af70b04480731d9a36c88af1455aabfba}
-
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_contact_list_af70b04480731d9a36c88af1455aabfba}{to\-Json}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_contact_list_ae53a1e421705939a439d719c6534a31b}{to\-Json\-Campaigns}
+\item 
+(\hyperlink{interface_contact_list_a49c285eb7e79510df7174dc7dc98cfb3}{id}) -\/ \hyperlink{interface_contact_list_a21d8e2af5f9529c26c1a691a8ef67ab5}{proxy\-For\-Json}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_contact_list}{Contact\-List} $\ast$) + \hyperlink{interface_contact_list_a66324c7c96144612c4993d059a79f48e}{contact\-List\-With\-Dictionary\-:}
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interface_contact_list_aa54f2323fcf5e876cee79418cad45215}{int {\bfseries contact\-Count}}\label{interface_contact_list_aa54f2323fcf5e876cee79418cad45215}
-
+int \hyperlink{interface_contact_list_aa54f2323fcf5e876cee79418cad45215}{contact\-Count}
 \item 
-\hypertarget{interface_contact_list_a7fc68eec3b0c15730a69a6fca1ccfeb6}{int {\bfseries id}}\label{interface_contact_list_a7fc68eec3b0c15730a69a6fca1ccfeb6}
-
+N\-S\-String $\ast$ \hyperlink{interface_contact_list_a49c285eb7e79510df7174dc7dc98cfb3}{id}
 \item 
-\hypertarget{interface_contact_list_a653eafbd8a3796d3ad72f4b66d521810}{N\-S\-String $\ast$ {\bfseries name}}\label{interface_contact_list_a653eafbd8a3796d3ad72f4b66d521810}
-
+N\-S\-String $\ast$ \hyperlink{interface_contact_list_a653eafbd8a3796d3ad72f4b66d521810}{name}
 \item 
-\hypertarget{interface_contact_list_adf2cac902652c9df6ec173ca2ab332f0}{B\-O\-O\-L {\bfseries opt\-In\-Default}}\label{interface_contact_list_adf2cac902652c9df6ec173ca2ab332f0}
-
-\item 
-\hypertarget{interface_contact_list_ae5c6acb5c88634460a5cac1765e68586}{N\-S\-String $\ast$ {\bfseries status}}\label{interface_contact_list_ae5c6acb5c88634460a5cac1765e68586}
-
+N\-S\-String $\ast$ \hyperlink{interface_contact_list_ae5c6acb5c88634460a5cac1765e68586}{status}
 \end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_contact_list_a66324c7c96144612c4993d059a79f48e}{\index{Contact\-List@{Contact\-List}!contact\-List\-With\-Dictionary\-:@{contact\-List\-With\-Dictionary\-:}}
+\index{contact\-List\-With\-Dictionary\-:@{contact\-List\-With\-Dictionary\-:}!ContactList@{Contact\-List}}
+\subsubsection[{contact\-List\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact\-List} $\ast$) contact\-List\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_contact_list_a66324c7c96144612c4993d059a79f48e}
+\hypertarget{interface_contact_list_a2d39e69823679158bf8ea9d360d0ced0}{\index{Contact\-List@{Contact\-List}!init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}}
+\index{init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}!ContactList@{Contact\-List}}
+\subsubsection[{init\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) init\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_contact_list_a2d39e69823679158bf8ea9d360d0ced0}
+\hypertarget{interface_contact_list_a21d8e2af5f9529c26c1a691a8ef67ab5}{\index{Contact\-List@{Contact\-List}!proxy\-For\-Json@{proxy\-For\-Json}}
+\index{proxy\-For\-Json@{proxy\-For\-Json}!ContactList@{Contact\-List}}
+\subsubsection[{proxy\-For\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) proxy\-For\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_contact_list_a21d8e2af5f9529c26c1a691a8ef67ab5}
+\hypertarget{interface_contact_list_af70b04480731d9a36c88af1455aabfba}{\index{Contact\-List@{Contact\-List}!to\-Json@{to\-Json}}
+\index{to\-Json@{to\-Json}!ContactList@{Contact\-List}}
+\subsubsection[{to\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) to\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_contact_list_af70b04480731d9a36c88af1455aabfba}
+\hypertarget{interface_contact_list_ae53a1e421705939a439d719c6534a31b}{\index{Contact\-List@{Contact\-List}!to\-Json\-Campaigns@{to\-Json\-Campaigns}}
+\index{to\-Json\-Campaigns@{to\-Json\-Campaigns}!ContactList@{Contact\-List}}
+\subsubsection[{to\-Json\-Campaigns}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) to\-Json\-Campaigns 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_contact_list_ae53a1e421705939a439d719c6534a31b}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_contact_list_aa54f2323fcf5e876cee79418cad45215}{\index{Contact\-List@{Contact\-List}!contact\-Count@{contact\-Count}}
+\index{contact\-Count@{contact\-Count}!ContactList@{Contact\-List}}
+\subsubsection[{contact\-Count}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) contact\-Count\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_contact_list_aa54f2323fcf5e876cee79418cad45215}
+\hypertarget{interface_contact_list_a49c285eb7e79510df7174dc7dc98cfb3}{\index{Contact\-List@{Contact\-List}!id@{id}}
+\index{id@{id}!ContactList@{Contact\-List}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_contact_list_a49c285eb7e79510df7174dc7dc98cfb3}
+\hypertarget{interface_contact_list_a653eafbd8a3796d3ad72f4b66d521810}{\index{Contact\-List@{Contact\-List}!name@{name}}
+\index{name@{name}!ContactList@{Contact\-List}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_contact_list_a653eafbd8a3796d3ad72f4b66d521810}
+\hypertarget{interface_contact_list_ae5c6acb5c88634460a5cac1765e68586}{\index{Contact\-List@{Contact\-List}!status@{status}}
+\index{status@{status}!ContactList@{Contact\-List}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_contact_list_ae5c6acb5c88634460a5cac1765e68586}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-C\-T\-C\-T\-Wrapper/\-Components/\-Contacts/Contact\-List.\-h\item 
-C\-T\-C\-T\-Wrapper/\-Components/\-Contacts/Contact\-List.\-m\end{DoxyCompactItemize}
+Components/\-Contacts/\hyperlink{_contact_list_8h}{Contact\-List.\-h}\item 
+Components/\-Contacts/\hyperlink{_contact_list_8m}{Contact\-List.\-m}\end{DoxyCompactItemize}

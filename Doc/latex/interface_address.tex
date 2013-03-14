@@ -1,6 +1,10 @@
 \hypertarget{interface_address}{\section{Address Class Reference}
 \label{interface_address}\index{Address@{Address}}
 }
+
+
+{\ttfamily \#import $<$Address.\-h$>$}
+
 Inheritance diagram for Address\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,48 +14,107 @@ Inheritance diagram for Address\-:\begin{figure}[H]
 \subsection*{Instance Methods}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interface_address_aaddeca97436531e934e9faabc74b5c81}{(id) -\/ {\bfseries init\-With\-Dictionary\-:}}\label{interface_address_aaddeca97436531e934e9faabc74b5c81}
-
+(id) -\/ \hyperlink{interface_address_aaddeca97436531e934e9faabc74b5c81}{init\-With\-Dictionary\-:}
+\item 
+(id) -\/ \hyperlink{interface_address_a3f23d482eaeb09f3a874c93bc0985675}{proxy\-For\-Json}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_address_a0a3ad7a9d7fdca9ff412ea5c5a85fabe}{to\-Json}
 \end{DoxyCompactItemize}
 \subsection*{Class Methods}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interface_address_acedade83516d78418c2208c113b21092}{(\hyperlink{interface_address}{Address} $\ast$) + {\bfseries address\-With\-Dictionary\-:}}\label{interface_address_acedade83516d78418c2208c113b21092}
-
+(\hyperlink{interface_address}{Address} $\ast$) + \hyperlink{interface_address_acedade83516d78418c2208c113b21092}{address\-With\-Dictionary\-:}
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interface_address_a1dfe784ca902520df620eff595d9c508}{N\-S\-String $\ast$ {\bfseries address\-Type}}\label{interface_address_a1dfe784ca902520df620eff595d9c508}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_a1dfe784ca902520df620eff595d9c508}{address\-Type}
 \item 
-\hypertarget{interface_address_ad47d0a1fe7c82b2c247f33cd745380df}{N\-S\-String $\ast$ {\bfseries city}}\label{interface_address_ad47d0a1fe7c82b2c247f33cd745380df}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_ad47d0a1fe7c82b2c247f33cd745380df}{city}
 \item 
-\hypertarget{interface_address_a8f80be382f87d243579dcb31c8ae1d09}{N\-S\-String $\ast$ {\bfseries country\-Code}}\label{interface_address_a8f80be382f87d243579dcb31c8ae1d09}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_a8f80be382f87d243579dcb31c8ae1d09}{country\-Code}
 \item 
-\hypertarget{interface_address_aa8393bdb98aa8a6f9abd997e12acdecd}{N\-S\-String $\ast$ {\bfseries line1}}\label{interface_address_aa8393bdb98aa8a6f9abd997e12acdecd}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_aa8393bdb98aa8a6f9abd997e12acdecd}{line1}
 \item 
-\hypertarget{interface_address_a9c46d3e585f0b05031b7b48a3755037b}{N\-S\-String $\ast$ {\bfseries line2}}\label{interface_address_a9c46d3e585f0b05031b7b48a3755037b}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_a9c46d3e585f0b05031b7b48a3755037b}{line2}
 \item 
-\hypertarget{interface_address_adb8395d68afe00ae8bd72871c5d6e3fa}{N\-S\-String $\ast$ {\bfseries line3}}\label{interface_address_adb8395d68afe00ae8bd72871c5d6e3fa}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_adb8395d68afe00ae8bd72871c5d6e3fa}{line3}
 \item 
-\hypertarget{interface_address_aa8e603be41326e86b6a15edff1b1588c}{N\-S\-String $\ast$ {\bfseries postal\-Code}}\label{interface_address_aa8e603be41326e86b6a15edff1b1588c}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_aa8e603be41326e86b6a15edff1b1588c}{postal\-Code}
 \item 
-\hypertarget{interface_address_abc54f84b280bc9ab6e8017f2bd62610b}{N\-S\-String $\ast$ {\bfseries state\-Code}}\label{interface_address_abc54f84b280bc9ab6e8017f2bd62610b}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_abc54f84b280bc9ab6e8017f2bd62610b}{state\-Code}
 \item 
-\hypertarget{interface_address_a93d53fa65fc90ec08e491c2d285f10e8}{N\-S\-String $\ast$ {\bfseries sub\-Postal\-Code}}\label{interface_address_a93d53fa65fc90ec08e491c2d285f10e8}
-
+N\-S\-String $\ast$ \hyperlink{interface_address_a93d53fa65fc90ec08e491c2d285f10e8}{sub\-Postal\-Code}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_address_a1cf0af3f0d1124b3d85935e756f5d4fd}{state\-Province}
 \end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_address_acedade83516d78418c2208c113b21092}{\index{Address@{Address}!address\-With\-Dictionary\-:@{address\-With\-Dictionary\-:}}
+\index{address\-With\-Dictionary\-:@{address\-With\-Dictionary\-:}!Address@{Address}}
+\subsubsection[{address\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Address} $\ast$) address\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_address_acedade83516d78418c2208c113b21092}
+\hypertarget{interface_address_aaddeca97436531e934e9faabc74b5c81}{\index{Address@{Address}!init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}}
+\index{init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}!Address@{Address}}
+\subsubsection[{init\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_address_aaddeca97436531e934e9faabc74b5c81}
+\hypertarget{interface_address_a3f23d482eaeb09f3a874c93bc0985675}{\index{Address@{Address}!proxy\-For\-Json@{proxy\-For\-Json}}
+\index{proxy\-For\-Json@{proxy\-For\-Json}!Address@{Address}}
+\subsubsection[{proxy\-For\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) proxy\-For\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_address_a3f23d482eaeb09f3a874c93bc0985675}
+\hypertarget{interface_address_a0a3ad7a9d7fdca9ff412ea5c5a85fabe}{\index{Address@{Address}!to\-Json@{to\-Json}}
+\index{to\-Json@{to\-Json}!Address@{Address}}
+\subsubsection[{to\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) to\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_address_a0a3ad7a9d7fdca9ff412ea5c5a85fabe}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_address_a1dfe784ca902520df620eff595d9c508}{\index{Address@{Address}!address\-Type@{address\-Type}}
+\index{address\-Type@{address\-Type}!Address@{Address}}
+\subsubsection[{address\-Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) address\-Type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_a1dfe784ca902520df620eff595d9c508}
+\hypertarget{interface_address_ad47d0a1fe7c82b2c247f33cd745380df}{\index{Address@{Address}!city@{city}}
+\index{city@{city}!Address@{Address}}
+\subsubsection[{city}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) city\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_ad47d0a1fe7c82b2c247f33cd745380df}
+\hypertarget{interface_address_a8f80be382f87d243579dcb31c8ae1d09}{\index{Address@{Address}!country\-Code@{country\-Code}}
+\index{country\-Code@{country\-Code}!Address@{Address}}
+\subsubsection[{country\-Code}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) country\-Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_a8f80be382f87d243579dcb31c8ae1d09}
+\hypertarget{interface_address_aa8393bdb98aa8a6f9abd997e12acdecd}{\index{Address@{Address}!line1@{line1}}
+\index{line1@{line1}!Address@{Address}}
+\subsubsection[{line1}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) line1\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_aa8393bdb98aa8a6f9abd997e12acdecd}
+\hypertarget{interface_address_a9c46d3e585f0b05031b7b48a3755037b}{\index{Address@{Address}!line2@{line2}}
+\index{line2@{line2}!Address@{Address}}
+\subsubsection[{line2}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) line2\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_a9c46d3e585f0b05031b7b48a3755037b}
+\hypertarget{interface_address_adb8395d68afe00ae8bd72871c5d6e3fa}{\index{Address@{Address}!line3@{line3}}
+\index{line3@{line3}!Address@{Address}}
+\subsubsection[{line3}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) line3\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_adb8395d68afe00ae8bd72871c5d6e3fa}
+\hypertarget{interface_address_aa8e603be41326e86b6a15edff1b1588c}{\index{Address@{Address}!postal\-Code@{postal\-Code}}
+\index{postal\-Code@{postal\-Code}!Address@{Address}}
+\subsubsection[{postal\-Code}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) postal\-Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_aa8e603be41326e86b6a15edff1b1588c}
+\hypertarget{interface_address_abc54f84b280bc9ab6e8017f2bd62610b}{\index{Address@{Address}!state\-Code@{state\-Code}}
+\index{state\-Code@{state\-Code}!Address@{Address}}
+\subsubsection[{state\-Code}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) state\-Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_abc54f84b280bc9ab6e8017f2bd62610b}
+\hypertarget{interface_address_a1cf0af3f0d1124b3d85935e756f5d4fd}{\index{Address@{Address}!state\-Province@{state\-Province}}
+\index{state\-Province@{state\-Province}!Address@{Address}}
+\subsubsection[{state\-Province}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) state\-Province\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_a1cf0af3f0d1124b3d85935e756f5d4fd}
+\hypertarget{interface_address_a93d53fa65fc90ec08e491c2d285f10e8}{\index{Address@{Address}!sub\-Postal\-Code@{sub\-Postal\-Code}}
+\index{sub\-Postal\-Code@{sub\-Postal\-Code}!Address@{Address}}
+\subsubsection[{sub\-Postal\-Code}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) sub\-Postal\-Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_address_a93d53fa65fc90ec08e491c2d285f10e8}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-C\-T\-C\-T\-Wrapper/\-Components/\-Contacts/Address.\-h\item 
-C\-T\-C\-T\-Wrapper/\-Components/\-Contacts/Address.\-m\end{DoxyCompactItemize}
+Components/\-Contacts/\hyperlink{_address_8h}{Address.\-h}\item 
+Components/\-Contacts/\hyperlink{_address_8m}{Address.\-m}\end{DoxyCompactItemize}

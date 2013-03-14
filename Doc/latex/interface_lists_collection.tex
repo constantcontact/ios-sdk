@@ -1,6 +1,10 @@
 \hypertarget{interface_lists_collection}{\section{Lists\-Collection Class Reference}
 \label{interface_lists_collection}\index{Lists\-Collection@{Lists\-Collection}}
 }
+
+
+{\ttfamily \#import $<$Lists\-Collection.\-h$>$}
+
 Inheritance diagram for Lists\-Collection\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,23 +14,29 @@ Inheritance diagram for Lists\-Collection\-:\begin{figure}[H]
 \subsection*{Class Methods}
 \begin{DoxyCompactItemize}
 \item 
-(N\-S\-Array $\ast$) + \hyperlink{interface_lists_collection_a0f8c52c5fe31334adc47fe9eda725eab}{lists\-With\-Access\-Token\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_lists_collection_a1d59e04e11816254c3280befb94be15c}{lists\-With\-Access\-Token\-:}
 \item 
-(\hyperlink{interface_contact_list}{Contact\-List} $\ast$) + \hyperlink{interface_lists_collection_aee455d56035cf11041a4677a47172369}{add\-List\-:with\-Access\-Token\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_lists_collection_a9d2bb9fc392b0c4a1445a9ebac3777c2}{add\-List\-:with\-Access\-Token\-:}
 \item 
-(\hyperlink{interface_contact_list}{Contact\-List} $\ast$) + \hyperlink{interface_lists_collection_a35b616d645a1c36c90e1d85505280f35}{list\-With\-Access\-Token\-:and\-List\-Id\-:}
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_lists_collection_a7e2ee804f245c4a2f5254f7c9337db1d}{list\-With\-Access\-Token\-:and\-List\-Id\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_lists_collection_ae0748049c69183491b6e91fa9251789a}{get\-Contacts\-With\-Access\-Token\-:from\-List\-:}
+\item 
+(N\-S\-Dictionary $\ast$) + \hyperlink{interface_lists_collection_a3e4b6508bb1ca2b8960db6f533dbf118}{update\-Access\-Token\-:and\-List\-Id\-:and\-List\-:}
+\item 
+(B\-O\-O\-L) + \hyperlink{interface_lists_collection_a84d4c02981fd98321417e2e35d9a14a6}{delete\-List\-With\-Access\-Token\-:and\-List\-Id\-:}
 \end{DoxyCompactItemize}
 
 
 \subsection{Method Documentation}
-\hypertarget{interface_lists_collection_aee455d56035cf11041a4677a47172369}{\index{Lists\-Collection@{Lists\-Collection}!add\-List\-:with\-Access\-Token\-:@{add\-List\-:with\-Access\-Token\-:}}
+\hypertarget{interface_lists_collection_a9d2bb9fc392b0c4a1445a9ebac3777c2}{\index{Lists\-Collection@{Lists\-Collection}!add\-List\-:with\-Access\-Token\-:@{add\-List\-:with\-Access\-Token\-:}}
 \index{add\-List\-:with\-Access\-Token\-:@{add\-List\-:with\-Access\-Token\-:}!ListsCollection@{Lists\-Collection}}
-\subsubsection[{add\-List\-:with\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact\-List} $\ast$) add\-List\-: 
+\subsubsection[{add\-List\-:with\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) add\-List\-: 
 \begin{DoxyParamCaption}
 \item[{({\bf Contact\-List}$\ast$)}]{list}
 \item[{withAccessToken:(N\-S\-String$\ast$)}]{access\-Token}
 \end{DoxyParamCaption}
-}}\label{interface_lists_collection_aee455d56035cf11041a4677a47172369}
+}}\label{interface_lists_collection_a9d2bb9fc392b0c4a1445a9ebac3777c2}
 Function that adds a contact list to a user identified by a token;
 
 
@@ -37,15 +47,55 @@ Function that adds a contact list to a user identified by a token;
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Contact\-List$\ast$ -\/ the function returns the added contact list in case of succes; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the added \hyperlink{interface_contact_list}{Contact\-List} in case of succes; 
 \end{DoxyReturn}
-\hypertarget{interface_lists_collection_a0f8c52c5fe31334adc47fe9eda725eab}{\index{Lists\-Collection@{Lists\-Collection}!lists\-With\-Access\-Token\-:@{lists\-With\-Access\-Token\-:}}
+\hypertarget{interface_lists_collection_a84d4c02981fd98321417e2e35d9a14a6}{\index{Lists\-Collection@{Lists\-Collection}!delete\-List\-With\-Access\-Token\-:and\-List\-Id\-:@{delete\-List\-With\-Access\-Token\-:and\-List\-Id\-:}}
+\index{delete\-List\-With\-Access\-Token\-:and\-List\-Id\-:@{delete\-List\-With\-Access\-Token\-:and\-List\-Id\-:}!ListsCollection@{Lists\-Collection}}
+\subsubsection[{delete\-List\-With\-Access\-Token\-:and\-List\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (B\-O\-O\-L) delete\-List\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{access\-Token}
+\item[{andListId:(N\-S\-String$\ast$)}]{list\-Id}
+\end{DoxyParamCaption}
+}}\label{interface_lists_collection_a84d4c02981fd98321417e2e35d9a14a6}
+Function that delete a contact list
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login; \\
+\hline
+{\em N\-S\-String$\ast$} & list\-I\-D -\/ the id of the list that will be deleted;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the updated \hyperlink{interface_contact_list}{Contact\-List}; 
+\end{DoxyReturn}
+\hypertarget{interface_lists_collection_ae0748049c69183491b6e91fa9251789a}{\index{Lists\-Collection@{Lists\-Collection}!get\-Contacts\-With\-Access\-Token\-:from\-List\-:@{get\-Contacts\-With\-Access\-Token\-:from\-List\-:}}
+\index{get\-Contacts\-With\-Access\-Token\-:from\-List\-:@{get\-Contacts\-With\-Access\-Token\-:from\-List\-:}!ListsCollection@{Lists\-Collection}}
+\subsubsection[{get\-Contacts\-With\-Access\-Token\-:from\-List\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) get\-Contacts\-With\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{access\-Token}
+\item[{fromList:(N\-S\-String$\ast$)}]{list\-Id}
+\end{DoxyParamCaption}
+}}\label{interface_lists_collection_ae0748049c69183491b6e91fa9251789a}
+Function that gets contacts from the list specified by the user;
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login; \\
+\hline
+{\em N\-S\-String$\ast$} & list\-I\-D -\/ the id of the list you wish to obtain contacts from;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with a array of Contacts from the list; 
+\end{DoxyReturn}
+\hypertarget{interface_lists_collection_a1d59e04e11816254c3280befb94be15c}{\index{Lists\-Collection@{Lists\-Collection}!lists\-With\-Access\-Token\-:@{lists\-With\-Access\-Token\-:}}
 \index{lists\-With\-Access\-Token\-:@{lists\-With\-Access\-Token\-:}!ListsCollection@{Lists\-Collection}}
-\subsubsection[{lists\-With\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Array $\ast$) lists\-With\-Access\-Token\-: 
+\subsubsection[{lists\-With\-Access\-Token\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) lists\-With\-Access\-Token\-: 
 \begin{DoxyParamCaption}
 \item[{(N\-S\-String$\ast$)}]{access\-Token}
 \end{DoxyParamCaption}
-}}\label{interface_lists_collection_a0f8c52c5fe31334adc47fe9eda725eab}
+}}\label{interface_lists_collection_a1d59e04e11816254c3280befb94be15c}
 Function that gets a array of lists of a user identified by a token;
 
 
@@ -54,16 +104,16 @@ Function that gets a array of lists of a user identified by a token;
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-N\-S\-Array$\ast$ -\/ the function returns the array of contact lists belonging to the user authenthicated by the token; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the array of contact lists belonging to the user authenthicated by the token; 
 \end{DoxyReturn}
-\hypertarget{interface_lists_collection_a35b616d645a1c36c90e1d85505280f35}{\index{Lists\-Collection@{Lists\-Collection}!list\-With\-Access\-Token\-:and\-List\-Id\-:@{list\-With\-Access\-Token\-:and\-List\-Id\-:}}
+\hypertarget{interface_lists_collection_a7e2ee804f245c4a2f5254f7c9337db1d}{\index{Lists\-Collection@{Lists\-Collection}!list\-With\-Access\-Token\-:and\-List\-Id\-:@{list\-With\-Access\-Token\-:and\-List\-Id\-:}}
 \index{list\-With\-Access\-Token\-:and\-List\-Id\-:@{list\-With\-Access\-Token\-:and\-List\-Id\-:}!ListsCollection@{Lists\-Collection}}
-\subsubsection[{list\-With\-Access\-Token\-:and\-List\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Contact\-List} $\ast$) list\-With\-Access\-Token\-: 
+\subsubsection[{list\-With\-Access\-Token\-:and\-List\-Id\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) list\-With\-Access\-Token\-: 
 \begin{DoxyParamCaption}
 \item[{(N\-S\-String$\ast$)}]{access\-Token}
 \item[{andListId:(N\-S\-String$\ast$)}]{list\-Id}
 \end{DoxyParamCaption}
-}}\label{interface_lists_collection_a35b616d645a1c36c90e1d85505280f35}
+}}\label{interface_lists_collection_a7e2ee804f245c4a2f5254f7c9337db1d}
 Function that gets a specific contact list from the user identified by a token;
 
 
@@ -74,11 +124,34 @@ Function that gets a specific contact list from the user identified by a token;
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Contact\-List$\ast$ -\/ the function returns the contact list who is identified by list\-I\-D; 
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the \hyperlink{interface_contact_list}{Contact\-List} who is identified by list\-I\-D; 
+\end{DoxyReturn}
+\hypertarget{interface_lists_collection_a3e4b6508bb1ca2b8960db6f533dbf118}{\index{Lists\-Collection@{Lists\-Collection}!update\-Access\-Token\-:and\-List\-Id\-:and\-List\-:@{update\-Access\-Token\-:and\-List\-Id\-:and\-List\-:}}
+\index{update\-Access\-Token\-:and\-List\-Id\-:and\-List\-:@{update\-Access\-Token\-:and\-List\-Id\-:and\-List\-:}!ListsCollection@{Lists\-Collection}}
+\subsubsection[{update\-Access\-Token\-:and\-List\-Id\-:and\-List\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-Dictionary $\ast$) update\-Access\-Token\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{access\-Token}
+\item[{andListId:(N\-S\-String$\ast$)}]{list\-Id}
+\item[{andList:({\bf Contact\-List} $\ast$)}]{list}
+\end{DoxyParamCaption}
+}}\label{interface_lists_collection_a3e4b6508bb1ca2b8960db6f533dbf118}
+Function that updates a contact list
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-String$\ast$} & access\-Token -\/ Constant \hyperlink{interface_contact}{Contact} O\-Auth2 access token, obtained after login; \\
+\hline
+{\em N\-S\-String$\ast$} & list\-I\-D -\/ the id of the list that will be updated; \\
+\hline
+{\em \hyperlink{interface_contact_list}{Contact\-List}} & $\ast$list -\/ the list to be updated;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary $\ast$ -\/dictionary containing either "E\-R\-R\-O\-R\char`\"{} or @\char`\"{}data" with the updated \hyperlink{interface_contact_list}{Contact\-List}; 
 \end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-C\-T\-C\-T\-Wrapper/\-Collections/Lists\-Collection.\-h\item 
-C\-T\-C\-T\-Wrapper/\-Collections/Lists\-Collection.\-m\end{DoxyCompactItemize}
+Collections/\hyperlink{_lists_collection_8h}{Lists\-Collection.\-h}\item 
+Collections/\hyperlink{_lists_collection_8m}{Lists\-Collection.\-m}\end{DoxyCompactItemize}

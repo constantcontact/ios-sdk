@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['emailaddress',['EmailAddress',['../interface_email_address.html',1,'']]]
+  ['emailaddress',['EmailAddress',['../interface_email_address.html',1,'EmailAddress'],['../interface_activity_error.html#ab78c5329eb797a57cfca8b2003703467',1,'ActivityError::emailAddress()'],['../interface_email_address.html#affb38a74f6786b977661b59175bbd97c',1,'EmailAddress::emailAddress()'],['../interface_bounce_activity.html#afe1d492ae173849f08ebfff434948564',1,'BounceActivity::emailAddress()'],['../interface_click_activity.html#ac23f733678933938130fc10f72288911',1,'ClickActivity::emailAddress()'],['../interface_forward_activity.html#a304c05fd069d52625f1dafa9cc57a666',1,'ForwardActivity::emailAddress()'],['../interface_open_activity.html#a1c3077abd233822881504111b5226d9a',1,'OpenActivity::emailAddress()'],['../interface_opt_out_activity.html#a3e5ecc2b32632cc68218b363e05be345',1,'OptOutActivity::emailAddress()'],['../interface_send_activity.html#a145b6a27bdb02f7d6e47fef8610602a7',1,'SendActivity::emailAddress()']]],
+  ['emailaddress_2eh',['EmailAddress.h',['../_email_address_8h.html',1,'']]],
+  ['emailaddress_2em',['EmailAddress.m',['../_email_address_8m.html',1,'']]],
+  ['emailaddresses',['emailAddresses',['../interface_add_contacts_import_data.html#af4f52fc9be83a9e8f460d58ab58aee21',1,'AddContactsImportData::emailAddresses()'],['../interface_contact.html#a334fd74963f3c92c2699f2241bb63070',1,'Contact::emailAddresses()'],['../interface_test_send.html#ae3149637744140d9ce2eadea8d3acd80',1,'TestSend::emailAddresses()']]],
+  ['emailaddresswithdictionary_3a',['emailAddressWithDictionary:',['../interface_email_address.html#a0407c30ef902b7fafbcb77207c31ab44',1,'EmailAddress']]],
+  ['emailcampaign',['EmailCampaign',['../interface_email_campaign.html',1,'']]],
+  ['emailcampaign_2eh',['EmailCampaign.h',['../_email_campaign_8h.html',1,'']]],
+  ['emailcampaign_2em',['EmailCampaign.m',['../_email_campaign_8m.html',1,'']]],
+  ['emailcampaignservice',['EmailCampaignService',['../interface_email_campaign_service.html',1,'']]],
+  ['emailcampaignservice_2eh',['EmailCampaignService.h',['../_email_campaign_service_8h.html',1,'']]],
+  ['emailcampaignservice_2em',['EmailCampaignService.m',['../_email_campaign_service_8m.html',1,'']]],
+  ['emailcampaignwithdictionary_3a',['emailCampaignWithDictionary:',['../interface_email_campaign.html#a4c7d6c988d096da421dab0dc3f96ad06',1,'EmailCampaign']]],
+  ['emailcontent',['emailContent',['../interface_email_campaign.html#a4945ffab53d8957f547175a16ef36c9d',1,'EmailCampaign']]],
+  ['emailcontentformat',['emailContentFormat',['../interface_email_campaign.html#a89709de7356ab4634b672dd2877a189c',1,'EmailCampaign']]],
+  ['errorcount',['errorCount',['../interface_activity.html#abe1f522a0ec0a7c3e379273838a4da45',1,'Activity']]],
+  ['errors',['errors',['../interface_activity.html#af4fc739f25f0e96f0a044a00e596fe5e',1,'Activity']]],
+  ['exportaddedby',['exportAddedBy',['../interface_export_contacts.html#a3e04d556f4e5a6e5b190eecd5ce2eab6',1,'ExportContacts']]],
+  ['exportcontacts',['ExportContacts',['../interface_export_contacts.html',1,'']]],
+  ['exportcontacts_2eh',['ExportContacts.h',['../_export_contacts_8h.html',1,'']]],
+  ['exportcontacts_2em',['ExportContacts.m',['../_export_contacts_8m.html',1,'']]],
+  ['exportdateadded',['exportDateAdded',['../interface_export_contacts.html#a60b823601cc667da2a7b35075bbe8016',1,'ExportContacts']]]
 ];

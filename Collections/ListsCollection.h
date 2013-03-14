@@ -16,9 +16,9 @@
  *
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  *
- * @return NSArray* - the function returns the array of contact lists belonging to the user authenthicated by the token;
+ * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the array of contact lists belonging to the user authenthicated by the token;
  */
-+(NSArray*)listsWithAccessToken:(NSString*)accessToken;
++ (NSDictionary *)listsWithAccessToken:(NSString*)accessToken;
 
  /**
  * Function that adds a contact list to a user identified by a token;
@@ -26,9 +26,9 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param ContactList* list - the list to be added to the users list collection;
  *
- * @return ContactList* - the function returns the added contact list in case of succes;
+ * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the added ContactList in case of succes;
  */
-+(ContactList*)addList:(ContactList*)list withAccessToken:(NSString*)accessToken;
++ (NSDictionary *)addList:(ContactList*)list withAccessToken:(NSString*)accessToken;
 
  /**
  * Function that gets a specific contact list from the user identified by a token;
@@ -36,8 +36,41 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* listID - the id of the list you wish to obtain;
  *
- * @return ContactList* - the function returns the contact list who is identified by listID;
+ * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the ContactList who is identified by listID;
  */
-+(ContactList*)listWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId;
++ (NSDictionary *)listWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId;
+
+/**
+ * Function that gets contacts from the list specified by the user;
+ *
+ * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
+ * @param NSString* listID - the id of the list you wish to obtain contacts from;
+ *
+ * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a array of Contacts from the list;
+ */
++ (NSDictionary *)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId;
+
+/**
+ * Function that updates a contact list
+ *
+ * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
+ * @param NSString* listID - the id of the list that will be updated;
+ * @param ContactList *list - the list to be updated;
+ *
+ * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the updated ContactList;
+ */
++ (NSDictionary *)updateAccessToken:(NSString*)accessToken andListId:(NSString*)listId andList:(ContactList *)list;
+
+/**
+ * Function that delete a contact list
+ *
+ * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
+ * @param NSString* listID - the id of the list that will be deleted;
+ *
+ * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the updated ContactList;
+ */
++ (BOOL)deleteListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId;
+
+
 
 @end

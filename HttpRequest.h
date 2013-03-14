@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 
 @interface HttpRequest : NSObject
-
  /**
  * Function is used to make a Http GET request;
  *

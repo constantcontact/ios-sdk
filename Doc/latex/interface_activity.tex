@@ -1,0 +1,134 @@
+\hypertarget{interface_activity}{\section{Activity Class Reference}
+\label{interface_activity}\index{Activity@{Activity}}
+}
+
+
+{\ttfamily \#import $<$Activity.\-h$>$}
+
+Inheritance diagram for Activity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_activity}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_activity_a84ac9c4a42c6b67f863bea5839146274}{id}) -\/ \hyperlink{interface_activity_a6c48ff0b7f9d7c7ebd6a6e7d7db0a11e}{init\-With\-Dictionary\-:}
+\item 
+(\hyperlink{interface_activity_a84ac9c4a42c6b67f863bea5839146274}{id}) -\/ \hyperlink{interface_activity_a94321b2e4d33f840fbe3dbf9cb49abdc}{proxy\-For\-Json}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_activity}{Activity} $\ast$) + \hyperlink{interface_activity_acf82e4129c89f266ead77a540b943393}{activity\-With\-Dictionary\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_a84ac9c4a42c6b67f863bea5839146274}{id}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_a8619c7b5d0a0a2cfdad6a94c6ea45595}{type}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_a578a5685a7c166b438e9c5f9596d7ae4}{status}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_ad1b9a79c58a3f4b19e82195cab809fd4}{start\-Date}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_a1d860160f4fc5dcc362b364dbf556ffd}{finish\-Date}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_ad3402799bc6113ec527f54788dce3777}{file\-Name}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_a3b0d23eb3c06d0854f0e7f63701f8749}{created\-Date}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_abe1f522a0ec0a7c3e379273838a4da45}{error\-Count}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_activity_ab9ad52e8f64b80becf9be642f1d5d786}{contact\-Count}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_activity_af4fc739f25f0e96f0a044a00e596fe5e}{errors}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_activity_a59cf6d1a6bc8d97f373e5b05f852ce31}{warnings}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a single \hyperlink{interface_activity}{Activity} in Constant \hyperlink{interface_contact}{Contact} 
+
+\subsection{Method Documentation}
+\hypertarget{interface_activity_acf82e4129c89f266ead77a540b943393}{\index{Activity@{Activity}!activity\-With\-Dictionary\-:@{activity\-With\-Dictionary\-:}}
+\index{activity\-With\-Dictionary\-:@{activity\-With\-Dictionary\-:}!Activity@{Activity}}
+\subsubsection[{activity\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf Activity} $\ast$) activity\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_activity_acf82e4129c89f266ead77a540b943393}
+\hypertarget{interface_activity_a6c48ff0b7f9d7c7ebd6a6e7d7db0a11e}{\index{Activity@{Activity}!init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}}
+\index{init\-With\-Dictionary\-:@{init\-With\-Dictionary\-:}!Activity@{Activity}}
+\subsubsection[{init\-With\-Dictionary\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) init\-With\-Dictionary\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{dictionary}
+\end{DoxyParamCaption}
+}}\label{interface_activity_a6c48ff0b7f9d7c7ebd6a6e7d7db0a11e}
+Factory method to create an \hyperlink{interface_activity}{Activity} object from an dictionary
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\-S\-Dictionary} & $\ast$dictionary -\/ dictionary with propertyes to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{interface_activity}{Activity} 
+\end{DoxyReturn}
+\hypertarget{interface_activity_a94321b2e4d33f840fbe3dbf9cb49abdc}{\index{Activity@{Activity}!proxy\-For\-Json@{proxy\-For\-Json}}
+\index{proxy\-For\-Json@{proxy\-For\-Json}!Activity@{Activity}}
+\subsubsection[{proxy\-For\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) proxy\-For\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_activity_a94321b2e4d33f840fbe3dbf9cb49abdc}
+Create json\-Dict used for a P\-O\-S\-T/\-P\-U\-T request, also handles removing attributes that will cause errors if sent
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Mutable\-Dictionary -\/ dictionary that can be used to create json, or can be added in another json string 
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_activity_ab9ad52e8f64b80becf9be642f1d5d786}{\index{Activity@{Activity}!contact\-Count@{contact\-Count}}
+\index{contact\-Count@{contact\-Count}!Activity@{Activity}}
+\subsubsection[{contact\-Count}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) contact\-Count\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_ab9ad52e8f64b80becf9be642f1d5d786}
+\hypertarget{interface_activity_a3b0d23eb3c06d0854f0e7f63701f8749}{\index{Activity@{Activity}!created\-Date@{created\-Date}}
+\index{created\-Date@{created\-Date}!Activity@{Activity}}
+\subsubsection[{created\-Date}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) created\-Date\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_a3b0d23eb3c06d0854f0e7f63701f8749}
+\hypertarget{interface_activity_abe1f522a0ec0a7c3e379273838a4da45}{\index{Activity@{Activity}!error\-Count@{error\-Count}}
+\index{error\-Count@{error\-Count}!Activity@{Activity}}
+\subsubsection[{error\-Count}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) error\-Count\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_abe1f522a0ec0a7c3e379273838a4da45}
+\hypertarget{interface_activity_af4fc739f25f0e96f0a044a00e596fe5e}{\index{Activity@{Activity}!errors@{errors}}
+\index{errors@{errors}!Activity@{Activity}}
+\subsubsection[{errors}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) errors\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_af4fc739f25f0e96f0a044a00e596fe5e}
+\hypertarget{interface_activity_ad3402799bc6113ec527f54788dce3777}{\index{Activity@{Activity}!file\-Name@{file\-Name}}
+\index{file\-Name@{file\-Name}!Activity@{Activity}}
+\subsubsection[{file\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) file\-Name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_ad3402799bc6113ec527f54788dce3777}
+\hypertarget{interface_activity_a1d860160f4fc5dcc362b364dbf556ffd}{\index{Activity@{Activity}!finish\-Date@{finish\-Date}}
+\index{finish\-Date@{finish\-Date}!Activity@{Activity}}
+\subsubsection[{finish\-Date}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) finish\-Date\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_a1d860160f4fc5dcc362b364dbf556ffd}
+\hypertarget{interface_activity_a84ac9c4a42c6b67f863bea5839146274}{\index{Activity@{Activity}!id@{id}}
+\index{id@{id}!Activity@{Activity}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_activity_a84ac9c4a42c6b67f863bea5839146274}
+\hypertarget{interface_activity_ad1b9a79c58a3f4b19e82195cab809fd4}{\index{Activity@{Activity}!start\-Date@{start\-Date}}
+\index{start\-Date@{start\-Date}!Activity@{Activity}}
+\subsubsection[{start\-Date}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) start\-Date\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_ad1b9a79c58a3f4b19e82195cab809fd4}
+\hypertarget{interface_activity_a578a5685a7c166b438e9c5f9596d7ae4}{\index{Activity@{Activity}!status@{status}}
+\index{status@{status}!Activity@{Activity}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_a578a5685a7c166b438e9c5f9596d7ae4}
+\hypertarget{interface_activity_a8619c7b5d0a0a2cfdad6a94c6ea45595}{\index{Activity@{Activity}!type@{type}}
+\index{type@{type}!Activity@{Activity}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_a8619c7b5d0a0a2cfdad6a94c6ea45595}
+\hypertarget{interface_activity_a59cf6d1a6bc8d97f373e5b05f852ce31}{\index{Activity@{Activity}!warnings@{warnings}}
+\index{warnings@{warnings}!Activity@{Activity}}
+\subsubsection[{warnings}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) warnings\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}}\label{interface_activity_a59cf6d1a6bc8d97f373e5b05f852ce31}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Components/\-Activites/\hyperlink{_activity_8h}{Activity.\-h}\item 
+Components/\-Activites/\hyperlink{_activity_8m}{Activity.\-m}\end{DoxyCompactItemize}

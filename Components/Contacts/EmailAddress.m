@@ -24,7 +24,7 @@
     return self;
 }
 
--(id)initWithEmailAddress:(NSString *)emailAddress
+- (id)initWithEmailAddress:(NSString *)emailAddress
 {
     if (self = [super init])
     {
@@ -34,7 +34,7 @@
     return self;
 }
 
--(id)initWithDictionary:(NSDictionary *)dictionary
+- (id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init])
     {
@@ -54,9 +54,10 @@
     return self;
 }
 
-+(EmailAddress*)addressWithDictionary:(NSDictionary *)dictionary
++ (EmailAddress *)emailAddressWithDictionary:(NSDictionary *)dictionary
 {
     EmailAddress *emailAddress = [[EmailAddress alloc] init];
+    
     emailAddress.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
     emailAddress.confirmStatus = [Component valueForDictionary:dictionary withKey:@"confirm_status"];
     emailAddress.status = [Component valueForDictionary:dictionary withKey:@"status"];
@@ -73,7 +74,7 @@
 }
 
 
--(id) proxyForJson
+- (id) proxyForJson
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat: @"yyyy-MM-dd'T'HH:mm:sss'Z'"];
