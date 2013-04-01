@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['getactiviteswithtoken_3a',['getActivitesWithToken:',['../interface_activity_service.html#a6062c0f0290dbf0d4dacfbf3e05e1f52',1,'ActivityService']]],
+  ['getactivitywithtoken_3aandactivityid_3a',['getActivityWithToken:andActivityId:',['../interface_activity_service.html#ad3be3890398246ce83788c523acc2c73',1,'ActivityService']]],
+  ['getbounceswithaccesstoken_3acampaignid_3aandparams_3a',['getBouncesWithAccessToken:campaignID:andParams:',['../interface_campaign_tracking_service.html#af3c97b0545f31bf4117934a45f39a6f9',1,'CampaignTrackingService']]],
+  ['getbounceswithaccesstoken_3acontactid_3aandparams_3a',['getBouncesWithAccessToken:contactId:andParams:',['../interface_contact_tracking_service.html#a8541bfe28d0414381916dc9036a0061b',1,'ContactTrackingService']]],
+  ['getcampaignswithtoken_3aandparams_3a',['getCampaignsWithToken:andParams:',['../interface_email_campaign_service.html#af3638f960d92b590579365c5d689a85c',1,'EmailCampaignService']]],
+  ['getcampaignwithtoken_3aandcampaignid_3a',['getCampaignWithToken:andCampaignId:',['../interface_email_campaign_service.html#ab78b32aa539982abf228be55fa540eae',1,'EmailCampaignService']]],
+  ['getclicksbylinkwithaccesstoken_3acampaignid_3alinkid_3aandparams_3a',['getClicksByLinkwithAccessToken:campaignId:linkId:andParams:',['../interface_campaign_tracking_service.html#a70f3c4d43d2a1143535d3a8288b029aa',1,'CampaignTrackingService']]],
+  ['getclickswithaccesstoken_3acampaignid_3aandparams_3a',['getClicksWithAccessToken:campaignId:andParams:',['../interface_campaign_tracking_service.html#ab1534c0e31a4afe3b1c38f5a56d5ec84',1,'CampaignTrackingService']]],
+  ['getclickswithaccesstoken_3acontactid_3aandparams_3a',['getClicksWithAccessToken:contactId:andParams:',['../interface_contact_tracking_service.html#a9058d03ece2ebc3dd468f59043d005d8',1,'ContactTrackingService']]],
+  ['getcontactswithaccesstoken_3afromlist_3a',['getContactsWithAccessToken:fromList:',['../interface_lists_collection.html#a935f3bc831fbe733de3d9e0206593e70',1,'ListsCollection']]],
+  ['getemailaddresses_3aandconfirmedstatus_3a',['getEmailAddresses:andConfirmedStatus:',['../interface_verified_email_addresses.html#a80a25ae4701f27e6c3bd4b6a9854a11b',1,'VerifiedEmailAddresses']]],
+  ['getforwardswithaccesstoken_3acampaignid_3aandparams_3a',['getForwardsWithAccessToken:campaignId:andParams:',['../interface_campaign_tracking_service.html#ab9e69f3eb0b570de32e9e6e42c512c45',1,'CampaignTrackingService']]],
+  ['getforwardswithaccesstoken_3acontactid_3aandparams_3a',['getForwardsWithAccessToken:contactId:andParams:',['../interface_contact_tracking_service.html#a0ae8d92c7f36df2ce46ad9006f6b57e9',1,'ContactTrackingService']]],
+  ['getopenswithaccesstoken_3acampaignid_3aandparams_3a',['getOpensWithAccessToken:campaignId:andParams:',['../interface_campaign_tracking_service.html#a772b1290fc063fed652a846d9497434d',1,'CampaignTrackingService']]],
+  ['getopenswithaccesstoken_3acontactid_3aandparams_3a',['getOpensWithAccessToken:contactId:andParams:',['../interface_contact_tracking_service.html#a13bcc847cad4223d4140447f76eaf107',1,'ContactTrackingService']]],
+  ['getoptoutswithaccesstoken_3acampaignid_3aandparams_3a',['getOptOutsWithAccessToken:campaignId:andParams:',['../interface_campaign_tracking_service.html#a3e8af0ca5838f428d9f387f8f6eb7b62',1,'CampaignTrackingService']]],
+  ['getoptoutswithaccesstoken_3acontactid_3aandparams_3a',['getOptOutsWithAccessToken:contactId:andParams:',['../interface_contact_tracking_service.html#a28d5613caffc501a935e341cd55f9ca7',1,'ContactTrackingService']]],
+  ['getscheduleswithaccestoken_3aandcampaignid_3a',['getSchedulesWithAccesToken:andCampaignId:',['../interface_campaign_schedule_service.html#a79b09813d0293226202381a6786d6d29',1,'CampaignScheduleService']]],
+  ['getschedulewithaccestoken_3acampaignid_3aandscheduleid_3a',['getScheduleWithAccesToken:campaignId:andScheduleId:',['../interface_campaign_schedule_service.html#ab23aa1b02e8ca4a564ddb093fb25b155',1,'CampaignScheduleService']]],
+  ['getsendswithaccesstoken_3acampaignid_3aandparams_3a',['getSendsWithAccessToken:campaignId:andParams:',['../interface_campaign_tracking_service.html#af180b0da1884501b9efa730d47879320',1,'CampaignTrackingService']]],
+  ['getsendswithaccesstoken_3acontactid_3aandparams_3a',['getSendsWithAccessToken:contactId:andParams:',['../interface_contact_tracking_service.html#adfee6c8617b3e8f8755b5d197f8fe489',1,'ContactTrackingService']]],
+  ['getsummarywithaccesstoken_3aandcampaignid_3a',['getSummaryWithAccessToken:andCampaignId:',['../interface_campaign_tracking_service.html#a636df5a8ddfd93687b021827701a35c6',1,'CampaignTrackingService']]],
+  ['getsummarywithaccesstoken_3acontactid_3a',['getSummaryWithAccessToken:contactId:',['../interface_contact_tracking_service.html#a6c7dbc609ad372a9c0e88aa1df6f43b4',1,'ContactTrackingService']]],
+  ['getwithurl_3aandheaders_3a',['getWithUrl:andHeaders:',['../interface_http_request.html#abf4ee9a0d905814ee47a693df168959a',1,'HttpRequest']]]
+];

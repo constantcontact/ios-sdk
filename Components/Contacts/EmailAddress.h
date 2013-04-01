@@ -10,6 +10,7 @@
 
 @interface EmailAddress : NSObject
 
+@property (nonatomic, strong, readonly) NSString *emailId;
 @property (nonatomic, strong) NSString *confirmStatus;
 @property (nonatomic, strong) NSString *emailAddress;
 @property (nonatomic, strong) NSDate *optInDate;
@@ -20,6 +21,7 @@
 - (id)initWithEmailAddress:(NSString *)emailAddress;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (EmailAddress *)emailAddressWithDictionary:(NSDictionary *)dictionary;
-- (id) proxyForJson;
+
+- (NSDictionary*)proxyForJSON;
 
 @end

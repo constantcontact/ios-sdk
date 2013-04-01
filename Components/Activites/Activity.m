@@ -14,7 +14,7 @@
 {
     if (self = [super init])
     {
-        _id = @"";
+        _activityId = @"";
         _type = @"";
         _status = @"";
         _startDate = @"";
@@ -34,7 +34,7 @@
 {
     if (self = [super init])
     {
-        _id = [Component valueForDictionary:dictionary withKey:@"id"];
+        _activityId = [Component valueForDictionary:dictionary withKey:@"id"];
         _type = [Component valueForDictionary:dictionary withKey:@"type"];
         _status = [Component valueForDictionary:dictionary withKey:@"status"];
         _startDate = [Component valueForDictionary:dictionary withKey:@"start_date"];
@@ -71,44 +71,23 @@
 
 + (Activity *)activityWithDictionary:(NSDictionary *)dictionary
 {
-    Activity *activity = [[Activity alloc] init];
-    
-    activity.id = [Component valueForDictionary:dictionary withKey:@"id"];
-    activity.type = [Component valueForDictionary:dictionary withKey:@"type"];
-    activity.status = [Component valueForDictionary:dictionary withKey:@"status"];
-    activity.startDate = [Component valueForDictionary:dictionary withKey:@"start_date"];
-    activity.finishDate = [Component valueForDictionary:dictionary withKey:@"finish_date"];
-    activity.createdDate = [Component valueForDictionary:dictionary withKey:@"created_date"];
-    activity.errorCount = [Component valueForDictionary:dictionary withKey:@"error_count"];
-    activity.contactCount = [Component valueForDictionary:dictionary withKey:@"contact_count"];
-    
-    // set any errors that exist, otherewise destroy the property
-    activity.errors = [[NSMutableArray alloc]init];
-    if( [dictionary objectForKey:@"errors"])
-        for(ActivityError *error in [dictionary objectForKey:@"errors"])
-        {
-            [activity.errors addObject:error]; //---de schimbat dupa ce fac error class $activity->warnings[] = ActivityError::create($error);
-        }
-    // set any warnings that exist, otherewise destroy the property
-    activity.warnings = [[NSMutableArray alloc]init];
-    if( [dictionary objectForKey:@"warnings"])
-        for(ActivityError *error in [dictionary objectForKey:@"warnings"])
-        {
-            [activity.warnings addObject:error]; ////---de schimbat dupa ce fac error class $activity->warnings[] = ActivityError::create($error);
-        }
-    // set the file name if exists
-    if( [dictionary objectForKey:@"file_name"])
-    {
-        activity.fileName = [Component valueForDictionary:dictionary withKey:@"file_name"];
-    }
+    Activity *activity = [[Activity alloc] initWithDictionary:dictionary];
     
     return activity;
 }
 
--(id) proxyForJson
+- (id) proxyForJson
 {
-    
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys: _id, @"id", _type, @"type",_status,"status",_startDate,@"start_date",_finishDate,@"finish_date",_createdDate,@"created_date",_errorCount,@"error_count",_contactCount,@"contact_count", nil];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                 _activityId, @"id",
+                                 _type, @"type",
+                                 _status,"status",
+                                 _startDate,@"start_date",
+                                 _finishDate,@"finish_date",
+                                 _createdDate,@"created_date",
+                                 _errorCount,@"error_count",
+                                 _contactCount,@"contact_count",
+                                 nil];
     
     if(_errors.count > 0)
        [dict setObject:_errors forKey:@"errors"];

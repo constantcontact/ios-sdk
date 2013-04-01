@@ -33,22 +33,22 @@
 
 + (Schedule *)scheduleWithDictionary:(NSDictionary *)dictionary
 {
-    Schedule *schedule = [[Schedule alloc] init];
-    
-    schedule.scheduleId = [Component valueForDictionary:dictionary withKey:@"id"];
-    schedule.scheduledDate = [Component valueForDictionary:dictionary withKey:@"scheduled_date"];
+    Schedule *schedule = [[Schedule alloc] initWithDictionary:dictionary];
     
     return schedule;
 }
 
--(id) proxyForJson
+-(NSDictionary*)proxyForJSON
 {
-    return [NSDictionary dictionaryWithObjectsAndKeys: _scheduledDate, @"scheduled_date",_scheduleId,@"id",nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            _scheduledDate, @"scheduled_date",
+            _scheduleId,@"id",
+            nil];
 }
 
-- (NSString *) toJson
+- (NSString*)JSON
 {
-    NSString *jsonDict = [self proxyForJson];
+    NSDictionary *jsonDict = [self proxyForJSON];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted

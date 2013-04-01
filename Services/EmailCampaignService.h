@@ -24,9 +24,9 @@
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param Campaign *campaign - Campign to be created
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the Campaign that was created
+ * @return HttpResponse * - response containing either errors or data with the Campaign that was created
  */
-+ (NSDictionary *)addCampaignWithToken:(NSString *)accessToken andCampaign:(EmailCampaign *)campaign;
++ (HttpResponse *)addCampaignWithToken:(NSString *)accessToken andCampaign:(EmailCampaign *)campaign;
 
 /**
  * Get a set of campaigns
@@ -34,10 +34,10 @@
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param int param - query param to be appended to the request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet containing the pagination and campaigns related to the user.
+ * @return HttpResponse * - response containing either errors or data with a ResultSet containing the pagination and campaigns related to the user.
  */
 
-+ (NSDictionary *)getCampaignsWithToken:(NSString *)accessToken andParams:(NSString *)param;
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken andParams:(NSString*)params;
 
 /**
  * Get campaign details for a specific campaign
@@ -45,9 +45,9 @@
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - Valid campaign id
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the specific Campaign required.
+ * @return HttpResponse * - response containing either errors or data with the specific Campaign required.
  */
-+ (NSDictionary *)getCampaignWithToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
++ (HttpResponse *)getCampaignWithToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
 
 /**
  * Delete an email campaign
@@ -57,7 +57,7 @@
  *
  * @return boolean - if the deletion action was succcesful or not
  */
-+ (BOOL)deleteCamapaignWithToken:(NSString *)accessToken andCamapaignId:(NSString *)campaignId;
++ (BOOL)deleteCamapaignWithToken:(NSString *)accessToken andCamapaignId:(NSString *)campaignId errors:(NSArray**)errors;
 
 /**
  * Update a specific email campaign
@@ -65,8 +65,8 @@
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param Campaign *emailCampaign - Campaign to be updated
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the Campaign that was updated
+ * @return HttpResponse * - response containing either errors or data with the Campaign that was updated
  */
-+ (NSDictionary *)updateCampaignWithToken:(NSString *)accessToken andEmailCampaign:(EmailCampaign *)emailCampaign;
++ (HttpResponse *)updateCampaignWithToken:(NSString *)accessToken andEmailCampaign:(EmailCampaign *)emailCampaign;
 
 @end

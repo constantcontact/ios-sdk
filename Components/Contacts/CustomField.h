@@ -15,5 +15,6 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (CustomField *)customFieldWithDictionary:(NSDictionary *)dictionary;
-- (id) proxyForJson;
+- (NSDictionary*)proxyForJSON;
+
 @end

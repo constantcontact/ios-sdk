@@ -31,9 +31,9 @@
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return ResultSet *- Containing a results array of BounceActivityes
+ * @return HttpResponse *-  response containing a results array of BounceActivityes
  */
-+ (NSDictionary *)getBouncesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
 /**
  * Get clicks for a given contact
  *
@@ -41,9 +41,9 @@
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of ClickActivityes
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of ClickActivityes
  */
-+ (NSDictionary *)getClicksWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
 /**
  * Get forwards for a given contact
  *
@@ -51,9 +51,9 @@
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of ForwardActivityes
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of ForwardActivityes
  */
-+ (NSDictionary *)getForwardsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
 /**
  * Get opens for a given contact
  *
@@ -61,9 +61,9 @@
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of OpenActivityes
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of OpenActivityes
  */
-+ (NSDictionary *)getOpensWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
 /**
  * Get sends for a given contact
  *
@@ -71,10 +71,10 @@
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of SendActivityes
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of SendActivityes
  */
 
-+ (NSDictionary *)getSendsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
 /**
  * Get opt outs for a given contact
  *
@@ -82,17 +82,17 @@
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of OptOutActivityes
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of OptOutActivityes
  */
-+ (NSDictionary *)getOptOutsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
++ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andParams:(NSString *)params;
 /**
  * Get a summary of reporting data for a given contact
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a summary reguarding all activites of a specific contact
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with a summary reguarding all activites of a specific contact
  */
-+ (NSDictionary *)getSummaryWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId;
++ (HttpResponse*)getSummaryWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId;
 
 @end

@@ -61,14 +61,18 @@
     [_emailAddresses addObject:emailAddress];
 }
 
--(id) proxyForJson
+- (NSDictionary*)proxyForJSON
 {
-    return [NSDictionary dictionaryWithObjectsAndKeys:   _format , @"format",_personalMessage , @"personal_message",_emailAddresses , @"email_addresses",nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            _format , @"format",
+            _personalMessage , @"personal_message",
+            _emailAddresses , @"email_addresses",
+            nil];
 }
 
-- (NSString *) toJson
+- (NSString*)JSON
 {
-    NSString *jsonDict = [self proxyForJson];
+    NSDictionary *jsonDict = [self proxyForJSON];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted

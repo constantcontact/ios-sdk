@@ -30,9 +30,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultsSet of BounceActivityes
+ * @return HttpResponse * - response containing either errors or data with a ResultsSet of BounceActivityes
  */
-+ (NSDictionary *)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId andParams:(NSString *)params;
 
 /**
  * Get clicks for a given campaign
@@ -41,9 +41,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of ClickActivityes
+ * @return HttpResponse * - response containing either errors or data with a ResultSet of ClickActivityes
  */
-+ (NSDictionary *)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
 
 /**
  * Get forwards for a given campaign
@@ -52,10 +52,10 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of ForwardActivityes
+ * @return HttpResponse * - response containing either errors or data with a ResultSet of ForwardActivityes
  */
 
-+ (NSDictionary *)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
 
 /**
  * Get opens for a given campaign
@@ -64,9 +64,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of OpenActivityes
+ * @return HttpResponse * - response containing either errors or data with a ResultSet of OpenActivityes
  */
-+ (NSDictionary *)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
 
 /**
  * Get sends for a given campaign
@@ -75,9 +75,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of SendActivityes
+ * @return HttpResponse * - response containing either errors or data with a ResultSet of SendActivityes
  */
-+ (NSDictionary *)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
 
 /**
  * Get opt outs for a given campaign
@@ -86,9 +86,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
  * @param NSString *param - query param to be appended to request
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of OptOutActivityes;
+ * @return HttpResponse * - response containing either errors or data with a ResultSet of OptOutActivityes;
  */
-+ (NSDictionary *)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
 
 /**
  * Get clicks for a specific link for a given campaign
@@ -98,9 +98,9 @@
  * @param NSString *param - query param to be appended to request
  * @param NSString *linkId - the id of the specific link you want
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a ResultSet of all the Clicks on a specific link;
+ * @return HttpResponse * - response containing either errors or data with a ResultSet of all the Clicks on a specific link;
  */
-+ (NSDictionary *)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId andParams:(NSString *)params;
++ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId andParams:(NSString *)params;
 
 /**
  * Get a summary of reporting data for a given campaign
@@ -110,6 +110,6 @@
  *
  * @return TrackingSummary * - the summary of all the tracking services related to the campaign
  */
-+ (NSDictionary *)getSummaryWithAccessToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
++ (HttpResponse*)getSummaryWithAccessToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
 
 @end

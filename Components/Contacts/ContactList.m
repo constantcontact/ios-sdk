@@ -13,7 +13,7 @@
 {
     if (self = [super init])
     {
-        _id = @"";
+        _listId = @"";
         _name = @"";
         _status = @"";
         _contactCount = 0;
@@ -26,7 +26,7 @@
 {
     if (self = [super init])
     {
-        _id = [Component valueForDictionary:dictionary withKey:@"id"];
+        _listId = [Component valueForDictionary:dictionary withKey:@"id"];
         _name = [Component valueForDictionary:dictionary withKey:@"name"];
         _status = [Component valueForDictionary:dictionary withKey:@"status"];
         _contactCount = [[Component valueForDictionary:dictionary withKey:@"contact_count"] intValue];
@@ -36,26 +36,23 @@
 
 + (ContactList *)contactListWithDictionary:(NSDictionary *)dictionary
 {
-    ContactList *contactList = [[ContactList alloc] init];
-    
-    contactList.id = [Component valueForDictionary:dictionary withKey:@"id"];
-    contactList.name = [Component valueForDictionary:dictionary withKey:@"name"];
-    contactList.status = [Component valueForDictionary:dictionary withKey:@"status"];
-    contactList.contactCount = [[Component valueForDictionary:dictionary withKey:@"contact_count"] intValue];
+    ContactList *contactList = [[ContactList alloc] initWithDictionary:dictionary];
     
     return contactList;
 }
 
-- (id) proxyForJson
+- (NSDictionary*)proxyForMinimal
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_id, @"id",nil];// _name, @"name", _status, @"status", [NSNumber numberWithInt: _contactCount], @"contact_count", nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                          _listId, @"id",
+                          nil];
 
     return dict;
 }
 
-- (NSString *) toJson
+- (NSString*)JSONForMinimal
 {
-    NSString *jsonDict = [self proxyForJson];
+    NSDictionary *jsonDict = [self proxyForMinimal];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted
@@ -70,16 +67,19 @@
     
     return jsonString;
 }
-- (id) proxyForJsonLists
+- (NSDictionary*)proxyForJSON
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_id, @"id", _name, @"name", _status, @"status", [NSNumber numberWithInt: _contactCount], @"contact_count", nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                          _name, @"name",
+                          _status, @"status",
+                          nil];
     
     return dict;
 }
 
-- (NSString *) toJsonCampaigns
+- (NSString*)JSON
 {
-    NSString *jsonDict = [self proxyForJsonLists];
+    NSDictionary *jsonDict = [self proxyForJSON];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted

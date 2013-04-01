@@ -24,9 +24,9 @@
  * @param NSString *campaignId - Campaign id to be scheduled
  * @param Schedule *schedule - Schedule to be created
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the schedule that was created
+ * @return HttpResponse * - response containing either errors or data with the schedule that was created
  */
-+ (NSDictionary *)addScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule;
++ (HttpResponse*)addScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule;
 
 /**
  * Get a list of schedules for a campaign
@@ -34,9 +34,9 @@
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the schedules
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a Array with the scheduels of a specific campaign
+ * @return HttpResponse * - response containing either errors or data with a Array with the scheduels of a specific campaign
  */
-+ (NSDictionary *)getSchedulesWithAccesToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
++ (HttpResponse*)getSchedulesWithAccesToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
 
 /**
  * Get a specific schedule for a campaign
@@ -45,9 +45,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the schedules
  * @param NSString *scheudleId - id of the Schedule we want to see
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the specific Schedule we required if it exists
+ * @return HttpResponse * - response containing either errors or data with the specific Schedule we required if it exists
  */
-+ (NSDictionary *)getScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)scheduleId;
++ (HttpResponse*)getScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)scheduleId;
 
 /**
  * Update a specific schedule for a campaign
@@ -56,9 +56,9 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the schedules
  * @param Schedule *schedule - Schedule to update
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the updated Schedule
+ * @return HttpResponse * - response containing either errors or data with the updated Schedule
  */
-+ (NSDictionary *)updateScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule;
++ (HttpResponse*)updateScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule;
 
 /**
  * Delete a specific schedule for a campaign
@@ -69,7 +69,7 @@
  *
  * @return bool - if the schedule was deleted or not
  */
-+ (BOOL)deleteScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)scheduleId;
++ (BOOL)deleteScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)scheduleId errors:(NSArray**)errors;
 
 /**
  * Send a test send of a campaign
@@ -78,8 +78,8 @@
  * @param NSString *campaignId - id of the Campaign to which we want to see the schedules
  * @param TestSend *testSend - Test send details
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the TestSend return
+ * @return HttpResponse * - response containing either errors or data with the TestSend return
  */
-+ (NSDictionary *)sendTestWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andTestSend:(TestSend *)testSend;
++ (HttpResponse*)sendTestWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andTestSend:(TestSend *)testSend;
 
 @end

@@ -19,7 +19,7 @@
  */
 @interface EmailCampaign : NSObject
 
-@property (nonatomic, readwrite) NSString *id;
+@property (nonatomic, readonly) NSString *campaignId;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *subject;
 @property (nonatomic, strong) NSString *status;
@@ -30,10 +30,8 @@
 @property (nonatomic, strong) NSString *createdDate;
 @property (nonatomic, strong) NSString *modifiedDate;
 @property (nonatomic, strong) NSString *lastSendDate;
-@property (nonatomic, strong) NSString *lastEditDate;
 @property (nonatomic, strong) NSString *lastRunDate;
 @property (nonatomic, strong) NSString *nextRunDate;
-@property (nonatomic, strong) NSString *sharePageUrl;
 @property (nonatomic, readwrite) BOOL isPermissionReminderEnabled;
 @property (nonatomic, strong) NSString *permissionReminderText;
 @property (nonatomic, readwrite) BOOL isViewAsWebpageEnabled;
@@ -84,7 +82,7 @@
  *
  * @return NSString *
  */
-- (NSString *) toJson;
-- (NSString *) toJsonShortList;
+- (NSString *)JSON;
+- (NSString *)minimalJSON;
 
 @end

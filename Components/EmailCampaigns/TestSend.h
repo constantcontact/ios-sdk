@@ -56,6 +56,6 @@
  *
  * @return NSString
  */
-- (NSString *) toJson;
+- (NSString*)JSON;
 
 @end

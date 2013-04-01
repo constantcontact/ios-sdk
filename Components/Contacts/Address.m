@@ -13,6 +13,7 @@
 {
     if (self = [super init])
     {
+        _addressId = @"0";
         _addressType = @"";
         _city = @"";
         _countryCode = @"";
@@ -32,6 +33,7 @@
 {
     if (self = [super init])
     {
+        _addressId = [Component valueForDictionary:dictionary withKey:@"id"];
         _addressType = [Component valueForDictionary:dictionary withKey:@"address_type"];
         _city = [Component valueForDictionary:dictionary withKey:@"city"];
         _countryCode = [Component valueForDictionary:dictionary withKey:@"country_code"];
@@ -48,30 +50,29 @@
 
 + (Address *)addressWithDictionary:(NSDictionary *)dictionary
 {
-    Address *address = [[Address alloc] init];
-    
-    address.addressType = [Component valueForDictionary:dictionary withKey:@"address_type"];
-    address.city = [Component valueForDictionary:dictionary withKey:@"city"];
-    address.countryCode = [Component valueForDictionary:dictionary withKey:@"country_code"];
-    address.line1 = [Component valueForDictionary:dictionary withKey:@"line1"];
-    address.line2 = [Component valueForDictionary:dictionary withKey:@"line2"];
-    address.line3 = [Component valueForDictionary:dictionary withKey:@"line3"];
-    address.postalCode = [Component valueForDictionary:dictionary withKey:@"postal_code"];
-    address.stateCode = [Component valueForDictionary:dictionary withKey:@"state_code"];
-    address.subPostalCode = [Component valueForDictionary:dictionary withKey:@"sub_postal_code"];
-    address.stateProvince = [Component valueForDictionary:dictionary withKey:@"state_province"];
+    Address *address = [[Address alloc] initWithDictionary:dictionary];
 
     return address;
 }
 
--(id) proxyForJson
+- (NSDictionary*)proxyForJSON
 {
-    return [NSDictionary dictionaryWithObjectsAndKeys: _addressType, @"address_type", _city, @"city",_countryCode, @"country_code", _line1, @"line1", _line2, @"line2", _line3, @"line3", _postalCode, @"postal_code", _stateCode, @"state_code", _subPostalCode, @"sub_postal_code",_stateProvince,@"state_province", nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            _addressType, @"address_type",
+            _city, @"city",
+            _countryCode, @"country_code",
+            _line1, @"line1",
+            _line2, @"line2",
+            _line3, @"line3",
+            _postalCode, @"postal_code",
+            _stateCode, @"state_code",
+            _subPostalCode, @"sub_postal_code",
+            nil];
 }
 
-- (NSString *) toJson
+- (NSString *)JSON
 {
-    NSString *jsonDict = [self proxyForJson];
+    NSDictionary *jsonDict = [self proxyForJSON];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted
@@ -86,4 +87,5 @@
     
     return jsonString;
 }
+
 @end

@@ -31,7 +31,7 @@
     return self;
 }
 
-+ (CustomField *)customFieldWithDictionary:(NSDictionary *)dictionary
++ (CustomField*)customFieldWithDictionary:(NSDictionary *)dictionary
 {
     CustomField *customField = [[CustomField alloc] init];
     
@@ -42,9 +42,12 @@
 }
 
 
-- (id) proxyForJson
+- (NSDictionary*)proxyForJSON
 {
-    return [NSDictionary dictionaryWithObjectsAndKeys:_name, @"name", _value, @"value", nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            _name, @"name",
+            _value, @"value",
+            nil];
 }
 
 @end

@@ -9,7 +9,7 @@
 
 @implementation CampaignTrackingService
 
-+ (NSDictionary *)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_bounces"],campaignId];
@@ -21,29 +21,29 @@
     if(params.length > 0 )
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
         NSMutableArray *bounces = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *bounce in [response objectForKey:@"results"])
+        for (NSDictionary *bounceDict in resultArray)
         {
-            [bounces addObject:[BounceActivity bounceActivityWithDictionary:bounce]];
+            BounceActivity *bounce = [BounceActivity bounceActivityWithDictionary:bounceDict];
+            [bounces addObject:bounce];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:bounces andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[bounces copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_clicks"],campaignId];
@@ -55,29 +55,29 @@
     if(params.length > 0 )
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
         NSMutableArray *clicks = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *click in [response objectForKey:@"results"])
+        for (NSDictionary *clickDict in resultArray)
         {
-            [clicks addObject:[ClickActivity clickActivityWithDictionary:click]];
+            ClickActivity *click = [ClickActivity clickActivityWithDictionary:clickDict];
+            [clicks addObject:click];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:clicks andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[clicks copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_forwards"],campaignId];
@@ -89,29 +89,29 @@
     if(params.length > 0 )
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
         NSMutableArray *forwards = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *forward in [response objectForKey:@"results"])
+        for (NSDictionary *forwardDict in resultArray)
         {
-            [forwards addObject:[ForwardActivity forwardActivityWithDictionary:forward]];
+            ForwardActivity *forward = [ForwardActivity forwardActivityWithDictionary:forwardDict];
+            [forwards addObject:forward];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:forwards andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[forwards copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_opens"],campaignId];
@@ -123,29 +123,29 @@
     if(params.length > 0 )
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
         NSMutableArray *opens = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *open in [response objectForKey:@"results"])
+        for (NSDictionary *openDict in resultArray)
         {
-            [opens addObject:[OpenActivity openActivityWithDictionary:open]];
+            OpenActivity *open = [OpenActivity openActivityWithDictionary:openDict];
+            [opens addObject:open];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:opens andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[opens copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_sends"],campaignId];
@@ -157,29 +157,29 @@
     if(params.length > 0 )
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
         NSMutableArray *sends = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *send in [response objectForKey:@"results"])
+        for (NSDictionary *sendDict in resultArray)
         {
-            [sends addObject:[SendActivity sendActivityWithDictionary:send]];
+            SendActivity *send = [SendActivity sendActivityWithDictionary:sendDict];
+            [sends addObject:send];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:sends andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[sends copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_unsubscribes"],campaignId];
@@ -192,29 +192,29 @@
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
         NSMutableArray *unsubscribes = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *unsubscribe in [response objectForKey:@"results"])
+        for (NSDictionary *unsubscribeDict in resultArray)
         {
-            [unsubscribes addObject:[OptOutActivity optOutWithDictionary:unsubscribe]];
+            OptOutActivity *unsubscribe = [OptOutActivity optOutWithDictionary:unsubscribeDict];
+            [unsubscribes addObject:unsubscribe];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:unsubscribes andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[unsubscribes copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getSummaryWithAccessToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId
++ (HttpResponse*)getSummaryWithAccessToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_summary"],campaignId];
@@ -224,21 +224,18 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
-   
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    
+    if (response.statusCode == 200)
     {
-       TrackingSummary *rez = [TrackingSummary trackingSummaryWithDictionary:response];
-        [sendBack setObject:rez forKey:@"data"];
+        TrackingSummary *summary = [TrackingSummary trackingSummaryWithDictionary:response.data];
+        [response replaceDataWithNewData:summary];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId andParams:(NSString *)params
++ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId andParams:(NSString *)params
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_link"],campaignId,linkId];
@@ -250,27 +247,26 @@
     if(params.length > 0 )
         url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
-    
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-        NSMutableArray *unsubscribes = [[NSMutableArray alloc] init];
+        NSMutableArray *clicks = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
         
-        for (NSDictionary *unsubscribe in [response objectForKey:@"results"])
+        for (NSDictionary *clickDict in resultArray)
         {
-            [unsubscribes addObject:[ClickActivity clickActivityWithDictionary:unsubscribe]];
+            ClickActivity *click = [ClickActivity clickActivityWithDictionary:clickDict];
+            [clicks addObject:click];
         }
         
-        NSDictionary *meta= [response objectForKey:@"meta"];
-        ResultSet *rez = [[ResultSet alloc]initResultSetWithResults:unsubscribes andMeta:meta];
-        [sendBack setObject:rez forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[clicks copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
 @end

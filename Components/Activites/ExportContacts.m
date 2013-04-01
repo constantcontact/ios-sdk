@@ -39,7 +39,14 @@
 - (id)proxyForJson
 {
     
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys: _fileType, @"file_type", _sortBy, @"sort_by",[NSNumber numberWithBool:_exportDateAdded],@"export_date_added",[NSNumber numberWithBool:_exportAddedBy],@"export_added_by",_lists,@"lists",_columnNames,@"column_names", nil];
+    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 _fileType, @"file_type",
+                                 _sortBy, @"sort_by",
+                                 [NSNumber numberWithBool:_exportDateAdded],@"export_date_added",
+                                 [NSNumber numberWithBool:_exportAddedBy],@"export_added_by",
+                                 _lists,@"lists",
+                                 _columnNames,@"column_names",
+                                 nil];
     
     return dict;
 }

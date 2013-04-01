@@ -13,6 +13,7 @@
 {
     if (self = [super init])
     {
+        _emailId = @"0";
         _emailAddress = @"";
         _confirmStatus = @"";
         _status = @"";
@@ -38,6 +39,7 @@
 {
     if (self = [super init])
     {
+        _emailId = [Component valueForDictionary:dictionary withKey:@"id"];
         _emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
         _confirmStatus = [Component valueForDictionary:dictionary withKey:@"confirm_status"];
         _status = [Component valueForDictionary:dictionary withKey:@"status"];
@@ -56,30 +58,18 @@
 
 + (EmailAddress *)emailAddressWithDictionary:(NSDictionary *)dictionary
 {
-    EmailAddress *emailAddress = [[EmailAddress alloc] init];
-    
-    emailAddress.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    emailAddress.confirmStatus = [Component valueForDictionary:dictionary withKey:@"confirm_status"];
-    emailAddress.status = [Component valueForDictionary:dictionary withKey:@"status"];
-    emailAddress.optInSource = [Component valueForDictionary:dictionary withKey:@"opt_in_source"];
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:sss'Z'"];
-    [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-    
-    emailAddress.optInDate = [dateFormat dateFromString:[Component valueForDictionary:dictionary withKey:@"opt_in_date"]];
-    emailAddress.optOutDate = [dateFormat dateFromString:[Component valueForDictionary:dictionary withKey:@"opt_out_date"]];
+    EmailAddress *emailAddress = [[EmailAddress alloc] initWithDictionary:dictionary];
     
     return emailAddress;
 }
 
 
-- (id) proxyForJson
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat: @"yyyy-MM-dd'T'HH:mm:sss'Z'"];
-    
-    return [NSDictionary dictionaryWithObjectsAndKeys:_emailAddress, @"email_address", _confirmStatus, @"confirm_status", _status, @"status", _optInSource , @"opt_in_source", [formatter stringFromDate:_optInDate] , @"opt_in_date", [formatter stringFromDate:_optOutDate] , @"opt_out_date", nil];
+- (NSDictionary*)proxyForJSON
+{    
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            _emailAddress, @"email_address",
+            self.optInSource, @"opt_in_source",
+            nil];
 }
 
 @end

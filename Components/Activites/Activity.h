@@ -14,7 +14,7 @@
  */
 @interface Activity : NSObject
 
-@property (nonatomic, readwrite) NSString *id;
+@property (nonatomic, strong, readonly) NSString *activityId;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *status;
 @property (nonatomic, strong) NSString *startDate;

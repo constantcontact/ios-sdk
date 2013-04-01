@@ -18,7 +18,7 @@
  *
  * @var NSString
  */
-@property (nonatomic, strong) NSString *scheduleId;
+@property (nonatomic, strong, readonly) NSString *scheduleId;
 
 /**
  * The scheduled start date/time in ISO 8601 format
@@ -43,6 +43,6 @@
  *
  * @return NSString
  */
-- (NSString *) toJson;
--(id) proxyForJson;
+- (NSString*)JSON;
+- (NSDictionary*)proxyForJSON;
 @end

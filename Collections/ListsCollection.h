@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HttpRequest.h"
 #import "ContactList.h"
 #import "Collection.h"
 
@@ -16,9 +17,9 @@
  *
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the array of contact lists belonging to the user authenthicated by the token;
+ * @return HttpResponse * - response containing either errors or data with the array of contact lists belonging to the user authenthicated by the token;
  */
-+ (NSDictionary *)listsWithAccessToken:(NSString*)accessToken;
++ (HttpResponse*)listsWithAccessToken:(NSString*)accessToken;
 
  /**
  * Function that adds a contact list to a user identified by a token;
@@ -26,9 +27,9 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param ContactList* list - the list to be added to the users list collection;
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the added ContactList in case of succes;
+ * @return HttpResponse * - response containing either errors or data with the added ContactList in case of succes;
  */
-+ (NSDictionary *)addList:(ContactList*)list withAccessToken:(NSString*)accessToken;
++ (HttpResponse*)addList:(ContactList*)list withAccessToken:(NSString*)accessToken;
 
  /**
  * Function that gets a specific contact list from the user identified by a token;
@@ -36,9 +37,9 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* listID - the id of the list you wish to obtain;
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the ContactList who is identified by listID;
+ * @return HttpResponse * - response containing either errors or data with the ContactList who is identified by listID;
  */
-+ (NSDictionary *)listWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId;
++ (HttpResponse*)listWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId;
 
 /**
  * Function that gets contacts from the list specified by the user;
@@ -46,9 +47,9 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* listID - the id of the list you wish to obtain contacts from;
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with a array of Contacts from the list;
+ * @return HttpResponse * - response containing either errors or data with a array of Contacts from the list;
  */
-+ (NSDictionary *)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId;
++ (HttpResponse*)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId;
 
 /**
  * Function that updates a contact list
@@ -57,9 +58,9 @@
  * @param NSString* listID - the id of the list that will be updated;
  * @param ContactList *list - the list to be updated;
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the updated ContactList;
+ * @return HttpResponse * - response containing either errors or data with the updated ContactList;
  */
-+ (NSDictionary *)updateAccessToken:(NSString*)accessToken andListId:(NSString*)listId andList:(ContactList *)list;
++ (HttpResponse*)updateListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId andList:(ContactList *)list;
 
 /**
  * Function that delete a contact list
@@ -67,9 +68,9 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* listID - the id of the list that will be deleted;
  *
- * @return NSDictionary * -dictionary containing either @"ERROR" or @"data" with the updated ContactList;
+ * @return HttpResponse * - response containing either errors or data with the updated ContactList;
  */
-+ (BOOL)deleteListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId;
++ (BOOL)deleteListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId errors:(NSArray**)errors;
 
 
 

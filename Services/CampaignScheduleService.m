@@ -9,7 +9,7 @@
 
 @implementation CampaignScheduleService
 
-+ (NSDictionary *)addScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule;
++ (HttpResponse*)addScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule;
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedules"],campaignId];
@@ -18,25 +18,22 @@
     
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    NSString *jsonedSchedule = [schedule toJson];
+    NSString *scheduleJSON = [schedule JSON];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonedSchedule];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:scheduleJSON];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 201)
     {
-        Schedule *sched = [Schedule scheduleWithDictionary:response];
-        [sendBack setObject:sched forKey:@"data"];
+        Schedule *schedule = [Schedule scheduleWithDictionary:response.data];
+        [response replaceDataWithNewData:schedule];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getSchedulesWithAccesToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId
++ (HttpResponse*)getSchedulesWithAccesToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedules"],campaignId];
@@ -46,103 +43,88 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
-
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    
+    if (response.statusCode == 200)
     {
-        NSMutableArray *sets = [[NSMutableArray alloc] init];
+        NSMutableArray *schedules = [[NSMutableArray alloc] init];
+        NSMutableArray *resultArray = response.data;
         
-        if([response objectForKey:@"result"])
+        for (NSDictionary *scheduleDict in resultArray)
         {
-            
-            NSArray *tempArray = [response objectForKey:@"result"];
-            for (int i=0; i< tempArray.count;i++)
-            {
-                [sets addObject:[Schedule scheduleWithDictionary:[tempArray objectAtIndex:i]]];
-            }
+            Schedule *schedule = [Schedule scheduleWithDictionary:scheduleDict];
+            [schedules addObject:schedule];
         }
-
-        [sendBack setObject:sets forKey:@"data"];
+        
+        [response replaceDataWithNewData:[schedules copy]];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)scheduleId
++ (HttpResponse*)getScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)scheduleId
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedule"],campaignId,[scheduleId intValue]];
+    NSString *endpoint = [NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedule"], campaignId, scheduleId];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-        Schedule *schedule =[Schedule scheduleWithDictionary:response];
-        [sendBack setObject:schedule forKey:@"data"];
+        Schedule *schedule = [Schedule scheduleWithDictionary:response.data];
+        [response replaceDataWithNewData:schedule];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)updateScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule
++ (HttpResponse*)updateScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andSchedule:(Schedule *)schedule
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedule"],campaignId,[schedule.scheduleId intValue]];
+    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedule"], campaignId, schedule.scheduleId];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     
-    NSString *jsonedSchedule = [schedule toJson];
+    NSString *scheduleJSON = [schedule JSON];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:jsonedSchedule];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:scheduleJSON];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-       Schedule *sched = [Schedule scheduleWithDictionary:response];
-        [sendBack setObject:sched forKey:@"data"];
+        Schedule *schedule = [Schedule scheduleWithDictionary:response.data];
+        [response replaceDataWithNewData:schedule];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (BOOL)deleteScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)schedule
++ (BOOL)deleteScheduleWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andScheduleId:(NSString *)schedule errors:(NSArray *__autoreleasing *)errors
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedule"],campaignId,[schedule intValue]];
+    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_schedule"],campaignId, schedule];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
     
-    BOOL ret = NO;
-    if([[response objectForKey:@"code"]intValue] == 204)
-        ret = YES;
-    else
-        ret = NO;
-    return ret;
+    *errors = response.errors;
+    
+    return (response.statusCode == 204);
 
 }
 
-+ (NSDictionary *)sendTestWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andTestSend:(TestSend *)testSend
++ (HttpResponse*)sendTestWithAccesToken:(NSString *)accessToken campaignId:(NSString *)campaignId andTestSend:(TestSend *)testSend
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_test_sends"],campaignId];
@@ -150,23 +132,19 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    NSString *jsonedTest = [testSend toJson];
+    NSString *testJSON = [testSend JSON];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonedTest];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:testJSON];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-       TestSend *test = [TestSend testSendWithDictionary:response];
-        [sendBack setObject:test forKey:@"data"];
+        TestSend *test = [TestSend testSendWithDictionary:response.data];
+        [response replaceDataWithNewData:test];
     }
     
-    return [sendBack mutableCopy];
-
+    return response;
 }
 
 

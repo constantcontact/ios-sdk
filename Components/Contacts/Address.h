@@ -10,6 +10,7 @@
 
 @interface Address : NSObject
 
+@property (nonatomic, strong, readonly) NSString *addressId;
 @property (nonatomic, strong) NSString *addressType;
 @property (nonatomic, strong) NSString *city;
 @property (nonatomic, strong) NSString *countryCode;
@@ -23,6 +24,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (Address *)addressWithDictionary:(NSDictionary *)dictionary;
--(id) proxyForJson;
-- (NSString *) toJson;
+- (NSDictionary*)proxyForJSON;
+- (NSString*)JSON;
+
 @end

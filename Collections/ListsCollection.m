@@ -7,7 +7,6 @@
 
 #import "ListsCollection.h"
 #import "Config.h"
-#import "HttpRequest.h"
 #import "ContactsCollection.h"
 
 @implementation ListsCollection
@@ -16,7 +15,7 @@
 // Gets a array of lists
 // accessToken - Constant Contact OAuth2 access token
 //------------------------------------------------------------------------------------
-+ (NSDictionary *)listsWithAccessToken:(NSString*)accessToken
++ (HttpResponse*)listsWithAccessToken:(NSString*)accessToken
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"lists"];
@@ -26,27 +25,30 @@
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
-    
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+
+    if (response.statusCode == 200)
     {
-        NSArray * arr = nil;
-        if([response objectForKey:@"result"])
-            arr = [response objectForKey:@"result"];
-        [sendBack setObject:arr forKey:@"data"];
+        NSMutableArray *lists = [[NSMutableArray alloc] init];
+        NSArray *resultArray = response.data;
+        
+        for (NSDictionary *listDict in resultArray)
+        {
+            ContactList *list = [[ContactList alloc] initWithDictionary:listDict];
+            [lists addObject:list];
+        }
+        
+        [response replaceDataWithNewData:lists];
     }
-    
-    return [sendBack mutableCopy];
+
+    return response;
 }
 //------------------------------------------------------------------------------------
 // Add a contact list
 // accessToken - Constant Contact OAuth2 access token
 // list - the list to be added to your list collection
 //------------------------------------------------------------------------------------
-+ (NSDictionary *)addList:(ContactList*)list withAccessToken:(NSString*)accessToken
++ (HttpResponse*)addList:(ContactList*)list withAccessToken:(NSString*)accessToken
 {
     ContactList *returnContactList = nil;
     
@@ -58,29 +60,28 @@
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    NSString *jsonString = [list toJsonCampaigns];
+    NSString *jsonString = [list JSON];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonString];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonString];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 201)
     {
-       returnContactList = [[ContactList alloc] initWithDictionary:response];
-       [sendBack setObject:returnContactList forKey:@"data"];
+        returnContactList = [[ContactList alloc] initWithDictionary:response.data];
+        [response replaceDataWithNewData:returnContactList];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 //------------------------------------------------------------------------------------
 // Get a specific contact list
 // accessToken - Constant Contact OAuth2 access token
 // listID - unique id for each list
 //------------------------------------------------------------------------------------
-+ (NSDictionary *)listWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId
++ (HttpResponse*)listWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId
 {
-    ContactList *returnContactList = nil;
+    // request should't return an array if no listId specified
+    if (listId.length == 0)
+        listId = @"0";
     
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"list"];
@@ -88,21 +89,18 @@
     NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
 
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-        returnContactList = [[ContactList alloc] initWithDictionary:response];
-        [sendBack setObject:returnContactList forKey:@"data"];
+        ContactList *returnContactList = [[ContactList alloc] initWithDictionary:response.data];
+        [response replaceDataWithNewData:returnContactList];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId
++ (HttpResponse*)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"membership_list"];
@@ -110,51 +108,26 @@
     NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableArray *rez = [[NSMutableArray alloc]init];
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if(response.statusCode == 200)
     {
-        for (NSDictionary * dict in [response objectForKey:@"results"])
+        NSMutableArray *contacts = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
+        
+        for (NSDictionary *contactDict in resultArray)
         {
-            Contact *cont = [Contact contactWithDictionary:dict];
-            [rez addObject:cont];
+            Contact *contact = [Contact contactWithDictionary:contactDict];
+            [contacts addObject:contact];
         }
-        [sendBack setObject:rez forKey:@"data"];
+        
+        [response replaceDataWithNewData:[contacts copy]];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)updateAccessToken:(NSString*)accessToken andListId:(NSString*)listId andList:(ContactList *)list
-{
-    
-    NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint = [Config valueForType:@"endpoints" key:@"list"];
-    NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
-    NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
-    
-    NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
-    NSString *jsonedList = [list toJsonCampaigns];
-    
-    NSDictionary *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:jsonedList];
-    
-   NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
-    {
-        ContactList *uplist = [[ContactList alloc] initWithDictionary:response];
-        [sendBack setObject:uplist forKey:@"data"];
-    }
-    
-    return [sendBack mutableCopy];
-}
-
-+ (BOOL)deleteListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId
++ (HttpResponse*)updateListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId andList:(ContactList *)list
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"list"];
@@ -162,13 +135,33 @@
     NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
-    NSDictionary *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    NSString *listJSON = [list JSON];
     
-    if( [[response objectForKey:@"code"] isEqualToString:@"204"])
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:listJSON];
+    
+    if (response.statusCode == 200)
     {
-        return YES;
+        ContactList *returnContactList = [[ContactList alloc] initWithDictionary:response.data];
+        [response replaceDataWithNewData:returnContactList];
     }
-    return NO;
+    
+    return response;
+}
+
++ (BOOL)deleteListWithAccessToken:(NSString*)accessToken andListId:(NSString*)listId errors:(NSArray**)errors
+{
+    NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
+    NSString *endpoint = [Config valueForType:@"endpoints" key:@"list"];
+    NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
+    NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
+    
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    
+    *errors = response.errors;
+    
+    return (response.statusCode == 204);
 }
 
 @end

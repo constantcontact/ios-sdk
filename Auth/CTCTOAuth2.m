@@ -51,10 +51,9 @@
     NSString *url = [self authorizationURLFromServer:NO];
     NSLog(@"URL1:%@", url);
     
-    NSDictionary *response = [self httpRequestWithUrl:url andMethod:@"GET"];
-    NSString * responseStatusCode = [response objectForKey:@"ResponseStatusCode"];
+    HttpResponse *response = [self httpRequestWithUrl:url andMethod:@"GET"];
     
-    if ([responseStatusCode isEqualToString:@"200"]) // statusCode=200
+    if (response.statusCode == 200) // statusCode=200
     {
         // Construct the login URL
         NSString *baseURL = [Config valueForType:@"login" key:@"base_url"];
@@ -65,9 +64,8 @@
         NSLog(@"URL2:%@", url);
         
         response = [self httpRequestWithUrl:url andMethod:@"POST"];
-        responseStatusCode = [response objectForKey:@"ResponseStatusCode"];
         
-        if ([responseStatusCode isEqualToString:@"200"]) // statusCode=200
+        if (response.statusCode == 200) // statusCode=200
         {
             
             // Grant access to redirect URL
@@ -78,16 +76,14 @@
             NSLog(@"URL3:%@", url);
             
             response = [self httpRequestWithUrl:url andMethod:@"POST"];
-            responseStatusCode = [response objectForKey:@"ResponseStatusCode"];
             
-            if ([responseStatusCode isEqualToString:@"200"]) // statusCode=200
+            if (response.statusCode == 200) // statusCode=200
             {
-                NSString *responseURL = [response objectForKey:@"ResponseURL"];
-                NSRange range = [responseURL rangeOfString:@"#access_token="];
+                NSRange range = [response.responseURL rangeOfString:@"#access_token="];
                 
                 if (range.location != NSNotFound)
                 {
-                    NSString *accessToken= [responseURL substringFromIndex:range.location + 14];
+                    NSString *accessToken= [response.responseURL substringFromIndex:range.location + 14];
                     accessToken = [accessToken substringToIndex:36];
                     
                     return accessToken;
@@ -100,10 +96,11 @@
 }
 
 
--(NSDictionary*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method
+-(HttpResponse*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method
 {
     NSError *error = nil;
     NSURLResponse *response = nil;
+    HttpResponse *customResponse = nil;
     
     // Request
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
@@ -115,21 +112,46 @@
             [urlRequest setValue:[NSString stringWithFormat:@"%@",cookieee] forHTTPHeaderField:@"Cookies"];
     }
 
-    [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    id responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
     int responseStatusCode = [httpResponse statusCode];
     NSString *responseURL = [NSString stringWithFormat:@"%@", [httpResponse URL]];
     
     NSLog(@"STATUS:%d", responseStatusCode);
-    NSLog(@"URLRESPONSE:%@", responseURL);
     
     NSDictionary *theHeaders = [httpResponse allHeaderFields];
     NSString * cookie = [theHeaders valueForKey:@"Set-Cookie"];
     
     if (cookie)
-        cookiesArray = [NSHTTPCookie cookiesWithResponseHeaderFields:theHeaders forURL:[response URL]];   
-
-    return [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d", responseStatusCode], @"ResponseStatusCode", responseURL, @"ResponseURL",  nil];
+        cookiesArray = [NSHTTPCookie cookiesWithResponseHeaderFields:theHeaders forURL:[response URL]];
+    
+    id responseJSON = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
+    
+    NSDictionary *responseDict;
+    
+    if (responseStatusCode == 200)
+    {
+        responseDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                        [NSString stringWithFormat:@"%d", responseStatusCode], KEY_STATUS_CODE,
+                        url, KEY_REQUEST_URL,
+                        responseURL, KEY_RESPONSE_URL,
+                        responseJSON, KEY_DATA,
+                        nil];
+    }
+    else
+    {
+        responseDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                        [NSString stringWithFormat:@"%d", responseStatusCode], KEY_STATUS_CODE,
+                        url, KEY_REQUEST_URL,
+                        responseURL, KEY_RESPONSE_URL,
+                        responseJSON, KEY_ERRORS,
+                        nil];
+    }
+    
+    customResponse = [[HttpResponse alloc] initWithDictionary:responseDict];
+    
+    return customResponse;
 }
 
 
@@ -137,7 +159,7 @@
 // Obtain an access token
 // code - code returned from Constant Contact after a user has granted access to their account
 // ----------------------------------------------------------------------------------------------------
-- (NSDictionary*)accesTokenWithCode:(NSString*)code
+- (HttpResponse*)accesTokenWithCode:(NSString*)code
 {
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             [Config valueForType:@"auth" key:@"authorization_code_grant_type"] , @"grant_type",
@@ -152,9 +174,9 @@
     NSString *httpQuery = [NSString stringWithFormat:@"%@", params];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    NSDictionary *responseJSON = [HttpRequest postWithUrl:url andHeaders:nil andStringData:nil];
+    HttpResponse *customResponse = [HttpRequest postWithUrl:url andHeaders:nil andStringData:nil];
     
-    return responseJSON;
+    return customResponse;
 }
 //----------------------------------------------------------------------------------------------------------------------
 //Returns the username of the user who authorized the application

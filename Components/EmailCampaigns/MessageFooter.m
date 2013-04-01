@@ -73,16 +73,30 @@
     return messageFooter;
 }
 
-- (id) proxyForJson
+- (NSDictionary*)proxyForJSON
 {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:_city, @"city", _state, @"state", _country, @"country", _organizationMame, @"organization_name",_addressLine1,@"address_line_1",_addressLine2,@"address_line_2",_addressLine3,@"address_line_3",_internationalState,@"international_state",_postalCode,@"postal_code",[NSNumber numberWithBool:_includeForwardEmail],@"include_forward_email",_forwardEmailLinkText,@"forward_email_link_text",[NSNumber numberWithBool:_includeSubscribeLink],@"include_subscribe_link",_subscribeLinkText,@"subscribe_link_text", nil];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                 _city, @"city",
+                                 _state, @"state",
+                                 _country, @"country",
+                                 _organizationMame, @"organization_name",
+                                 _addressLine1,@"address_line_1",
+                                 _addressLine2,@"address_line_2",
+                                 _addressLine3,@"address_line_3",
+                                 _internationalState,@"international_state",
+                                 _postalCode,@"postal_code",
+                                 [NSNumber numberWithBool:_includeForwardEmail],@"include_forward_email",
+                                 _forwardEmailLinkText,@"forward_email_link_text",
+                                 [NSNumber numberWithBool:_includeSubscribeLink],@"include_subscribe_link",
+                                 _subscribeLinkText,@"subscribe_link_text",
+                                 nil];
     
     return dict;
 }
 
-- (NSString *) toJson
+- (NSString *)JSON
 {
-    NSString *jsonDict = [self proxyForJson];
+    NSDictionary *jsonDict = [self proxyForJSON];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted

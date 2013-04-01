@@ -39,5 +39,6 @@
 
 + (MessageFooter *)messageFooterWithDictionary:(NSDictionary *)dictionary;
 
-- (NSString *) toJson;
+- (NSString*)JSON;
+
 @end

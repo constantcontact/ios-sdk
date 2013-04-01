@@ -134,7 +134,11 @@
     }
     
     
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys: temp, @"import_data", _lists, @"lists",_columnNames,@"column_names", nil];
+    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 temp, @"import_data",
+                                 _lists, @"lists",
+                                 _columnNames,@"column_names",
+                                 nil];
     
     return dict;
 }

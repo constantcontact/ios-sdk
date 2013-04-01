@@ -14,17 +14,17 @@
     if (self = [super init])
     {
         self.results = [results mutableCopy];
-    
-        if([[meta objectForKey:@"pagination"] objectForKey:@"next_link"])
-        {
+        
         NSString *nextLink = [[meta objectForKey:@"pagination"] objectForKey:@"next_link"];
-        
-        NSRange replaceRange = [nextLink rangeOfString:@"?"];
-        int length = nextLink.length - replaceRange.length;
-        
-        NSString *result = [nextLink substringWithRange:NSMakeRange(replaceRange.location,length)];
+    
+        if(nextLink)
+        {
+            NSRange replaceRange = [nextLink rangeOfString:@"?"];
+            int length = nextLink.length - replaceRange.location - 1;
+            
+            NSString *result = [nextLink substringWithRange:NSMakeRange(replaceRange.location+1,length)];
 
-        self.next = result;
+            self.next = result;
         }
     }
     return self;

@@ -1,4 +1,3 @@
-
 Constant Contact IOS SDK
 =========================
 
@@ -37,7 +36,7 @@ In order to use the Constant Contact SDK you have to follow these steps:
 <br>
 `#import  "ContactTrackingService.h"`  -for contact tracking manipulation
 <br>
-`#import  "VerriffiedEmailAddress.h"`  -to obtain the valid email addresses used in some calls
+`#import  "VerifiedEmailAddress.h"`  -to obtain the valid email addresses used in some calls
 
 
 2) Create a authentication object with your user credentials:
@@ -71,6 +70,6 @@ NSString *myToken = [ctctOauth2 accessToken];
 
 ######Example for getting a array of contacts
 ```
-NSDictionary *result = [ContactsCollection contactsWithAccessToken: myToken];
-NSArray *contactArray = [result objectForKey:@"data"];
+HttpResponse *result = [ContactsCollection contactsWithAccessToken: myToken];
+NSArray *contactArray = result.data;
 ```

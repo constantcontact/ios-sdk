@@ -9,7 +9,7 @@
 
 @implementation ActivityService
 
-+ (NSDictionary *)getActivitesWithToken:(NSString *)accessToken
++ (HttpResponse*)getActivitesWithToken:(NSString *)accessToken
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"activities"];
@@ -18,28 +18,27 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-        NSMutableArray *activites = [[NSMutableArray alloc] init];
-        for (NSDictionary *activ in [response objectForKey:@"result"])
+        NSMutableArray *activities = [[NSMutableArray alloc] init];
+        NSArray *result = response.data;
+        
+        for (NSDictionary *listDict in result)
         {
-            [activites addObject:[Activity activityWithDictionary:activ]];
+            Activity *activity = [Activity activityWithDictionary:listDict];
+            [activities addObject:activity];
         }
         
-        [sendBack setObject:activites forKey:@"data"];
+        [response replaceDataWithNewData:activities];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 
 }
 
-+ (NSDictionary *)getActivityWithToken:(NSString *)accessToken andActivityId:(NSString *)activityId
++ (HttpResponse*)getActivityWithToken:(NSString *)accessToken andActivityId:(NSString *)activityId
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =   [NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"activity"],activityId];
@@ -50,21 +49,18 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-        Activity *activ = [Activity activityWithDictionary:response];
-        [sendBack setObject:activ forKey:@"data"];
+        Activity *activity = [Activity activityWithDictionary:response.data];
+        [response replaceDataWithNewData:activity];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)createAddContactsActivityWithToken:(NSString *)accessToken andContacts:(AddContacts *)addContacts
++ (HttpResponse*)createAddContactsActivityWithToken:(NSString *)accessToken andContacts:(AddContacts *)addContacts
 {
  
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
@@ -76,23 +72,20 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSString *jsonedString = [addContacts toJson];
+    NSString *contactsJSON = [addContacts toJson];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonedString];
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:contactsJSON];
     
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 201)
     {
-         Activity *activ = [Activity activityWithDictionary:response];
-        [sendBack setObject:activ forKey:@"data"];
+        Activity *activity = [Activity activityWithDictionary:response.data];
+        [response replaceDataWithNewData:activity];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)addClearListActivityWithToken:(NSString *)accessToken andLists:(NSArray *)lists
++ (HttpResponse*)addClearListActivityWithToken:(NSString *)accessToken andLists:(NSArray *)lists
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =   [Config valueForType:@"endpoints" key:@"clear_lists_activity"];
@@ -105,20 +98,18 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:stringData];
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:stringData];
+    
+    if (response.statusCode == 201)
     {
-        Activity *activ = [Activity activityWithDictionary:response];
-        [sendBack setObject:activ forKey:@"data"];
+        Activity *activity = [Activity activityWithDictionary:response.data];
+        [response replaceDataWithNewData:activity];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)addExportContactsActivityWithToken:(NSString *)accessToken andExportContacts:(ExportContacts *)exportContacts
++ (HttpResponse*)addExportContactsActivityWithToken:(NSString *)accessToken andExportContacts:(ExportContacts *)exportContacts
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =   [Config valueForType:@"endpoints" key:@"export_contacts_activity"];
@@ -131,21 +122,18 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:stringData];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:stringData];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 201)
     {
-        Activity *activ = [Activity activityWithDictionary:response];
-        [sendBack setObject:activ forKey:@"data"];
+        Activity *activity = [Activity activityWithDictionary:response.data];
+        [response replaceDataWithNewData:activity];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)addRemoveContactsFromListsActivityWithToken:(NSString *)accessToken emailAddresses:(NSArray *)emailAddresses andLists:(NSArray *)lists
++ (HttpResponse*)addRemoveContactsFromListsActivityWithToken:(NSString *)accessToken emailAddresses:(NSArray *)emailAddresses andLists:(NSArray *)lists
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =   [Config valueForType:@"endpoints" key:@"remove_from_lists_activity"];
@@ -167,18 +155,15 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:[self toJson:payload]];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:[self toJson:payload]];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 201)
     {
-        Activity *activ = [Activity activityWithDictionary:response];
-        [sendBack setObject:activ forKey:@"data"];
+        Activity *activity = [Activity activityWithDictionary:response.data];
+        [response replaceDataWithNewData:activity];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
                               
 + (NSString *) toJson:(id)dict

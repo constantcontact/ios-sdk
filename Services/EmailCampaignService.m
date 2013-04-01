@@ -9,70 +9,69 @@
 
 @implementation EmailCampaignService
 
-+ (NSDictionary *)addCampaignWithToken:(NSString *)accessToken andCampaign:(EmailCampaign *)campaign;
++ (HttpResponse *)addCampaignWithToken:(NSString *)accessToken andCampaign:(EmailCampaign *)campaign;
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"campaigns"];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     
-    NSString *jsonedCampaign = [campaign toJsonShortList];
+    NSString *campaignJSON = [campaign JSON];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonedCampaign];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:campaignJSON];
  
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 201)
     {
-        EmailCampaign *campaignRez = [EmailCampaign emailCampaignWithDictionary:response];
-        [sendBack setObject:campaignRez forKey:@"data"];
+        EmailCampaign *campaign = [EmailCampaign emailCampaignWithDictionary:response.data];
+        [response replaceDataWithNewData:campaign];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getCampaignsWithToken:(NSString *)accessToken andParams:(NSString *)param;
-{
-    NSMutableArray *campaigns = [[NSMutableArray alloc] init];
-    
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken andParams:(NSString*)params;
+{    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"campaigns"];
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    if(param.length > 0)
+    if(params.length > 0)
     {
-        httpQuery = [NSString stringWithFormat:@"%@&%@",httpQuery,param];
+        httpQuery = [NSString stringWithFormat:@"%@&%@",params,httpQuery];
     }
+    
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
-  
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    
+    if (response.statusCode == 200)
     {
-        for (NSDictionary *contact in [response objectForKey:@"results"])
+        NSMutableArray *campaigns = [[NSMutableArray alloc] init];
+        NSArray *resultArray = [response.data objectForKey:@"results"];
+        
+        for (NSDictionary *campaignDict in resultArray)
         {
-            [campaigns addObject:[EmailCampaign emailCampaignWithDictionary:contact]];
+            EmailCampaign *campaign = [EmailCampaign emailCampaignWithDictionary:campaignDict];
+            [campaigns addObject:campaign];
         }
         
-        ResultSet *set = [[ResultSet alloc]initResultSetWithResults:campaigns andMeta:[response objectForKey:@"meta"]];
-        [sendBack setObject:set forKey:@"data"];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[campaigns copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
-+ (NSDictionary *)getCampaignWithToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
++ (HttpResponse *)getCampaignWithToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign"],campaignId];
@@ -82,22 +81,21 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-         EmailCampaign *campaign = [EmailCampaign emailCampaignWithDictionary:response];
-        [sendBack setObject:campaign forKey:@"data"];
+        EmailCampaign *campaign = [EmailCampaign emailCampaignWithDictionary:response.data];
+        [response replaceDataWithNewData:campaign];
     }
     
-    return [sendBack mutableCopy];
+    return response;;
 }
 
-+ (BOOL)deleteCamapaignWithToken:(NSString *)accessToken andCamapaignId:(NSString *)campaignId;
++ (BOOL)deleteCamapaignWithToken:(NSString *)accessToken andCamapaignId:(NSString *)campaignId errors:(NSArray *__autoreleasing *)errors;
 {
+    if (campaignId.length == 0)
+        campaignId = @"0";
     
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign"],campaignId];
@@ -107,40 +105,34 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
-   
-    BOOL ret = NO;
-    if([[response objectForKey:@"code"]intValue] == 204)
-       ret = YES;
-    else
-        ret = NO;
-     return ret;
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    
+    *errors = response.errors;
+       
+    return (response.statusCode == 204);
 }
 
-+ (NSDictionary *)updateCampaignWithToken:(NSString *)accessToken andEmailCampaign:(EmailCampaign *)emailCampaign
++ (HttpResponse *)updateCampaignWithToken:(NSString *)accessToken andEmailCampaign:(EmailCampaign *)emailCampaign
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign"],emailCampaign.id];
+    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign"],emailCampaign.campaignId];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     
-    NSString *jsonedCampaign = [emailCampaign toJson];
+    NSString *campaignJSON = [emailCampaign JSON];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSDictionary *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:jsonedCampaign];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:campaignJSON];
     
-    NSMutableDictionary *sendBack = [[NSMutableDictionary alloc]init];
-    if([response objectForKey:@"ERROR"])
-        return response;
-    else
+    if (response.statusCode == 200)
     {
-         EmailCampaign *campaignRez = [EmailCampaign emailCampaignWithDictionary:response];
-        [sendBack setObject:campaignRez forKey:@"data"];
+        EmailCampaign *campaign = [EmailCampaign emailCampaignWithDictionary:response.data];
+        [response replaceDataWithNewData:campaign];
     }
     
-    return [sendBack mutableCopy];
+    return response;
 }
 
 @end

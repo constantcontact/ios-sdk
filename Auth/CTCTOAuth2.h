@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HttpResponse.h"
 
 @interface CTCTOAuth2 : NSObject
 {
@@ -42,9 +43,9 @@
  *
  * @param NSString* code - code sent to site and obtained at login;
  *
- * @return NSDictionary* - a dictinary that contains the accesToken;
+ * @return HttpResponse* - response with the access token;
  */
-- (NSDictionary*)accesTokenWithCode:(NSString*)code;
+- (HttpResponse*)accesTokenWithCode:(NSString*)code;
 
  /** 
  * Function is used to obtain an access token;

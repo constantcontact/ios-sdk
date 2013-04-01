@@ -40,6 +40,6 @@
  * @return ClickThroughDetails *
  */
 - (id)initWithDictionary:(NSDictionary *)dictionary;
-
 + (ClickThroughDetails *)clickThroughDetailsWithDictionary:(NSDictionary *)dictionary;
+
 @end

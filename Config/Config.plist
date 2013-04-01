@@ -5,11 +5,11 @@
 	<key>config</key>
 	<dict>
 		<key>consumer_secret</key>
-		<string>9886d7d656a44f1daac4b5f42c95dda3</string>
+		<string></string>
 		<key>redirect_uri</key>
-		<string>http://www.constantcontact.com/index.jsp</string>
+		<string></string>
 		<key>api_key</key>
-		<string>4d6f1e55-8673-47fb-88df-3945e2d94781</string>
+		<string></string>
 	</dict>
 	<key>errors</key>
 	<dict>
@@ -93,74 +93,74 @@
 		<string>lists/%@/contacts</string>
 		<key>verified_email</key>
 		<string>account/verifiedemailaddresses</string>
-		<key>contact_tracking_forwards</key>
-		<string>contacts/%@/tracking/forwards</string>
 		<key>contact_lists</key>
-		<string>contacts/%d/lists</string>
-		<key>contact_tracking_sends</key>
-		<string>contacts/%@/tracking/sends</string>
+		<string>contacts/%@/lists</string>
 		<key>base_url</key>
 		<string>https://api.constantcontact.com/v2/</string>
-		<key>campaign_tracking_clicks</key>
-		<string>emailcampaigns/%@/tracking/clicks</string>
-		<key>campaign_tracking_unsubscribes</key>
-		<string>emailcampaigns/%@/tracking/unsubscribes</string>
-		<key>contact_tracking_summary</key>
-		<string>contacts/%@/tracking/reports/summary</string>
 		<key>add_contacts_activity</key>
 		<string>activities/addcontacts</string>
 		<key>contact_list</key>
-		<string>contacts/%d/lists/%@</string>
-		<key>campaign_tracking_sends</key>
-		<string>emailcampaigns/%@/tracking/sends</string>
-		<key>contact</key>
-		<string>contacts/%d</string>
-		<key>clear_lists_activity</key>
-		<string>activities/clearlists</string>
-		<key>contact_tracking_bounces</key>
-		<string>contacts/%@/tracking/bounces</string>
-		<key>campaign</key>
-		<string>emailcampaigns/%@</string>
-		<key>campaign_schedules</key>
-		<string>emailcampaigns/%@/schedules</string>
-		<key>campaign_schedule</key>
-		<string>emailcampaigns/%@/schedules/%d</string>
-		<key>campaign_test_sends</key>
-		<string>emailcampaigns/%@/tests</string>
-		<key>campaign_tracking_opens</key>
-		<string>emailcampaigns/%@/tracking/opens</string>
-		<key>list</key>
-		<string>lists/%@</string>
-		<key>activities</key>
-		<string>activities</string>
-		<key>remove_from_lists_activity</key>
-		<string>activities/removefromlists</string>
-		<key>contact_tracking_unsubscribes</key>
-		<string>contacts/%@/tracking/unsubscribes</string>
+		<string>contacts/%@/lists/%@</string>
 		<key>contacts</key>
 		<string>contacts</string>
-		<key>campaigns</key>
-		<string>emailcampaigns</string>
-		<key>contact_tracking_opens</key>
-		<string>contacts/%@/tracking/opens</string>
-		<key>campaign_tracking_summary</key>
-		<string>emailcampaigns/%@/tracking/reports/summary</string>
-		<key>activity</key>
-		<string>activities/%@</string>
-		<key>contact_tracking_clicks</key>
-		<string>contacts/%@/tracking/clicks</string>
-		<key>campaign_tracking_link</key>
-		<string>emailcampaigns/%@/tracking/clicks/%@</string>
-		<key>export_contacts_activity</key>
-		<string>activities/exportcontacts</string>
+		<key>contact</key>
+		<string>contacts/%@</string>
 		<key>lists</key>
 		<string>lists</string>
+		<key>list</key>
+		<string>lists/%@</string>
+		<key>clear_lists_activity</key>
+		<string>activities/clearlists</string>
+		<key>activities</key>
+		<string>activities</string>
+		<key>activity</key>
+		<string>activities/%@</string>
+		<key>campaigns</key>
+		<string>emailmarketing/campaigns</string>
+		<key>campaign</key>
+		<string>emailmarketing/campaigns/%@</string>
+		<key>campaign_schedules</key>
+		<string>emailmarketing/campaigns/%@/schedules</string>
+		<key>campaign_schedule</key>
+		<string>emailmarketing/campaigns/%@/schedules/%@</string>
+		<key>campaign_test_sends</key>
+		<string>emailmarketing/campaigns/%@/tests</string>
+		<key>campaign_tracking_opens</key>
+		<string>emailmarketing/campaigns/%@/tracking/opens</string>
+		<key>campaign_tracking_sends</key>
+		<string>emailmarketing/campaigns/%@/tracking/sends</string>
 		<key>campaign_tracking_bounces</key>
-		<string>emailcampaigns/%@/tracking/bounces</string>
+		<string>emailmarketing/campaigns/%@/tracking/bounces</string>
 		<key>campaign_tracking_forwards</key>
-		<string>emailcampaigns/%@/tracking/forwards</string>
+		<string>emailmarketing/campaigns/%@/tracking/forwards</string>
+		<key>campaign_tracking_summary</key>
+		<string>emailmarketing/campaigns/%@/tracking/reports/summary</string>
+		<key>campaign_tracking_clicks</key>
+		<string>emailmarketing/campaigns/%@/tracking/clicks</string>
+		<key>campaign_tracking_link</key>
+		<string>emailmarketing/campaigns/%@/tracking/clicks/%@</string>
+		<key>campaign_tracking_unsubscribes</key>
+		<string>emailmarketing/campaigns/%@/tracking/unsubscribes</string>
+		<key>contact_tracking_opens</key>
+		<string>contacts/%@/tracking/opens</string>
+		<key>contact_tracking_sends</key>
+		<string>contacts/%@/tracking/sends</string>
+		<key>contact_tracking_forwards</key>
+		<string>contacts/%@/tracking/forwards</string>
+		<key>contact_tracking_bounces</key>
+		<string>contacts/%@/tracking/bounces</string>
+		<key>contact_tracking_clicks</key>
+		<string>contacts/%@/tracking/clicks</string>
+		<key>contact_tracking_summary</key>
+		<string>contacts/%@/tracking/reports/summary</string>
+		<key>contact_tracking_unsubscribes</key>
+		<string>contacts/%@/tracking/unsubscribes</string>
 		<key>contact_tracking_link</key>
 		<string>contacts/%@/tracking/clicks/%@</string>
+		<key>export_contacts_activity</key>
+		<string>activities/exportcontacts</string>
+		<key>remove_from_lists_activity</key>
+		<string>activities/removefromlists</string>
 	</dict>
 	<key>auth</key>
 	<dict>

@@ -21,7 +21,7 @@
  * Id of the note
  * @var string
  */
-@property (nonatomic, readwrite) NSString *id;
+@property (nonatomic, strong, readonly) NSString *noteId;
 /**
  * Content of the note
  * @var string
@@ -31,7 +31,7 @@
  * Date the note was created
  * @var string
  */
-@property (nonatomic, strong) NSString *createdDate;
+@property (nonatomic, strong, readonly) NSString *createdDate;
 /**
  * Factory method to create a Note object from an array
  * @param array $props - Associative array of initial properties to set
@@ -39,4 +39,8 @@
  */
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (Note *)NoteWithDictionary:(NSDictionary *)dictionary;
+
+- (NSDictionary*)proxyForJSON;
+- (NSString*)JSON;
+
 @end
