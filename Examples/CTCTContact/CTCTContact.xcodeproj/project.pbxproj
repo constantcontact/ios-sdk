@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3A8CD45171ECBF00048F3C5 /* ContactCustomFieldsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A8CD43171ECBF00048F3C5 /* ContactCustomFieldsViewController.m */; };
+		A3A8CD46171ECBF00048F3C5 /* ContactCustomFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A8CD44171ECBF00048F3C5 /* ContactCustomFieldsViewController.xib */; };
+		B029C40417046F0F005B4FE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B029C40317046F0F005B4FE2 /* UIKit.framework */; };
+		B029C40617046F0F005B4FE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B029C40517046F0F005B4FE2 /* Foundation.framework */; };
+		B029C40817046F0F005B4FE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B029C40717046F0F005B4FE2 /* CoreGraphics.framework */; };
+		B029C40E17046F0F005B4FE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B029C40C17046F0F005B4FE2 /* InfoPlist.strings */; };
+		B029C41017046F0F005B4FE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C40F17046F0F005B4FE2 /* main.m */; };
+		B029C41417046F0F005B4FE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C41317046F0F005B4FE2 /* AppDelegate.m */; };
+		B029C41617046F0F005B4FE2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B029C41517046F0F005B4FE2 /* Default.png */; };
+		B029C41817046F0F005B4FE2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B029C41717046F0F005B4FE2 /* Default@2x.png */; };
+		B029C41A17046F0F005B4FE2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B029C41917046F0F005B4FE2 /* Default-568h@2x.png */; };
+		B029C41D17046F0F005B4FE2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C41C17046F0F005B4FE2 /* MainViewController.m */; };
+		B029C42017046F0F005B4FE2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B029C41E17046F0F005B4FE2 /* MainViewController.xib */; };
+		B029C4B617047C0A005B4FE2 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C4B517047C0A005B4FE2 /* LoadingView.m */; };
+		B029C4BA170484A7005B4FE2 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C4B7170484A6005B4FE2 /* ContactViewController.m */; };
+		B029C4BB170484A7005B4FE2 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B029C4B8170484A6005B4FE2 /* ContactViewController.xib */; };
+		B029C4BF1704899B005B4FE2 /* ListsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C4BD1704899A005B4FE2 /* ListsTableViewController.m */; };
+		B029C4C01704899B005B4FE2 /* ListsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B029C4BE1704899B005B4FE2 /* ListsTableViewController.xib */; };
+		B0F397461729376200205B40 /* CTCTDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396E41729376200205B40 /* CTCTDataStore.m */; };
+		B0F397471729376200205B40 /* CTCTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396E61729376200205B40 /* CTCTLoginViewController.m */; };
+		B0F397481729376200205B40 /* CTCTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F396E71729376200205B40 /* CTCTLoginViewController.xib */; };
+		B0F3974A1729376200205B40 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396EC1729376200205B40 /* Collection.m */; };
+		B0F3974B1729376200205B40 /* ContactsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396EE1729376200205B40 /* ContactsCollection.m */; };
+		B0F3974C1729376200205B40 /* ListsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F01729376200205B40 /* ListsCollection.m */; };
+		B0F3974D1729376200205B40 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F41729376200205B40 /* Activity.m */; };
+		B0F3974E1729376200205B40 /* ActivityError.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F61729376200205B40 /* ActivityError.m */; };
+		B0F3974F1729376200205B40 /* AddContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F81729376200205B40 /* AddContacts.m */; };
+		B0F397501729376300205B40 /* AddContactsImportData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396FA1729376200205B40 /* AddContactsImportData.m */; };
+		B0F397511729376300205B40 /* ExportContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396FC1729376200205B40 /* ExportContacts.m */; };
+		B0F397521729376300205B40 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396FE1729376200205B40 /* Component.m */; };
+		B0F397531729376300205B40 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397011729376200205B40 /* Address.m */; };
+		B0F397541729376300205B40 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397031729376200205B40 /* Contact.m */; };
+		B0F397551729376300205B40 /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397051729376200205B40 /* ContactList.m */; };
+		B0F397561729376300205B40 /* CustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397071729376200205B40 /* CustomField.m */; };
+		B0F397571729376300205B40 /* EmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397091729376200205B40 /* EmailAddress.m */; };
+		B0F397581729376300205B40 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3970B1729376200205B40 /* Note.m */; };
+		B0F397591729376300205B40 /* ClickThroughDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3970E1729376200205B40 /* ClickThroughDetails.m */; };
+		B0F3975A1729376300205B40 /* EmailCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397101729376200205B40 /* EmailCampaign.m */; };
+		B0F3975B1729376300205B40 /* MessageFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397121729376200205B40 /* MessageFooter.m */; };
+		B0F3975C1729376300205B40 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397141729376200205B40 /* Schedule.m */; };
+		B0F3975D1729376300205B40 /* TestSend.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397161729376200205B40 /* TestSend.m */; };
+		B0F3975E1729376300205B40 /* ResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397181729376200205B40 /* ResultSet.m */; };
+		B0F3975F1729376300205B40 /* BounceActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3971B1729376200205B40 /* BounceActivity.m */; };
+		B0F397601729376300205B40 /* ClickActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3971D1729376200205B40 /* ClickActivity.m */; };
+		B0F397611729376300205B40 /* ForwardActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3971F1729376200205B40 /* ForwardActivity.m */; };
+		B0F397621729376300205B40 /* OpenActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397211729376200205B40 /* OpenActivity.m */; };
+		B0F397631729376300205B40 /* OptOutActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397231729376200205B40 /* OptOutActivity.m */; };
+		B0F397641729376300205B40 /* SendActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397251729376200205B40 /* SendActivity.m */; };
+		B0F397651729376300205B40 /* TrackingActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397271729376200205B40 /* TrackingActivity.m */; };
+		B0F397661729376300205B40 /* TrackingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397291729376200205B40 /* TrackingSummary.m */; };
+		B0F397671729376300205B40 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3972C1729376200205B40 /* Config.m */; };
+		B0F397681729376300205B40 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F3972D1729376200205B40 /* Config.plist */; };
+		B0F397691729376300205B40 /* HttpError.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397311729376200205B40 /* HttpError.m */; };
+		B0F3976A1729376300205B40 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397331729376200205B40 /* HttpRequest.m */; };
+		B0F3976B1729376300205B40 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397351729376200205B40 /* HttpResponse.m */; };
+		B0F3976C1729376300205B40 /* ActivityService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397381729376200205B40 /* ActivityService.m */; };
+		B0F3976D1729376300205B40 /* CampaignScheduleService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3973A1729376200205B40 /* CampaignScheduleService.m */; };
+		B0F3976E1729376300205B40 /* CampaignTrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3973C1729376200205B40 /* CampaignTrackingService.m */; };
+		B0F3976F1729376300205B40 /* ContactTrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3973E1729376200205B40 /* ContactTrackingService.m */; };
+		B0F397701729376300205B40 /* EmailCampaignService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397401729376200205B40 /* EmailCampaignService.m */; };
+		B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397421729376200205B40 /* VerifiedEmailAddresses.m */; };
+		B0F397721729376300205B40 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397451729376200205B40 /* CTCTGlobal.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A3A8CD42171ECBEF0048F3C5 /* ContactCustomFieldsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCustomFieldsViewController.h; sourceTree = "<group>"; };
+		A3A8CD43171ECBF00048F3C5 /* ContactCustomFieldsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCustomFieldsViewController.m; sourceTree = "<group>"; };
+		A3A8CD44171ECBF00048F3C5 /* ContactCustomFieldsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCustomFieldsViewController.xib; sourceTree = "<group>"; };
+		B029C40017046F0F005B4FE2 /* CTCTContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTCTContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B029C40317046F0F005B4FE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B029C40517046F0F005B4FE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B029C40717046F0F005B4FE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B029C40B17046F0F005B4FE2 /* CTCTContact-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CTCTContact-Info.plist"; sourceTree = "<group>"; };
+		B029C40D17046F0F005B4FE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B029C40F17046F0F005B4FE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B029C41117046F0F005B4FE2 /* CTCTContact-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTCTContact-Prefix.pch"; sourceTree = "<group>"; };
+		B029C41217046F0F005B4FE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B029C41317046F0F005B4FE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B029C41517046F0F005B4FE2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B029C41717046F0F005B4FE2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B029C41917046F0F005B4FE2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B029C41B17046F0F005B4FE2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B029C41C17046F0F005B4FE2 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B029C41F17046F0F005B4FE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
+		B029C4B417047C09005B4FE2 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		B029C4B517047C0A005B4FE2 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		B029C4B7170484A6005B4FE2 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		B029C4B8170484A6005B4FE2 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		B029C4B9170484A6005B4FE2 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		B029C4BC1704899A005B4FE2 /* ListsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsTableViewController.h; sourceTree = "<group>"; };
+		B029C4BD1704899A005B4FE2 /* ListsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsTableViewController.m; sourceTree = "<group>"; };
+		B029C4BE1704899B005B4FE2 /* ListsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsTableViewController.xib; sourceTree = "<group>"; };
+		B0F396E31729376200205B40 /* CTCTDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTDataStore.h; sourceTree = "<group>"; };
+		B0F396E41729376200205B40 /* CTCTDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTDataStore.m; sourceTree = "<group>"; };
+		B0F396E51729376200205B40 /* CTCTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTLoginViewController.h; sourceTree = "<group>"; };
+		B0F396E61729376200205B40 /* CTCTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTLoginViewController.m; sourceTree = "<group>"; };
+		B0F396E71729376200205B40 /* CTCTLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTCTLoginViewController.xib; sourceTree = "<group>"; };
+		B0F396EB1729376200205B40 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
+		B0F396EC1729376200205B40 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
+		B0F396ED1729376200205B40 /* ContactsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCollection.h; sourceTree = "<group>"; };
+		B0F396EE1729376200205B40 /* ContactsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCollection.m; sourceTree = "<group>"; };
+		B0F396EF1729376200205B40 /* ListsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsCollection.h; sourceTree = "<group>"; };
+		B0F396F01729376200205B40 /* ListsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsCollection.m; sourceTree = "<group>"; };
+		B0F396F31729376200205B40 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		B0F396F41729376200205B40 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		B0F396F51729376200205B40 /* ActivityError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityError.h; sourceTree = "<group>"; };
+		B0F396F61729376200205B40 /* ActivityError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityError.m; sourceTree = "<group>"; };
+		B0F396F71729376200205B40 /* AddContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContacts.h; sourceTree = "<group>"; };
+		B0F396F81729376200205B40 /* AddContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContacts.m; sourceTree = "<group>"; };
+		B0F396F91729376200205B40 /* AddContactsImportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactsImportData.h; sourceTree = "<group>"; };
+		B0F396FA1729376200205B40 /* AddContactsImportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsImportData.m; sourceTree = "<group>"; };
+		B0F396FB1729376200205B40 /* ExportContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportContacts.h; sourceTree = "<group>"; };
+		B0F396FC1729376200205B40 /* ExportContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportContacts.m; sourceTree = "<group>"; };
+		B0F396FD1729376200205B40 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		B0F396FE1729376200205B40 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		B0F397001729376200205B40 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		B0F397011729376200205B40 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		B0F397021729376200205B40 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		B0F397031729376200205B40 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		B0F397041729376200205B40 /* ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
+		B0F397051729376200205B40 /* ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
+		B0F397061729376200205B40 /* CustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomField.h; sourceTree = "<group>"; };
+		B0F397071729376200205B40 /* CustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomField.m; sourceTree = "<group>"; };
+		B0F397081729376200205B40 /* EmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddress.h; sourceTree = "<group>"; };
+		B0F397091729376200205B40 /* EmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddress.m; sourceTree = "<group>"; };
+		B0F3970A1729376200205B40 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		B0F3970B1729376200205B40 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		B0F3970D1729376200205B40 /* ClickThroughDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickThroughDetails.h; sourceTree = "<group>"; };
+		B0F3970E1729376200205B40 /* ClickThroughDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickThroughDetails.m; sourceTree = "<group>"; };
+		B0F3970F1729376200205B40 /* EmailCampaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailCampaign.h; sourceTree = "<group>"; };
+		B0F397101729376200205B40 /* EmailCampaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailCampaign.m; sourceTree = "<group>"; };
+		B0F397111729376200205B40 /* MessageFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageFooter.h; sourceTree = "<group>"; };
+		B0F397121729376200205B40 /* MessageFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageFooter.m; sourceTree = "<group>"; };
+		B0F397131729376200205B40 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		B0F397141729376200205B40 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		B0F397151729376200205B40 /* TestSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSend.h; sourceTree = "<group>"; };
+		B0F397161729376200205B40 /* TestSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSend.m; sourceTree = "<group>"; };
+		B0F397171729376200205B40 /* ResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSet.h; sourceTree = "<group>"; };
+		B0F397181729376200205B40 /* ResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultSet.m; sourceTree = "<group>"; };
+		B0F3971A1729376200205B40 /* BounceActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BounceActivity.h; sourceTree = "<group>"; };
+		B0F3971B1729376200205B40 /* BounceActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BounceActivity.m; sourceTree = "<group>"; };
+		B0F3971C1729376200205B40 /* ClickActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickActivity.h; sourceTree = "<group>"; };
+		B0F3971D1729376200205B40 /* ClickActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickActivity.m; sourceTree = "<group>"; };
+		B0F3971E1729376200205B40 /* ForwardActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardActivity.h; sourceTree = "<group>"; };
+		B0F3971F1729376200205B40 /* ForwardActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardActivity.m; sourceTree = "<group>"; };
+		B0F397201729376200205B40 /* OpenActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenActivity.h; sourceTree = "<group>"; };
+		B0F397211729376200205B40 /* OpenActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenActivity.m; sourceTree = "<group>"; };
+		B0F397221729376200205B40 /* OptOutActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptOutActivity.h; sourceTree = "<group>"; };
+		B0F397231729376200205B40 /* OptOutActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptOutActivity.m; sourceTree = "<group>"; };
+		B0F397241729376200205B40 /* SendActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendActivity.h; sourceTree = "<group>"; };
+		B0F397251729376200205B40 /* SendActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendActivity.m; sourceTree = "<group>"; };
+		B0F397261729376200205B40 /* TrackingActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingActivity.h; sourceTree = "<group>"; };
+		B0F397271729376200205B40 /* TrackingActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingActivity.m; sourceTree = "<group>"; };
+		B0F397281729376200205B40 /* TrackingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingSummary.h; sourceTree = "<group>"; };
+		B0F397291729376200205B40 /* TrackingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingSummary.m; sourceTree = "<group>"; };
+		B0F3972B1729376200205B40 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		B0F3972C1729376200205B40 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		B0F3972D1729376200205B40 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		B0F397301729376200205B40 /* HttpError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpError.h; sourceTree = "<group>"; };
+		B0F397311729376200205B40 /* HttpError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpError.m; sourceTree = "<group>"; };
+		B0F397321729376200205B40 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		B0F397331729376200205B40 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		B0F397341729376200205B40 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
+		B0F397351729376200205B40 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
+		B0F397371729376200205B40 /* ActivityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityService.h; sourceTree = "<group>"; };
+		B0F397381729376200205B40 /* ActivityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityService.m; sourceTree = "<group>"; };
+		B0F397391729376200205B40 /* CampaignScheduleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignScheduleService.h; sourceTree = "<group>"; };
+		B0F3973A1729376200205B40 /* CampaignScheduleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignScheduleService.m; sourceTree = "<group>"; };
+		B0F3973B1729376200205B40 /* CampaignTrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignTrackingService.h; sourceTree = "<group>"; };
+		B0F3973C1729376200205B40 /* CampaignTrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignTrackingService.m; sourceTree = "<group>"; };
+		B0F3973D1729376200205B40 /* ContactTrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTrackingService.h; sourceTree = "<group>"; };
+		B0F3973E1729376200205B40 /* ContactTrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTrackingService.m; sourceTree = "<group>"; };
+		B0F3973F1729376200205B40 /* EmailCampaignService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailCampaignService.h; sourceTree = "<group>"; };
+		B0F397401729376200205B40 /* EmailCampaignService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailCampaignService.m; sourceTree = "<group>"; };
+		B0F397411729376200205B40 /* VerifiedEmailAddresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifiedEmailAddresses.h; sourceTree = "<group>"; };
+		B0F397421729376200205B40 /* VerifiedEmailAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedEmailAddresses.m; sourceTree = "<group>"; };
+		B0F397441729376200205B40 /* CTCTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTGlobal.h; sourceTree = "<group>"; };
+		B0F397451729376200205B40 /* CTCTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTGlobal.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B029C3FD17046F0F005B4FE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B029C40417046F0F005B4FE2 /* UIKit.framework in Frameworks */,
+				B029C40617046F0F005B4FE2 /* Foundation.framework in Frameworks */,
+				B029C40817046F0F005B4FE2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B029C3F717046F0F005B4FE2 = {
+			isa = PBXGroup;
+			children = (
+				B029C40917046F0F005B4FE2 /* CTCTContact */,
+				B029C40217046F0F005B4FE2 /* Frameworks */,
+				B029C40117046F0F005B4FE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B029C40117046F0F005B4FE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B029C40017046F0F005B4FE2 /* CTCTContact.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B029C40217046F0F005B4FE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B029C40317046F0F005B4FE2 /* UIKit.framework */,
+				B029C40517046F0F005B4FE2 /* Foundation.framework */,
+				B029C40717046F0F005B4FE2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B029C40917046F0F005B4FE2 /* CTCTContact */ = {
+			isa = PBXGroup;
+			children = (
+				B0F396E11729376200205B40 /* CTCTWrapper */,
+				B029C41217046F0F005B4FE2 /* AppDelegate.h */,
+				B029C41317046F0F005B4FE2 /* AppDelegate.m */,
+				B029C41B17046F0F005B4FE2 /* MainViewController.h */,
+				B029C41C17046F0F005B4FE2 /* MainViewController.m */,
+				B029C41E17046F0F005B4FE2 /* MainViewController.xib */,
+				B029C4B9170484A6005B4FE2 /* ContactViewController.h */,
+				B029C4B7170484A6005B4FE2 /* ContactViewController.m */,
+				B029C4B8170484A6005B4FE2 /* ContactViewController.xib */,
+				A3A8CD42171ECBEF0048F3C5 /* ContactCustomFieldsViewController.h */,
+				A3A8CD43171ECBF00048F3C5 /* ContactCustomFieldsViewController.m */,
+				A3A8CD44171ECBF00048F3C5 /* ContactCustomFieldsViewController.xib */,
+				B029C4BC1704899A005B4FE2 /* ListsTableViewController.h */,
+				B029C4BD1704899A005B4FE2 /* ListsTableViewController.m */,
+				B029C4BE1704899B005B4FE2 /* ListsTableViewController.xib */,
+				B029C4B417047C09005B4FE2 /* LoadingView.h */,
+				B029C4B517047C0A005B4FE2 /* LoadingView.m */,
+				B029C40A17046F0F005B4FE2 /* Supporting Files */,
+			);
+			path = CTCTContact;
+			sourceTree = "<group>";
+		};
+		B029C40A17046F0F005B4FE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B029C40B17046F0F005B4FE2 /* CTCTContact-Info.plist */,
+				B029C40C17046F0F005B4FE2 /* InfoPlist.strings */,
+				B029C40F17046F0F005B4FE2 /* main.m */,
+				B029C41117046F0F005B4FE2 /* CTCTContact-Prefix.pch */,
+				B029C41517046F0F005B4FE2 /* Default.png */,
+				B029C41717046F0F005B4FE2 /* Default@2x.png */,
+				B029C41917046F0F005B4FE2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0F396E11729376200205B40 /* CTCTWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				B0F396E21729376200205B40 /* Auth */,
+				B0F396EA1729376200205B40 /* Collections */,
+				B0F396F11729376200205B40 /* Components */,
+				B0F3972A1729376200205B40 /* Config */,
+				B0F3972E1729376200205B40 /* Exceptions */,
+				B0F3972F1729376200205B40 /* HttpRequest */,
+				B0F397361729376200205B40 /* Services */,
+				B0F397431729376200205B40 /* Utilities */,
+			);
+			name = CTCTWrapper;
+			path = ../../../CTCTWrapper;
+			sourceTree = "<group>";
+		};
+		B0F396E21729376200205B40 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B0F396E31729376200205B40 /* CTCTDataStore.h */,
+				B0F396E41729376200205B40 /* CTCTDataStore.m */,
+				B0F396E51729376200205B40 /* CTCTLoginViewController.h */,
+				B0F396E61729376200205B40 /* CTCTLoginViewController.m */,
+				B0F396E71729376200205B40 /* CTCTLoginViewController.xib */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B0F396EA1729376200205B40 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				B0F396EB1729376200205B40 /* Collection.h */,
+				B0F396EC1729376200205B40 /* Collection.m */,
+				B0F396ED1729376200205B40 /* ContactsCollection.h */,
+				B0F396EE1729376200205B40 /* ContactsCollection.m */,
+				B0F396EF1729376200205B40 /* ListsCollection.h */,
+				B0F396F01729376200205B40 /* ListsCollection.m */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		B0F396F11729376200205B40 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B0F396F21729376200205B40 /* Activites */,
+				B0F396FD1729376200205B40 /* Component.h */,
+				B0F396FE1729376200205B40 /* Component.m */,
+				B0F396FF1729376200205B40 /* Contacts */,
+				B0F3970C1729376200205B40 /* EmailCampaigns */,
+				B0F397171729376200205B40 /* ResultSet.h */,
+				B0F397181729376200205B40 /* ResultSet.m */,
+				B0F397191729376200205B40 /* Tracking */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B0F396F21729376200205B40 /* Activites */ = {
+			isa = PBXGroup;
+			children = (
+				B0F396F31729376200205B40 /* Activity.h */,
+				B0F396F41729376200205B40 /* Activity.m */,
+				B0F396F51729376200205B40 /* ActivityError.h */,
+				B0F396F61729376200205B40 /* ActivityError.m */,
+				B0F396F71729376200205B40 /* AddContacts.h */,
+				B0F396F81729376200205B40 /* AddContacts.m */,
+				B0F396F91729376200205B40 /* AddContactsImportData.h */,
+				B0F396FA1729376200205B40 /* AddContactsImportData.m */,
+				B0F396FB1729376200205B40 /* ExportContacts.h */,
+				B0F396FC1729376200205B40 /* ExportContacts.m */,
+			);
+			path = Activites;
+			sourceTree = "<group>";
+		};
+		B0F396FF1729376200205B40 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B0F397001729376200205B40 /* Address.h */,
+				B0F397011729376200205B40 /* Address.m */,
+				B0F397021729376200205B40 /* Contact.h */,
+				B0F397031729376200205B40 /* Contact.m */,
+				B0F397041729376200205B40 /* ContactList.h */,
+				B0F397051729376200205B40 /* ContactList.m */,
+				B0F397061729376200205B40 /* CustomField.h */,
+				B0F397071729376200205B40 /* CustomField.m */,
+				B0F397081729376200205B40 /* EmailAddress.h */,
+				B0F397091729376200205B40 /* EmailAddress.m */,
+				B0F3970A1729376200205B40 /* Note.h */,
+				B0F3970B1729376200205B40 /* Note.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		B0F3970C1729376200205B40 /* EmailCampaigns */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3970D1729376200205B40 /* ClickThroughDetails.h */,
+				B0F3970E1729376200205B40 /* ClickThroughDetails.m */,
+				B0F3970F1729376200205B40 /* EmailCampaign.h */,
+				B0F397101729376200205B40 /* EmailCampaign.m */,
+				B0F397111729376200205B40 /* MessageFooter.h */,
+				B0F397121729376200205B40 /* MessageFooter.m */,
+				B0F397131729376200205B40 /* Schedule.h */,
+				B0F397141729376200205B40 /* Schedule.m */,
+				B0F397151729376200205B40 /* TestSend.h */,
+				B0F397161729376200205B40 /* TestSend.m */,
+			);
+			path = EmailCampaigns;
+			sourceTree = "<group>";
+		};
+		B0F397191729376200205B40 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3971A1729376200205B40 /* BounceActivity.h */,
+				B0F3971B1729376200205B40 /* BounceActivity.m */,
+				B0F3971C1729376200205B40 /* ClickActivity.h */,
+				B0F3971D1729376200205B40 /* ClickActivity.m */,
+				B0F3971E1729376200205B40 /* ForwardActivity.h */,
+				B0F3971F1729376200205B40 /* ForwardActivity.m */,
+				B0F397201729376200205B40 /* OpenActivity.h */,
+				B0F397211729376200205B40 /* OpenActivity.m */,
+				B0F397221729376200205B40 /* OptOutActivity.h */,
+				B0F397231729376200205B40 /* OptOutActivity.m */,
+				B0F397241729376200205B40 /* SendActivity.h */,
+				B0F397251729376200205B40 /* SendActivity.m */,
+				B0F397261729376200205B40 /* TrackingActivity.h */,
+				B0F397271729376200205B40 /* TrackingActivity.m */,
+				B0F397281729376200205B40 /* TrackingSummary.h */,
+				B0F397291729376200205B40 /* TrackingSummary.m */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		B0F3972A1729376200205B40 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3972B1729376200205B40 /* Config.h */,
+				B0F3972C1729376200205B40 /* Config.m */,
+				B0F3972D1729376200205B40 /* Config.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B0F3972E1729376200205B40 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		B0F3972F1729376200205B40 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B0F397301729376200205B40 /* HttpError.h */,
+				B0F397311729376200205B40 /* HttpError.m */,
+				B0F397321729376200205B40 /* HttpRequest.h */,
+				B0F397331729376200205B40 /* HttpRequest.m */,
+				B0F397341729376200205B40 /* HttpResponse.h */,
+				B0F397351729376200205B40 /* HttpResponse.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		B0F397361729376200205B40 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0F397371729376200205B40 /* ActivityService.h */,
+				B0F397381729376200205B40 /* ActivityService.m */,
+				B0F397391729376200205B40 /* CampaignScheduleService.h */,
+				B0F3973A1729376200205B40 /* CampaignScheduleService.m */,
+				B0F3973B1729376200205B40 /* CampaignTrackingService.h */,
+				B0F3973C1729376200205B40 /* CampaignTrackingService.m */,
+				B0F3973D1729376200205B40 /* ContactTrackingService.h */,
+				B0F3973E1729376200205B40 /* ContactTrackingService.m */,
+				B0F3973F1729376200205B40 /* EmailCampaignService.h */,
+				B0F397401729376200205B40 /* EmailCampaignService.m */,
+				B0F397411729376200205B40 /* VerifiedEmailAddresses.h */,
+				B0F397421729376200205B40 /* VerifiedEmailAddresses.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0F397431729376200205B40 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0F397441729376200205B40 /* CTCTGlobal.h */,
+				B0F397451729376200205B40 /* CTCTGlobal.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B029C3FF17046F0F005B4FE2 /* CTCTContact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B029C42317046F0F005B4FE2 /* Build configuration list for PBXNativeTarget "CTCTContact" */;
+			buildPhases = (
+				B029C3FC17046F0F005B4FE2 /* Sources */,
+				B029C3FD17046F0F005B4FE2 /* Frameworks */,
+				B029C3FE17046F0F005B4FE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CTCTContact;
+			productName = CTCTContact;
+			productReference = B029C40017046F0F005B4FE2 /* CTCTContact.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B029C3F817046F0F005B4FE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "OSF Global";
+			};
+			buildConfigurationList = B029C3FB17046F0F005B4FE2 /* Build configuration list for PBXProject "CTCTContact" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B029C3F717046F0F005B4FE2;
+			productRefGroup = B029C40117046F0F005B4FE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B029C3FF17046F0F005B4FE2 /* CTCTContact */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B029C3FE17046F0F005B4FE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B029C40E17046F0F005B4FE2 /* InfoPlist.strings in Resources */,
+				B029C41617046F0F005B4FE2 /* Default.png in Resources */,
+				B029C41817046F0F005B4FE2 /* Default@2x.png in Resources */,
+				B029C41A17046F0F005B4FE2 /* Default-568h@2x.png in Resources */,
+				B029C42017046F0F005B4FE2 /* MainViewController.xib in Resources */,
+				B029C4BB170484A7005B4FE2 /* ContactViewController.xib in Resources */,
+				B029C4C01704899B005B4FE2 /* ListsTableViewController.xib in Resources */,
+				A3A8CD46171ECBF00048F3C5 /* ContactCustomFieldsViewController.xib in Resources */,
+				B0F397481729376200205B40 /* CTCTLoginViewController.xib in Resources */,
+				B0F397681729376300205B40 /* Config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B029C3FC17046F0F005B4FE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B029C41017046F0F005B4FE2 /* main.m in Sources */,
+				B029C41417046F0F005B4FE2 /* AppDelegate.m in Sources */,
+				B029C41D17046F0F005B4FE2 /* MainViewController.m in Sources */,
+				B029C4B617047C0A005B4FE2 /* LoadingView.m in Sources */,
+				B029C4BA170484A7005B4FE2 /* ContactViewController.m in Sources */,
+				B029C4BF1704899B005B4FE2 /* ListsTableViewController.m in Sources */,
+				A3A8CD45171ECBF00048F3C5 /* ContactCustomFieldsViewController.m in Sources */,
+				B0F397461729376200205B40 /* CTCTDataStore.m in Sources */,
+				B0F397471729376200205B40 /* CTCTLoginViewController.m in Sources */,
+				B0F3974A1729376200205B40 /* Collection.m in Sources */,
+				B0F3974B1729376200205B40 /* ContactsCollection.m in Sources */,
+				B0F3974C1729376200205B40 /* ListsCollection.m in Sources */,
+				B0F3974D1729376200205B40 /* Activity.m in Sources */,
+				B0F3974E1729376200205B40 /* ActivityError.m in Sources */,
+				B0F3974F1729376200205B40 /* AddContacts.m in Sources */,
+				B0F397501729376300205B40 /* AddContactsImportData.m in Sources */,
+				B0F397511729376300205B40 /* ExportContacts.m in Sources */,
+				B0F397521729376300205B40 /* Component.m in Sources */,
+				B0F397531729376300205B40 /* Address.m in Sources */,
+				B0F397541729376300205B40 /* Contact.m in Sources */,
+				B0F397551729376300205B40 /* ContactList.m in Sources */,
+				B0F397561729376300205B40 /* CustomField.m in Sources */,
+				B0F397571729376300205B40 /* EmailAddress.m in Sources */,
+				B0F397581729376300205B40 /* Note.m in Sources */,
+				B0F397591729376300205B40 /* ClickThroughDetails.m in Sources */,
+				B0F3975A1729376300205B40 /* EmailCampaign.m in Sources */,
+				B0F3975B1729376300205B40 /* MessageFooter.m in Sources */,
+				B0F3975C1729376300205B40 /* Schedule.m in Sources */,
+				B0F3975D1729376300205B40 /* TestSend.m in Sources */,
+				B0F3975E1729376300205B40 /* ResultSet.m in Sources */,
+				B0F3975F1729376300205B40 /* BounceActivity.m in Sources */,
+				B0F397601729376300205B40 /* ClickActivity.m in Sources */,
+				B0F397611729376300205B40 /* ForwardActivity.m in Sources */,
+				B0F397621729376300205B40 /* OpenActivity.m in Sources */,
+				B0F397631729376300205B40 /* OptOutActivity.m in Sources */,
+				B0F397641729376300205B40 /* SendActivity.m in Sources */,
+				B0F397651729376300205B40 /* TrackingActivity.m in Sources */,
+				B0F397661729376300205B40 /* TrackingSummary.m in Sources */,
+				B0F397671729376300205B40 /* Config.m in Sources */,
+				B0F397691729376300205B40 /* HttpError.m in Sources */,
+				B0F3976A1729376300205B40 /* HttpRequest.m in Sources */,
+				B0F3976B1729376300205B40 /* HttpResponse.m in Sources */,
+				B0F3976C1729376300205B40 /* ActivityService.m in Sources */,
+				B0F3976D1729376300205B40 /* CampaignScheduleService.m in Sources */,
+				B0F3976E1729376300205B40 /* CampaignTrackingService.m in Sources */,
+				B0F3976F1729376300205B40 /* ContactTrackingService.m in Sources */,
+				B0F397701729376300205B40 /* EmailCampaignService.m in Sources */,
+				B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */,
+				B0F397721729376300205B40 /* CTCTGlobal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B029C40C17046F0F005B4FE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B029C40D17046F0F005B4FE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B029C41E17046F0F005B4FE2 /* MainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B029C41F17046F0F005B4FE2 /* en */,
+			);
+			name = MainViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B029C42117046F0F005B4FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B029C42217046F0F005B4FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B029C42417046F0F005B4FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CTCTContact/CTCTContact-Prefix.pch";
+				INFOPLIST_FILE = "CTCTContact/CTCTContact-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B029C42517046F0F005B4FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CTCTContact/CTCTContact-Prefix.pch";
+				INFOPLIST_FILE = "CTCTContact/CTCTContact-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B029C3FB17046F0F005B4FE2 /* Build configuration list for PBXProject "CTCTContact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B029C42117046F0F005B4FE2 /* Debug */,
+				B029C42217046F0F005B4FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B029C42317046F0F005B4FE2 /* Build configuration list for PBXNativeTarget "CTCTContact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B029C42417046F0F005B4FE2 /* Debug */,
+				B029C42517046F0F005B4FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B029C3F817046F0F005B4FE2 /* Project object */;
+}
