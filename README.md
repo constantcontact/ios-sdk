@@ -1,3 +1,4 @@
+
 Constant Contact IOS SDK
 =========================
 
@@ -18,8 +19,7 @@ In order to use the Constant Contact SDK you have to follow these steps:
 
 1) Include the following code in the file you wish to use the SDK:
 
-`#import "CTCTOAuth2.h"`               -for the authentication process
-<br>
+
 `#import  "Config.h"`                  -for api key and other configuration elements
 <br>
 `#import  "ContactsCollection.h"`      -for contact collection manipulation
@@ -41,34 +41,33 @@ In order to use the Constant Contact SDK you have to follow these steps:
 
 2) Create an authentication object using your user credentials:
 
-###### Instantiate your credentials 
+###Instantiate your credentials 
 
 In the Config directory open the Congif.plist file.
 
 Select the config drop down section and fill in your `consumer_secret`, `api_key`, and `redirect_uri` keys.
- 
 
-######Store the values in a "CTCTOAuth2" object 
-```
-CTCTOAuth2 *ctctOauth2 = [[CTCTOAuth2 alloc] initWithClientID:[Config valueForType:@"config" key:@"api_key"]
-									    redirectURI:[Config valueForType:@"config" key:@"redirect_uri"]
-									    userName:YourUserName 
-									    password:YourPassword];
-```
+###Authentication 
 
-Note: 'your redirect url' is the URL of the action you just created.
+3) Show authentication view
 
-3) Make the call for the user token using the initiated "CTCTOAuth2" object, and save the token in a object of your choosing.
 
-```
-NSString *myToken = [ctctOauth2 accessToken];
-```
+        CTCTLoginViewController *loginViewController = [[CTCTLoginViewController alloc] init];
+            loginViewController.delegate = self;
+   
+        [self presentModalViewController:loginViewController animated:YES];
+
+4) Get the access token
+
+Respond to the following delegate method:
+
+        - (void)loginViewController:(CTCTLoginViewController *)loginViewController didLoginWithAccessToken:(NSString *)accessToken;
 
  Note: Requesting the access token implicitly means that you are giving the all the permissions needed by the SDK, no further permissions are required.
 
-4) Start using the SDK.
+3) Start using the SDK.
 
-######Example for getting a array of contacts
+##Example for getting a array of contacts
 ```
 HttpResponse *result = [ContactsCollection contactsWithAccessToken: myToken];
 NSArray *contactArray = result.data;
