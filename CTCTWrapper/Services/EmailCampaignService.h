@@ -32,12 +32,33 @@
  * Get a set of campaigns
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
- * @param int param - query param to be appended to the request
+ * @param NSString *limit - (optional) limits the number of results returned
  *
- * @return HttpResponse * - response containing either errors or data with a ResultSet containing the pagination and campaigns related to the user.
+ * @return HttpResponse * - response containing either errors or data with all the campaigns of the user
+ */
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken withALimitOf:(NSString *)limit;
+
+/**
+ * Get a set of campaigns
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *status - the returned values are filtered by the sent status value
+ * @param NSString *limit - (optional) limits the number of results returned
+ *
+ * @return HttpResponse * - response containing either errors or data with all the campaigns with the given status
+ */
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status withALimitOf:(NSString *)limit;
+
+/**
+ * Get a set of campaigns
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSDate *date - the returned values are filtered by the sent modification date
+ *
+ * @return HttpResponse * - response containing either errors or data with all the campaigns with the modification date
  */
 
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken andParams:(NSString*)params;
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken modificationDate:(NSDate *)date;
 
 /**
  * Get campaign details for a specific campaign
