@@ -16,10 +16,11 @@
  * Function that gets a array of lists of a user identified by a token;
  *
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
+ * @param NSDate* date = optional parameter used for filtering lists by modification date
  *
  * @return HttpResponse * - response containing either errors or data with the array of contact lists belonging to the user authenthicated by the token;
  */
-+ (HttpResponse*)listsWithAccessToken:(NSString*)accessToken;
++ (HttpResponse*)listsWithAccessToken:(NSString*)accessToken andModificationDate:(NSDate *)date;
 
  /**
  * Function that adds a contact list to a user identified by a token;
@@ -46,10 +47,12 @@
  *
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* listID - the id of the list you wish to obtain contacts from;
+ * @param NSDate* date - (otional) results will be filtered by the date if it is provided, adding a date will invalidate the limit parameter
+ * @param NSString* limit - (optional) the number of elements to be returned, default 50;
  *
  * @return HttpResponse * - response containing either errors or data with a array of Contacts from the list;
  */
-+ (HttpResponse*)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId;
++ (HttpResponse*)getContactListMembershipWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId withModificationDate:(NSDate *)date withAlimitOf:(NSString *)limit;
 
 /**
  * Function that updates a contact list

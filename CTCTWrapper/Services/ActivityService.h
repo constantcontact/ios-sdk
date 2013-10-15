@@ -41,6 +41,8 @@
  */
 + (HttpResponse*)getActivityWithToken:(NSString *)accessToken andActivityId:(NSString *)activityId;
 
+
+
 /**
  * Create an Add Contacts Activity
  *
@@ -81,5 +83,47 @@
  *@return HttpResponse * - response containing either errors or data with the specific Activity created 
  */
 + (HttpResponse*)addRemoveContactsFromListsActivityWithToken:(NSString *)accessToken emailAddresses:(NSArray *)emailAddresses andLists:(NSArray *)lists;
+
+/**
+ * Create a add Contacts Activity using file information
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *fileName - the file path that will be looked up for the file
+ * @param NSString *lists - the list in which the contacts will be added,list elements must be separated by commas
+ *
+ *@return HttpResponse * - response containing either errors or data with the specific Activity created
+ */
++ (HttpResponse *)addContactsMultipartWithToken:(NSString *)accessToken withFile:(NSString *)file toLists:(NSString *)lists;
+
+/**
+ * Create a remove Contacts Activity using file information
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *fileName - the file path that will be looked up for the file
+ * @param NSString *lists - the list in which the contacts will be removed, list elements must be separated by commas
+ *
+ *@return HttpResponse * - response containing either errors or data with the specific Activity created
+ */
++ (HttpResponse *)removeContactsMultipartWithToken:(NSString *)accessToken withFile:(NSString *)file fromLists:(NSString *)lists;
+
+/**
+ * Retrieves the last 50 activites reports
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ *
+ *@return HttpResponse * - response containing either errors or data with the specific Activity created
+ */
++ (HttpResponse *)getStatusReportForLast50Activites:(NSString *)accessToken;
+
+/**
+ * Retrieves a detailed activity based on the parameters sent
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *status - the status filter of the activity
+ * @param NSString *type - the type filter of the activity
+ *
+ *@return HttpResponse * - response containing either errors or data with the specific Activity created
+ */
++ (HttpResponse *)getActivityWithToken:(NSString *)accessToken status:(NSString *)status andType:(NSString *)type;
 
 @end
