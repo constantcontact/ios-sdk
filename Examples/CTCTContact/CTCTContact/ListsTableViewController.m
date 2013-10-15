@@ -48,7 +48,7 @@
     dispatch_async(callService, ^{
         
         
-        HttpResponse* response = [ListsCollection listsWithAccessToken:[CTCTGlobal shared].token];
+        HttpResponse* response = [ListsCollection listsWithAccessToken:[CTCTGlobal shared].token andModificationDate:nil];
         
         if(response.statusCode != 200)
         {
