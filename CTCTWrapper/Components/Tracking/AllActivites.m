@@ -46,12 +46,12 @@
     {
         _contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
         _openDate = [Component valueForDictionary:dictionary withKey:@"open_date"];
-        _unsubscribeDate = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-        _sendDate = [Component valueForDictionary:dictionary withKey:@"unsubscribe_date"]; 
-        _forwardDate = [Component valueForDictionary:dictionary withKey:@"send_date"];
-        _opens = [[Component valueForDictionary:dictionary withKey:@"forward_date"] intValue];
-        _linkUri = [Component valueForDictionary:dictionary withKey:@"opens"];
-        _linkId = [Component valueForDictionary:dictionary withKey:@"link_uri"];
+        _unsubscribeDate = [Component valueForDictionary:dictionary withKey:@"unsubscribe_date"];
+        _sendDate = [Component valueForDictionary:dictionary withKey:@"send_date"]; 
+        _forwardDate = [Component valueForDictionary:dictionary withKey:@"forward_date"];
+        _opens = [[Component valueForDictionary:dictionary withKey:@"opens"] intValue];
+        _linkUri = [Component valueForDictionary:dictionary withKey:@"link_uri"];
+        _linkId = [Component valueForDictionary:dictionary withKey:@"link_id"];
         _bounces = [[Component valueForDictionary:dictionary withKey:@"bounces"] intValue];
         _unsubscribeReason = [Component valueForDictionary:dictionary withKey:@"unsubscribe_reason"];
         _campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
@@ -75,12 +75,12 @@
     
     allActivityObject.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
     allActivityObject.openDate = [Component valueForDictionary:dictionary withKey:@"open_date"];
-    allActivityObject.unsubscribeDate = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    allActivityObject.sendDate = [Component valueForDictionary:dictionary withKey:@"unsubscribe_date"];
-    allActivityObject.forwardDate = [Component valueForDictionary:dictionary withKey:@"send_date"];
-    allActivityObject.opens = [[Component valueForDictionary:dictionary withKey:@"forward_date"] intValue];
-    allActivityObject.linkUri = [Component valueForDictionary:dictionary withKey:@"opens"];
-    allActivityObject.linkId = [Component valueForDictionary:dictionary withKey:@"link_uri"];
+    allActivityObject.unsubscribeDate = [Component valueForDictionary:dictionary withKey:@"unsubscribe_date"];
+    allActivityObject.sendDate = [Component valueForDictionary:dictionary withKey:@"send_date"];
+    allActivityObject.forwardDate = [Component valueForDictionary:dictionary withKey:@"forward_date"];
+    allActivityObject.opens = [[Component valueForDictionary:dictionary withKey:@"opens"] intValue];
+    allActivityObject.linkUri = [Component valueForDictionary:dictionary withKey:@"link_uri"];
+    allActivityObject.linkId = [Component valueForDictionary:dictionary withKey:@"link_id"];
     allActivityObject.bounces = [[Component valueForDictionary:dictionary withKey:@"bounces"] intValue];
     allActivityObject.unsubscribeReason = [Component valueForDictionary:dictionary withKey:@"unsubscribe_reason"];
     allActivityObject.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
