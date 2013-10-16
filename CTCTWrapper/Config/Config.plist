@@ -92,7 +92,7 @@
 		<key>contact_tracking_by_email_campaign</key>
 		<string>contacts/%@/tracking/reports/summaryByCampaign</string>
 		<key>contact_tracking_all</key>
-		<string>contacts/@/tracking</string>
+		<string>contacts/%@/tracking</string>
 		<key>membership_list</key>
 		<string>lists/%@/contacts</string>
 		<key>verified_email</key>

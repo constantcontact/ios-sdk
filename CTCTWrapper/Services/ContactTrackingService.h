@@ -17,6 +17,8 @@
 #import "SendActivity.h"
 #import "TrackingSummary.h"
 #import "ResultSet.h"
+#import "AllActivites.h"
+#import "EmailSortedActivity.h"
 
 /**
  * Performs all actions pertaining to Contact Tracking
@@ -95,4 +97,25 @@
  */
 + (HttpResponse*)getSummaryWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId;
 
+/**
+ * Get all the activites of the user sorted by email campaign
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *contactId - id of the contact to which we want to see the tracking service
+ * @param NSstring *limit - (optional) the number of elements returned on one page;
+ *
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with the activites of the user sorted by email campaign
+ */
++ (HttpResponse*)getActivitesSortedByEmailCampaignWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(NSString *)limit;
+
+/**
+ * Get all e activites of the user
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *contactId - id of the contact to which we want to see the tracking service
+ * @param NSstring *limit - (optional) the number of elements returned on one page;
+ *
+ * @return HttpResponse * - response containing either @"ERROR" or @"data" with the activites of the user
+ */
++ (HttpResponse*)getAllContactActivitesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(NSString *)limit;
 @end
