@@ -34,6 +34,7 @@
         _greetingSalutations = @"";
         _greetingName = @"";
         _greetingString = @"";
+        _permalinkURL = @"";
         
         _messageFooter = [[MessageFooter alloc]init];
         _trackingSummary = [[TrackingSummary alloc]init];
@@ -78,6 +79,7 @@
         _greetingSalutations = [Component valueForDictionary:dictionary withKey:@"greeting_salutations"];
         _greetingName = [Component valueForDictionary:dictionary withKey:@"greeting_name"];
         _greetingString = [Component valueForDictionary:dictionary withKey:@"greeting_string"];
+        _permalinkURL = [Component valueForDictionary:dictionary withKey:@"permalink_url"];
         
         if([dictionary objectForKey:@"message_footer"])
             _messageFooter = [MessageFooter messageFooterWithDictionary:[dictionary objectForKey:@"message_footer"]];
@@ -175,6 +177,7 @@
                                  _greetingSalutations, @"greeting_salutations",
                                  _greetingName, @"greeting_name",
                                  _greetingString, @"greeting_string",
+                                 _permalinkURL, @"permalink_url",
                                  _emailContent, @"email_content",
                                  _emailContentFormat, @"email_content_format",
                                  _styleSheet, @"style_sheet",
@@ -232,6 +235,7 @@
                                  _greetingSalutations,@"greeting_salutations",
                                  _greetingName,@"greeting_name",
                                  _greetingString,@"greeting_string",
+                                 _permalinkURL, @"permalink_url",
                                  _emailContent,@"email_content",
                                  _emailContentFormat,@"email_content_format",
                                  _styleSheet,@"style_sheet",

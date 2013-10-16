@@ -40,6 +40,7 @@
 @property (nonatomic, strong) NSString *greetingSalutations;
 @property (nonatomic, strong) NSString *greetingName;
 @property (nonatomic, strong) NSString *greetingString;
+@property (nonatomic, strong) NSString *permalinkURL;
 
 @property (nonatomic, strong) MessageFooter *messageFooter;
 @property (nonatomic, strong) TrackingSummary *trackingSummary;
