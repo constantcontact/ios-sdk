@@ -105,7 +105,7 @@
         dispatch_async(callService, ^{
             
             
-            HttpResponse *response =  [ContactsCollection contactsWithAccessToken:[CTCTGlobal shared].token andEmail:self.emailTextField.text];
+            HttpResponse *response =  [ContactsCollection contactsWithAccessToken:[CTCTGlobal shared].token andEmail:self.emailTextField.text withALimitOf:nil];
             
             if(response.statusCode != 200)
             {
