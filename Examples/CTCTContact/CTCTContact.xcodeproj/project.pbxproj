@@ -69,6 +69,8 @@
 		B0F397701729376300205B40 /* EmailCampaignService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397401729376200205B40 /* EmailCampaignService.m */; };
 		B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397421729376200205B40 /* VerifiedEmailAddresses.m */; };
 		B0F397721729376300205B40 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397451729376200205B40 /* CTCTGlobal.m */; };
+		C398C0C218101ACA00E54CAE /* AllActivites.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0BF18101ACA00E54CAE /* AllActivites.m */; };
+		C398C0C318101ACA00E54CAE /* EmailSortedActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +187,10 @@
 		B0F397421729376200205B40 /* VerifiedEmailAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedEmailAddresses.m; sourceTree = "<group>"; };
 		B0F397441729376200205B40 /* CTCTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTGlobal.h; sourceTree = "<group>"; };
 		B0F397451729376200205B40 /* CTCTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTGlobal.m; sourceTree = "<group>"; };
+		C398C0BE18101ACA00E54CAE /* AllActivites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActivites.h; sourceTree = "<group>"; };
+		C398C0BF18101ACA00E54CAE /* AllActivites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActivites.m; sourceTree = "<group>"; };
+		C398C0C018101ACA00E54CAE /* EmailSortedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSortedActivity.h; sourceTree = "<group>"; };
+		C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSortedActivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +385,10 @@
 		B0F397191729376200205B40 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				C398C0BE18101ACA00E54CAE /* AllActivites.h */,
+				C398C0BF18101ACA00E54CAE /* AllActivites.m */,
+				C398C0C018101ACA00E54CAE /* EmailSortedActivity.h */,
+				C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */,
 				B0F3971A1729376200205B40 /* BounceActivity.h */,
 				B0F3971B1729376200205B40 /* BounceActivity.m */,
 				B0F3971C1729376200205B40 /* ClickActivity.h */,
@@ -577,6 +587,8 @@
 				B0F397701729376300205B40 /* EmailCampaignService.m in Sources */,
 				B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */,
 				B0F397721729376300205B40 /* CTCTGlobal.m in Sources */,
+				C398C0C218101ACA00E54CAE /* AllActivites.m in Sources */,
+				C398C0C318101ACA00E54CAE /* EmailSortedActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
