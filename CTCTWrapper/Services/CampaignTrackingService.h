@@ -28,79 +28,86 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultsSet of BounceActivityes
  */
-+ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get clicks for a given campaign
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of ClickActivityes
  */
-+ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get forwards for a given campaign
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of ForwardActivityes
  */
 
-+ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get opens for a given campaign
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of OpenActivityes
  */
-+ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get sends for a given campaign
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of SendActivityes
  */
-+ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get opt outs for a given campaign
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of OptOutActivityes;
  */
-+ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params;
++ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get clicks for a specific link for a given campaign
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *campaignId - id of the Campaign to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
  * @param NSString *linkId - the id of the specific link you want
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of all the Clicks on a specific link;
  */
-+ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId andParams:(NSString *)params;
++ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
 
 /**
  * Get a summary of reporting data for a given campaign

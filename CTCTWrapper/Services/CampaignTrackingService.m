@@ -9,7 +9,7 @@
 
 @implementation CampaignTrackingService
 
-+ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_bounces"],campaignId];
@@ -17,9 +17,16 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
@@ -43,7 +50,7 @@
     return response;
 }
 
-+ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_clicks"],campaignId];
@@ -51,9 +58,16 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
@@ -77,7 +91,7 @@
     return response;
 }
 
-+ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_forwards"],campaignId];
@@ -85,10 +99,17 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
     
+    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
+
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
     if (response.statusCode == 200)
@@ -111,7 +132,7 @@
     return response;
 }
 
-+ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_opens"],campaignId];
@@ -119,9 +140,16 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
@@ -145,7 +173,7 @@
     return response;
 }
 
-+ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_sends"],campaignId];
@@ -153,9 +181,16 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
@@ -179,7 +214,7 @@
     return response;
 }
 
-+ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId andParams:(NSString *)params
++ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_unsubscribes"],campaignId];
@@ -187,10 +222,16 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
     
+    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
@@ -235,7 +276,7 @@
     return response;
 }
 
-+ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId andParams:(NSString *)params
++ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_tracking_link"],campaignId,linkId];
@@ -243,9 +284,17 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
+    if(date)
+    {
+        NSString *dateString = [self stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
+    }
+    else if(limit.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    
+    
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    if(params.length > 0 )
-        url  = [NSString stringWithFormat:@"%@&%@",url,params];
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
@@ -267,6 +316,16 @@
     }
     
     return response;
+}
+
++ (NSString *)stringFromDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    
+    return dateString;
 }
 
 @end
