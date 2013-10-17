@@ -2,8 +2,7 @@
 //  EmailSortedActivity.h
 //  CTCTContact
 //
-//  Created by A_Dumitras on 10/15/13.
-//  Copyright (c) 2013 OSF Global. All rights reserved.
+//  Copyright (c) 2013 Constant Contact. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

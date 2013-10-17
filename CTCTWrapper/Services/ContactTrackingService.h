@@ -31,7 +31,7 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page
  *
  * @return HttpResponse *-  response containing a results array of BounceActivityes
  */
@@ -41,7 +41,8 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of ClickActivityes
  */
@@ -51,7 +52,8 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of ForwardActivityes
  */
@@ -61,7 +63,8 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of OpenActivityes
  */
@@ -71,7 +74,8 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of SendActivityes
  */
@@ -82,7 +86,8 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param NSString *param - query param to be appended to request
+ * @param NSDate *date - (optional) if given only activites after the creation date will be returned, sending the date parameter will invalidate the limit parameter;
+ * @param NSString *limit - (optional) query param representing the number of items returned on a page;
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of OptOutActivityes
  */

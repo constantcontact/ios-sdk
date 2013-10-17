@@ -6,6 +6,8 @@
 //
 
 #import "ContactsCollection.h"
+
+#import "ResultSet.h"
 #import "Config.h"
 
 @implementation ContactsCollection
@@ -39,7 +41,10 @@
             [contacts addObject:[Contact contactWithDictionary:contact]];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
     return response;
@@ -103,7 +108,10 @@
             [contacts addObject:[Contact contactWithDictionary:contact]];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
     return response;
@@ -135,7 +143,10 @@
             [contacts addObject:[Contact contactWithDictionary:contact]];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     return response;
 }
@@ -167,7 +178,10 @@
             [contacts addObject:[Contact contactWithDictionary:contact]];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     return response;
 }

@@ -6,8 +6,10 @@
 //
 
 #import "ListsCollection.h"
-#import "Config.h"
+
 #import "ContactsCollection.h"
+#import "ResultSet.h"
+#import "Config.h"
 
 @implementation ListsCollection
 
@@ -148,7 +150,10 @@
             [contacts addObject:contact];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     return response;
 }
