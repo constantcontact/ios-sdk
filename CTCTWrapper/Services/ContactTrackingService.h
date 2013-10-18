@@ -111,8 +111,7 @@
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with the activites of the user sorted by email campaign
  */
-+ (HttpResponse*)getActivitesSortedByEmailCampaignWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(NSString *)limit;
-
++ (HttpResponse*)getActivitesSortedByEmailCampaignWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId;
 /**
  * Get all e activites of the user
  *
