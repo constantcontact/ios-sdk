@@ -13,6 +13,7 @@
 #import "ContactViewController.h"
 #import "CTCTGlobal.h"
 #import "VerifiedEmailAddresses.h"
+#import "ResultSet.h"
 
 @interface MainViewController () <CTCTLoginDelegate>
 
@@ -114,7 +115,8 @@
             }
             else
             {
-                self.contacts = response.data;
+                ResultSet *set = response.data;
+                self.contacts = set.results;
                 if (self.contacts.count == 0)
                     self.addContact = YES;
             }
