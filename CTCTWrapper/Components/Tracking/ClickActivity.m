@@ -40,14 +40,7 @@
 
 + (ClickActivity *)clickActivityWithDictionary:(NSDictionary *)dictionary
 {
-    ClickActivity *clickActivity = [[ClickActivity alloc] init];
-
-    clickActivity.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    clickActivity.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    clickActivity.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    clickActivity.linkId = [Component valueForDictionary:dictionary withKey:@"link_id"];
-    clickActivity.clickDate = [Component valueForDictionary:dictionary withKey:@"click_date"];
-    clickActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
+    ClickActivity *clickActivity = [[ClickActivity alloc] initWithDictionary:dictionary];
     
     return clickActivity;
 }

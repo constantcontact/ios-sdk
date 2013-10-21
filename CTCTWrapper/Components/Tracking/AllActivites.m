@@ -70,30 +70,9 @@
 
 + (AllActivites *)allActivitesWithDictionary:(NSDictionary *)dictionary;
 {
-    AllActivites *allActivityObject = [[AllActivites alloc] init];
-    
-    allActivityObject.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    allActivityObject.openDate = [Component valueForDictionary:dictionary withKey:@"open_date"];
-    allActivityObject.unsubscribeDate = [Component valueForDictionary:dictionary withKey:@"unsubscribe_date"];
-    allActivityObject.sendDate = [Component valueForDictionary:dictionary withKey:@"send_date"];
-    allActivityObject.forwardDate = [Component valueForDictionary:dictionary withKey:@"forward_date"];
-    allActivityObject.opens = [[Component valueForDictionary:dictionary withKey:@"opens"] intValue];
-    allActivityObject.linkUri = [Component valueForDictionary:dictionary withKey:@"link_uri"];
-    allActivityObject.linkId = [Component valueForDictionary:dictionary withKey:@"link_id"];
-    allActivityObject.bounces = [[Component valueForDictionary:dictionary withKey:@"bounces"] intValue];
-    allActivityObject.unsubscribeReason = [Component valueForDictionary:dictionary withKey:@"unsubscribe_reason"];
-    allActivityObject.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
-    allActivityObject.forwards = [[Component valueForDictionary:dictionary withKey:@"forwards"] intValue];
-    allActivityObject.bounceDescription = [Component valueForDictionary:dictionary withKey:@"bounce_description"];
-    allActivityObject.unsubscribeSource = [Component valueForDictionary:dictionary withKey:@"unsubscribe_source"];
-    allActivityObject.bounceMessage = [Component valueForDictionary:dictionary withKey:@"bounce_message"];
-    allActivityObject.bounceCode = [Component valueForDictionary:dictionary withKey:@"bounce_code"];
-    allActivityObject.clicks = [[Component valueForDictionary:dictionary withKey:@"clicks"] intValue];
-    allActivityObject.bounceDate = [Component valueForDictionary:dictionary withKey:@"bounce_date"];
-    allActivityObject.clickDate = [Component valueForDictionary:dictionary withKey:@"click_date"];
-    allActivityObject.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    allActivityObject.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
+    AllActivites *allActivityObject = [[AllActivites alloc] initWithDictionary:dictionary];
     
     return allActivityObject;
 }
+
 @end

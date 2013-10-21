@@ -40,14 +40,7 @@
 
 + (EmailSortedActivity *)emailSortedActivityWithDictionary:(NSDictionary *)dictionary;
 {
-    EmailSortedActivity *emailSortedActivity = [[EmailSortedActivity alloc] init];
-    
-    emailSortedActivity.contactId  = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    emailSortedActivity.clicks     = [[Component valueForDictionary:dictionary withKey:@"clicks"] intValue];
-    emailSortedActivity.opens      = [[Component valueForDictionary:dictionary withKey:@"opens"] intValue];
-    emailSortedActivity.bounces    = [[Component valueForDictionary:dictionary withKey:@"bounces"] intValue];
-    emailSortedActivity.forwards   = [[Component valueForDictionary:dictionary withKey:@"forwards"] intValue];
-    emailSortedActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
+    EmailSortedActivity *emailSortedActivity = [[EmailSortedActivity alloc] initWithDictionary:dictionary];
     
     return emailSortedActivity;
 }

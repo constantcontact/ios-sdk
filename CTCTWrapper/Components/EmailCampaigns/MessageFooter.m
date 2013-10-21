@@ -54,21 +54,7 @@
 
 + (MessageFooter *)messageFooterWithDictionary:(NSDictionary *)dictionary;
 {
-    MessageFooter *messageFooter = [[MessageFooter alloc] init];
-    
-    messageFooter.city =[Component valueForDictionary:dictionary withKey:@"city"];
-    messageFooter.state = [Component valueForDictionary:dictionary withKey:@"state"];
-    messageFooter.country = [Component valueForDictionary:dictionary withKey:@"country"];
-    messageFooter.organizationMame = [Component valueForDictionary:dictionary withKey:@"organization_name"];
-    messageFooter.addressLine1 = [Component valueForDictionary:dictionary withKey:@"address_line_1"];
-    messageFooter.addressLine2 = [Component valueForDictionary:dictionary withKey:@"address_line_2"];;
-    messageFooter.addressLine3 = [Component valueForDictionary:dictionary withKey:@"address_line_3"];
-    messageFooter.internationalState = [Component valueForDictionary:dictionary withKey:@"international_state"];
-    messageFooter.postalCode = [Component valueForDictionary:dictionary withKey:@"postal_code"];
-    messageFooter.includeForwardEmail = [[Component valueForDictionary:dictionary withKey:@"include_forward_email"]boolValue];
-    messageFooter.forwardEmailLinkText = [Component valueForDictionary:dictionary withKey:@"forward_email_link_text"];
-    messageFooter.includeSubscribeLink = [[Component valueForDictionary:dictionary withKey:@"include_subscribe_link"]boolValue];
-    messageFooter.subscribeLinkText = [Component valueForDictionary:dictionary withKey:@"subscribe_link_text"];
+    MessageFooter *messageFooter = [[MessageFooter alloc] initWithDictionary:dictionary];
     
     return messageFooter;
 }

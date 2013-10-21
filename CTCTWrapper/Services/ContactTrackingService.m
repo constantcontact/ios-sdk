@@ -269,10 +269,11 @@
     
     return response;
 }
+
 + (HttpResponse*)getActivitesSortedByEmailCampaignWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_by_email_campaign"],contactId];
+    NSString *endpoint = [NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_by_email_campaign"],contactId];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
@@ -301,7 +302,7 @@
 + (HttpResponse*)getAllContactActivitesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
-    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_all"],contactId];
+    NSString *endpoint = [NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_all"],contactId];
     
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
@@ -321,7 +322,6 @@
     
     if (response.statusCode == 200)
     {
-        
         NSMutableArray *activityArray = [[NSMutableArray alloc] init];
         NSArray *resultArray = [response.data objectForKey:@"results"];
         
@@ -349,4 +349,5 @@
     
     return dateString;
 }
+
 @end

@@ -38,13 +38,7 @@
 
 + (SendActivity *)sendActivityWithDictionary:(NSDictionary *)dictionary;
 {
-    SendActivity *sendActivity = [[SendActivity alloc]init];
-    
-    sendActivity.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    sendActivity.sendDate = [Component valueForDictionary:dictionary withKey:@"send_date"];
-    sendActivity.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    sendActivity.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    sendActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
+    SendActivity *sendActivity = [[SendActivity alloc] initWithDictionary:dictionary];
     
     return sendActivity;
 }

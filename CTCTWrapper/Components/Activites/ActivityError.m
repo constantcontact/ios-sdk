@@ -35,11 +35,7 @@
 
 + (ActivityError *)activityErrorWithDictionary:(NSDictionary *)dictionary
 {
-    ActivityError *activityError = [[ActivityError alloc] init];
-   
-    activityError.message = [Component valueForDictionary:dictionary withKey:@"message"];
-    activityError.lineNumber = [Component valueForDictionary:dictionary withKey:@"line_number"];
-    activityError.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
+    ActivityError *activityError = [[ActivityError alloc] initWithDictionary:dictionary];
     
     return activityError;
 }

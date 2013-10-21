@@ -45,15 +45,7 @@
 
 + (OptOutActivity *)optOutWithDictionary:(NSDictionary *)dictionary;
 {
-    OptOutActivity *optOutActivity = [[OptOutActivity alloc]init];
-    
-    optOutActivity.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    optOutActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
-    optOutActivity.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    optOutActivity.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    optOutActivity.unsubscribeDate = [Component valueForDictionary:dictionary withKey:@"unsubscribe_date"];
-    optOutActivity.unsubscribeSource = [Component valueForDictionary:dictionary withKey:@"unsubscribe_source"];
-    optOutActivity.unsubscribeReason = [Component valueForDictionary:dictionary withKey:@"unsubscribe_reason"];
+    OptOutActivity *optOutActivity = [[OptOutActivity alloc] initWithDictionary:dictionary];
     
     return optOutActivity;
 }

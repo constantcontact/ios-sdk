@@ -44,16 +44,7 @@
 
 + (BounceActivity *)bounceActivityWithDictionary:(NSDictionary *)dictionary
 {
-    BounceActivity *bounceActivity = [[BounceActivity alloc] init];
-    
-    bounceActivity.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    bounceActivity.bounceCode = [Component valueForDictionary:dictionary withKey:@"bounce_code"];
-    bounceActivity.bounceDescription = [Component valueForDictionary:dictionary withKey:@"bounce_description"];
-    bounceActivity.bounceMessage = [Component valueForDictionary:dictionary withKey:@"bounce_message"];
-    bounceActivity.bounceDate = [Component valueForDictionary:dictionary withKey:@"bounce_date"];
-    bounceActivity.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    bounceActivity.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    bounceActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
+    BounceActivity *bounceActivity = [[BounceActivity alloc] initWithDictionary:dictionary];
 
     return bounceActivity;
 }

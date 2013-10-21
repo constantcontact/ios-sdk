@@ -33,14 +33,10 @@
 
 + (CustomField*)customFieldWithDictionary:(NSDictionary *)dictionary
 {
-    CustomField *customField = [[CustomField alloc] init];
-    
-    customField.name = [dictionary objectForKey:@"name"];
-    customField.value = [dictionary objectForKey:@"value"];
+    CustomField *customField = [[CustomField alloc] initWithDictionary:dictionary];
     
     return customField;
 }
-
 
 - (NSDictionary*)proxyForJSON
 {
