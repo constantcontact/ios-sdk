@@ -2,7 +2,7 @@ var searchData=
 [
   ['scheduleddate',['scheduledDate',['../interface_schedule.html#a0e55944a0eac854b9e8eb185fc2766e2',1,'Schedule']]],
   ['scheduleid',['scheduleId',['../interface_schedule.html#a00b1ae8330675f0890f917abfdbef460',1,'Schedule']]],
-  ['senddate',['sendDate',['../interface_send_activity.html#ae36769174b1db462665442e41de83890',1,'SendActivity']]],
+  ['senddate',['sendDate',['../interface_all_activites.html#ae7a0135c65162d89e07b417ce8246301',1,'AllActivites::sendDate()'],['../interface_send_activity.html#ae36769174b1db462665442e41de83890',1,'SendActivity::sendDate()']]],
   ['sends',['sends',['../interface_tracking_summary.html#af19c3ebbfee6e05a5d972f68cbd9459a',1,'TrackingSummary']]],
   ['senttocontactlists',['sentToContactLists',['../interface_email_campaign.html#ae9419aa69a528b574124f5e9cafe4b54',1,'EmailCampaign']]],
   ['sortby',['sortBy',['../interface_export_contacts.html#a0f38be8806e1582be9980cd84e446081',1,'ExportContacts']]],

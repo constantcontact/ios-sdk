@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>ConstantContact iOS SDK: /Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/Collections/ContactsCollection.h Source File</title>
+<title>ConstantContact iOS SDK: /Users/grigorievs/Documents/work/CTCT-iOS-VladDumitras/CTCTWrapper/Collections/ContactsCollection.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="33ccd6cdd43948cca451deac8cdf8d40.jpeg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ConstantContact iOS SDK
    </div>
@@ -80,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3ea090068edd8d2dff6b876d1bd3f3bc.html">work</a></li><li class="navelem"><a class="el" href="dir_0c35509ffd46d3493c0ad3e1125026d1.html">ConstantContact</a></li><li class="navelem"><a class="el" href="dir_a5b7260044f3faa3965aa9f29fc5caa7.html">V2Wrapper</a></li><li class="navelem"><a class="el" href="dir_d65ce151f89708a06668eae5460603c6.html">IOS</a></li><li class="navelem"><a class="el" href="dir_a8f94871f7b3522e1bc1ddef3a236c40.html">CTCTWrapper</a></li><li class="navelem"><a class="el" href="dir_f9572b2f1d6c6ce54653ad300241f173.html">Collections</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_fda7dc800d61feb5b8277ca5de98c53f.html">CTCTWrapper</a></li><li class="navelem"><a class="el" href="dir_f548ee3101b9432ca6022d421242718f.html">Collections</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,28 +103,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="interface_contacts_collection.html">   13</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_contacts_collection.html">ContactsCollection</a> : NSObject</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactsWithAccessToken:(NSString*)accessToken;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactsWithAccessToken:(NSString*)accessToken withLimitOf:(NSString *)limit;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactWithAccessToken:(NSString*)accessToken andId:(NSString*)contactId;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)addContact:(<a class="code" href="interface_contact.html">Contact</a>*)contact withAccessToken:(NSString*)accessToken actionByVisitor:(BOOL)action;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;+ (BOOL)deleteContactWithAccessToken:(NSString*)accessToken andContactId:(NSString*)contactId errors:(NSArray**)errors;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;+ (BOOL)deleteContactFromListsWithAccessToken:(NSString*)accessToken andContactId:(NSString*)contactId errors:(NSArray**)errors;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;+ (BOOL)deleteContactFromListWithAccessToken:(NSString*)accessToken andContactId:(NSString*)contactId andListId:(NSString*)listId errors:(NSArray**)errors;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email withALimitOf:(NSString *)limit;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactsWithAccessToken:(NSString*)accessToken andStatus:(NSString *)status withAlimitOf:(NSString *)limit;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)contactsWithAccessToken:(NSString*)accessToken andModifiedSince:(NSDate *)date;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)addContact:(<a class="code" href="interface_contact.html">Contact</a>*)contact withAccessToken:(NSString*)accessToken actionByVisitor:(BOOL)action;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;+ (BOOL)deleteContactWithAccessToken:(NSString*)accessToken andContactId:(NSString*)contactId errors:(NSArray**)errors;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)updateContact:(<a class="code" href="interface_contact.html">Contact</a>*)contact withAccessToken:(NSString*)accessToken actionByVisitor:(BOOL)action;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;+ (BOOL)deleteContactFromListsWithAccessToken:(NSString*)accessToken andContactId:(NSString*)contactId errors:(NSArray**)errors;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;+ (BOOL)deleteContactFromListWithAccessToken:(NSString*)accessToken andContactId:(NSString*)contactId andListId:(NSString*)listId errors:(NSArray**)errors;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;+ (<a class="code" href="interface_http_response.html">HttpResponse</a> *)updateContact:(<a class="code" href="interface_contact.html">Contact</a>*)contact withAccessToken:(NSString*)accessToken actionByVisitor:(BOOL)action;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 17:17:44 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 21 2013 11:41:37 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

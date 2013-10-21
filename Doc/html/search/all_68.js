@@ -5,6 +5,7 @@ var searchData=
   ['httperror',['HttpError',['../interface_http_error.html',1,'']]],
   ['httperror_2eh',['HttpError.h',['../_http_error_8h.html',1,'']]],
   ['httperror_2em',['HttpError.m',['../_http_error_8m.html',1,'']]],
+  ['httpmultipartrequestwithurl_3afile_3adata_3alists_3a',['httpMultipartRequestWithUrl:file:data:lists:',['../interface_http_request.html#a33475783ef28f0fa3ec4b94015b709de',1,'HttpRequest']]],
   ['httprequest',['HttpRequest',['../interface_http_request.html',1,'']]],
   ['httprequest_2eh',['HttpRequest.h',['../_http_request_8h.html',1,'']]],
   ['httprequest_2em',['HttpRequest.m',['../_http_request_8m.html',1,'']]],

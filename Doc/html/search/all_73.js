@@ -10,7 +10,7 @@ var searchData=
   ['sendactivity_2eh',['SendActivity.h',['../_send_activity_8h.html',1,'']]],
   ['sendactivity_2em',['SendActivity.m',['../_send_activity_8m.html',1,'']]],
   ['sendactivitywithdictionary_3a',['sendActivityWithDictionary:',['../interface_send_activity.html#ac0ba4d4355530e716db91583af9f262d',1,'SendActivity']]],
-  ['senddate',['sendDate',['../interface_send_activity.html#ae36769174b1db462665442e41de83890',1,'SendActivity']]],
+  ['senddate',['sendDate',['../interface_all_activites.html#ae7a0135c65162d89e07b417ce8246301',1,'AllActivites::sendDate()'],['../interface_send_activity.html#ae36769174b1db462665442e41de83890',1,'SendActivity::sendDate()']]],
   ['sends',['sends',['../interface_tracking_summary.html#af19c3ebbfee6e05a5d972f68cbd9459a',1,'TrackingSummary']]],
   ['sendtestwithaccestoken_3acampaignid_3aandtestsend_3a',['sendTestWithAccesToken:campaignId:andTestSend:',['../interface_campaign_schedule_service.html#afdb0682a498147c0660ee66237268fa6',1,'CampaignScheduleService']]],
   ['senttocontactlists',['sentToContactLists',['../interface_email_campaign.html#ae9419aa69a528b574124f5e9cafe4b54',1,'EmailCampaign']]],
