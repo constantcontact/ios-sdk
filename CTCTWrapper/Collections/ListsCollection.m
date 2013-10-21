@@ -113,7 +113,7 @@
     return response;
 }
 
-+ (HttpResponse*)getContactListMembershipWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId withModificationDate:(NSDate *)date withAlimitOf:(NSString *)limit
++ (HttpResponse*)getContactListMembershipWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId withModificationDate:(NSDate *)date withAlimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"membership_list"];
@@ -132,9 +132,9 @@
         
         url = [NSString stringWithFormat:@"%@&modified_since=%@", url, dateString];
     }
-    else if (limit && limit.length > 0)
+    else if (limit > 0)
     {
-        url = [NSString stringWithFormat:@"%@&limit=%@", url, limit];
+        url = [NSString stringWithFormat:@"%@&limit=%d", url, limit];
     }
     
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];

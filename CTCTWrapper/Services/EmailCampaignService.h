@@ -36,7 +36,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with all the campaigns of the user
  */
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken withALimitOf:(NSString *)limit;
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken withALimitOf:(int)limit;
 
 /**
  * Get a set of campaigns
@@ -47,7 +47,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with all the campaigns with the given status
  */
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status withALimitOf:(NSString *)limit;
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status withALimitOf:(int)limit;
 
 /**
  * Get a set of campaigns

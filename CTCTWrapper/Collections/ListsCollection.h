@@ -48,11 +48,11 @@
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* listID - the id of the list you wish to obtain contacts from;
  * @param NSDate* date - (otional) results will be filtered by the date if it is provided, adding a date will invalidate the limit parameter
- * @param NSString* limit - (optional) the number of elements to be returned, default 50;
+ * @param int limit - (optional) the number of elements to be returned, default 50;
  *
  * @return HttpResponse * - response containing either errors or data with a array of Contacts from the list;
  */
-+ (HttpResponse*)getContactListMembershipWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId withModificationDate:(NSDate *)date withAlimitOf:(NSString *)limit;
++ (HttpResponse*)getContactListMembershipWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId withModificationDate:(NSDate *)date withAlimitOf:(int)limit;
 
 /**
  * Function that updates a contact list

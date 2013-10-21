@@ -32,22 +32,22 @@
     return response;
 }
 
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken withALimitOf:(NSString *)limit
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken withALimitOf:(int)limit
 {
     return [self getCampaignsWithToken:accessToken status:nil modificationDate:nil withALimitOf:limit];
 }
 
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status withALimitOf:(NSString *)limit
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status withALimitOf:(int)limit
 {
     return [self getCampaignsWithToken:accessToken status:status modificationDate:nil withALimitOf:limit];
 }
 
 + (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken modificationDate:(NSDate *)date
 {
-    return [self getCampaignsWithToken:accessToken status:nil modificationDate:date withALimitOf:nil];
+    return [self getCampaignsWithToken:accessToken status:nil modificationDate:date withALimitOf:0];
 }
 
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status modificationDate:(NSDate *)date withALimitOf:(NSString *)limit
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status modificationDate:(NSDate *)date withALimitOf:(int)limit
 {    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"campaigns"];
@@ -67,8 +67,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&modified_since=%@",httpQuery,dateString];
     }
-    else if(limit && limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@",httpQuery,limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d",httpQuery,limit];
     
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
