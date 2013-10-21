@@ -109,8 +109,8 @@ Class Methods</h2></td></tr>
 <tr class="separator:a467a860dc8d7d8ccf7c24168be9e859f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f01143dd9acb80108f8c7f8096aaa6f"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_lists_collection.html#a9f01143dd9acb80108f8c7f8096aaa6f">listWithAccessToken:andListId:</a></td></tr>
 <tr class="separator:a9f01143dd9acb80108f8c7f8096aaa6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f3fd38a81b2fce54722957216be710"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_lists_collection.html#a87f3fd38a81b2fce54722957216be710">getContactListMembershipWithAccessToken:fromList:withModificationDate:withAlimitOf:</a></td></tr>
-<tr class="separator:a87f3fd38a81b2fce54722957216be710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acbbbb64ca0ab5c9bc125cd71d13244"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_lists_collection.html#a2acbbbb64ca0ab5c9bc125cd71d13244">getContactListMembershipWithAccessToken:fromList:withModificationDate:withAlimitOf:</a></td></tr>
+<tr class="separator:a2acbbbb64ca0ab5c9bc125cd71d13244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875b80ad1fe2b0a020903371d01b8bea"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_lists_collection.html#a875b80ad1fe2b0a020903371d01b8bea">updateListWithAccessToken:andListId:andList:</a></td></tr>
 <tr class="separator:a875b80ad1fe2b0a020903371d01b8bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29925f50b80443469e1d55d857c706f9"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_lists_collection.html#a29925f50b80443469e1d55d857c706f9">deleteListWithAccessToken:andListId:errors:</a></td></tr>
@@ -193,7 +193,7 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a87f3fd38a81b2fce54722957216be710"></a>
+<a class="anchor" id="a2acbbbb64ca0ab5c9bc125cd71d13244"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -218,7 +218,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="paramkey">withAlimitOf:</td>
           <td></td>
-          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramtype">(int)&#160;</td>
           <td class="paramname"><em>limit</em>&#160;</td>
         </tr>
         <tr>
@@ -234,7 +234,7 @@ Class Methods</h2></td></tr>
     <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
     <tr><td class="paramname">NSString*</td><td>listID - the id of the list you wish to obtain contacts from; </td></tr>
     <tr><td class="paramname">NSDate*</td><td>date - (otional) results will be filtered by the date if it is provided, adding a date will invalidate the limit parameter </td></tr>
-    <tr><td class="paramname">NSString*</td><td>limit - (optional) the number of elements to be returned, default 50;</td></tr>
+    <tr><td class="paramname">int</td><td>limit - (optional) the number of elements to be returned, default 50;</td></tr>
   </table>
   </dd>
 </dl>
@@ -361,7 +361,7 @@ Class Methods</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2013 12:01:34 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 21 2013 12:30:31 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
