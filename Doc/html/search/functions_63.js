@@ -7,7 +7,7 @@ var searchData=
   ['contactswithaccesstoken_3aandemail_3awithalimitof_3a',['contactsWithAccessToken:andEmail:withALimitOf:',['../interface_contacts_collection.html#aed30686b9da5daea0074afdfdf2ee81d',1,'ContactsCollection']]],
   ['contactswithaccesstoken_3aandmodifiedsince_3a',['contactsWithAccessToken:andModifiedSince:',['../interface_contacts_collection.html#a22766b68c6b097092222e3a300937fa0',1,'ContactsCollection']]],
   ['contactswithaccesstoken_3aandstatus_3awithalimitof_3a',['contactsWithAccessToken:andStatus:withAlimitOf:',['../interface_contacts_collection.html#a0edc5e16e63fa36d2b48d3e3c82db73b',1,'ContactsCollection']]],
-  ['contactswithaccesstoken_3awithlimitof_3a',['contactsWithAccessToken:withLimitOf:',['../interface_contacts_collection.html#afe102cb944baff3cf2c210ecccee15dc',1,'ContactsCollection']]],
+  ['contactswithaccesstoken_3awithlimitof_3a',['contactsWithAccessToken:withLimitOf:',['../interface_contacts_collection.html#a88d96e2c2cb9315b747e3c13ec132b94',1,'ContactsCollection']]],
   ['contactwithaccesstoken_3aandid_3a',['contactWithAccessToken:andId:',['../interface_contacts_collection.html#a94c45e3c9f4fa861848e3bdc17b27259',1,'ContactsCollection']]],
   ['contactwithdictionary_3a',['contactWithDictionary:',['../interface_contact.html#aa05ff62d981764acd92474352457e248',1,'Contact']]],
   ['createaddcontactsactivitywithtoken_3aandcontacts_3a',['createAddContactsActivityWithToken:andContacts:',['../interface_activity_service.html#abc95042a4b1383b33267896415edae59',1,'ActivityService']]],

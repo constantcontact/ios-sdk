@@ -103,8 +103,8 @@ Inheritance diagram for ContactsCollection:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:afe102cb944baff3cf2c210ecccee15dc"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#afe102cb944baff3cf2c210ecccee15dc">contactsWithAccessToken:withLimitOf:</a></td></tr>
-<tr class="separator:afe102cb944baff3cf2c210ecccee15dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d96e2c2cb9315b747e3c13ec132b94"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a88d96e2c2cb9315b747e3c13ec132b94">contactsWithAccessToken:withLimitOf:</a></td></tr>
+<tr class="separator:a88d96e2c2cb9315b747e3c13ec132b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c45e3c9f4fa861848e3bdc17b27259"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a94c45e3c9f4fa861848e3bdc17b27259">contactWithAccessToken:andId:</a></td></tr>
 <tr class="separator:a94c45e3c9f4fa861848e3bdc17b27259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed30686b9da5daea0074afdfdf2ee81d"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#aed30686b9da5daea0074afdfdf2ee81d">contactsWithAccessToken:andEmail:withALimitOf:</a></td></tr>
@@ -285,7 +285,7 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afe102cb944baff3cf2c210ecccee15dc"></a>
+<a class="anchor" id="a88d96e2c2cb9315b747e3c13ec132b94"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -298,7 +298,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="paramkey">withLimitOf:</td>
           <td></td>
-          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramtype">(int)&#160;</td>
           <td class="paramname"><em>limit</em>&#160;</td>
         </tr>
         <tr>
@@ -311,7 +311,8 @@ Class Methods</h2></td></tr>
 <p>Function gets all contacts belonging to the user identified by the token;</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login;</td></tr>
+    <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
+    <tr><td class="paramname">int</td><td>limit - Number of results to get</td></tr>
   </table>
   </dd>
 </dl>
@@ -535,7 +536,7 @@ Class Methods</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2013 11:41:38 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 21 2013 12:01:34 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
