@@ -134,7 +134,7 @@
     }
     
     
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                  temp, @"import_data",
                                  _lists, @"lists",
                                  _columnNames,@"column_names",

@@ -35,7 +35,7 @@
  *
  * @return HttpResponse *-  response containing a results array of BounceActivityes
  */
-+ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(NSString *)limit;
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(int)limit;
 /**
  * Get clicks for a given contact
  *
@@ -46,7 +46,7 @@
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of ClickActivityes
  */
-+ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit;
 /**
  * Get forwards for a given contact
  *
@@ -57,7 +57,7 @@
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of ForwardActivityes
  */
-+ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit;
 /**
  * Get opens for a given contact
  *
@@ -68,7 +68,7 @@
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of OpenActivityes
  */
-+ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit;
 /**
  * Get sends for a given contact
  *
@@ -80,7 +80,7 @@
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of SendActivityes
  */
 
-+ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit;
 /**
  * Get opt outs for a given contact
  *
@@ -91,7 +91,7 @@
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with a ResultSet of OptOutActivityes
  */
-+ (HttpResponse*)getUnsubscribesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getUnsubscribesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit;
 /**
  * Get a summary of reporting data for a given contact
  *
@@ -122,5 +122,5 @@
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with the activites of the user
  */
-+ (HttpResponse*)getAllContactActivitesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getAllContactActivitesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit;
 @end

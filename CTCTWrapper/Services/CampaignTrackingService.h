@@ -33,7 +33,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with a ResultsSet of BounceActivityes
  */
-+ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken campaignID:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get clicks for a given campaign
@@ -45,7 +45,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of ClickActivityes
  */
-+ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get forwards for a given campaign
@@ -58,7 +58,7 @@
  * @return HttpResponse * - response containing either errors or data with a ResultSet of ForwardActivityes
  */
 
-+ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get opens for a given campaign
@@ -70,7 +70,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of OpenActivityes
  */
-+ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get sends for a given campaign
@@ -82,7 +82,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of SendActivityes
  */
-+ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get opt outs for a given campaign
@@ -94,7 +94,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of OptOutActivityes;
  */
-+ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getOptOutsWithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get clicks for a specific link for a given campaign
@@ -107,7 +107,7 @@
  *
  * @return HttpResponse * - response containing either errors or data with a ResultSet of all the Clicks on a specific link;
  */
-+ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId creationDate:(NSDate *)date andALimitOf:(NSString *)limit;
++ (HttpResponse*)getClicksByLinkwithAccessToken:(NSString *)accessToken campaignId:(NSString *)campaignId linkId:(NSString *)linkId creationDate:(NSDate *)date andALimitOf:(int)limit;
 
 /**
  * Get a summary of reporting data for a given campaign

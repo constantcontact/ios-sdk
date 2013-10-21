@@ -9,7 +9,7 @@
 
 @implementation ContactTrackingService
 
-+ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(NSString *)limit
++ (HttpResponse*)getBouncesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_bounces"],contactId];
@@ -17,8 +17,8 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
@@ -44,7 +44,7 @@
     return response;
 }
 
-+ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
++ (HttpResponse*)getClicksWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_clicks"],contactId];
@@ -58,8 +58,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
     }
-    else if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
@@ -85,7 +85,7 @@
     return response;
 }
 
-+ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
++ (HttpResponse*)getForwardsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_forwards"],contactId];
@@ -99,8 +99,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
     }
-    else if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
 
@@ -126,7 +126,7 @@
     return response;
 }
 
-+ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
++ (HttpResponse*)getOpensWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_opens"],contactId];
@@ -140,8 +140,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
     }
-    else if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
      NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
@@ -167,7 +167,7 @@
     return response;
 }
 
-+ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
++ (HttpResponse*)getSendsWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_sends"],contactId];
@@ -181,8 +181,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
     }
-    else if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
@@ -208,7 +208,7 @@
     return response;
 }
 
-+ (HttpResponse*)getUnsubscribesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
++ (HttpResponse*)getUnsubscribesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_unsubscribes"],contactId];
@@ -222,8 +222,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
     }
-    else if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
@@ -299,7 +299,7 @@
     return response;
 }
 
-+ (HttpResponse*)getAllContactActivitesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(NSString *)limit
++ (HttpResponse*)getAllContactActivitesWithAccessToken:(NSString *)accessToken contactId:(NSString *)contactId creationDate:(NSDate *)date andALimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"contact_tracking_all"],contactId];
@@ -313,8 +313,8 @@
         
         httpQuery = [NSString stringWithFormat:@"%@&created_since=%@", httpQuery, dateString];
     }
-    else if(limit.length > 0)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     

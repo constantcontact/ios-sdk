@@ -16,7 +16,7 @@
 // Get an array of contacts
 // accessToken - Constant Contact OAuth2 access token
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken withLimitOf:(NSString *)limit
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken withLimitOf:(int)limit
 {    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
@@ -26,7 +26,7 @@
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
     if(limit)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];

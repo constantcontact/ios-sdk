@@ -108,7 +108,7 @@
 
 - (id) proxyForJson
 {
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                  _firstName, @"first_name",
                                  _middleName, @"middle_name",
                                  _lastName,@"last_name",

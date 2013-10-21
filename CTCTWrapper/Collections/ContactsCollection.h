@@ -15,11 +15,12 @@
  /**
  * Function gets all contacts belonging to the user identified by the token;
  *
- * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login; 
+ * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
+ * @param int limit - Number of results to get
  *
  * @return HttpResponse * - response containing either errors or data with a array of all contacts belonging to the user identified by the token;
  */
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken withLimitOf:(NSString *)limit;
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken withLimitOf:(int)limit;
 
  /**
  * Function gets the contact details for a specific contact, belonging to the user identified by the token;
