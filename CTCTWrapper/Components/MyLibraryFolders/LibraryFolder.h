@@ -7,6 +7,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Component.h"
+
+#define SORT_FOLDER_BY_CREATION_DATE @"CREATED_DATE"
+#define SORT_FOLDER_BY_CREATION_DATE_DESCENDING @"CREATED_DATE_DESC"
+#define SORT_FOLDER_BY_MODIFIED_DATE @" MODIFIED_DATE"
+#define SORT_FOLDER_BY_MODIFIED_DATE_DESC @"MODIFIED_DATE_DESC"
+#define SORT_FOLDER_BY_NAME @"NAME"
+#define SORT_FOLDER_BY_NAME_DESC @"NAME_DESC"
+
 /**
  * Represents a folder in Constant Contact
  *

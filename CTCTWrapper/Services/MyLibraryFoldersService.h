@@ -31,7 +31,7 @@
  * Retrieve all existing MyLibrary folders
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
- * @param NSString *sortParam - (optional) Specifies how the list of folders is sorted, alid sort options are: CREATED_DATE, CREATED_DATE, MODIFIED_DATE, MODIFIED_DATE_DESC, NAME, NAME_DESC. Default value is ADDED_DATE_DESC.
+ * @param NSString *sortParam - (optional) Specifies how the list of folders is sorted, alid sort options are: CREATED_DATE, CREATED_DATE, MODIFIED_DATE, MODIFIED_DATE_DESC, NAME, NAME_DESC. Default value is ADDED_DATE_DESC. Accessible by the keyword SORT_FOLDER_BY
  * @param int limit - (optional) the number of elements to be returned, default 50;
  * @return HttpResponse * - response containing data and errors (if there are some)
  */
@@ -87,8 +87,8 @@
  * Retrieves the files in the Trash folder. 
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
- * @param NSString *type - (optional) Specifies the type of files to retrieve, ALL, IMAGES, or DOCUMENTS. Default ALL.
- * @param NSString *sortby - (optional) Specifies how the list of folders is sorted, alid sort options are: ADDED_DATE, ADDED_DATE_DESC, MODIFIED_DATE, MODIFIED_DATE_DESC, NAME, NAME_DESC. Default value is ADDED_DATE_DESC.
+ * @param NSString *type - (optional) Specifies the type of files to retrieve, ALL, IMAGES, or DOCUMENTS. Default ALL.  Accessible by the keyword FILE_TYPE_
+ * @param NSString *sortby - (optional) Specifies how the list of folders is sorted, alid sort options are: ADDED_DATE, ADDED_DATE_DESC, MODIFIED_DATE, MODIFIED_DATE_DESC, NAME, NAME_DESC. Default value is ADDED_DATE_DESC.Accessible by the keyword  SORT_FOLDER_BY
  * @param int limit - (optional) the number of elements to be returned, default 50;
  *
  * @return HttpResponse * - response containing data and errors (if there are some)

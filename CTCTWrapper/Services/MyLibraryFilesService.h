@@ -21,8 +21,8 @@
  * Returns a collection of MyLibrary files.
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
- * @param NSString *type - (optional) Specifies the type of files to retrieve, ALL, IMAGES, or DOCUMENTS. Default All.
- * @param NSString *source - (optional) Specifies to retrieve files from a particular source: ALL , MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile. Default All.
+ * @param NSString *type - (optional) Specifies the type of files to retrieve, ALL, IMAGES, or DOCUMENTS. Default All. Accessible by the keyword FILE_TYPE_
+ * @param NSString *source - (optional) Specifies to retrieve files from a particular source: ALL , MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile. Default All.  Accessible by the keyword FILE_SOURCE_
  * @param int limit - (optional) the number of elements to be returned, default 50;
  *
  * @return HttpResponse * - response containing data and errors (if there are some)
@@ -84,7 +84,7 @@
  *  @param NSString *file - the file path for the file sent to the server.
  *  @param NSString *folderId - the folder destination for the file sent to the server.
  *  @param NSString *description - user description for the file sent to the server.
- *  @param NSString *fromSource - the source of the original file: MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile
+ *  @param NSString *fromSource - the source of the original file: MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile . Accessible by the keyword FILE_TYPE_
  *  @param NSString* data - the data from the selected file in string format.
  *
  *  @return HttpResponse * - response containing data and errors (if there are some)

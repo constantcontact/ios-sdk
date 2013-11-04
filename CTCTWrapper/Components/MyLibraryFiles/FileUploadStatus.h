@@ -8,6 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "Component.h"
 
+#define UPLOAD_STATUS_ACTIVE @"ACTIVE"
+#define UPLOAD_STATUS_UPLOADED @"Uploaded"
+#define UPLOAD_STATUS_VIRUSFOUND @"VirusFound"
+#define UPLOAD_STATUS_FAILED @"Failed"
+#define UPLOAD_STATUS_DELETED @"Deleted"
+
 @interface FileUploadStatus : NSObject
 
 @property (strong, nonatomic) NSString *description;

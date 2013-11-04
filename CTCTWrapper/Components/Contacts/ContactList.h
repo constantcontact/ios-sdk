@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 #import "Component.h"
 
+#define LIST_STATUS_ACTIVE @"ACTIVE"
+#define LIST_STATUS_HIDDEN @"HIDDEN"
+
 @interface ContactList : NSObject
 
 @property (nonatomic, strong, readonly) NSString *listId;

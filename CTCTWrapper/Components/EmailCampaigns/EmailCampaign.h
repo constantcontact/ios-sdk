@@ -17,6 +17,11 @@
  * Represents a single Campaign in Constant Contact
  *
  */
+#define CAMPAIGN_STATUS_DRAFT @"DRAFT"
+#define CAMPAIGN_STATUS_RUNNING @"RUNNING"
+#define CAMPAIGN_STATUS_SENT @"SENT"
+#define CAMPAIGN_STATUS_SCHEDULED @"SCHEDULED"
+
 @interface EmailCampaign : NSObject
 
 @property (nonatomic, readonly) NSString *campaignId;
