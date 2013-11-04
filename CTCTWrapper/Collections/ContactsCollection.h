@@ -38,22 +38,22 @@
  *
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* email - The e-mail address of the contacts that we want to get;
- * @param NSString* limit - positive value that specifyes the maximum number of contacts returned;
+ * @param int limit - positive value that specifyes the maximum number of contacts returned;
  * 
  * @return HttpResponse * - response containing either errors or data with a array containing all the Contacts that have the given e-mail address;
  */
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email withALimitOf:(NSString *)limit;
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email withALimitOf:(int)limit;
 
 /**
  * Function gets the contacts with a specified status, belonging to the user identified by the token;
  *
  * @param NSString* accessToken - Constant Contact OAuth2 access token, obtained after login;
  * @param NSString* status - The status of the contacts that we want to get;
- * @param NSString* limit - positive value that specifyes the maximum number of contacts returned;
+ * @param int limit - positive value that specifyes the maximum number of contacts returned;
  * 
  * @return HttpResponse * - response containing either errors or data with a array containing all the Contacts that have the given status;
  */
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andStatus:(NSString *)status withAlimitOf:(NSString *)limit;
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andStatus:(NSString *)status withAlimitOf:(int)limit;
 
 /**
  * Function gets the contacts with a specified modification date, belonging to the user identified by the token;

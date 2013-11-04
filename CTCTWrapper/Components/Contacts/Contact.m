@@ -32,6 +32,10 @@
         _modifiedDate = @"";
         _lists = [[NSMutableArray alloc] init];
         _sourceDetails = @"";
+        _notes = [[NSMutableArray alloc] init];
+        _confirmed = NO;
+        _createdDate = @"";;
+        _source = @"";
     }
     return self;
 }
@@ -55,6 +59,9 @@
         _fax = [Component valueForDictionary:dictionary withKey:@"fax"];
         _prefixName = [Component valueForDictionary:dictionary withKey:@"prefix_name"];
         _jobTitle = [Component valueForDictionary:dictionary withKey:@"job_title"];
+        _confirmed = [[Component valueForDictionary:dictionary withKey:@"confirmed"] boolValue];
+        _createdDate = [Component valueForDictionary:dictionary withKey:@"created_date"];
+        _source = [Component valueForDictionary:dictionary withKey:@"source"];
         
         _emailAddresses = [[NSMutableArray alloc] init];
         

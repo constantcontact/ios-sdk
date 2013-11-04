@@ -14,6 +14,8 @@
 @property (nonatomic, readonly) int contactCount;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSString *createdDate;
+@property (nonatomic, strong) NSString *modifiedDate;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (ContactList *)contactListWithDictionary:(NSDictionary *)dictionary;

@@ -85,15 +85,15 @@
 // accessToken - Constant Contact OAuth2 access token
 // email - contact email address to search for
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email withALimitOf:(NSString *)limit
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email withALimitOf:(int)limit
 {    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"email=%@&access_token=%@&api_key=%@", email,accessToken,apiKey];
     
-    if(limit)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
 
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
@@ -120,15 +120,15 @@
 // ----------------------------------------------------------------------------------------------------
 //
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andStatus:(NSString *)status withAlimitOf:(NSString *)limit
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andStatus:(NSString *)status withAlimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"status=%@&access_token=%@&api_key=%@",status,accessToken,apiKey];
     
-    if(limit)
-        httpQuery = [NSString stringWithFormat:@"%@&limit=%@", httpQuery, limit];
+    if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];

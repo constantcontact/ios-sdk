@@ -51,6 +51,7 @@
 @property (nonatomic, strong) NSString *textContent;
 @property (nonatomic, strong) NSMutableArray *sentToContactLists;
 @property (nonatomic, strong) NSMutableArray *clickThroughDetails;
+@property (nonatomic,strong) NSString  *templateType;
 
 /**
  * Factory method to create a Campaign object from an Dictionary

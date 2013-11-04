@@ -45,6 +45,7 @@
         _textContent = @"";
         _sentToContactLists = [[NSMutableArray alloc] init];
         _clickThroughDetails = [[NSMutableArray alloc] init];
+        _templateType = @"";
     }
     
     return self;
@@ -91,6 +92,7 @@
         _emailContentFormat = [Component valueForDictionary:dictionary withKey:@"email_content_format"];
         _styleSheet = [Component valueForDictionary:dictionary withKey:@"style_sheet"];
         _textContent = [Component valueForDictionary:dictionary withKey:@"text_content"];
+        _templateType = [Component valueForDictionary:dictionary withKey:@"template_type"];
         
         _sentToContactLists = [[NSMutableArray alloc] init];
         
