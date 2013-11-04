@@ -87,9 +87,9 @@
  *  @param NSString *fromSource - the source of the original file: MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile
  *  @param NSString* data - the data from the selected file in string format.
  *
- *  @return BOOL - value that shows if upload was succesfull or not;
+ *  @return HttpResponse * - response containing data and errors (if there are some)
  */
-+ (BOOL)addFileMultipartWithToken:(NSString *)accessToken withFile:(NSString *)file toFolder:(NSString *)folderId withDescription:(NSString *)description fromSource:(NSString *)source errors:(NSArray**)errors;
++ (HttpResponse *)addFileMultipartWithToken:(NSString *)accessToken withFile:(NSString *)file toFolder:(NSString *)folderId withDescription:(NSString *)description fromSource:(NSString *)source errors:(NSArray**)errors;
 
 #pragma mark - file upload status
 

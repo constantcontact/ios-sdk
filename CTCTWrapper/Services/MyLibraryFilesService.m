@@ -155,7 +155,7 @@
 
 #pragma mark - file with multipart
 
-+ (BOOL)addFileMultipartWithToken:(NSString *)accessToken withFile:(NSString *)file toFolder:(NSString *)folderId withDescription:(NSString *)description fromSource:(NSString *)source errors:(NSArray**)errors;
++ (HttpResponse *)addFileMultipartWithToken:(NSString *)accessToken withFile:(NSString *)file toFolder:(NSString *)folderId withDescription:(NSString *)description fromSource:(NSString *)source errors:(NSArray**)errors;
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"library_files"];
@@ -171,9 +171,7 @@
     
     HttpResponse *response = [HttpRequest httpMultipartRequestWithUrl:url file:fileName folderId:folderId description:description source:source data:content];
     
-    *errors = response.errors;
-    
-    return (response.statusCode == 202);
+    return response;
 }
 
 #pragma mark - file upload status
@@ -216,7 +214,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    NSString * fileArray = [self toJson:arr];
+    NSString * fileArray = [self toJson:arr] ;
     
     HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:fileArray];
     

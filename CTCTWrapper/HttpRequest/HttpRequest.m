@@ -294,6 +294,11 @@
     // set URL
     [request setURL:[NSURL URLWithString:urlString]];
     
+    // NSLog(@"%@", [[NSString alloc] initWithUTF8String:[body bytes]]);
+    // NSLog(@"%@", [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding]);
+    // NSLog(@"%@", [urlRequest valueForHTTPHeaderField:@"Content-Type"]);
+    NSLog(@"%@", [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding]);
+    
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
@@ -304,8 +309,16 @@
     NSDictionary *responseDictionary;
     
     // json may return dictionary or array classes have to check
-    if (responseStatusCode == 200 || responseStatusCode == 204 || responseStatusCode == 201)
+    if (responseStatusCode == 202)
     {
+        if ([response respondsToSelector:@selector(allHeaderFields)])
+        {
+            NSDictionary *dictionary = [httpResponse allHeaderFields];
+            NSArray *locationArray = [[dictionary objectForKey:@"Location"] componentsSeparatedByString:@"/"];
+            
+            responseJSON = [NSDictionary dictionaryWithObjectsAndKeys:locationArray.lastObject,@"upload_id",nil];
+        }
+        
         responseDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                               urlString, KEY_REQUEST_URL,
                               responseURL, KEY_RESPONSE_URL,
