@@ -69,6 +69,15 @@
 		B0F397701729376300205B40 /* EmailCampaignService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397401729376200205B40 /* EmailCampaignService.m */; };
 		B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397421729376200205B40 /* VerifiedEmailAddresses.m */; };
 		B0F397721729376300205B40 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397451729376200205B40 /* CTCTGlobal.m */; };
+		C3709BF81827A9170072CA14 /* FileMoved.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BF51827A9170072CA14 /* FileMoved.m */; };
+		C3709BF91827A9170072CA14 /* FileUploadStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BF71827A9170072CA14 /* FileUploadStatus.m */; };
+		C3709C051827A9250072CA14 /* LibraryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BFC1827A9250072CA14 /* LibraryFile.m */; };
+		C3709C061827A9250072CA14 /* LibraryFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BFE1827A9250072CA14 /* LibraryFolder.m */; };
+		C3709C071827A9250072CA14 /* LibrarySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C001827A9250072CA14 /* LibrarySummary.m */; };
+		C3709C081827A9250072CA14 /* Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C021827A9250072CA14 /* Thumbnail.m */; };
+		C3709C091827A9250072CA14 /* UsageSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C041827A9250072CA14 /* UsageSummary.m */; };
+		C3709C0E1827A9E90072CA14 /* MyLibraryFilesService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C0B1827A9E90072CA14 /* MyLibraryFilesService.m */; };
+		C3709C0F1827A9E90072CA14 /* MyLibraryFoldersService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C0D1827A9E90072CA14 /* MyLibraryFoldersService.m */; };
 		C398C0C218101ACA00E54CAE /* AllActivites.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0BF18101ACA00E54CAE /* AllActivites.m */; };
 		C398C0C318101ACA00E54CAE /* EmailSortedActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */; };
 /* End PBXBuildFile section */
@@ -187,6 +196,24 @@
 		B0F397421729376200205B40 /* VerifiedEmailAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedEmailAddresses.m; sourceTree = "<group>"; };
 		B0F397441729376200205B40 /* CTCTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTGlobal.h; sourceTree = "<group>"; };
 		B0F397451729376200205B40 /* CTCTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTGlobal.m; sourceTree = "<group>"; };
+		C3709BF41827A9170072CA14 /* FileMoved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMoved.h; sourceTree = "<group>"; };
+		C3709BF51827A9170072CA14 /* FileMoved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMoved.m; sourceTree = "<group>"; };
+		C3709BF61827A9170072CA14 /* FileUploadStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadStatus.h; sourceTree = "<group>"; };
+		C3709BF71827A9170072CA14 /* FileUploadStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadStatus.m; sourceTree = "<group>"; };
+		C3709BFB1827A9250072CA14 /* LibraryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFile.h; sourceTree = "<group>"; };
+		C3709BFC1827A9250072CA14 /* LibraryFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryFile.m; sourceTree = "<group>"; };
+		C3709BFD1827A9250072CA14 /* LibraryFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFolder.h; sourceTree = "<group>"; };
+		C3709BFE1827A9250072CA14 /* LibraryFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryFolder.m; sourceTree = "<group>"; };
+		C3709BFF1827A9250072CA14 /* LibrarySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrarySummary.h; sourceTree = "<group>"; };
+		C3709C001827A9250072CA14 /* LibrarySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarySummary.m; sourceTree = "<group>"; };
+		C3709C011827A9250072CA14 /* Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thumbnail.h; sourceTree = "<group>"; };
+		C3709C021827A9250072CA14 /* Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thumbnail.m; sourceTree = "<group>"; };
+		C3709C031827A9250072CA14 /* UsageSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageSummary.h; sourceTree = "<group>"; };
+		C3709C041827A9250072CA14 /* UsageSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsageSummary.m; sourceTree = "<group>"; };
+		C3709C0A1827A9E90072CA14 /* MyLibraryFilesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryFilesService.h; sourceTree = "<group>"; };
+		C3709C0B1827A9E90072CA14 /* MyLibraryFilesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLibraryFilesService.m; sourceTree = "<group>"; };
+		C3709C0C1827A9E90072CA14 /* MyLibraryFoldersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryFoldersService.h; sourceTree = "<group>"; };
+		C3709C0D1827A9E90072CA14 /* MyLibraryFoldersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLibraryFoldersService.m; sourceTree = "<group>"; };
 		C398C0BE18101ACA00E54CAE /* AllActivites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActivites.h; sourceTree = "<group>"; };
 		C398C0BF18101ACA00E54CAE /* AllActivites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActivites.m; sourceTree = "<group>"; };
 		C398C0C018101ACA00E54CAE /* EmailSortedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSortedActivity.h; sourceTree = "<group>"; };
@@ -317,6 +344,8 @@
 		B0F396F11729376200205B40 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C3709BFA1827A9250072CA14 /* MyLibraryFolders */,
+				C3709BF31827A9170072CA14 /* MyLibraryFiles */,
 				B0F396F21729376200205B40 /* Activites */,
 				B0F396FD1729376200205B40 /* Component.h */,
 				B0F396FE1729376200205B40 /* Component.m */,
@@ -442,6 +471,10 @@
 		B0F397361729376200205B40 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C3709C0A1827A9E90072CA14 /* MyLibraryFilesService.h */,
+				C3709C0B1827A9E90072CA14 /* MyLibraryFilesService.m */,
+				C3709C0C1827A9E90072CA14 /* MyLibraryFoldersService.h */,
+				C3709C0D1827A9E90072CA14 /* MyLibraryFoldersService.m */,
 				B0F397371729376200205B40 /* ActivityService.h */,
 				B0F397381729376200205B40 /* ActivityService.m */,
 				B0F397391729376200205B40 /* CampaignScheduleService.h */,
@@ -465,6 +498,34 @@
 				B0F397451729376200205B40 /* CTCTGlobal.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C3709BF31827A9170072CA14 /* MyLibraryFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C3709BF41827A9170072CA14 /* FileMoved.h */,
+				C3709BF51827A9170072CA14 /* FileMoved.m */,
+				C3709BF61827A9170072CA14 /* FileUploadStatus.h */,
+				C3709BF71827A9170072CA14 /* FileUploadStatus.m */,
+			);
+			path = MyLibraryFiles;
+			sourceTree = "<group>";
+		};
+		C3709BFA1827A9250072CA14 /* MyLibraryFolders */ = {
+			isa = PBXGroup;
+			children = (
+				C3709BFB1827A9250072CA14 /* LibraryFile.h */,
+				C3709BFC1827A9250072CA14 /* LibraryFile.m */,
+				C3709BFD1827A9250072CA14 /* LibraryFolder.h */,
+				C3709BFE1827A9250072CA14 /* LibraryFolder.m */,
+				C3709BFF1827A9250072CA14 /* LibrarySummary.h */,
+				C3709C001827A9250072CA14 /* LibrarySummary.m */,
+				C3709C011827A9250072CA14 /* Thumbnail.h */,
+				C3709C021827A9250072CA14 /* Thumbnail.m */,
+				C3709C031827A9250072CA14 /* UsageSummary.h */,
+				C3709C041827A9250072CA14 /* UsageSummary.m */,
+			);
+			path = MyLibraryFolders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +650,15 @@
 				B0F397721729376300205B40 /* CTCTGlobal.m in Sources */,
 				C398C0C218101ACA00E54CAE /* AllActivites.m in Sources */,
 				C398C0C318101ACA00E54CAE /* EmailSortedActivity.m in Sources */,
+				C3709BF81827A9170072CA14 /* FileMoved.m in Sources */,
+				C3709BF91827A9170072CA14 /* FileUploadStatus.m in Sources */,
+				C3709C051827A9250072CA14 /* LibraryFile.m in Sources */,
+				C3709C061827A9250072CA14 /* LibraryFolder.m in Sources */,
+				C3709C071827A9250072CA14 /* LibrarySummary.m in Sources */,
+				C3709C081827A9250072CA14 /* Thumbnail.m in Sources */,
+				C3709C091827A9250072CA14 /* UsageSummary.m in Sources */,
+				C3709C0E1827A9E90072CA14 /* MyLibraryFilesService.m in Sources */,
+				C3709C0F1827A9E90072CA14 /* MyLibraryFoldersService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

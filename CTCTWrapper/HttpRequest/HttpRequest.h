@@ -65,7 +65,7 @@
 +(HttpResponse*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
 
 /**
- * Function is used to make a Http multipart request;
+ * Function is used to make a Http multipart request for bulk activityes;
  *
  *  @param NSString* Url - the request url for the call;
  *  @param NSString* fileName - the filename of the file sent to the server (first part of the multipart);
@@ -75,4 +75,18 @@
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
 + (HttpResponse*)httpMultipartRequestWithUrl:(NSString *)urlString file:(NSString *)fileName data:(NSData *)data lists:(NSString *)lists;
+
+/**
+ * Function is used to make a Http multipart request for MyLibrary files;
+ *
+ *  @param NSString* Url - the request url for the call;
+ *  @param NSString* fileName - the filename of the file sent to the server;
+ *  @param NSString* folderId
+ *  @param NSString* description
+ *  @param NSString* source
+ *  @param NSString* data - the data from the selected file in string format (second part of the multipart);
+ *
+ *  @return HttpResponse* - The function returns a response that contains the calls returned value;
+ */
++ (HttpResponse*)httpMultipartRequestWithUrl:(NSString *)urlString file:(NSString *)fileName folderId:(NSString *)folderId description:(NSString *)description source:(NSString *)source data:(NSData *)data;
 @end
