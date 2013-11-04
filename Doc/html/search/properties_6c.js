@@ -3,6 +3,7 @@ var searchData=
   ['lastname',['lastName',['../interface_add_contacts_import_data.html#a375331c67e7bf7d4afde74ae1f223e00',1,'AddContactsImportData::lastName()'],['../interface_contact.html#a6779c87444d59d250b3f797e6d1c666a',1,'Contact::lastName()']]],
   ['lastrundate',['lastRunDate',['../interface_email_campaign.html#a955fa9ef9a2c0f16999e3333437ab5d0',1,'EmailCampaign']]],
   ['lastsenddate',['lastSendDate',['../interface_email_campaign.html#a8c03ddd9c60f0b5de112617cded5435c',1,'EmailCampaign']]],
+  ['level',['level',['../interface_library_folder.html#a697f1f61429c02558661275e8aa33c68',1,'LibraryFolder']]],
   ['line1',['line1',['../interface_address.html#aa8393bdb98aa8a6f9abd997e12acdecd',1,'Address']]],
   ['line2',['line2',['../interface_address.html#a9c46d3e585f0b05031b7b48a3755037b',1,'Address']]],
   ['line3',['line3',['../interface_address.html#adb8395d68afe00ae8bd72871c5d6e3fa',1,'Address']]],

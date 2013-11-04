@@ -6,8 +6,15 @@ var searchData=
   ['unsubscribesource',['unsubscribeSource',['../interface_all_activites.html#aeb0cd3a32441e539aa470266fae50ecd',1,'AllActivites::unsubscribeSource()'],['../interface_opt_out_activity.html#a60f8ddc41707b7b60ec473e344d0caf7',1,'OptOutActivity::unsubscribeSource()']]],
   ['updatecampaignwithtoken_3aandemailcampaign_3a',['updateCampaignWithToken:andEmailCampaign:',['../interface_email_campaign_service.html#a7b991803e42de09ba0fba83e969c1d3d',1,'EmailCampaignService']]],
   ['updatecontact_3awithaccesstoken_3aactionbyvisitor_3a',['updateContact:withAccessToken:actionByVisitor:',['../interface_contacts_collection.html#a91193e5ee2abafdc675eec6d8f22e482',1,'ContactsCollection']]],
+  ['updatefilewithaccesstoken_3afileid_3aincludepayload_3aandfile_3a',['updateFileWithAccessToken:fileId:includePayload:andFile:',['../interface_my_library_files_service.html#ac13c1b8710f0e452cf425a2eff5409d3',1,'MyLibraryFilesService']]],
+  ['updatefolderwithaccesstoken_3awithid_3awithupdatefolder_3aincludepayload_3a',['updateFolderWithAccessToken:withId:withUpdateFolder:includePayload:',['../interface_my_library_folders_service.html#ab664fc9ceec535a82b156112fc7fb4ec',1,'MyLibraryFoldersService']]],
   ['updatelistwithaccesstoken_3aandlistid_3aandlist_3a',['updateListWithAccessToken:andListId:andList:',['../interface_lists_collection.html#a875b80ad1fe2b0a020903371d01b8bea',1,'ListsCollection']]],
   ['updateschedulewithaccestoken_3acampaignid_3aandschedule_3a',['updateScheduleWithAccesToken:campaignId:andSchedule:',['../interface_campaign_schedule_service.html#a02b28e987201b279f876edd7dbdb6d3e',1,'CampaignScheduleService']]],
-  ['url',['url',['../interface_click_through_details.html#a3b99fa4774bd8eab8aac29488b59480b',1,'ClickThroughDetails']]],
-  ['urluid',['urlUid',['../interface_click_through_details.html#a872fe75aab72a323e05459998bd703e2',1,'ClickThroughDetails']]]
+  ['uri',['uri',['../interface_file_moved.html#aa2186e7597b54dc7f83f20760924ccc1',1,'FileMoved']]],
+  ['url',['url',['../interface_click_through_details.html#a3b99fa4774bd8eab8aac29488b59480b',1,'ClickThroughDetails::url()'],['../interface_library_file.html#ac84ce41c7cc998ba5f8cec473e7fd0f8',1,'LibraryFile::url()'],['../interface_thumbnail.html#ac692bda083ad0c9fc728a256fe1019ed',1,'Thumbnail::url()']]],
+  ['urluid',['urlUid',['../interface_click_through_details.html#a872fe75aab72a323e05459998bd703e2',1,'ClickThroughDetails']]],
+  ['usagesummary',['UsageSummary',['../interface_usage_summary.html',1,'UsageSummary'],['../interface_library_summary.html#ab482e2c794fcbbae22905b7b1b06afa1',1,'LibrarySummary::usageSummary()']]],
+  ['usagesummary_2eh',['UsageSummary.h',['../_usage_summary_8h.html',1,'']]],
+  ['usagesummary_2em',['UsageSummary.m',['../_usage_summary_8m.html',1,'']]],
+  ['usagesummarywithdictionary_3a',['usageSummaryWithDictionary:',['../interface_usage_summary.html#a0bed2e6a587ef7a6dd671f32dfea54f5',1,'UsageSummary']]]
 ];
