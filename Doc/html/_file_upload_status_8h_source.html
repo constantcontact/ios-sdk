@@ -99,21 +99,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html">   11</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_file_upload_status.html">FileUploadStatus</a> : NSObject</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html#ada69e1986226e63c14ee69650d4668ec">   13</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSString *<a class="code" href="interface_file_upload_status.html#ada69e1986226e63c14ee69650d4668ec">description</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html#a7c39a6ae67af919e208b134768aeb836">   14</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSString *<a class="code" href="interface_file_upload_status.html#a7c39a6ae67af919e208b134768aeb836">fileId</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html#a01f865ecaf934777377987b1a86919a7">   15</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSString *<a class="code" href="interface_file_upload_status.html#a01f865ecaf934777377987b1a86919a7">status</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- (id)initWithDictionary:(NSDictionary *)dictionary;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="_file_upload_status_8h.html#a627c8de339d33df44ab6a4bb6b85d670">   11</a></span>&#160;<span class="preprocessor">#define UPLOAD_STATUS_ACTIVE @&quot;ACTIVE&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="_file_upload_status_8h.html#a35bce04bd8f1d344c2a726628291647d">   12</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UPLOAD_STATUS_UPLOADED @&quot;Uploaded&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="_file_upload_status_8h.html#a826da0999e935c0b4ba4c09c9f1012df">   13</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UPLOAD_STATUS_VIRUSFOUND @&quot;VirusFound&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="_file_upload_status_8h.html#adfa009639749405bfd6fdfa4f158cf3b">   14</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UPLOAD_STATUS_FAILED @&quot;Failed&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="_file_upload_status_8h.html#a62601271bfb70f051d28b68adb6825f7">   15</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UPLOAD_STATUS_DELETED @&quot;Deleted&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html">   17</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_file_upload_status.html">FileUploadStatus</a> : NSObject</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;+ (<a class="code" href="interface_file_upload_status.html">FileUploadStatus</a> *)fileUploadStatusWithDictionary:(NSDictionary *)dictionary;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html#ada69e1986226e63c14ee69650d4668ec">   19</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSString *<a class="code" href="interface_file_upload_status.html#ada69e1986226e63c14ee69650d4668ec">description</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html#a7c39a6ae67af919e208b134768aeb836">   20</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSString *<a class="code" href="interface_file_upload_status.html#a7c39a6ae67af919e208b134768aeb836">fileId</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="interface_file_upload_status.html#a01f865ecaf934777377987b1a86919a7">   21</a></span>&#160;<span class="keyword">@property</span> (strong, nonatomic) NSString *<a class="code" href="interface_file_upload_status.html#a01f865ecaf934777377987b1a86919a7">status</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;- (id)initWithDictionary:(NSDictionary *)dictionary;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;+ (<a class="code" href="interface_file_upload_status.html">FileUploadStatus</a> *)fileUploadStatusWithDictionary:(NSDictionary *)dictionary;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 4 2013 12:23:08 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 5 2013 09:38:51 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

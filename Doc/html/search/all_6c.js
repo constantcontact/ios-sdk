@@ -20,6 +20,8 @@ var searchData=
   ['linenumber',['lineNumber',['../interface_activity_error.html#a1e98d11d46b4e2c1693be54a9573d915',1,'ActivityError']]],
   ['linkid',['linkId',['../interface_all_activites.html#aa3b9cf781b32d1a1e5688cedc6476b1f',1,'AllActivites::linkId()'],['../interface_click_activity.html#a19803f5ea19ba2bcef1842d19886373c',1,'ClickActivity::linkId()']]],
   ['linkuri',['linkUri',['../interface_all_activites.html#a27bc2bf7bd6f5e80ee64cc5c1a5976fa',1,'AllActivites']]],
+  ['list_5fstatus_5factive',['LIST_STATUS_ACTIVE',['../_contact_list_8h.html#a562fbc0fcbaacffc93f5dd6f98eeb449',1,'ContactList.h']]],
+  ['list_5fstatus_5fhidden',['LIST_STATUS_HIDDEN',['../_contact_list_8h.html#a2bc33813c609859339ae97ca423491fb',1,'ContactList.h']]],
   ['listid',['listId',['../interface_contact_list.html#ab557acd9c14b54fd358a77fb2cf3dc73',1,'ContactList']]],
   ['lists',['lists',['../interface_add_contacts.html#a5e31df8915ef05031b2856e54c0bbca6',1,'AddContacts::lists()'],['../interface_export_contacts.html#a911744dfb12c60e9bb176a6b71fea829',1,'ExportContacts::lists()'],['../interface_contact.html#a985f57955f894f6e3b9068bcbf1726c6',1,'Contact::lists()']]],
   ['listscollection',['ListsCollection',['../interface_lists_collection.html',1,'']]],

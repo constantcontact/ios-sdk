@@ -14,7 +14,7 @@ var searchData=
   ['addemailaddress_3a',['addEmailAddress:',['../interface_contact.html#a1eac37e0e1065a838a21d5153837d7d6',1,'Contact']]],
   ['addemailtoemailaddresses_3a',['addEmailToEmailAddresses:',['../interface_test_send.html#a12b6ea779bb944f98e57997a140d65d3',1,'TestSend']]],
   ['addexportcontactsactivitywithtoken_3aandexportcontacts_3a',['addExportContactsActivityWithToken:andExportContacts:',['../interface_activity_service.html#a319817daa39be22f4e0461208f2d714d',1,'ActivityService']]],
-  ['addfilemultipartwithtoken_3awithfile_3atofolder_3awithdescription_3afromsource_3aerrors_3a',['addFileMultipartWithToken:withFile:toFolder:withDescription:fromSource:errors:',['../interface_my_library_files_service.html#a68c643872b1b65771678855638fc6f09',1,'MyLibraryFilesService']]],
+  ['addfilemultipartwithtoken_3awithfile_3atofolder_3awithdescription_3afromsource_3aerrors_3a',['addFileMultipartWithToken:withFile:toFolder:withDescription:fromSource:errors:',['../interface_my_library_files_service.html#a561900736b703c4672b2808960aae54a',1,'MyLibraryFilesService']]],
   ['addfolderwithaccesstoken_3aandfolder_3a',['addFolderWithAccessToken:andFolder:',['../interface_my_library_folders_service.html#ae8ab32f8b534a78c29ee5d8a33448021',1,'MyLibraryFoldersService']]],
   ['addlist_3a',['addList:',['../interface_contact.html#a57dd8a4ba092145487a90ddc52ee57bf',1,'Contact']]],
   ['addlist_3awithaccesstoken_3a',['addList:withAccessToken:',['../interface_lists_collection.html#a467a860dc8d7d8ccf7c24168be9e859f',1,'ListsCollection']]],

@@ -113,20 +113,20 @@ Class Methods</h2></td></tr>
 <tr class="separator:ac13c1b8710f0e452cf425a2eff5409d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3bc2eb464d9d94d86e2a578d6fe848"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_my_library_files_service.html#a8c3bc2eb464d9d94d86e2a578d6fe848">deleteFileWithAccessToken:andFileId:errors:</a></td></tr>
 <tr class="separator:a8c3bc2eb464d9d94d86e2a578d6fe848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68c643872b1b65771678855638fc6f09"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_my_library_files_service.html#a68c643872b1b65771678855638fc6f09">addFileMultipartWithToken:withFile:toFolder:withDescription:fromSource:errors:</a></td></tr>
-<tr class="separator:a68c643872b1b65771678855638fc6f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561900736b703c4672b2808960aae54a"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_my_library_files_service.html#a561900736b703c4672b2808960aae54a">addFileMultipartWithToken:withFile:toFolder:withDescription:fromSource:errors:</a></td></tr>
+<tr class="separator:a561900736b703c4672b2808960aae54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e76e92ddf87b8109641e6da428c9b0"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_my_library_files_service.html#ae7e76e92ddf87b8109641e6da428c9b0">getUploadStatusWithAccessToken:forFilesInArray:</a></td></tr>
 <tr class="separator:ae7e76e92ddf87b8109641e6da428c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e4c00f52b2cd5350da036ecad8dc86f"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_my_library_files_service.html#a6e4c00f52b2cd5350da036ecad8dc86f">moveFilesWithAccessToken:toFolderWithId:withMoveFilesArray:</a></td></tr>
 <tr class="separator:a6e4c00f52b2cd5350da036ecad8dc86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a68c643872b1b65771678855638fc6f09"></a>
+<a class="anchor" id="a561900736b703c4672b2808960aae54a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">+ (BOOL) addFileMultipartWithToken: </td>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) addFileMultipartWithToken: </td>
           <td></td>
           <td class="paramtype">(NSString *)&#160;</td>
           <td class="paramname"><em>accessToken</em></td>
@@ -175,12 +175,12 @@ Class Methods</h2></td></tr>
     <tr><td class="paramname">NSString</td><td>*file - the file path for the file sent to the server. </td></tr>
     <tr><td class="paramname">NSString</td><td>*folderId - the folder destination for the file sent to the server. </td></tr>
     <tr><td class="paramname">NSString</td><td>*description - user description for the file sent to the server. </td></tr>
-    <tr><td class="paramname">NSString</td><td>*fromSource - the source of the original file: MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile </td></tr>
+    <tr><td class="paramname">NSString</td><td>*fromSource - the source of the original file: MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile . Accessible by the keyword FILE_TYPE_ </td></tr>
     <tr><td class="paramname">NSString*</td><td>data - the data from the selected file in string format.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>BOOL - value that shows if upload was succesfull or not; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing data and errors (if there are some) </dd></dl>
 
 </div>
 </div>
@@ -306,8 +306,8 @@ Class Methods</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">NSString</td><td>*accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token </td></tr>
-    <tr><td class="paramname">NSString</td><td>*type - (optional) Specifies the type of files to retrieve, ALL, IMAGES, or DOCUMENTS. Default All. </td></tr>
-    <tr><td class="paramname">NSString</td><td>*source - (optional) Specifies to retrieve files from a particular source: ALL , MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile. Default All. </td></tr>
+    <tr><td class="paramname">NSString</td><td>*type - (optional) Specifies the type of files to retrieve, ALL, IMAGES, or DOCUMENTS. Default All. Accessible by the keyword FILE_TYPE_ </td></tr>
+    <tr><td class="paramname">NSString</td><td>*source - (optional) Specifies to retrieve files from a particular source: ALL , MyComputer, StockImage, Facebook, Instagram, Shutterstock, Mobile. Default All. Accessible by the keyword FILE_SOURCE_ </td></tr>
     <tr><td class="paramname">int</td><td>limit - (optional) the number of elements to be returned, default 50;</td></tr>
   </table>
   </dd>
@@ -484,7 +484,7 @@ Class Methods</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 4 2013 12:23:09 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 5 2013 09:38:51 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['campaign_5fstatus_5fdraft',['CAMPAIGN_STATUS_DRAFT',['../_email_campaign_8h.html#a899216a43b7703a10342ffb4c258df37',1,'EmailCampaign.h']]],
+  ['campaign_5fstatus_5frunning',['CAMPAIGN_STATUS_RUNNING',['../_email_campaign_8h.html#afbc47f57b1f75a53e8c56319d7d65d9d',1,'EmailCampaign.h']]],
+  ['campaign_5fstatus_5fscheduled',['CAMPAIGN_STATUS_SCHEDULED',['../_email_campaign_8h.html#abdc42b8835b14f1cdeefe96ce77e66be',1,'EmailCampaign.h']]],
+  ['campaign_5fstatus_5fsent',['CAMPAIGN_STATUS_SENT',['../_email_campaign_8h.html#a6839f978db3ddc260f721dc29d50508c',1,'EmailCampaign.h']]],
   ['campaignid',['campaignId',['../interface_email_campaign.html#a52eedc10d6dcdc4b53830104a26cc0b5',1,'EmailCampaign::campaignId()'],['../interface_all_activites.html#a5c59bb1b8778f68b010b336bcf75304e',1,'AllActivites::campaignId()'],['../interface_bounce_activity.html#a350e6393e579bbe9b4bc3fa513789049',1,'BounceActivity::campaignId()'],['../interface_click_activity.html#a15b782c8f0a91e45a23ef474032bf03a',1,'ClickActivity::campaignId()'],['../interface_email_sorted_activity.html#abcf2a9ab00debc51d7f9a7157d1be218',1,'EmailSortedActivity::campaignId()'],['../interface_forward_activity.html#ae407d3782a7517e8eeba5389ff943f05',1,'ForwardActivity::campaignId()'],['../interface_open_activity.html#a29b983f924c01e2486ea676c2a1c4a18',1,'OpenActivity::campaignId()'],['../interface_opt_out_activity.html#a3b3983be20d7748f712eea16fc159771',1,'OptOutActivity::campaignId()'],['../interface_send_activity.html#a196f08d02afbc58d935493c33d936b5f',1,'SendActivity::campaignId()']]],
   ['campaignscheduleservice',['CampaignScheduleService',['../interface_campaign_schedule_service.html',1,'']]],
   ['campaignscheduleservice_2eh',['CampaignScheduleService.h',['../_campaign_schedule_service_8h.html',1,'']]],
@@ -40,6 +44,10 @@ var searchData=
   ['contact',['Contact',['../interface_contact.html',1,'']]],
   ['contact_2eh',['Contact.h',['../_contact_8h.html',1,'']]],
   ['contact_2em',['Contact.m',['../_contact_8m.html',1,'']]],
+  ['contact_5fstatus_5factive',['CONTACT_STATUS_ACTIVE',['../_contact_8h.html#ad716bba7c2cb306c3cf983dee2e62425',1,'Contact.h']]],
+  ['contact_5fstatus_5foptout',['CONTACT_STATUS_OPTOUT',['../_contact_8h.html#ad12d7d3ee2d6a87e2f2149f07bfb93fb',1,'Contact.h']]],
+  ['contact_5fstatus_5fremoved',['CONTACT_STATUS_REMOVED',['../_contact_8h.html#aba7dba5b732c4f93ee8a68082b07924e',1,'Contact.h']]],
+  ['contact_5fstatus_5funconfirmed',['CONTACT_STATUS_UNCONFIRMED',['../_contact_8h.html#a7e4d199bb18ad490a9b8878cf20151c3',1,'Contact.h']]],
   ['contactcount',['contactCount',['../interface_activity.html#ab9ad52e8f64b80becf9be642f1d5d786',1,'Activity::contactCount()'],['../interface_contact_list.html#aa54f2323fcf5e876cee79418cad45215',1,'ContactList::contactCount()']]],
   ['contactid',['contactId',['../interface_contact.html#a2022bd675e25894ff324bdc497d597e2',1,'Contact::contactId()'],['../interface_all_activites.html#ad46540cb37d0caa7e8344d9e9d5bd99d',1,'AllActivites::contactId()'],['../interface_bounce_activity.html#af8245514e78d4fb91e928a532045a834',1,'BounceActivity::contactId()'],['../interface_click_activity.html#a43778e834519d609722b7694e4d12d39',1,'ClickActivity::contactId()'],['../interface_email_sorted_activity.html#a127694fefcbac68dbb926abd85cb815a',1,'EmailSortedActivity::contactId()'],['../interface_forward_activity.html#a2a1eeadc413bd97b649b467ab969047e',1,'ForwardActivity::contactId()'],['../interface_open_activity.html#a49b69de4834004271ba25088c418e9b7',1,'OpenActivity::contactId()'],['../interface_opt_out_activity.html#a76459ddb1d21c63532155364dbf73404',1,'OptOutActivity::contactId()'],['../interface_send_activity.html#ab57e078a4a8c44df85190deaf79c88f0',1,'SendActivity::contactId()']]],
   ['contactlist',['ContactList',['../interface_contact_list.html',1,'']]],
