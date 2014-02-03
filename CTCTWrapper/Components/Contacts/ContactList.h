@@ -8,12 +8,17 @@
 #import <Foundation/Foundation.h>
 #import "Component.h"
 
+#define LIST_STATUS_ACTIVE @"ACTIVE"
+#define LIST_STATUS_HIDDEN @"HIDDEN"
+
 @interface ContactList : NSObject
 
 @property (nonatomic, strong, readonly) NSString *listId;
 @property (nonatomic, readonly) int contactCount;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSString *createdDate;
+@property (nonatomic, strong) NSString *modifiedDate;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (ContactList *)contactListWithDictionary:(NSDictionary *)dictionary;

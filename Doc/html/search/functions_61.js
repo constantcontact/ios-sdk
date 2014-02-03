@@ -8,14 +8,18 @@ var searchData=
   ['addcontact_3awithaccesstoken_3aactionbyvisitor_3a',['addContact:withAccessToken:actionByVisitor:',['../interface_contacts_collection.html#a1d6701c1a322dbcf895e281de7a6302e',1,'ContactsCollection']]],
   ['addcontactlist_3a',['addContactList:',['../interface_email_campaign.html#a7766e8c1903c5731e2d6fb577feb6321',1,'EmailCampaign']]],
   ['addcontactsimportdatarwithdictionary_3a',['AddContactsImportDatarWithDictionary:',['../interface_add_contacts_import_data.html#a967337003febb9772f96a9b173c20b25',1,'AddContactsImportData']]],
+  ['addcontactsmultipartwithtoken_3awithfile_3atolists_3a',['addContactsMultipartWithToken:withFile:toLists:',['../interface_activity_service.html#a4e8b9b33e5dcfe740c15a5fa17ee3d87',1,'ActivityService']]],
   ['addcustomfield_3a',['addCustomField:',['../interface_add_contacts_import_data.html#a1c2ad5596b42cc0db4808298eeeb8c55',1,'AddContactsImportData']]],
   ['addemail_3a',['addEmail:',['../interface_add_contacts_import_data.html#a0a8725b2420ef3d4fe64e2f31472c881',1,'AddContactsImportData']]],
   ['addemailaddress_3a',['addEmailAddress:',['../interface_contact.html#a1eac37e0e1065a838a21d5153837d7d6',1,'Contact']]],
   ['addemailtoemailaddresses_3a',['addEmailToEmailAddresses:',['../interface_test_send.html#a12b6ea779bb944f98e57997a140d65d3',1,'TestSend']]],
   ['addexportcontactsactivitywithtoken_3aandexportcontacts_3a',['addExportContactsActivityWithToken:andExportContacts:',['../interface_activity_service.html#a319817daa39be22f4e0461208f2d714d',1,'ActivityService']]],
+  ['addfilemultipartwithtoken_3awithfile_3atofolder_3awithdescription_3afromsource_3aerrors_3a',['addFileMultipartWithToken:withFile:toFolder:withDescription:fromSource:errors:',['../interface_my_library_files_service.html#a561900736b703c4672b2808960aae54a',1,'MyLibraryFilesService']]],
+  ['addfolderwithaccesstoken_3aandfolder_3a',['addFolderWithAccessToken:andFolder:',['../interface_my_library_folders_service.html#ae8ab32f8b534a78c29ee5d8a33448021',1,'MyLibraryFoldersService']]],
   ['addlist_3a',['addList:',['../interface_contact.html#a57dd8a4ba092145487a90ddc52ee57bf',1,'Contact']]],
   ['addlist_3awithaccesstoken_3a',['addList:withAccessToken:',['../interface_lists_collection.html#a467a860dc8d7d8ccf7c24168be9e859f',1,'ListsCollection']]],
   ['addremovecontactsfromlistsactivitywithtoken_3aemailaddresses_3aandlists_3a',['addRemoveContactsFromListsActivityWithToken:emailAddresses:andLists:',['../interface_activity_service.html#ad7b3a5816ee5909a2dba252f047c98ad',1,'ActivityService']]],
   ['addresswithdictionary_3a',['addressWithDictionary:',['../interface_address.html#acedade83516d78418c2208c113b21092',1,'Address']]],
-  ['addschedulewithaccestoken_3acampaignid_3aandschedule_3a',['addScheduleWithAccesToken:campaignId:andSchedule:',['../interface_campaign_schedule_service.html#a92ee1b608a75b4d0e9b4e0809f2772e5',1,'CampaignScheduleService']]]
+  ['addschedulewithaccestoken_3acampaignid_3aandschedule_3a',['addScheduleWithAccesToken:campaignId:andSchedule:',['../interface_campaign_schedule_service.html#a92ee1b608a75b4d0e9b4e0809f2772e5',1,'CampaignScheduleService']]],
+  ['allactiviteswithdictionary_3a',['allActivitesWithDictionary:',['../interface_all_activites.html#a071e92485b617f10d43b3968a98a005b',1,'AllActivites']]]
 ];

@@ -17,6 +17,11 @@
  * Represents a single Campaign in Constant Contact
  *
  */
+#define CAMPAIGN_STATUS_DRAFT @"DRAFT"
+#define CAMPAIGN_STATUS_RUNNING @"RUNNING"
+#define CAMPAIGN_STATUS_SENT @"SENT"
+#define CAMPAIGN_STATUS_SCHEDULED @"SCHEDULED"
+
 @interface EmailCampaign : NSObject
 
 @property (nonatomic, readonly) NSString *campaignId;
@@ -40,6 +45,7 @@
 @property (nonatomic, strong) NSString *greetingSalutations;
 @property (nonatomic, strong) NSString *greetingName;
 @property (nonatomic, strong) NSString *greetingString;
+@property (nonatomic, strong) NSString *permalinkURL;
 
 @property (nonatomic, strong) MessageFooter *messageFooter;
 @property (nonatomic, strong) TrackingSummary *trackingSummary;
@@ -50,6 +56,7 @@
 @property (nonatomic, strong) NSString *textContent;
 @property (nonatomic, strong) NSMutableArray *sentToContactLists;
 @property (nonatomic, strong) NSMutableArray *clickThroughDetails;
+@property (nonatomic,strong) NSString  *templateType;
 
 /**
  * Factory method to create a Campaign object from an Dictionary

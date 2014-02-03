@@ -13,6 +13,11 @@
 #import "CustomField.h"
 #import "Component.h"
 
+#define CONTACT_STATUS_ACTIVE @"ACTIVE"
+#define CONTACT_STATUS_UNCONFIRMED @"UNCONFIRMED"
+#define CONTACT_STATUS_OPTOUT @"OPTOUT"
+#define CONTACT_STATUS_REMOVED @"REMOVED"
+
 @interface Contact : NSObject
 
 @property (nonatomic, strong, readonly) NSString *contactId;
@@ -34,6 +39,9 @@
 @property (nonatomic, strong) NSString *sourceDetails;
 @property (nonatomic, strong) NSString *status;
 @property (nonatomic, strong) NSString *workPhone;
+@property (nonatomic, readwrite) BOOL  confirmed;
+@property (nonatomic, strong) NSString *createdDate;
+@property (nonatomic, strong) NSString *source;
 
 +(Contact*)contactWithDictionary:(NSDictionary *)dictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;

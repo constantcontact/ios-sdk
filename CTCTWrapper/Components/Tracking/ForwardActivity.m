@@ -38,13 +38,8 @@
 
 + (ForwardActivity *)forwardActivityWithDictionary:(NSDictionary *)dictionary;
 {
-    ForwardActivity *forwardActivity = [[ForwardActivity alloc] init];
+    ForwardActivity *forwardActivity = [[ForwardActivity alloc] initWithDictionary:dictionary];
     
-    forwardActivity.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    forwardActivity.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    forwardActivity.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    forwardActivity.forwardDate = [Component valueForDictionary:dictionary withKey:@"forward_date"];
-    forwardActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
     return forwardActivity;
 }
 

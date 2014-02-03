@@ -40,14 +40,7 @@
 
 + (TrackingSummary *)trackingSummaryWithDictionary:(NSDictionary *)dictionary;
 {
-    TrackingSummary *trackingSummary = [[TrackingSummary alloc]init];
-    
-    trackingSummary.sends = [Component valueForDictionary:dictionary withKey:@"sends"];
-    trackingSummary.opens = [Component valueForDictionary:dictionary withKey:@"opens"];
-    trackingSummary.clicks = [Component valueForDictionary:dictionary withKey:@"clicks"];
-    trackingSummary.forwards = [Component valueForDictionary:dictionary withKey:@"forwards"];
-    trackingSummary.bounces = [Component valueForDictionary:dictionary withKey:@"bounces"];
-    trackingSummary.unsubscribes = [Component valueForDictionary:dictionary withKey:@"unsubscribes"];
+    TrackingSummary *trackingSummary = [[TrackingSummary alloc] initWithDictionary:dictionary];
 
     return trackingSummary;
 }

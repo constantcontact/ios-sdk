@@ -89,6 +89,28 @@
 	</dict>
 	<key>endpoints</key>
 	<dict>
+		<key>library_files_move</key>
+		<string>library/folders/%@/files</string>
+		<key>library_files_upload_status</key>
+		<string>library/files/uploadstatus/%@</string>
+		<key>library_files_individual</key>
+		<string>library/files/%@</string>
+		<key>library_files_by_folder</key>
+		<string>library/folders/%@/files</string>
+		<key>library_files</key>
+		<string>library/files</string>
+		<key>library_folders_trash</key>
+		<string>library/folders/trash/files</string>
+		<key>library_folders_collection</key>
+		<string>library/folders</string>
+		<key>library_folders_individual</key>
+		<string>library/folders/%@</string>
+		<key>library_folders_info</key>
+		<string>library/info</string>
+		<key>contact_tracking_by_email_campaign</key>
+		<string>contacts/%@/tracking/reports/summaryByCampaign</string>
+		<key>contact_tracking_all</key>
+		<string>contacts/%@/tracking</string>
 		<key>membership_list</key>
 		<string>lists/%@/contacts</string>
 		<key>verified_email</key>

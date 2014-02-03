@@ -13,6 +13,7 @@
 #import "ContactViewController.h"
 #import "CTCTGlobal.h"
 #import "VerifiedEmailAddresses.h"
+#import "ResultSet.h"
 
 @interface MainViewController () <CTCTLoginDelegate>
 
@@ -105,7 +106,7 @@
         dispatch_async(callService, ^{
             
             
-            HttpResponse *response =  [ContactsCollection contactsWithAccessToken:[CTCTGlobal shared].token andEmail:self.emailTextField.text];
+            HttpResponse *response =  [ContactsCollection contactsWithAccessToken:[CTCTGlobal shared].token andEmail:self.emailTextField.text withALimitOf:0];
             
             if(response.statusCode != 200)
             {
@@ -114,7 +115,8 @@
             }
             else
             {
-                self.contacts = response.data;
+                ResultSet *set = response.data;
+                self.contacts = set.results;
                 if (self.contacts.count == 0)
                     self.addContact = YES;
             }

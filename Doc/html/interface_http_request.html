@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ctct_logo.jpeg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ConstantContact iOS SDK
    </div>
@@ -112,6 +113,10 @@ Class Methods</h2></td></tr>
 <tr class="separator:ae847c9b8c8f0a45592da54baa9d943b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb99433a55d31d313ef58a5174e597ca"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_http_request.html#afb99433a55d31d313ef58a5174e597ca">httpRequestWithUrl:andMethod:andHeaders:andStringData:</a></td></tr>
 <tr class="separator:afb99433a55d31d313ef58a5174e597ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33475783ef28f0fa3ec4b94015b709de"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_http_request.html#a33475783ef28f0fa3ec4b94015b709de">httpMultipartRequestWithUrl:file:data:lists:</a></td></tr>
+<tr class="separator:a33475783ef28f0fa3ec4b94015b709de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529a4a6536bf3db8a3d428201cb0ef16"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_http_request.html#a529a4a6536bf3db8a3d428201cb0ef16">httpMultipartRequestWithUrl:file:folderId:description:source:data:</a></td></tr>
+<tr class="separator:a529a4a6536bf3db8a3d428201cb0ef16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Method Documentation</h2>
 <a class="anchor" id="ae847c9b8c8f0a45592da54baa9d943b2"></a>
@@ -178,6 +183,118 @@ Class Methods</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">NSString*</td><td>Url - the request url for the call; </td></tr>
     <tr><td class="paramname">NSArray*</td><td>Headers - a array of all http headers to send;</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>HttpResponse* - The function returns a response that contains the calls returned value; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a33475783ef28f0fa3ec4b94015b709de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) httpMultipartRequestWithUrl: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>urlString</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">file:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>fileName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">data:</td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>data</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">lists:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>lists</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function is used to make a Http multipart request for bulk activityes;</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString*</td><td>Url - the request url for the call; </td></tr>
+    <tr><td class="paramname">NSString*</td><td>fileName - the filename of the file sent to the server (first part of the multipart); </td></tr>
+    <tr><td class="paramname">NSString*</td><td>data - the data from the selected file in string format (second part of the multipart); </td></tr>
+    <tr><td class="paramname">NSString*</td><td>lists - a string containing the lists where the contacts will be added;</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>HttpResponse* - The function returns a response that contains the calls returned value; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a529a4a6536bf3db8a3d428201cb0ef16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) httpMultipartRequestWithUrl: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>urlString</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">file:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>fileName</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">folderId:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>folderId</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">description:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>description</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">source:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>source</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">data:</td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function is used to make a Http multipart request for MyLibrary files;</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString*</td><td>Url - the request url for the call; </td></tr>
+    <tr><td class="paramname">NSString*</td><td>fileName - the filename of the file sent to the server; </td></tr>
+    <tr><td class="paramname">NSString*</td><td>folderId </td></tr>
+    <tr><td class="paramname">NSString*</td><td>description </td></tr>
+    <tr><td class="paramname">NSString*</td><td>source </td></tr>
+    <tr><td class="paramname">NSString*</td><td>data - the data from the selected file in string format (second part of the multipart);</td></tr>
   </table>
   </dd>
 </dl>
@@ -319,13 +436,13 @@ Class Methods</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/HttpRequest/<a class="el" href="_http_request_8h_source.html">HttpRequest.h</a></li>
-<li>/Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/HttpRequest/<a class="el" href="_http_request_8m.html">HttpRequest.m</a></li>
+<li>work/CTCT-iOS-VladDumitras/CTCTWrapper/HttpRequest/<a class="el" href="_http_request_8h_source.html">HttpRequest.h</a></li>
+<li>work/CTCT-iOS-VladDumitras/CTCTWrapper/HttpRequest/<a class="el" href="_http_request_8m.html">HttpRequest.m</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 17:17:44 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 5 2013 09:38:51 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

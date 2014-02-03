@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ctct_logo.jpeg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ConstantContact iOS SDK
    </div>
@@ -104,8 +105,12 @@ Inheritance diagram for EmailCampaignService:</div>
 Class Methods</h2></td></tr>
 <tr class="memitem:a2f8a95f902eda2097296266f654e047c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#a2f8a95f902eda2097296266f654e047c">addCampaignWithToken:andCampaign:</a></td></tr>
 <tr class="separator:a2f8a95f902eda2097296266f654e047c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3638f960d92b590579365c5d689a85c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#af3638f960d92b590579365c5d689a85c">getCampaignsWithToken:andParams:</a></td></tr>
-<tr class="separator:af3638f960d92b590579365c5d689a85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5a75cc6bfc80525005bef1a7095f8a"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#a5d5a75cc6bfc80525005bef1a7095f8a">getCampaignsWithToken:withALimitOf:</a></td></tr>
+<tr class="separator:a5d5a75cc6bfc80525005bef1a7095f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865557ff1e591c33c40e7caf37c181a4"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#a865557ff1e591c33c40e7caf37c181a4">getCampaignsWithToken:status:withALimitOf:</a></td></tr>
+<tr class="separator:a865557ff1e591c33c40e7caf37c181a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057ce63d5a1316c56d66edc8a21e0e70"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#a057ce63d5a1316c56d66edc8a21e0e70">getCampaignsWithToken:modificationDate:</a></td></tr>
+<tr class="separator:a057ce63d5a1316c56d66edc8a21e0e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab78b32aa539982abf228be55fa540eae"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#ab78b32aa539982abf228be55fa540eae">getCampaignWithToken:andCampaignId:</a></td></tr>
 <tr class="separator:ab78b32aa539982abf228be55fa540eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a315a633bcaa6ae68b182082d05a59a"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_email_campaign_service.html#a4a315a633bcaa6ae68b182082d05a59a">deleteCamapaignWithToken:andCamapaignId:errors:</a></td></tr>
@@ -192,7 +197,7 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af3638f960d92b590579365c5d689a85c"></a>
+<a class="anchor" id="a057ce63d5a1316c56d66edc8a21e0e70"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -203,10 +208,10 @@ Class Methods</h2></td></tr>
           <td class="paramname"><em>accessToken</em></td>
         </tr>
         <tr>
-          <td class="paramkey">andParams:</td>
+          <td class="paramkey">modificationDate:</td>
           <td></td>
-          <td class="paramtype">(NSString*)&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
+          <td class="paramtype">(NSDate *)&#160;</td>
+          <td class="paramname"><em>date</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -219,11 +224,88 @@ Class Methods</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">NSString</td><td>*accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token </td></tr>
-    <tr><td class="paramname">int</td><td>param - query param to be appended to the request</td></tr>
+    <tr><td class="paramname">NSDate</td><td>*date - the returned values are filtered by the sent modification date</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with a <a class="el" href="interface_result_set.html">ResultSet</a> containing the pagination and campaigns related to the user. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with all the campaigns with the modification date </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a865557ff1e591c33c40e7caf37c181a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) getCampaignsWithToken: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>accessToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">status:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>status</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withALimitOf:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a set of campaigns</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString</td><td>*accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token </td></tr>
+    <tr><td class="paramname">NSString</td><td>*status - the returned values are filtered by the sent status value </td></tr>
+    <tr><td class="paramname">int</td><td>limit - (optional) limits the number of results returned</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with all the campaigns with the given status </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d5a75cc6bfc80525005bef1a7095f8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) getCampaignsWithToken: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>accessToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withALimitOf:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a set of campaigns</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString</td><td>*accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token </td></tr>
+    <tr><td class="paramname">int</td><td>limit - (optional) limits the number of results returned</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with all the campaigns of the user </dd></dl>
 
 </div>
 </div>
@@ -298,13 +380,13 @@ Class Methods</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/Services/<a class="el" href="_email_campaign_service_8h_source.html">EmailCampaignService.h</a></li>
-<li>/Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/Services/<a class="el" href="_email_campaign_service_8m.html">EmailCampaignService.m</a></li>
+<li>work/CTCT-iOS-VladDumitras/CTCTWrapper/Services/<a class="el" href="_email_campaign_service_8h_source.html">EmailCampaignService.h</a></li>
+<li>work/CTCT-iOS-VladDumitras/CTCTWrapper/Services/<a class="el" href="_email_campaign_service_8m.html">EmailCampaignService.m</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 17:17:44 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 5 2013 09:38:51 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -227,7 +227,7 @@
     
     EmailAddress *emailAdress2 = [[EmailAddress alloc] initWithDictionary:emailAdressDict];
     
-    self.contactToEdit.emailAddresses = [NSArray arrayWithObject:emailAdress2];
+    self.contactToEdit.emailAddresses = [NSMutableArray arrayWithObject:emailAdress2];
     
     __block NSString *msg = @"";
     
@@ -321,7 +321,7 @@
     
     EmailAddress *emailAdress2 = [[EmailAddress alloc] initWithDictionary:emailAdressDict];
     
-    self.contactToEdit.emailAddresses = [NSArray arrayWithObject:emailAdress2];
+    self.contactToEdit.emailAddresses = [NSMutableArray arrayWithObject:emailAdress2];
     
     __block NSString *msg = @"";
     __block int tag = 0;

@@ -38,16 +38,9 @@
 
 + (OpenActivity *)openActivityWithDictionary:(NSDictionary *)dictionary
 {
-    OpenActivity *openActivity = [[OpenActivity alloc] init];
-    
-    openActivity.activityType = [Component valueForDictionary:dictionary withKey:@"activity_type"];
-    openActivity.contactId = [Component valueForDictionary:dictionary withKey:@"contact_id"];
-    openActivity.emailAddress = [Component valueForDictionary:dictionary withKey:@"email_address"];
-    openActivity.openDate = [Component valueForDictionary:dictionary withKey:@"open_date"];
-    openActivity.campaignId = [Component valueForDictionary:dictionary withKey:@"campaign_id"];
+    OpenActivity *openActivity = [[OpenActivity alloc] initWithDictionary:dictionary];
     
     return openActivity;
 }
-
 
 @end

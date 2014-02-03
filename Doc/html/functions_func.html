@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ctct_logo.jpeg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ConstantContact iOS SDK
    </div>
@@ -141,6 +142,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>AddContactsImportDatarWithDictionary:
 : <a class="el" href="interface_add_contacts_import_data.html#a967337003febb9772f96a9b173c20b25">AddContactsImportData</a>
 </li>
+<li>addContactsMultipartWithToken:withFile:toLists:
+: <a class="el" href="interface_activity_service.html#a4e8b9b33e5dcfe740c15a5fa17ee3d87">ActivityService</a>
+</li>
 <li>addCustomField:
 : <a class="el" href="interface_add_contacts_import_data.html#a1c2ad5596b42cc0db4808298eeeb8c55">AddContactsImportData</a>
 </li>
@@ -156,6 +160,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>addExportContactsActivityWithToken:andExportContacts:
 : <a class="el" href="interface_activity_service.html#a319817daa39be22f4e0461208f2d714d">ActivityService</a>
 </li>
+<li>addFileMultipartWithToken:withFile:toFolder:withDescription:fromSource:errors:
+: <a class="el" href="interface_my_library_files_service.html#a561900736b703c4672b2808960aae54a">MyLibraryFilesService</a>
+</li>
+<li>addFolderWithAccessToken:andFolder:
+: <a class="el" href="interface_my_library_folders_service.html#ae8ab32f8b534a78c29ee5d8a33448021">MyLibraryFoldersService</a>
+</li>
 <li>addList:
 : <a class="el" href="interface_contact.html#a57dd8a4ba092145487a90ddc52ee57bf">Contact</a>
 </li>
@@ -170,6 +180,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>addScheduleWithAccesToken:campaignId:andSchedule:
 : <a class="el" href="interface_campaign_schedule_service.html#a92ee1b608a75b4d0e9b4e0809f2772e5">CampaignScheduleService</a>
+</li>
+<li>allActivitesWithDictionary:
+: <a class="el" href="interface_all_activites.html#a071e92485b617f10d43b3968a98a005b">AllActivites</a>
 </li>
 </ul>
 
@@ -194,11 +207,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>contactListWithDictionary:
 : <a class="el" href="interface_contact_list.html#a66324c7c96144612c4993d059a79f48e">ContactList</a>
 </li>
-<li>contactsWithAccessToken:
-: <a class="el" href="interface_contacts_collection.html#aecc11eeca58169e94d858ad8a59e937d">ContactsCollection</a>
+<li>contactsWithAccessToken:andEmail:withALimitOf:
+: <a class="el" href="interface_contacts_collection.html#af96ebd9be42f282d95d93f7af66a4508">ContactsCollection</a>
 </li>
-<li>contactsWithAccessToken:andEmail:
-: <a class="el" href="interface_contacts_collection.html#ab0960e30df67f38898d4bab1f8061a30">ContactsCollection</a>
+<li>contactsWithAccessToken:andModifiedSince:
+: <a class="el" href="interface_contacts_collection.html#a22766b68c6b097092222e3a300937fa0">ContactsCollection</a>
+</li>
+<li>contactsWithAccessToken:andStatus:withAlimitOf:
+: <a class="el" href="interface_contacts_collection.html#a1a8ea12c93cef0771c61f4e37f3952ff">ContactsCollection</a>
+</li>
+<li>contactsWithAccessToken:withLimitOf:
+: <a class="el" href="interface_contacts_collection.html#a88d96e2c2cb9315b747e3c13ec132b94">ContactsCollection</a>
 </li>
 <li>contactWithAccessToken:andId:
 : <a class="el" href="interface_contacts_collection.html#a94c45e3c9f4fa861848e3bdc17b27259">ContactsCollection</a>
@@ -234,11 +253,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>deleteContactWithAccessToken:andContactId:errors:
 : <a class="el" href="interface_contacts_collection.html#a5a1815c12237f599a7449f9a35618941">ContactsCollection</a>
 </li>
+<li>deleteFileWithAccessToken:andFileId:errors:
+: <a class="el" href="interface_my_library_files_service.html#a8c3bc2eb464d9d94d86e2a578d6fe848">MyLibraryFilesService</a>
+</li>
+<li>deleteFolderWithAccessToken:andWithId:errors:
+: <a class="el" href="interface_my_library_folders_service.html#a3198042f419de1b12c8f4f4f24be906e">MyLibraryFoldersService</a>
+</li>
 <li>deleteListWithAccessToken:andListId:errors:
 : <a class="el" href="interface_lists_collection.html#a29925f50b80443469e1d55d857c706f9">ListsCollection</a>
 </li>
 <li>deleteScheduleWithAccesToken:campaignId:andScheduleId:errors:
 : <a class="el" href="interface_campaign_schedule_service.html#aadcb4e4ba25640c281feec95ce8916c7">CampaignScheduleService</a>
+</li>
+<li>deleteTrashFoldersWithAccessToken:errors:
+: <a class="el" href="interface_my_library_folders_service.html#a558bfeef8cfc38d92c038341232239c7">MyLibraryFoldersService</a>
 </li>
 <li>deleteWithUrl:andHeaders:
 : <a class="el" href="interface_http_request.html#ae847c9b8c8f0a45592da54baa9d943b2">HttpRequest</a>
@@ -253,10 +281,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>emailCampaignWithDictionary:
 : <a class="el" href="interface_email_campaign.html#a4c7d6c988d096da421dab0dc3f96ad06">EmailCampaign</a>
 </li>
+<li>emailSortedActivityWithDictionary:
+: <a class="el" href="interface_email_sorted_activity.html#a9d93f08e745ad44e98bf432533077abb">EmailSortedActivity</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>fileMovementWithDictionary:
+: <a class="el" href="interface_file_moved.html#ab43844667957d80a4538afe8290ccfda">FileMoved</a>
+</li>
+<li>fileUploadStatusWithDictionary:
+: <a class="el" href="interface_file_upload_status.html#aaafb3eb877f6ce7e87838c5c26f1e5f0">FileUploadStatus</a>
+</li>
+<li>fileWithDictionary:
+: <a class="el" href="interface_library_file.html#ac77b562797490baa5f817f86f587528b">LibraryFile</a>
+</li>
+<li>folderWithDictionary:
+: <a class="el" href="interface_library_folder.html#a3e191e98ce03659aacb4ee0ba6f4b395">LibraryFolder</a>
+</li>
 <li>forwardActivityWithDictionary:
 : <a class="el" href="interface_forward_activity.html#ab776a26160ea0b2ea14d9794b71db9ab">ForwardActivity</a>
 </li>
@@ -264,56 +307,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getActivitesSortedByEmailCampaignWithAccessToken:contactId:
+: <a class="el" href="interface_contact_tracking_service.html#a24e1e69423ba5ef7382e793539f95a92">ContactTrackingService</a>
+</li>
 <li>getActivitesWithToken:
 : <a class="el" href="interface_activity_service.html#a6062c0f0290dbf0d4dacfbf3e05e1f52">ActivityService</a>
 </li>
 <li>getActivityWithToken:andActivityId:
 : <a class="el" href="interface_activity_service.html#ad3be3890398246ce83788c523acc2c73">ActivityService</a>
 </li>
-<li>getBouncesWithAccessToken:campaignID:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#af3c97b0545f31bf4117934a45f39a6f9">CampaignTrackingService</a>
+<li>getActivityWithToken:status:andType:
+: <a class="el" href="interface_activity_service.html#afe5ea07110f13dd8bddd34ca72ac6e72">ActivityService</a>
 </li>
-<li>getBouncesWithAccessToken:contactId:andParams:
-: <a class="el" href="interface_contact_tracking_service.html#a8541bfe28d0414381916dc9036a0061b">ContactTrackingService</a>
+<li>getAllContactActivitesWithAccessToken:contactId:creationDate:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#a57c909e029e7bd5cadb863e2ac9423d9">ContactTrackingService</a>
 </li>
-<li>getCampaignsWithToken:andParams:
-: <a class="el" href="interface_email_campaign_service.html#af3638f960d92b590579365c5d689a85c">EmailCampaignService</a>
+<li>getBouncesWithAccessToken:campaignID:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#a9be9a2c410bd95325e899290b0dccd0c">CampaignTrackingService</a>
+</li>
+<li>getBouncesWithAccessToken:contactId:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#a3dcbac357e0cd6ee5fea791343997f89">ContactTrackingService</a>
+</li>
+<li>getCampaignsWithToken:modificationDate:
+: <a class="el" href="interface_email_campaign_service.html#a057ce63d5a1316c56d66edc8a21e0e70">EmailCampaignService</a>
+</li>
+<li>getCampaignsWithToken:status:withALimitOf:
+: <a class="el" href="interface_email_campaign_service.html#a865557ff1e591c33c40e7caf37c181a4">EmailCampaignService</a>
+</li>
+<li>getCampaignsWithToken:withALimitOf:
+: <a class="el" href="interface_email_campaign_service.html#a5d5a75cc6bfc80525005bef1a7095f8a">EmailCampaignService</a>
 </li>
 <li>getCampaignWithToken:andCampaignId:
 : <a class="el" href="interface_email_campaign_service.html#ab78b32aa539982abf228be55fa540eae">EmailCampaignService</a>
 </li>
-<li>getClicksByLinkwithAccessToken:campaignId:linkId:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#a70f3c4d43d2a1143535d3a8288b029aa">CampaignTrackingService</a>
+<li>getClicksByLinkwithAccessToken:campaignId:linkId:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#af6498ad4c1248ff98b143541b1f9e527">CampaignTrackingService</a>
 </li>
-<li>getClicksWithAccessToken:campaignId:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#ab1534c0e31a4afe3b1c38f5a56d5ec84">CampaignTrackingService</a>
+<li>getClicksWithAccessToken:campaignId:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#a0e83883c112ba8840e542d12a9c4f202">CampaignTrackingService</a>
 </li>
-<li>getClicksWithAccessToken:contactId:andParams:
-: <a class="el" href="interface_contact_tracking_service.html#a9058d03ece2ebc3dd468f59043d005d8">ContactTrackingService</a>
+<li>getClicksWithAccessToken:contactId:creationDate:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#a453d09f25272485dc8d71f1643e56a3d">ContactTrackingService</a>
 </li>
-<li>getContactsWithAccessToken:fromList:
-: <a class="el" href="interface_lists_collection.html#a935f3bc831fbe733de3d9e0206593e70">ListsCollection</a>
+<li>getContactListMembershipWithAccessToken:fromList:withModificationDate:withAlimitOf:
+: <a class="el" href="interface_lists_collection.html#a2acbbbb64ca0ab5c9bc125cd71d13244">ListsCollection</a>
 </li>
 <li>getEmailAddresses:andConfirmedStatus:
 : <a class="el" href="interface_verified_email_addresses.html#a80a25ae4701f27e6c3bd4b6a9854a11b">VerifiedEmailAddresses</a>
 </li>
-<li>getForwardsWithAccessToken:campaignId:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#ab9e69f3eb0b570de32e9e6e42c512c45">CampaignTrackingService</a>
+<li>getFileCollectionWithAccessToken:folderId:withaAimitOf:
+: <a class="el" href="interface_my_library_files_service.html#a115b88cac38780c91577650719974683">MyLibraryFilesService</a>
 </li>
-<li>getForwardsWithAccessToken:contactId:andParams:
-: <a class="el" href="interface_contact_tracking_service.html#a0ae8d92c7f36df2ce46ad9006f6b57e9">ContactTrackingService</a>
+<li>getFileCollectionWithAccessToken:type:source:withALimitOf:
+: <a class="el" href="interface_my_library_files_service.html#ad545e4352c236d81215c64f2d66e251e">MyLibraryFilesService</a>
 </li>
-<li>getOpensWithAccessToken:campaignId:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#a772b1290fc063fed652a846d9497434d">CampaignTrackingService</a>
+<li>getFileWithAccessToken:andFileId:
+: <a class="el" href="interface_my_library_files_service.html#aca19e7fbf2019921e06f88d4a77a7877">MyLibraryFilesService</a>
 </li>
-<li>getOpensWithAccessToken:contactId:andParams:
-: <a class="el" href="interface_contact_tracking_service.html#a13bcc847cad4223d4140447f76eaf107">ContactTrackingService</a>
+<li>getFoldersWithAccessToken:SortedBy:withALimitOf:
+: <a class="el" href="interface_my_library_folders_service.html#a9d8163e16ad59a0cd6f0da9b4ef268ac">MyLibraryFoldersService</a>
 </li>
-<li>getOptOutsWithAccessToken:campaignId:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#a3e8af0ca5838f428d9f387f8f6eb7b62">CampaignTrackingService</a>
+<li>getFolderWithAccessToken:withId:
+: <a class="el" href="interface_my_library_folders_service.html#ace947a51fd2c6fe74607fae2ba6e88dc">MyLibraryFoldersService</a>
 </li>
-<li>getOptOutsWithAccessToken:contactId:andParams:
-: <a class="el" href="interface_contact_tracking_service.html#a28d5613caffc501a935e341cd55f9ca7">ContactTrackingService</a>
+<li>getForwardsWithAccessToken:campaignId:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#ac6d16af5b8321f77ef239aba6a6eeb0a">CampaignTrackingService</a>
+</li>
+<li>getForwardsWithAccessToken:contactId:creationDate:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#a777a569791e4e6e0ea1807eb15fa6083">ContactTrackingService</a>
+</li>
+<li>getMyLibrarySummaryInformationWithAccessToken:
+: <a class="el" href="interface_my_library_folders_service.html#ab2dbbfa3aca1d0808265e9e750ce9f18">MyLibraryFoldersService</a>
+</li>
+<li>getOpensWithAccessToken:campaignId:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#a7d9bdac3d5b06c3dd2222a86d0444b23">CampaignTrackingService</a>
+</li>
+<li>getOpensWithAccessToken:contactId:creationDate:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#a695b93fdd52ba1ee472163837c85cc7f">ContactTrackingService</a>
+</li>
+<li>getOptOutsWithAccessToken:campaignId:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#a8f056a3160637ce245ee2cd0effb00b3">CampaignTrackingService</a>
 </li>
 <li>getSchedulesWithAccesToken:andCampaignId:
 : <a class="el" href="interface_campaign_schedule_service.html#a79b09813d0293226202381a6786d6d29">CampaignScheduleService</a>
@@ -321,17 +394,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getScheduleWithAccesToken:campaignId:andScheduleId:
 : <a class="el" href="interface_campaign_schedule_service.html#ab23aa1b02e8ca4a564ddb093fb25b155">CampaignScheduleService</a>
 </li>
-<li>getSendsWithAccessToken:campaignId:andParams:
-: <a class="el" href="interface_campaign_tracking_service.html#af180b0da1884501b9efa730d47879320">CampaignTrackingService</a>
+<li>getSendsWithAccessToken:campaignId:creationDate:andALimitOf:
+: <a class="el" href="interface_campaign_tracking_service.html#ad21855995f5e4de7a2750bc4ccc325c6">CampaignTrackingService</a>
 </li>
-<li>getSendsWithAccessToken:contactId:andParams:
-: <a class="el" href="interface_contact_tracking_service.html#adfee6c8617b3e8f8755b5d197f8fe489">ContactTrackingService</a>
+<li>getSendsWithAccessToken:contactId:creationDate:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#a7f4b76865f11f94b0ba46abd4c0e1d00">ContactTrackingService</a>
+</li>
+<li>getStatusReportForLast50Activites:
+: <a class="el" href="interface_activity_service.html#a20463e027954a7fc9ac7645dd241f0c8">ActivityService</a>
 </li>
 <li>getSummaryWithAccessToken:andCampaignId:
 : <a class="el" href="interface_campaign_tracking_service.html#a636df5a8ddfd93687b021827701a35c6">CampaignTrackingService</a>
 </li>
 <li>getSummaryWithAccessToken:contactId:
 : <a class="el" href="interface_contact_tracking_service.html#a6c7dbc609ad372a9c0e88aa1df6f43b4">ContactTrackingService</a>
+</li>
+<li>getTrashFoldersWithAccessToken:withType:sortedBy:withALimitOf:
+: <a class="el" href="interface_my_library_folders_service.html#acbf1cd986a89dde17337ff2c49951290">MyLibraryFoldersService</a>
+</li>
+<li>getUnsubscribesWithAccessToken:contactId:creationDate:andALimitOf:
+: <a class="el" href="interface_contact_tracking_service.html#af4949f047cfda56f8891a0f72c57ecfd">ContactTrackingService</a>
+</li>
+<li>getUploadStatusWithAccessToken:forFilesInArray:
+: <a class="el" href="interface_my_library_files_service.html#ae7e76e92ddf87b8109641e6da428c9b0">MyLibraryFilesService</a>
 </li>
 <li>getWithUrl:andHeaders:
 : <a class="el" href="interface_http_request.html#abf4ee9a0d905814ee47a693df168959a">HttpRequest</a>
@@ -342,6 +427,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>headersWithAccessToken:
 : <a class="el" href="interface_collection.html#adc052418d19ec291c97733ee22d42a68">Collection</a>
+</li>
+<li>httpMultipartRequestWithUrl:file:data:lists:
+: <a class="el" href="interface_http_request.html#a33475783ef28f0fa3ec4b94015b709de">HttpRequest</a>
+</li>
+<li>httpMultipartRequestWithUrl:file:folderId:description:source:data:
+: <a class="el" href="interface_http_request.html#a529a4a6536bf3db8a3d428201cb0ef16">HttpRequest</a>
 </li>
 <li>httpRequestWithUrl:andMethod:andHeaders:andStringData:
 : <a class="el" href="interface_http_request.html#afb99433a55d31d313ef58a5174e597ca">HttpRequest</a>
@@ -359,22 +450,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>initWithDictionary:
 : <a class="el" href="interface_activity_error.html#a68592793502af93d00c0cfddb15c8eb7">ActivityError</a>
 , <a class="el" href="interface_http_response.html#a742a42d610f16055848744d00a52ee44">HttpResponse</a>
-, <a class="el" href="interface_http_error.html#a066ebf45156985cd634748bd5880d2d4">HttpError</a>
-, <a class="el" href="interface_tracking_summary.html#ad63933b25b6a2156a9663414caf1c9c9">TrackingSummary</a>
+, <a class="el" href="interface_contact_list.html#a2d39e69823679158bf8ea9d360d0ced0">ContactList</a>
+, <a class="el" href="interface_test_send.html#a0c64e5cfc992ca613ffc0fa160ecf62d">TestSend</a>
 , <a class="el" href="interface_send_activity.html#a4bbb8130a948894afebeba44106ef6cf">SendActivity</a>
 , <a class="el" href="interface_opt_out_activity.html#a4501df4cb0edb6fa53d8863260932b12">OptOutActivity</a>
 , <a class="el" href="interface_open_activity.html#ab862ab78c6c11c08afb00357d31f16a6">OpenActivity</a>
 , <a class="el" href="interface_forward_activity.html#a7dc56cd9b996d83e7f55d3e26a4f0c9e">ForwardActivity</a>
+, <a class="el" href="interface_email_sorted_activity.html#ad7b27f865eb20cb2b9eaad87c063bff9">EmailSortedActivity</a>
 , <a class="el" href="interface_click_activity.html#a933595e83a8420e68c26b7949df6bf6a">ClickActivity</a>
-, <a class="el" href="interface_contact_list.html#a2d39e69823679158bf8ea9d360d0ced0">ContactList</a>
-, <a class="el" href="interface_test_send.html#a0c64e5cfc992ca613ffc0fa160ecf62d">TestSend</a>
+, <a class="el" href="interface_bounce_activity.html#a0758a0d267c2e51605d1cce1d1078151">BounceActivity</a>
+, <a class="el" href="interface_all_activites.html#ad6e25cfc8013e4fbc83c6d1c91dd04ec">AllActivites</a>
+, <a class="el" href="interface_usage_summary.html#a9d84275d7f7678f260cdb3fc9ecfd93c">UsageSummary</a>
+, <a class="el" href="interface_thumbnail.html#a064157217d7887438ec707c19527a43e">Thumbnail</a>
+, <a class="el" href="interface_library_summary.html#aac915d54f77d3a3a597adc48d9778502">LibrarySummary</a>
+, <a class="el" href="interface_library_folder.html#af3d58f7522d5a75888c78ff6fd475a7b">LibraryFolder</a>
+, <a class="el" href="interface_library_file.html#a33a1375cb71cbcca8155186561fef2d5">LibraryFile</a>
+, <a class="el" href="interface_file_upload_status.html#ab036f4dbece893021a509fbb1b674edf">FileUploadStatus</a>
+, <a class="el" href="interface_tracking_summary.html#ad63933b25b6a2156a9663414caf1c9c9">TrackingSummary</a>
+, <a class="el" href="interface_http_error.html#a066ebf45156985cd634748bd5880d2d4">HttpError</a>
 , <a class="el" href="interface_schedule.html#aff4295174b2b8721744bb3e679fe5af6">Schedule</a>
 , <a class="el" href="interface_message_footer.html#a3b1e5441abacd0398e5b20f9b9c26562">MessageFooter</a>
 , <a class="el" href="interface_email_campaign.html#acbd2693ea084722489f4d8be87f3e2a1">EmailCampaign</a>
 , <a class="el" href="interface_click_through_details.html#a5ce3bc6ae727dfb132c7ef1bd9042d0a">ClickThroughDetails</a>
 , <a class="el" href="interface_note.html#a1006a3c75bc5f9cf277f9782f84e1ee3">Note</a>
 , <a class="el" href="interface_email_address.html#a70ff0aa37e73f488616f57258cbe36d3">EmailAddress</a>
-, <a class="el" href="interface_bounce_activity.html#a0758a0d267c2e51605d1cce1d1078151">BounceActivity</a>
+, <a class="el" href="interface_file_moved.html#a207f00eda67996e0558684c7446da131">FileMoved</a>
 , <a class="el" href="interface_custom_field.html#a7626174a904b8bb2ffb0a1f3335e11f3">CustomField</a>
 , <a class="el" href="interface_contact.html#a899404ecb81550be559c297f3c8302eb">Contact</a>
 , <a class="el" href="interface_address.html#aaddeca97436531e934e9faabc74b5c81">Address</a>
@@ -395,6 +495,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="interface_address.html#afa3e57b54eb7afa491e27917409feca8">Address</a>
 , <a class="el" href="interface_contact_list.html#a084a8f5e56a04a5ca25ffd389b0fc0d7">ContactList</a>
 , <a class="el" href="interface_email_campaign.html#a327c5ad26e9a40048fe46dd8ef570ea4">EmailCampaign</a>
+, <a class="el" href="interface_library_file.html#a87dbcea9698d4fed705c8552c65e9f36">LibraryFile</a>
+, <a class="el" href="interface_library_folder.html#a53fcfcbcf617fd327cd2a07b8563ed6e">LibraryFolder</a>
 , <a class="el" href="interface_message_footer.html#a574b8db89176134e5bc32955546e9d46">MessageFooter</a>
 , <a class="el" href="interface_test_send.html#a2992ae5f5b65fa36f472c8b3d5298ba8">TestSend</a>
 , <a class="el" href="interface_schedule.html#aa3375d9defc7c6eedb594c0889aed606">Schedule</a>
@@ -413,8 +515,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
-<li>listsWithAccessToken:
-: <a class="el" href="interface_lists_collection.html#aef8b932bc784f2c24af5dbb878e39186">ListsCollection</a>
+<li>librarySummaryWithDictionary:
+: <a class="el" href="interface_library_summary.html#ae152bba7069ab413e5237588274b5de5">LibrarySummary</a>
+</li>
+<li>listsWithAccessToken:andModificationDate:
+: <a class="el" href="interface_lists_collection.html#a9acfb3a4e743d108f0e5759f9435d5b8">ListsCollection</a>
 </li>
 <li>listWithAccessToken:andListId:
 : <a class="el" href="interface_lists_collection.html#a9f01143dd9acb80108f8c7f8096aaa6f">ListsCollection</a>
@@ -437,6 +542,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>minimalJSON
 : <a class="el" href="interface_email_campaign.html#ae966e8eeb454c4a453747e05420cdd4a">EmailCampaign</a>
+</li>
+<li>moveFilesWithAccessToken:toFolderWithId:withMoveFilesArray:
+: <a class="el" href="interface_my_library_files_service.html#a6e4c00f52b2cd5350da036ecad8dc86f">MyLibraryFilesService</a>
 </li>
 </ul>
 
@@ -467,7 +575,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>proxyForJSON
 : <a class="el" href="interface_address.html#af38fb3a0c84ea2e40072fb59465c26ff">Address</a>
+, <a class="el" href="interface_library_folder.html#a2a8045a1f6b4343e1c3c04979c6a6822">LibraryFolder</a>
 , <a class="el" href="interface_schedule.html#aae6302dc850e553583c0dd96a600ca47">Schedule</a>
+, <a class="el" href="interface_library_file.html#a42105b2cb6c5f587d11e7758989290df">LibraryFile</a>
 , <a class="el" href="interface_note.html#a8d73771c27787a5bdbb4c7d19e94aa63">Note</a>
 , <a class="el" href="interface_email_address.html#a705373f59834115953b1c547896e1556">EmailAddress</a>
 , <a class="el" href="interface_custom_field.html#a913d625cd08f35d9c85b106b31396e41">CustomField</a>
@@ -490,6 +600,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>reloadLogin
 : <a class="el" href="interface_c_t_c_t_login_view_controller.html#a40e3dd678a8118d4e2e56f1c8e3d53d1">CTCTLoginViewController</a>
+</li>
+<li>removeContactsMultipartWithToken:withFile:fromLists:
+: <a class="el" href="interface_activity_service.html#a5f7ff1a9198a13b2fd4acc37f2544dff">ActivityService</a>
 </li>
 <li>replaceDataWithNewData:
 : <a class="el" href="interface_http_response.html#a96181f9cb9db5ff067db4775e4d5dcd5">HttpResponse</a>
@@ -517,10 +630,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>testSendWithDictionary:
 : <a class="el" href="interface_test_send.html#a4c6865254eeb50999c7bdc5deb392a05">TestSend</a>
 </li>
+<li>thumbnailWithDictionary:
+: <a class="el" href="interface_thumbnail.html#a9cb99f8b24406b0d980eb1175af06d7d">Thumbnail</a>
+</li>
 <li>toJson
-: <a class="el" href="interface_add_contacts.html#ac7cc3a655cc7a0f4628b0fcfd4803932">AddContacts</a>
-, <a class="el" href="interface_export_contacts.html#a7c6d549662f605d1e8cd5ce8cc0e0b80">ExportContacts</a>
+: <a class="el" href="interface_export_contacts.html#a7c6d549662f605d1e8cd5ce8cc0e0b80">ExportContacts</a>
 , <a class="el" href="interface_add_contacts_import_data.html#a10a4294a578b5fe115403cfd36a64a96">AddContactsImportData</a>
+, <a class="el" href="interface_add_contacts.html#ac7cc3a655cc7a0f4628b0fcfd4803932">AddContacts</a>
 </li>
 <li>trackingSummaryWithDictionary:
 : <a class="el" href="interface_tracking_summary.html#a2913d7d6344b34946682551a8e06b763">TrackingSummary</a>
@@ -535,11 +651,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>updateContact:withAccessToken:actionByVisitor:
 : <a class="el" href="interface_contacts_collection.html#a91193e5ee2abafdc675eec6d8f22e482">ContactsCollection</a>
 </li>
+<li>updateFileWithAccessToken:fileId:includePayload:andFile:
+: <a class="el" href="interface_my_library_files_service.html#ac13c1b8710f0e452cf425a2eff5409d3">MyLibraryFilesService</a>
+</li>
+<li>updateFolderWithAccessToken:withId:withUpdateFolder:includePayload:
+: <a class="el" href="interface_my_library_folders_service.html#ab664fc9ceec535a82b156112fc7fb4ec">MyLibraryFoldersService</a>
+</li>
 <li>updateListWithAccessToken:andListId:andList:
 : <a class="el" href="interface_lists_collection.html#a875b80ad1fe2b0a020903371d01b8bea">ListsCollection</a>
 </li>
 <li>updateScheduleWithAccesToken:campaignId:andSchedule:
 : <a class="el" href="interface_campaign_schedule_service.html#a02b28e987201b279f876edd7dbdb6d3e">CampaignScheduleService</a>
+</li>
+<li>usageSummaryWithDictionary:
+: <a class="el" href="interface_usage_summary.html#a0bed2e6a587ef7a6dd671f32dfea54f5">UsageSummary</a>
 </li>
 </ul>
 
@@ -555,7 +680,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 17:17:44 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 5 2013 09:38:52 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

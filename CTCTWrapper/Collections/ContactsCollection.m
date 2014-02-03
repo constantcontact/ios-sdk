@@ -6,6 +6,8 @@
 //
 
 #import "ContactsCollection.h"
+
+#import "ResultSet.h"
 #import "Config.h"
 
 @implementation ContactsCollection
@@ -14,7 +16,7 @@
 // Get an array of contacts
 // accessToken - Constant Contact OAuth2 access token
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken withLimitOf:(int)limit
 {    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
@@ -23,6 +25,8 @@
     
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
+    if(limit)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
@@ -37,7 +41,10 @@
             [contacts addObject:[Contact contactWithDictionary:contact]];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
     
     return response;
@@ -78,12 +85,50 @@
 // accessToken - Constant Contact OAuth2 access token
 // email - contact email address to search for
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andEmail:(NSString*)email withALimitOf:(int)limit
 {    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"email=%@&access_token=%@&api_key=%@", email,accessToken,apiKey];
+    
+    if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
+
+    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    
+    if(response.statusCode == 200)
+    {
+        NSMutableArray *contacts = [[NSMutableArray alloc] init];
+        NSArray *resultsArray = [response.data objectForKey:@"results"];
+        
+        for (NSDictionary *contact in resultsArray)
+        {
+            [contacts addObject:[Contact contactWithDictionary:contact]];
+        }
+        
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
+    }
+    
+    return response;
+}
+
+// ----------------------------------------------------------------------------------------------------
+//
+// ----------------------------------------------------------------------------------------------------
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andStatus:(NSString *)status withAlimitOf:(int)limit
+{
+    NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
+    NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
+    NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
+    NSString *httpQuery = [NSString stringWithFormat:@"status=%@&access_token=%@&api_key=%@",status,accessToken,apiKey];
+    
+    if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
@@ -98,9 +143,46 @@
             [contacts addObject:[Contact contactWithDictionary:contact]];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
+    return response;
+}
+
++ (HttpResponse *)contactsWithAccessToken:(NSString*)accessToken andModifiedSince:(NSDate *)date
+{
+    NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
+    NSString *endpoint = [Config valueForType:@"endpoints" key:@"contacts"];
+    NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+    NSString *dateString = [dateFormat stringFromDate:date];
+    
+    NSString *httpQuery = [NSString stringWithFormat:@"modified_since=%@&access_token=%@&api_key=%@",dateString,accessToken,apiKey];
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    
+    if(response.statusCode == 200)
+    {
+        NSMutableArray *contacts = [[NSMutableArray alloc] init];
+        NSArray *resultsArray = [response.data objectForKey:@"results"];
+        
+        for (NSDictionary *contact in resultsArray)
+        {
+            [contacts addObject:[Contact contactWithDictionary:contact]];
+        }
+        
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
+    }
     return response;
 }
 

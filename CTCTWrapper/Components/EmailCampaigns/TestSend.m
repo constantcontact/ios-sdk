@@ -41,17 +41,7 @@
 
 + (TestSend *)testSendWithDictionary:(NSDictionary *)dictionary
 {
-    TestSend *testSend = [[TestSend alloc] init];
-    
-    testSend.format = [Component valueForDictionary:dictionary withKey:@"format"];
-    testSend.personalMessage = [Component valueForDictionary:dictionary withKey:@"personal_message"];
-    
-    testSend.emailAddresses = [[NSMutableArray alloc] init];
-    
-    for(NSString *emailAddress in [dictionary objectForKey:@"email_addresses"])
-    {
-        [testSend.emailAddresses addObject:emailAddress];
-    }
+    TestSend *testSend = [[TestSend alloc] initWithDictionary:dictionary];
     
     return testSend;
 }

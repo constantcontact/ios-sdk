@@ -21,6 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ctct_logo.jpeg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ConstantContact iOS SDK
    </div>
@@ -102,12 +103,16 @@ Inheritance diagram for ContactsCollection:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:aecc11eeca58169e94d858ad8a59e937d"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#aecc11eeca58169e94d858ad8a59e937d">contactsWithAccessToken:</a></td></tr>
-<tr class="separator:aecc11eeca58169e94d858ad8a59e937d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d96e2c2cb9315b747e3c13ec132b94"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a88d96e2c2cb9315b747e3c13ec132b94">contactsWithAccessToken:withLimitOf:</a></td></tr>
+<tr class="separator:a88d96e2c2cb9315b747e3c13ec132b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c45e3c9f4fa861848e3bdc17b27259"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a94c45e3c9f4fa861848e3bdc17b27259">contactWithAccessToken:andId:</a></td></tr>
 <tr class="separator:a94c45e3c9f4fa861848e3bdc17b27259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0960e30df67f38898d4bab1f8061a30"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#ab0960e30df67f38898d4bab1f8061a30">contactsWithAccessToken:andEmail:</a></td></tr>
-<tr class="separator:ab0960e30df67f38898d4bab1f8061a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96ebd9be42f282d95d93f7af66a4508"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#af96ebd9be42f282d95d93f7af66a4508">contactsWithAccessToken:andEmail:withALimitOf:</a></td></tr>
+<tr class="separator:af96ebd9be42f282d95d93f7af66a4508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8ea12c93cef0771c61f4e37f3952ff"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a1a8ea12c93cef0771c61f4e37f3952ff">contactsWithAccessToken:andStatus:withAlimitOf:</a></td></tr>
+<tr class="separator:a1a8ea12c93cef0771c61f4e37f3952ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22766b68c6b097092222e3a300937fa0"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a22766b68c6b097092222e3a300937fa0">contactsWithAccessToken:andModifiedSince:</a></td></tr>
+<tr class="separator:a22766b68c6b097092222e3a300937fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d6701c1a322dbcf895e281de7a6302e"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_http_response.html">HttpResponse</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a1d6701c1a322dbcf895e281de7a6302e">addContact:withAccessToken:actionByVisitor:</a></td></tr>
 <tr class="separator:a1d6701c1a322dbcf895e281de7a6302e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a1815c12237f599a7449f9a35618941"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_contacts_collection.html#a5a1815c12237f599a7449f9a35618941">deleteContactWithAccessToken:andContactId:errors:</a></td></tr>
@@ -161,7 +166,7 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aecc11eeca58169e94d858ad8a59e937d"></a>
+<a class="anchor" id="af96ebd9be42f282d95d93f7af66a4508"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -170,36 +175,18 @@ Class Methods</h2></td></tr>
           <td></td>
           <td class="paramtype">(NSString*)&#160;</td>
           <td class="paramname"><em>accessToken</em></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Function gets all contacts belonging to the user identified by the token;</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login;</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with a array of all contacts belonging to the user identified by the token; </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ab0960e30df67f38898d4bab1f8061a30"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) <a class="el" href="interface_contacts_collection.html#aecc11eeca58169e94d858ad8a59e937d">contactsWithAccessToken:</a> </td>
-          <td></td>
-          <td class="paramtype">(NSString*)&#160;</td>
-          <td class="paramname"><em>accessToken</em></td>
         </tr>
         <tr>
           <td class="paramkey">andEmail:</td>
           <td></td>
           <td class="paramtype">(NSString*)&#160;</td>
-          <td class="paramname"><em>email</em>&#160;</td>
+          <td class="paramname"><em>email</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withALimitOf:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -212,11 +199,124 @@ Class Methods</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
-    <tr><td class="paramname">NSString</td><td>email - The e-mail address of the contacts that we want to get;</td></tr>
+    <tr><td class="paramname">NSString*</td><td>email - The e-mail address of the contacts that we want to get; </td></tr>
+    <tr><td class="paramname">int</td><td>limit - positive value that specifyes the maximum number of contacts returned;</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with a array containing all the Contacts that have the given e-mail address; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a22766b68c6b097092222e3a300937fa0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) contactsWithAccessToken: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>accessToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andModifiedSince:</td>
+          <td></td>
+          <td class="paramtype">(NSDate *)&#160;</td>
+          <td class="paramname"><em>date</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function gets the contacts with a specified modification date, belonging to the user identified by the token;</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
+    <tr><td class="paramname">NSDate*</td><td>date - The modification date of the contacts that we want to get;</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with a array containing all the Contacts that have the given date; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a8ea12c93cef0771c61f4e37f3952ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) contactsWithAccessToken: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>accessToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andStatus:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>status</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withAlimitOf:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function gets the contacts with a specified status, belonging to the user identified by the token;</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
+    <tr><td class="paramname">NSString*</td><td>status - The status of the contacts that we want to get; </td></tr>
+    <tr><td class="paramname">int</td><td>limit - positive value that specifyes the maximum number of contacts returned;</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with a array containing all the Contacts that have the given status; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a88d96e2c2cb9315b747e3c13ec132b94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_http_response.html">HttpResponse</a> *) contactsWithAccessToken: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>accessToken</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withLimitOf:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>limit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function gets all contacts belonging to the user identified by the token;</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
+    <tr><td class="paramname">int</td><td>limit - Number of results to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="interface_http_response.html">HttpResponse</a> * - response containing either errors or data with a array of all contacts belonging to the user identified by the token; </dd></dl>
 
 </div>
 </div>
@@ -247,7 +347,8 @@ Class Methods</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">NSString*</td><td>accessToken - Constant <a class="el" href="interface_contact.html">Contact</a> OAuth2 access token, obtained after login; </td></tr>
-    <tr><td class="paramname">int</td><td>contactId - The id of the contact that we want to get;</td></tr>
+    <tr><td class="paramname">int</td><td>contactId - The id of the contact that we want to get; </td></tr>
+    <tr><td class="paramname">NSString*</td><td>limit - positive value that specifyes the maximum number of contacts returned;</td></tr>
   </table>
   </dd>
 </dl>
@@ -429,13 +530,13 @@ Class Methods</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/Collections/<a class="el" href="_contacts_collection_8h_source.html">ContactsCollection.h</a></li>
-<li>/Users/grigorievs/Documents/work/ConstantContact/V2Wrapper/IOS/CTCTWrapper/Collections/<a class="el" href="_contacts_collection_8m.html">ContactsCollection.m</a></li>
+<li>work/CTCT-iOS-VladDumitras/CTCTWrapper/Collections/<a class="el" href="_contacts_collection_8h_source.html">ContactsCollection.h</a></li>
+<li>work/CTCT-iOS-VladDumitras/CTCTWrapper/Collections/<a class="el" href="_contacts_collection_8m.html">ContactsCollection.m</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 17:17:44 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 5 2013 09:38:51 for ConstantContact iOS SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

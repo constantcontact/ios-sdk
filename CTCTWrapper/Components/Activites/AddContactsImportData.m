@@ -64,32 +64,7 @@
 
 + (AddContactsImportData *)AddContactsImportDatarWithDictionary:(NSDictionary *)dictionary
 {
-    AddContactsImportData *addImportData = [[AddContactsImportData alloc]init];
-    
-    addImportData.firstName = [Component valueForDictionary:dictionary withKey:@"first_name"];
-    addImportData.middleName = [Component valueForDictionary:dictionary withKey:@"middle_name"];
-    addImportData.lastName = [Component valueForDictionary:dictionary withKey:@"last_name"];
-    addImportData.jobTitle = [Component valueForDictionary:dictionary withKey:@"job_title"];
-    addImportData.companyName = [Component valueForDictionary:dictionary withKey:@"company_name"];
-    addImportData.workPhone = [Component valueForDictionary:dictionary withKey:@"work_phone"];
-    addImportData.homePhone = [Component valueForDictionary:dictionary withKey:@"home_phone"];
-    
-    
-    addImportData.emailAddresses = [[NSMutableArray alloc]init];
-    for(NSDictionary *email in [dictionary objectForKey:@"email_addresses"])
-    {
-        [addImportData.emailAddresses addObject:email];
-    }
-    addImportData.addresses = [[NSMutableArray alloc]init];
-    for(Address *address in [dictionary objectForKey:@"addresses"])
-    {
-        [addImportData.addresses addObject:address];
-    }
-    addImportData.customFields = [[NSMutableArray alloc]init];
-    for(CustomField *field in [dictionary objectForKey:@"custom_fields"])
-    {
-        [addImportData.customFields addObject:field];
-    }
+    AddContactsImportData *addImportData = [[AddContactsImportData alloc] initWithDictionary:dictionary];
     
     return addImportData;
 }
@@ -133,7 +108,7 @@
 
 - (id) proxyForJson
 {
-    NSMutableDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                  _firstName, @"first_name",
                                  _middleName, @"middle_name",
                                  _lastName,@"last_name",

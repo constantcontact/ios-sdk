@@ -17,6 +17,8 @@
         _name = @"";
         _status = @"";
         _contactCount = 0;
+        _createdDate = @"";
+        _modifiedDate = @"";
     }
     
     return self;
@@ -30,6 +32,8 @@
         _name = [Component valueForDictionary:dictionary withKey:@"name"];
         _status = [Component valueForDictionary:dictionary withKey:@"status"];
         _contactCount = [[Component valueForDictionary:dictionary withKey:@"contact_count"] intValue];
+        _createdDate = [Component valueForDictionary:dictionary withKey:@"created_date"];
+        _modifiedDate = [Component valueForDictionary:dictionary withKey:@"modified_date"];
     }
     return self;
 }

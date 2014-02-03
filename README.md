@@ -69,6 +69,6 @@ Respond to the following delegate method:
 
 ##Example for getting a array of contacts
 ```
-HttpResponse *result = [ContactsCollection contactsWithAccessToken: myToken];
+HttpResponse *result = [ContactsCollection contactsWithAccessToken: myToken withLimitOf:10];
 NSArray *contactArray = result.data;
 ```

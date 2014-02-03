@@ -34,11 +34,7 @@
 
 + (ClickThroughDetails *)clickThroughDetailsWithDictionary:(NSDictionary *)dictionary;
 {
-    ClickThroughDetails *clickThroughDetails = [[ClickThroughDetails alloc] init];
-    
-    clickThroughDetails.url = [Component valueForDictionary:dictionary withKey:@"url"];
-    clickThroughDetails.urlUid = [Component valueForDictionary:dictionary withKey:@"url_uid"];
-    clickThroughDetails.clickCount = [[Component valueForDictionary:dictionary withKey:@"click_count"] intValue];
+    ClickThroughDetails *clickThroughDetails = [[ClickThroughDetails alloc] initWithDictionary:dictionary];
 
     return clickThroughDetails;
 }

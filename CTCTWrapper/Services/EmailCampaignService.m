@@ -32,17 +32,43 @@
     return response;
 }
 
-+ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken andParams:(NSString*)params;
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken withALimitOf:(int)limit
+{
+    return [self getCampaignsWithToken:accessToken status:nil modificationDate:nil withALimitOf:limit];
+}
+
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status withALimitOf:(int)limit
+{
+    return [self getCampaignsWithToken:accessToken status:status modificationDate:nil withALimitOf:limit];
+}
+
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken modificationDate:(NSDate *)date
+{
+    return [self getCampaignsWithToken:accessToken status:nil modificationDate:date withALimitOf:0];
+}
+
++ (HttpResponse *)getCampaignsWithToken:(NSString *)accessToken status:(NSString *)status modificationDate:(NSDate *)date withALimitOf:(int)limit
 {    
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"campaigns"];
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
     
-    if(params.length > 0)
+    if(status && status.length > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&status=%@",httpQuery,status];
+    
+    if(date)
     {
-        httpQuery = [NSString stringWithFormat:@"%@&%@",params,httpQuery];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd"];
+        [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        
+        NSString *dateString = [dateFormat stringFromDate:date];
+        
+        httpQuery = [NSString stringWithFormat:@"%@&modified_since=%@",httpQuery,dateString];
     }
+    else if(limit > 0)
+        httpQuery = [NSString stringWithFormat:@"%@&limit=%d",httpQuery,limit];
     
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it

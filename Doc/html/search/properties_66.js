@@ -1,14 +1,20 @@
 var searchData=
 [
   ['fax',['fax',['../interface_contact.html#acb90e8cf0e6ff5ea93ae8c712d24eda5',1,'Contact']]],
+  ['filecount',['fileCount',['../interface_usage_summary.html#aa22f8f3f93dd81e549c74e49dc24bb77',1,'UsageSummary']]],
+  ['fileid',['fileID',['../interface_file_moved.html#aa19e6109e2975dff168baae20184ac2d',1,'FileMoved::fileID()'],['../interface_file_upload_status.html#a7c39a6ae67af919e208b134768aeb836',1,'FileUploadStatus::fileId()'],['../interface_library_file.html#a877f3f55e55f0a9e6f4fbd94682b95a4',1,'LibraryFile::fileId()']]],
   ['filename',['fileName',['../interface_activity.html#ad3402799bc6113ec527f54788dce3777',1,'Activity']]],
-  ['filetype',['fileType',['../interface_export_contacts.html#a2da21b833047ae9858e52fb23b57def2',1,'ExportContacts']]],
+  ['filetype',['fileType',['../interface_export_contacts.html#a2da21b833047ae9858e52fb23b57def2',1,'ExportContacts::fileType()'],['../interface_library_file.html#a31a9f1e806b14338fb498637f7d42f89',1,'LibraryFile::fileType()']]],
   ['finishdate',['finishDate',['../interface_activity.html#a1d860160f4fc5dcc362b364dbf556ffd',1,'Activity']]],
   ['firstname',['firstName',['../interface_add_contacts_import_data.html#adb19c403a4abd271156a99dc0637ddc2',1,'AddContactsImportData::firstName()'],['../interface_contact.html#a8624b8683addad46447537e7646e7c7a',1,'Contact::firstName()']]],
+  ['folder',['folder',['../interface_library_file.html#aa4eff10aa3584fae7fde00a9dc8b084c',1,'LibraryFile']]],
+  ['foldercount',['folderCount',['../interface_usage_summary.html#a552ff1eeb6f7653810b348194f86b0b8',1,'UsageSummary']]],
+  ['folderid',['folderId',['../interface_library_file.html#a1180ac481ba2ff9725b58b9dabbd28d2',1,'LibraryFile::folderId()'],['../interface_library_folder.html#a6e16f2fd551855081f68e1748ede2619',1,'LibraryFolder::folderId()']]],
   ['format',['format',['../interface_test_send.html#a9b8f331d88f602bfb6281faaaa1640f0',1,'TestSend']]],
-  ['forwarddate',['forwardDate',['../interface_forward_activity.html#a3f3583cc908d4fc17e61bb45d1b15299',1,'ForwardActivity']]],
+  ['forwarddate',['forwardDate',['../interface_all_activites.html#ab273603a4c2814e0012accb12ea5ebfa',1,'AllActivites::forwardDate()'],['../interface_forward_activity.html#a3f3583cc908d4fc17e61bb45d1b15299',1,'ForwardActivity::forwardDate()']]],
   ['forwardemaillinktext',['forwardEmailLinkText',['../interface_message_footer.html#a7301fdaaf574173a94ef9c63582cad1e',1,'MessageFooter']]],
-  ['forwards',['forwards',['../interface_tracking_summary.html#a148063017db3a9d3a7a39b1c8c95f55e',1,'TrackingSummary']]],
+  ['forwards',['forwards',['../interface_all_activites.html#aaa7dfe113d061ca4961458eeb198288d',1,'AllActivites::forwards()'],['../interface_email_sorted_activity.html#a5ae68fac22aa75f086619834a14e92f4',1,'EmailSortedActivity::forwards()'],['../interface_tracking_summary.html#a148063017db3a9d3a7a39b1c8c95f55e',1,'TrackingSummary::forwards()']]],
+  ['freefilesremaining',['freeFilesRemaining',['../interface_usage_summary.html#a94aca23bbc4baaff3948e930be1a53bf',1,'UsageSummary']]],
   ['fromemail',['fromEmail',['../interface_email_campaign.html#a4356976b57c32fb34b48b2b821d4d81c',1,'EmailCampaign']]],
   ['fromname',['fromName',['../interface_email_campaign.html#a83dce4d2716d423471c754b8a321ec43',1,'EmailCampaign']]]
 ];

@@ -6,8 +6,10 @@
 //
 
 #import "ListsCollection.h"
-#import "Config.h"
+
 #import "ContactsCollection.h"
+#import "ResultSet.h"
+#import "Config.h"
 
 @implementation ListsCollection
 
@@ -15,12 +17,23 @@
 // Gets a array of lists
 // accessToken - Constant Contact OAuth2 access token
 //------------------------------------------------------------------------------------
-+ (HttpResponse*)listsWithAccessToken:(NSString*)accessToken
++ (HttpResponse*)listsWithAccessToken:(NSString*)accessToken andModificationDate:(NSDate *)date
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"lists"];
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken,apiKey];
+    
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+    NSString *dateString = [dateFormat stringFromDate:date];
+    if(date)
+    {
+     httpQuery = [NSString stringWithFormat:@"modified_since=%@&access_token=%@&api_key=%@",dateString,accessToken,apiKey];
+    }
     
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
@@ -100,7 +113,7 @@
     return response;
 }
 
-+ (HttpResponse*)getContactsWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId
++ (HttpResponse*)getContactListMembershipWithAccessToken:(NSString*)accessToken fromList:(NSString*)listId withModificationDate:(NSDate *)date withAlimitOf:(int)limit
 {
     NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
     NSString *endpoint = [Config valueForType:@"endpoints" key:@"membership_list"];
@@ -108,6 +121,22 @@
     NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
+    
+    if(date)
+    {
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd"];
+        [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+        NSString *dateString = [dateFormat stringFromDate:date];
+        
+        url = [NSString stringWithFormat:@"%@&modified_since=%@", url, dateString];
+    }
+    else if (limit > 0)
+    {
+        url = [NSString stringWithFormat:@"%@&limit=%d", url, limit];
+    }
+    
     HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
     
     if(response.statusCode == 200)
@@ -121,9 +150,11 @@
             [contacts addObject:contact];
         }
         
-        [response replaceDataWithNewData:[contacts copy]];
+        NSDictionary *meta = [response.data objectForKey:@"meta"];
+        ResultSet *resultSet = [[ResultSet alloc] initResultSetWithResults:[contacts copy] andMeta:meta];
+        
+        [response replaceDataWithNewData:resultSet];
     }
-    
     return response;
 }
 

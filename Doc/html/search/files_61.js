@@ -11,5 +11,7 @@ var searchData=
   ['addcontactsimportdata_2eh',['AddContactsImportData.h',['../_add_contacts_import_data_8h.html',1,'']]],
   ['addcontactsimportdata_2em',['AddContactsImportData.m',['../_add_contacts_import_data_8m.html',1,'']]],
   ['address_2eh',['Address.h',['../_address_8h.html',1,'']]],
-  ['address_2em',['Address.m',['../_address_8m.html',1,'']]]
+  ['address_2em',['Address.m',['../_address_8m.html',1,'']]],
+  ['allactivites_2eh',['AllActivites.h',['../_all_activites_8h.html',1,'']]],
+  ['allactivites_2em',['AllActivites.m',['../_all_activites_8m.html',1,'']]]
 ];
