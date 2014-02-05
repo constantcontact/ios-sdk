@@ -1,6 +1,19 @@
 var searchData=
 [
   ['fax',['fax',['../interface_contact.html#acb90e8cf0e6ff5ea93ae8c712d24eda5',1,'Contact']]],
+  ['fee',['fee',['../interface_event_registrant_discount_scope_enum.html#afaa6cbabc4f75be4e30fc427bf74db82',1,'EventRegistrantDiscountScopeEnum::fee()'],['../interface_event_fee.html#af0b1f681a05a8c9121bdf59003981b03',1,'EventFee::fee()']]],
+  ['feeid',['feeId',['../interface_event_fee.html#af31a09bd450b2b159997aa5099cae973',1,'EventFee::feeId()'],['../interface_registrant_fee.html#a577b00269fe8278a94da7920da15acdc',1,'RegistrantFee::feeId()']]],
+  ['feeids',['feeIds',['../interface_event_promocode.html#a9a1534835e82899a8fc65eef77b8de4c',1,'EventPromocode']]],
+  ['feelist',['feeList',['../interface_promocode_discount_scope_enum.html#a3f5638e98412d9314370870392aca16f',1,'PromocodeDiscountScopeEnum']]],
+  ['feeperiodtype',['feePeriodType',['../interface_registrant_fee.html#af6dc056cd2b143c1da173f5206572dc9',1,'RegistrantFee::feePeriodType()'],['../interface_registrant_sale_item.html#aa12747c51bc2011819b0cfa112adbf5b',1,'RegistrantSaleItem::feePeriodType()']]],
+  ['fees',['fees',['../interface_registrant_order.html#a005cc873e693b70fd65fbee7cc50b04e',1,'RegistrantOrder']]],
+  ['feescope',['feeScope',['../interface_event_fee.html#ad5b4553c6b05f086b9eb4a856b7fbef2',1,'EventFee']]],
+  ['feescopeenum',['FeeScopeEnum',['../interface_fee_scope_enum.html',1,'FeeScopeEnum'],['../interface_event_fee.html#aa8c05ef091accd0abd86b93735ff6126',1,'EventFee::feeScopeEnum()']]],
+  ['feescopeenum_2eh',['FeeScopeEnum.h',['../_fee_scope_enum_8h.html',1,'']]],
+  ['feescopeenum_2em',['FeeScopeEnum.m',['../_fee_scope_enum_8m.html',1,'']]],
+  ['festivalsfairs',['festivalsFairs',['../interface_event_type_enum.html#a6ced6a394f0bc29a921fd77f4b10814a',1,'EventTypeEnum']]],
+  ['fields',['fields',['../interface_registrant_section.html#a445a21ee9e55bcb3c32a288a74a712f2',1,'RegistrantSection']]],
+  ['fieldtype',['fieldType',['../interface_registrant_section.html#a376ffaa7eb326b1fef94177f42fb0412',1,'RegistrantSection']]],
   ['file_5fsource_5fall',['FILE_SOURCE_ALL',['../_library_file_8h.html#a9726b375a85ec371c0ac6b91fd85b3db',1,'LibraryFile.h']]],
   ['file_5fsource_5ffacebook',['FILE_SOURCE_FACEBOOK',['../_library_file_8h.html#acea3b8bce466a4e162ac7edbfc95469b',1,'LibraryFile.h']]],
   ['file_5fsource_5finstagram',['FILE_SOURCE_INSTAGRAM',['../_library_file_8h.html#a8d489366a4ea855ec13c2f5451dd05fa',1,'LibraryFile.h']]],
@@ -25,11 +38,12 @@ var searchData=
   ['fileuploadstatuswithdictionary_3a',['fileUploadStatusWithDictionary:',['../interface_file_upload_status.html#aaafb3eb877f6ce7e87838c5c26f1e5f0',1,'FileUploadStatus']]],
   ['filewithdictionary_3a',['fileWithDictionary:',['../interface_library_file.html#ac77b562797490baa5f817f86f587528b',1,'LibraryFile']]],
   ['finishdate',['finishDate',['../interface_activity.html#a1d860160f4fc5dcc362b364dbf556ffd',1,'Activity']]],
-  ['firstname',['firstName',['../interface_add_contacts_import_data.html#adb19c403a4abd271156a99dc0637ddc2',1,'AddContactsImportData::firstName()'],['../interface_contact.html#a8624b8683addad46447537e7646e7c7a',1,'Contact::firstName()']]],
+  ['firstname',['firstName',['../interface_add_contacts_import_data.html#adb19c403a4abd271156a99dc0637ddc2',1,'AddContactsImportData::firstName()'],['../interface_contact.html#a8624b8683addad46447537e7646e7c7a',1,'Contact::firstName()'],['../interface_event_registrant.html#a084368eaf841696094a71c6069e24caa',1,'EventRegistrant::firstName()']]],
   ['folder',['folder',['../interface_library_file.html#aa4eff10aa3584fae7fde00a9dc8b084c',1,'LibraryFile']]],
   ['foldercount',['folderCount',['../interface_usage_summary.html#a552ff1eeb6f7653810b348194f86b0b8',1,'UsageSummary']]],
   ['folderid',['folderId',['../interface_library_file.html#a1180ac481ba2ff9725b58b9dabbd28d2',1,'LibraryFile::folderId()'],['../interface_library_folder.html#a6e16f2fd551855081f68e1748ede2619',1,'LibraryFolder::folderId()']]],
   ['folderwithdictionary_3a',['folderWithDictionary:',['../interface_library_folder.html#a3e191e98ce03659aacb4ee0ba6f4b395',1,'LibraryFolder']]],
+  ['foodwine',['foodWine',['../interface_event_type_enum.html#a5ab1cfc148c9178160b5fc054993c544',1,'EventTypeEnum']]],
   ['format',['format',['../interface_test_send.html#a9b8f331d88f602bfb6281faaaa1640f0',1,'TestSend']]],
   ['forwardactivity',['ForwardActivity',['../interface_forward_activity.html',1,'']]],
   ['forwardactivity_2eh',['ForwardActivity.h',['../_forward_activity_8h.html',1,'']]],
@@ -40,5 +54,6 @@ var searchData=
   ['forwards',['forwards',['../interface_all_activites.html#aaa7dfe113d061ca4961458eeb198288d',1,'AllActivites::forwards()'],['../interface_email_sorted_activity.html#a5ae68fac22aa75f086619834a14e92f4',1,'EmailSortedActivity::forwards()'],['../interface_tracking_summary.html#a148063017db3a9d3a7a39b1c8c95f55e',1,'TrackingSummary::forwards()']]],
   ['freefilesremaining',['freeFilesRemaining',['../interface_usage_summary.html#a94aca23bbc4baaff3948e930be1a53bf',1,'UsageSummary']]],
   ['fromemail',['fromEmail',['../interface_email_campaign.html#a4356976b57c32fb34b48b2b821d4d81c',1,'EmailCampaign']]],
-  ['fromname',['fromName',['../interface_email_campaign.html#a83dce4d2716d423471c754b8a321ec43',1,'EmailCampaign']]]
+  ['fromname',['fromName',['../interface_email_campaign.html#a83dce4d2716d423471c754b8a321ec43',1,'EmailCampaign']]],
+  ['fundraiserscharities',['fundraisersCharities',['../interface_event_type_enum.html#aa1b8bc168f5367b9a4b7f195d50e629f',1,'EventTypeEnum']]]
 ];
