@@ -37,7 +37,7 @@
 
 - (NSString*)JSON
 {
-    NSDictionary *jsonDict = [NSArray arrayWithObject:[self proxyForJSON]];
+    NSDictionary *jsonDict = (NSDictionary *)[NSArray arrayWithObject:[self proxyForJSON]];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict
                                                        options:NSJSONWritingPrettyPrinted

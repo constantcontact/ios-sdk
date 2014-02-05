@@ -25,13 +25,10 @@
     {
         _guestId = [Component valueForDictionary:dictionary withKey:@"guest_id"];
 
-        _guestSections = [[NSMutableArray alloc] init];
-        
         if([dictionary objectForKey:@"guest_section"])
             _guestSections =[RegistrantGuestSections registrantGuestSectionsWithDictionary:[dictionary objectForKey:@"guest_section"]];
 
     }
-    
     return self;
 }
 
