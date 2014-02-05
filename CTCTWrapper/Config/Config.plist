@@ -5,11 +5,11 @@
 	<key>config</key>
 	<dict>
 		<key>consumer_secret</key>
-		<string></string>
+		<string>Tj5bUFsG3ynvtRdQ67SHsXDz</string>
 		<key>redirect_uri</key>
-		<string></string>
+		<string>http://google.com</string>
 		<key>api_key</key>
-		<string></string>
+		<string>74hvvcfvvwjtgdsuhfau6djb</string>
 	</dict>
 	<key>errors</key>
 	<dict>
@@ -89,6 +89,30 @@
 	</dict>
 	<key>endpoints</key>
 	<dict>
+		<key>event_spot_individual_item_attribute</key>
+		<string>eventspot/events/%@/items/%@/attributes/%@</string>
+		<key>event_spot_item_attribute_collection</key>
+		<string>eventspot/events/%@/items/%@/attributes</string>
+		<key>event_spot_individual_event_item</key>
+		<string>eventspot/events/%@/items/%@</string>
+		<key>event_spot_event_item_collection</key>
+		<string>eventspot/events/%@/items</string>
+		<key>event_spot_individual_registration</key>
+		<string>eventspot/events/%@/registrants/%@</string>
+		<key>event_spot_registration_collection</key>
+		<string>eventspot/events/%@/registrants</string>
+		<key>event_spot_individual_promocode</key>
+		<string>eventspot/events/%@/promocodes/%@</string>
+		<key>event_spot_promocode_collection</key>
+		<string>eventspot/events/%@/promocodes</string>
+		<key>event_spot_individual_fee</key>
+		<string>eventspot/events/%@/fees/%@</string>
+		<key>event_spot_fees_collection</key>
+		<string>eventspot/events/%@/fees</string>
+		<key>event_spot_individual_event</key>
+		<string>eventspot/events/%@</string>
+		<key>event_spot_collection</key>
+		<string>eventspot/events</string>
 		<key>library_files_move</key>
 		<string>library/folders/%@/files</string>
 		<key>library_files_upload_status</key>

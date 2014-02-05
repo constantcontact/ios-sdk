@@ -44,6 +44,17 @@
 }
 
 // ----------------------------------------------------------------------------------------------------
+// Make an Http PATCH request
+// url - request url
+// headers - array of all http headers to send
+// stringData - stringData to send with request
+// ----------------------------------------------------------------------------------------------------
++ (HttpResponse*)patchWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData
+{
+    return [self httpRequestWithUrl:url andMethod:@"PATCH" andHeaders:headers andStringData:stringData];
+}
+
+// ----------------------------------------------------------------------------------------------------
 // Make an Http DELETE request
 // url - request url
 // headers - array of all http headers to send
