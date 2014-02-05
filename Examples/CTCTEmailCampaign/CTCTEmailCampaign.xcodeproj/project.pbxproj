@@ -69,6 +69,50 @@
 		B0F398041729377800205B40 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397D71729377800205B40 /* CTCTGlobal.m */; };
 		C398C0C818101B5F00E54CAE /* AllActivites.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0C518101B5F00E54CAE /* AllActivites.m */; };
 		C398C0C918101B5F00E54CAE /* EmailSortedActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0C718101B5F00E54CAE /* EmailSortedActivity.m */; };
+		C39BE47718A2853A009589A5 /* EventSpotService.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE47618A2853A009589A5 /* EventSpotService.m */; };
+		C39BE4CF18A28545009589A5 /* EventCurrencyTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE47B18A28545009589A5 /* EventCurrencyTypeEnum.m */; };
+		C39BE4D018A28545009589A5 /* EventInformationSectionsEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE47D18A28545009589A5 /* EventInformationSectionsEnum.m */; };
+		C39BE4D118A28545009589A5 /* EventPatchOpEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE47F18A28545009589A5 /* EventPatchOpEnum.m */; };
+		C39BE4D218A28545009589A5 /* EventPatchStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48118A28545009589A5 /* EventPatchStatusEnum.m */; };
+		C39BE4D318A28545009589A5 /* EventPatchValueEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48318A28545009589A5 /* EventPatchValueEnum.m */; };
+		C39BE4D418A28545009589A5 /* EventPaymentTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48518A28545009589A5 /* EventPaymentTypeEnum.m */; };
+		C39BE4D518A28545009589A5 /* EventRegistrantAttendanceStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48718A28545009589A5 /* EventRegistrantAttendanceStatusEnum.m */; };
+		C39BE4D618A28545009589A5 /* EventRegistrantDiscountScopeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48918A28545009589A5 /* EventRegistrantDiscountScopeEnum.m */; };
+		C39BE4D718A28545009589A5 /* EventRegistrantPaymentTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48B18A28545009589A5 /* EventRegistrantPaymentTypeEnum.m */; };
+		C39BE4D818A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48D18A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.m */; };
+		C39BE4D918A28545009589A5 /* EventStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE48F18A28545009589A5 /* EventStatusEnum.m */; };
+		C39BE4DA18A28545009589A5 /* EventTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49118A28545009589A5 /* EventTypeEnum.m */; };
+		C39BE4DB18A28545009589A5 /* FeeScopeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49318A28545009589A5 /* FeeScopeEnum.m */; };
+		C39BE4DC18A28545009589A5 /* PromocodeCodeTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49518A28545009589A5 /* PromocodeCodeTypeEnum.m */; };
+		C39BE4DD18A28545009589A5 /* PromocodeDiscountScopeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49718A28545009589A5 /* PromocodeDiscountScopeEnum.m */; };
+		C39BE4DE18A28545009589A5 /* PromocodeDiscountTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49918A28545009589A5 /* PromocodeDiscountTypeEnum.m */; };
+		C39BE4DF18A28545009589A5 /* PromocodeStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49B18A28545009589A5 /* PromocodeStatusEnum.m */; };
+		C39BE4E018A28545009589A5 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49D18A28545009589A5 /* Event.m */; };
+		C39BE4E118A28545009589A5 /* EventAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE49F18A28545009589A5 /* EventAddress.m */; };
+		C39BE4E218A28545009589A5 /* EventContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4A118A28545009589A5 /* EventContact.m */; };
+		C39BE4E318A28545009589A5 /* EventExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4A318A28545009589A5 /* EventExtended.m */; };
+		C39BE4E418A28545009589A5 /* EventFee.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4A518A28545009589A5 /* EventFee.m */; };
+		C39BE4E518A28545009589A5 /* EventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4A718A28545009589A5 /* EventItem.m */; };
+		C39BE4E618A28545009589A5 /* EventItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4A918A28545009589A5 /* EventItemAttribute.m */; };
+		C39BE4E718A28545009589A5 /* EventNotificationOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4AB18A28545009589A5 /* EventNotificationOptions.m */; };
+		C39BE4E818A28545009589A5 /* EventOnlineMeeting.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4AD18A28545009589A5 /* EventOnlineMeeting.m */; };
+		C39BE4E918A28545009589A5 /* EventPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4AF18A28545009589A5 /* EventPatch.m */; };
+		C39BE4EA18A28545009589A5 /* EventPaymentOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4B018A28545009589A5 /* EventPaymentOptions.m */; };
+		C39BE4EB18A28545009589A5 /* EventPromocode.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4B218A28545009589A5 /* EventPromocode.m */; };
+		C39BE4EC18A28545009589A5 /* EventRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4B418A28545009589A5 /* EventRegistrant.m */; };
+		C39BE4ED18A28545009589A5 /* EventRegistrantExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4B618A28545009589A5 /* EventRegistrantExtended.m */; };
+		C39BE4EE18A28545009589A5 /* EventTrackInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4B818A28545009589A5 /* EventTrackInformation.m */; };
+		C39BE4EF18A28545009589A5 /* RegistrantFee.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4BA18A28545009589A5 /* RegistrantFee.m */; };
+		C39BE4F018A28545009589A5 /* RegistrantGuest.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4BC18A28545009589A5 /* RegistrantGuest.m */; };
+		C39BE4F118A28545009589A5 /* RegistrantGuestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4BE18A28545009589A5 /* RegistrantGuestInfo.m */; };
+		C39BE4F218A28545009589A5 /* RegistrantGuestSections.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4C018A28545009589A5 /* RegistrantGuestSections.m */; };
+		C39BE4F318A28545009589A5 /* RegistrantOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4C218A28545009589A5 /* RegistrantOrder.m */; };
+		C39BE4F418A28545009589A5 /* RegistrantPaymentSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4C418A28545009589A5 /* RegistrantPaymentSummary.m */; };
+		C39BE4F518A28545009589A5 /* RegistrantPromoCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4C618A28545009589A5 /* RegistrantPromoCode.m */; };
+		C39BE4F618A28545009589A5 /* RegistrantPromocodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4C818A28545009589A5 /* RegistrantPromocodeInfo.m */; };
+		C39BE4F718A28545009589A5 /* RegistrantSaleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4CA18A28545009589A5 /* RegistrantSaleItem.m */; };
+		C39BE4F818A28545009589A5 /* RegistrantSection.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4CC18A28545009589A5 /* RegistrantSection.m */; };
+		C39BE4F918A28545009589A5 /* RegistrantSectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = C39BE4CE18A28545009589A5 /* RegistrantSectionField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +230,93 @@
 		C398C0C518101B5F00E54CAE /* AllActivites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActivites.m; sourceTree = "<group>"; };
 		C398C0C618101B5F00E54CAE /* EmailSortedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSortedActivity.h; sourceTree = "<group>"; };
 		C398C0C718101B5F00E54CAE /* EmailSortedActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSortedActivity.m; sourceTree = "<group>"; };
+		C39BE47518A2853A009589A5 /* EventSpotService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSpotService.h; sourceTree = "<group>"; };
+		C39BE47618A2853A009589A5 /* EventSpotService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSpotService.m; sourceTree = "<group>"; };
+		C39BE47A18A28545009589A5 /* EventCurrencyTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCurrencyTypeEnum.h; sourceTree = "<group>"; };
+		C39BE47B18A28545009589A5 /* EventCurrencyTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCurrencyTypeEnum.m; sourceTree = "<group>"; };
+		C39BE47C18A28545009589A5 /* EventInformationSectionsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInformationSectionsEnum.h; sourceTree = "<group>"; };
+		C39BE47D18A28545009589A5 /* EventInformationSectionsEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInformationSectionsEnum.m; sourceTree = "<group>"; };
+		C39BE47E18A28545009589A5 /* EventPatchOpEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatchOpEnum.h; sourceTree = "<group>"; };
+		C39BE47F18A28545009589A5 /* EventPatchOpEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatchOpEnum.m; sourceTree = "<group>"; };
+		C39BE48018A28545009589A5 /* EventPatchStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatchStatusEnum.h; sourceTree = "<group>"; };
+		C39BE48118A28545009589A5 /* EventPatchStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatchStatusEnum.m; sourceTree = "<group>"; };
+		C39BE48218A28545009589A5 /* EventPatchValueEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatchValueEnum.h; sourceTree = "<group>"; };
+		C39BE48318A28545009589A5 /* EventPatchValueEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatchValueEnum.m; sourceTree = "<group>"; };
+		C39BE48418A28545009589A5 /* EventPaymentTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPaymentTypeEnum.h; sourceTree = "<group>"; };
+		C39BE48518A28545009589A5 /* EventPaymentTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPaymentTypeEnum.m; sourceTree = "<group>"; };
+		C39BE48618A28545009589A5 /* EventRegistrantAttendanceStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantAttendanceStatusEnum.h; sourceTree = "<group>"; };
+		C39BE48718A28545009589A5 /* EventRegistrantAttendanceStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantAttendanceStatusEnum.m; sourceTree = "<group>"; };
+		C39BE48818A28545009589A5 /* EventRegistrantDiscountScopeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantDiscountScopeEnum.h; sourceTree = "<group>"; };
+		C39BE48918A28545009589A5 /* EventRegistrantDiscountScopeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantDiscountScopeEnum.m; sourceTree = "<group>"; };
+		C39BE48A18A28545009589A5 /* EventRegistrantPaymentTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantPaymentTypeEnum.h; sourceTree = "<group>"; };
+		C39BE48B18A28545009589A5 /* EventRegistrantPaymentTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantPaymentTypeEnum.m; sourceTree = "<group>"; };
+		C39BE48C18A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantSectionsFieldTypeEnum.h; sourceTree = "<group>"; };
+		C39BE48D18A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantSectionsFieldTypeEnum.m; sourceTree = "<group>"; };
+		C39BE48E18A28545009589A5 /* EventStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventStatusEnum.h; sourceTree = "<group>"; };
+		C39BE48F18A28545009589A5 /* EventStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventStatusEnum.m; sourceTree = "<group>"; };
+		C39BE49018A28545009589A5 /* EventTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTypeEnum.h; sourceTree = "<group>"; };
+		C39BE49118A28545009589A5 /* EventTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTypeEnum.m; sourceTree = "<group>"; };
+		C39BE49218A28545009589A5 /* FeeScopeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeScopeEnum.h; sourceTree = "<group>"; };
+		C39BE49318A28545009589A5 /* FeeScopeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeScopeEnum.m; sourceTree = "<group>"; };
+		C39BE49418A28545009589A5 /* PromocodeCodeTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeCodeTypeEnum.h; sourceTree = "<group>"; };
+		C39BE49518A28545009589A5 /* PromocodeCodeTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeCodeTypeEnum.m; sourceTree = "<group>"; };
+		C39BE49618A28545009589A5 /* PromocodeDiscountScopeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeDiscountScopeEnum.h; sourceTree = "<group>"; };
+		C39BE49718A28545009589A5 /* PromocodeDiscountScopeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeDiscountScopeEnum.m; sourceTree = "<group>"; };
+		C39BE49818A28545009589A5 /* PromocodeDiscountTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeDiscountTypeEnum.h; sourceTree = "<group>"; };
+		C39BE49918A28545009589A5 /* PromocodeDiscountTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeDiscountTypeEnum.m; sourceTree = "<group>"; };
+		C39BE49A18A28545009589A5 /* PromocodeStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeStatusEnum.h; sourceTree = "<group>"; };
+		C39BE49B18A28545009589A5 /* PromocodeStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeStatusEnum.m; sourceTree = "<group>"; };
+		C39BE49C18A28545009589A5 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		C39BE49D18A28545009589A5 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		C39BE49E18A28545009589A5 /* EventAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventAddress.h; sourceTree = "<group>"; };
+		C39BE49F18A28545009589A5 /* EventAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventAddress.m; sourceTree = "<group>"; };
+		C39BE4A018A28545009589A5 /* EventContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContact.h; sourceTree = "<group>"; };
+		C39BE4A118A28545009589A5 /* EventContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContact.m; sourceTree = "<group>"; };
+		C39BE4A218A28545009589A5 /* EventExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventExtended.h; sourceTree = "<group>"; };
+		C39BE4A318A28545009589A5 /* EventExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventExtended.m; sourceTree = "<group>"; };
+		C39BE4A418A28545009589A5 /* EventFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventFee.h; sourceTree = "<group>"; };
+		C39BE4A518A28545009589A5 /* EventFee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventFee.m; sourceTree = "<group>"; };
+		C39BE4A618A28545009589A5 /* EventItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventItem.h; sourceTree = "<group>"; };
+		C39BE4A718A28545009589A5 /* EventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventItem.m; sourceTree = "<group>"; };
+		C39BE4A818A28545009589A5 /* EventItemAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventItemAttribute.h; sourceTree = "<group>"; };
+		C39BE4A918A28545009589A5 /* EventItemAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventItemAttribute.m; sourceTree = "<group>"; };
+		C39BE4AA18A28545009589A5 /* EventNotificationOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNotificationOptions.h; sourceTree = "<group>"; };
+		C39BE4AB18A28545009589A5 /* EventNotificationOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNotificationOptions.m; sourceTree = "<group>"; };
+		C39BE4AC18A28545009589A5 /* EventOnlineMeeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventOnlineMeeting.h; sourceTree = "<group>"; };
+		C39BE4AD18A28545009589A5 /* EventOnlineMeeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventOnlineMeeting.m; sourceTree = "<group>"; };
+		C39BE4AE18A28545009589A5 /* EventPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatch.h; sourceTree = "<group>"; };
+		C39BE4AF18A28545009589A5 /* EventPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatch.m; sourceTree = "<group>"; };
+		C39BE4B018A28545009589A5 /* EventPaymentOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPaymentOptions.m; sourceTree = "<group>"; };
+		C39BE4B118A28545009589A5 /* EventPromocode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPromocode.h; sourceTree = "<group>"; };
+		C39BE4B218A28545009589A5 /* EventPromocode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPromocode.m; sourceTree = "<group>"; };
+		C39BE4B318A28545009589A5 /* EventRegistrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrant.h; sourceTree = "<group>"; };
+		C39BE4B418A28545009589A5 /* EventRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrant.m; sourceTree = "<group>"; };
+		C39BE4B518A28545009589A5 /* EventRegistrantExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantExtended.h; sourceTree = "<group>"; };
+		C39BE4B618A28545009589A5 /* EventRegistrantExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantExtended.m; sourceTree = "<group>"; };
+		C39BE4B718A28545009589A5 /* EventTrackInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTrackInformation.h; sourceTree = "<group>"; };
+		C39BE4B818A28545009589A5 /* EventTrackInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTrackInformation.m; sourceTree = "<group>"; };
+		C39BE4B918A28545009589A5 /* RegistrantFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantFee.h; sourceTree = "<group>"; };
+		C39BE4BA18A28545009589A5 /* RegistrantFee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantFee.m; sourceTree = "<group>"; };
+		C39BE4BB18A28545009589A5 /* RegistrantGuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantGuest.h; sourceTree = "<group>"; };
+		C39BE4BC18A28545009589A5 /* RegistrantGuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantGuest.m; sourceTree = "<group>"; };
+		C39BE4BD18A28545009589A5 /* RegistrantGuestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantGuestInfo.h; sourceTree = "<group>"; };
+		C39BE4BE18A28545009589A5 /* RegistrantGuestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantGuestInfo.m; sourceTree = "<group>"; };
+		C39BE4BF18A28545009589A5 /* RegistrantGuestSections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantGuestSections.h; sourceTree = "<group>"; };
+		C39BE4C018A28545009589A5 /* RegistrantGuestSections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantGuestSections.m; sourceTree = "<group>"; };
+		C39BE4C118A28545009589A5 /* RegistrantOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantOrder.h; sourceTree = "<group>"; };
+		C39BE4C218A28545009589A5 /* RegistrantOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantOrder.m; sourceTree = "<group>"; };
+		C39BE4C318A28545009589A5 /* RegistrantPaymentSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantPaymentSummary.h; sourceTree = "<group>"; };
+		C39BE4C418A28545009589A5 /* RegistrantPaymentSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantPaymentSummary.m; sourceTree = "<group>"; };
+		C39BE4C518A28545009589A5 /* RegistrantPromoCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantPromoCode.h; sourceTree = "<group>"; };
+		C39BE4C618A28545009589A5 /* RegistrantPromoCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantPromoCode.m; sourceTree = "<group>"; };
+		C39BE4C718A28545009589A5 /* RegistrantPromocodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantPromocodeInfo.h; sourceTree = "<group>"; };
+		C39BE4C818A28545009589A5 /* RegistrantPromocodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantPromocodeInfo.m; sourceTree = "<group>"; };
+		C39BE4C918A28545009589A5 /* RegistrantSaleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantSaleItem.h; sourceTree = "<group>"; };
+		C39BE4CA18A28545009589A5 /* RegistrantSaleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantSaleItem.m; sourceTree = "<group>"; };
+		C39BE4CB18A28545009589A5 /* RegistrantSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantSection.h; sourceTree = "<group>"; };
+		C39BE4CC18A28545009589A5 /* RegistrantSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantSection.m; sourceTree = "<group>"; };
+		C39BE4CD18A28545009589A5 /* RegistrantSectionField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantSectionField.h; sourceTree = "<group>"; };
+		C39BE4CE18A28545009589A5 /* RegistrantSectionField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantSectionField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +440,7 @@
 		B0F397831729377800205B40 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C39BE47818A28545009589A5 /* EventSpot */,
 				B0F397841729377800205B40 /* Activites */,
 				B0F3978F1729377800205B40 /* Component.h */,
 				B0F397901729377800205B40 /* Component.m */,
@@ -434,6 +566,8 @@
 		B0F397C81729377800205B40 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C39BE47518A2853A009589A5 /* EventSpotService.h */,
+				C39BE47618A2853A009589A5 /* EventSpotService.m */,
 				B0F397C91729377800205B40 /* ActivityService.h */,
 				B0F397CA1729377800205B40 /* ActivityService.m */,
 				B0F397CB1729377800205B40 /* CampaignScheduleService.h */,
@@ -457,6 +591,106 @@
 				B0F397D71729377800205B40 /* CTCTGlobal.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C39BE47818A28545009589A5 /* EventSpot */ = {
+			isa = PBXGroup;
+			children = (
+				C39BE47918A28545009589A5 /* Enums */,
+				C39BE49C18A28545009589A5 /* Event.h */,
+				C39BE49D18A28545009589A5 /* Event.m */,
+				C39BE49E18A28545009589A5 /* EventAddress.h */,
+				C39BE49F18A28545009589A5 /* EventAddress.m */,
+				C39BE4A018A28545009589A5 /* EventContact.h */,
+				C39BE4A118A28545009589A5 /* EventContact.m */,
+				C39BE4A218A28545009589A5 /* EventExtended.h */,
+				C39BE4A318A28545009589A5 /* EventExtended.m */,
+				C39BE4A418A28545009589A5 /* EventFee.h */,
+				C39BE4A518A28545009589A5 /* EventFee.m */,
+				C39BE4A618A28545009589A5 /* EventItem.h */,
+				C39BE4A718A28545009589A5 /* EventItem.m */,
+				C39BE4A818A28545009589A5 /* EventItemAttribute.h */,
+				C39BE4A918A28545009589A5 /* EventItemAttribute.m */,
+				C39BE4AA18A28545009589A5 /* EventNotificationOptions.h */,
+				C39BE4AB18A28545009589A5 /* EventNotificationOptions.m */,
+				C39BE4AC18A28545009589A5 /* EventOnlineMeeting.h */,
+				C39BE4AD18A28545009589A5 /* EventOnlineMeeting.m */,
+				C39BE4AE18A28545009589A5 /* EventPatch.h */,
+				C39BE4AF18A28545009589A5 /* EventPatch.m */,
+				C39BE4B018A28545009589A5 /* EventPaymentOptions.m */,
+				C39BE4B118A28545009589A5 /* EventPromocode.h */,
+				C39BE4B218A28545009589A5 /* EventPromocode.m */,
+				C39BE4B318A28545009589A5 /* EventRegistrant.h */,
+				C39BE4B418A28545009589A5 /* EventRegistrant.m */,
+				C39BE4B518A28545009589A5 /* EventRegistrantExtended.h */,
+				C39BE4B618A28545009589A5 /* EventRegistrantExtended.m */,
+				C39BE4B718A28545009589A5 /* EventTrackInformation.h */,
+				C39BE4B818A28545009589A5 /* EventTrackInformation.m */,
+				C39BE4B918A28545009589A5 /* RegistrantFee.h */,
+				C39BE4BA18A28545009589A5 /* RegistrantFee.m */,
+				C39BE4BB18A28545009589A5 /* RegistrantGuest.h */,
+				C39BE4BC18A28545009589A5 /* RegistrantGuest.m */,
+				C39BE4BD18A28545009589A5 /* RegistrantGuestInfo.h */,
+				C39BE4BE18A28545009589A5 /* RegistrantGuestInfo.m */,
+				C39BE4BF18A28545009589A5 /* RegistrantGuestSections.h */,
+				C39BE4C018A28545009589A5 /* RegistrantGuestSections.m */,
+				C39BE4C118A28545009589A5 /* RegistrantOrder.h */,
+				C39BE4C218A28545009589A5 /* RegistrantOrder.m */,
+				C39BE4C318A28545009589A5 /* RegistrantPaymentSummary.h */,
+				C39BE4C418A28545009589A5 /* RegistrantPaymentSummary.m */,
+				C39BE4C518A28545009589A5 /* RegistrantPromoCode.h */,
+				C39BE4C618A28545009589A5 /* RegistrantPromoCode.m */,
+				C39BE4C718A28545009589A5 /* RegistrantPromocodeInfo.h */,
+				C39BE4C818A28545009589A5 /* RegistrantPromocodeInfo.m */,
+				C39BE4C918A28545009589A5 /* RegistrantSaleItem.h */,
+				C39BE4CA18A28545009589A5 /* RegistrantSaleItem.m */,
+				C39BE4CB18A28545009589A5 /* RegistrantSection.h */,
+				C39BE4CC18A28545009589A5 /* RegistrantSection.m */,
+				C39BE4CD18A28545009589A5 /* RegistrantSectionField.h */,
+				C39BE4CE18A28545009589A5 /* RegistrantSectionField.m */,
+			);
+			path = EventSpot;
+			sourceTree = "<group>";
+		};
+		C39BE47918A28545009589A5 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C39BE47A18A28545009589A5 /* EventCurrencyTypeEnum.h */,
+				C39BE47B18A28545009589A5 /* EventCurrencyTypeEnum.m */,
+				C39BE47C18A28545009589A5 /* EventInformationSectionsEnum.h */,
+				C39BE47D18A28545009589A5 /* EventInformationSectionsEnum.m */,
+				C39BE47E18A28545009589A5 /* EventPatchOpEnum.h */,
+				C39BE47F18A28545009589A5 /* EventPatchOpEnum.m */,
+				C39BE48018A28545009589A5 /* EventPatchStatusEnum.h */,
+				C39BE48118A28545009589A5 /* EventPatchStatusEnum.m */,
+				C39BE48218A28545009589A5 /* EventPatchValueEnum.h */,
+				C39BE48318A28545009589A5 /* EventPatchValueEnum.m */,
+				C39BE48418A28545009589A5 /* EventPaymentTypeEnum.h */,
+				C39BE48518A28545009589A5 /* EventPaymentTypeEnum.m */,
+				C39BE48618A28545009589A5 /* EventRegistrantAttendanceStatusEnum.h */,
+				C39BE48718A28545009589A5 /* EventRegistrantAttendanceStatusEnum.m */,
+				C39BE48818A28545009589A5 /* EventRegistrantDiscountScopeEnum.h */,
+				C39BE48918A28545009589A5 /* EventRegistrantDiscountScopeEnum.m */,
+				C39BE48A18A28545009589A5 /* EventRegistrantPaymentTypeEnum.h */,
+				C39BE48B18A28545009589A5 /* EventRegistrantPaymentTypeEnum.m */,
+				C39BE48C18A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.h */,
+				C39BE48D18A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.m */,
+				C39BE48E18A28545009589A5 /* EventStatusEnum.h */,
+				C39BE48F18A28545009589A5 /* EventStatusEnum.m */,
+				C39BE49018A28545009589A5 /* EventTypeEnum.h */,
+				C39BE49118A28545009589A5 /* EventTypeEnum.m */,
+				C39BE49218A28545009589A5 /* FeeScopeEnum.h */,
+				C39BE49318A28545009589A5 /* FeeScopeEnum.m */,
+				C39BE49418A28545009589A5 /* PromocodeCodeTypeEnum.h */,
+				C39BE49518A28545009589A5 /* PromocodeCodeTypeEnum.m */,
+				C39BE49618A28545009589A5 /* PromocodeDiscountScopeEnum.h */,
+				C39BE49718A28545009589A5 /* PromocodeDiscountScopeEnum.m */,
+				C39BE49818A28545009589A5 /* PromocodeDiscountTypeEnum.h */,
+				C39BE49918A28545009589A5 /* PromocodeDiscountTypeEnum.m */,
+				C39BE49A18A28545009589A5 /* PromocodeStatusEnum.h */,
+				C39BE49B18A28545009589A5 /* PromocodeStatusEnum.m */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,46 +763,88 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39BE4E618A28545009589A5 /* EventItemAttribute.m in Sources */,
 				A3AC46CF172015B8000D9EE7 /* main.m in Sources */,
+				C39BE4D918A28545009589A5 /* EventStatusEnum.m in Sources */,
+				C39BE4DC18A28545009589A5 /* PromocodeCodeTypeEnum.m in Sources */,
+				C39BE4E818A28545009589A5 /* EventOnlineMeeting.m in Sources */,
+				C39BE4F818A28545009589A5 /* RegistrantSection.m in Sources */,
 				A3AC46D3172015B8000D9EE7 /* AppDelegate.m in Sources */,
 				A3AC46FA172017D7000D9EE7 /* MainViewController.m in Sources */,
+				C39BE4E918A28545009589A5 /* EventPatch.m in Sources */,
 				A3AC46FD172017D7000D9EE7 /* LoadingView.m in Sources */,
 				A3AC47951720450D000D9EE7 /* ListsTableViewController.m in Sources */,
 				A3A155F117213B8000392318 /* ScheduleEmailCampaignViewController.m in Sources */,
 				B0F397D81729377800205B40 /* CTCTDataStore.m in Sources */,
+				C39BE4E018A28545009589A5 /* Event.m in Sources */,
+				C39BE4DB18A28545009589A5 /* FeeScopeEnum.m in Sources */,
 				B0F397D91729377800205B40 /* CTCTLoginViewController.m in Sources */,
+				C39BE4E218A28545009589A5 /* EventContact.m in Sources */,
 				B0F397DC1729377800205B40 /* Collection.m in Sources */,
 				B0F397DD1729377800205B40 /* ContactsCollection.m in Sources */,
 				B0F397DE1729377800205B40 /* ListsCollection.m in Sources */,
 				B0F397DF1729377800205B40 /* Activity.m in Sources */,
 				B0F397E01729377800205B40 /* ActivityError.m in Sources */,
 				B0F397E11729377800205B40 /* AddContacts.m in Sources */,
+				C39BE4E418A28545009589A5 /* EventFee.m in Sources */,
+				C39BE4EA18A28545009589A5 /* EventPaymentOptions.m in Sources */,
+				C39BE4D018A28545009589A5 /* EventInformationSectionsEnum.m in Sources */,
+				C39BE4F518A28545009589A5 /* RegistrantPromoCode.m in Sources */,
 				B0F397E21729377800205B40 /* AddContactsImportData.m in Sources */,
+				C39BE4DE18A28545009589A5 /* PromocodeDiscountTypeEnum.m in Sources */,
+				C39BE4F918A28545009589A5 /* RegistrantSectionField.m in Sources */,
 				B0F397E31729377800205B40 /* ExportContacts.m in Sources */,
 				B0F397E41729377800205B40 /* Component.m in Sources */,
+				C39BE4D818A28545009589A5 /* EventRegistrantSectionsFieldTypeEnum.m in Sources */,
 				B0F397E51729377800205B40 /* Address.m in Sources */,
+				C39BE4F118A28545009589A5 /* RegistrantGuestInfo.m in Sources */,
+				C39BE4F418A28545009589A5 /* RegistrantPaymentSummary.m in Sources */,
+				C39BE4CF18A28545009589A5 /* EventCurrencyTypeEnum.m in Sources */,
+				C39BE4D318A28545009589A5 /* EventPatchValueEnum.m in Sources */,
 				B0F397E61729377800205B40 /* Contact.m in Sources */,
+				C39BE4E318A28545009589A5 /* EventExtended.m in Sources */,
+				C39BE4E518A28545009589A5 /* EventItem.m in Sources */,
 				B0F397E71729377800205B40 /* ContactList.m in Sources */,
+				C39BE4EB18A28545009589A5 /* EventPromocode.m in Sources */,
 				B0F397E81729377800205B40 /* CustomField.m in Sources */,
 				B0F397E91729377800205B40 /* EmailAddress.m in Sources */,
+				C39BE4DD18A28545009589A5 /* PromocodeDiscountScopeEnum.m in Sources */,
 				B0F397EA1729377800205B40 /* Note.m in Sources */,
+				C39BE4D718A28545009589A5 /* EventRegistrantPaymentTypeEnum.m in Sources */,
+				C39BE4EE18A28545009589A5 /* EventTrackInformation.m in Sources */,
 				B0F397EB1729377800205B40 /* ClickThroughDetails.m in Sources */,
+				C39BE4F218A28545009589A5 /* RegistrantGuestSections.m in Sources */,
 				B0F397EC1729377800205B40 /* EmailCampaign.m in Sources */,
 				B0F397ED1729377800205B40 /* MessageFooter.m in Sources */,
 				B0F397EE1729377800205B40 /* Schedule.m in Sources */,
+				C39BE4DF18A28545009589A5 /* PromocodeStatusEnum.m in Sources */,
 				B0F397EF1729377800205B40 /* TestSend.m in Sources */,
 				B0F397F01729377800205B40 /* ResultSet.m in Sources */,
 				B0F397F11729377800205B40 /* BounceActivity.m in Sources */,
 				B0F397F21729377800205B40 /* ClickActivity.m in Sources */,
+				C39BE4D618A28545009589A5 /* EventRegistrantDiscountScopeEnum.m in Sources */,
 				B0F397F31729377800205B40 /* ForwardActivity.m in Sources */,
+				C39BE4E718A28545009589A5 /* EventNotificationOptions.m in Sources */,
 				B0F397F41729377800205B40 /* OpenActivity.m in Sources */,
+				C39BE4EF18A28545009589A5 /* RegistrantFee.m in Sources */,
 				B0F397F51729377800205B40 /* OptOutActivity.m in Sources */,
 				B0F397F61729377800205B40 /* SendActivity.m in Sources */,
+				C39BE4D418A28545009589A5 /* EventPaymentTypeEnum.m in Sources */,
+				C39BE4F618A28545009589A5 /* RegistrantPromocodeInfo.m in Sources */,
 				B0F397F71729377800205B40 /* TrackingActivity.m in Sources */,
+				C39BE4F018A28545009589A5 /* RegistrantGuest.m in Sources */,
+				C39BE47718A2853A009589A5 /* EventSpotService.m in Sources */,
 				B0F397F81729377800205B40 /* TrackingSummary.m in Sources */,
 				B0F397F91729377800205B40 /* Config.m in Sources */,
 				B0F397FB1729377800205B40 /* HttpError.m in Sources */,
+				C39BE4ED18A28545009589A5 /* EventRegistrantExtended.m in Sources */,
+				C39BE4D218A28545009589A5 /* EventPatchStatusEnum.m in Sources */,
+				C39BE4E118A28545009589A5 /* EventAddress.m in Sources */,
+				C39BE4DA18A28545009589A5 /* EventTypeEnum.m in Sources */,
 				B0F397FC1729377800205B40 /* HttpRequest.m in Sources */,
+				C39BE4D118A28545009589A5 /* EventPatchOpEnum.m in Sources */,
+				C39BE4F718A28545009589A5 /* RegistrantSaleItem.m in Sources */,
+				C39BE4F318A28545009589A5 /* RegistrantOrder.m in Sources */,
 				B0F397FD1729377800205B40 /* HttpResponse.m in Sources */,
 				B0F397FE1729377800205B40 /* ActivityService.m in Sources */,
 				B0F397FF1729377800205B40 /* CampaignScheduleService.m in Sources */,
@@ -576,7 +852,9 @@
 				B0F398011729377800205B40 /* ContactTrackingService.m in Sources */,
 				B0F398021729377800205B40 /* EmailCampaignService.m in Sources */,
 				B0F398031729377800205B40 /* VerifiedEmailAddresses.m in Sources */,
+				C39BE4EC18A28545009589A5 /* EventRegistrant.m in Sources */,
 				B0F398041729377800205B40 /* CTCTGlobal.m in Sources */,
+				C39BE4D518A28545009589A5 /* EventRegistrantAttendanceStatusEnum.m in Sources */,
 				C398C0C818101B5F00E54CAE /* AllActivites.m in Sources */,
 				C398C0C918101B5F00E54CAE /* EmailSortedActivity.m in Sources */,
 			);
