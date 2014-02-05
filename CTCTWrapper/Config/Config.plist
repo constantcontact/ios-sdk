@@ -5,11 +5,11 @@
 	<key>config</key>
 	<dict>
 		<key>consumer_secret</key>
-		<string>Tj5bUFsG3ynvtRdQ67SHsXDz</string>
+		<string></string>
 		<key>redirect_uri</key>
-		<string>http://google.com</string>
+		<string></string>
 		<key>api_key</key>
-		<string>74hvvcfvvwjtgdsuhfau6djb</string>
+		<string></string>
 	</dict>
 	<key>errors</key>
 	<dict>
