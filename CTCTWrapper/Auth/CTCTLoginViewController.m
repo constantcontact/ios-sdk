@@ -12,6 +12,7 @@
 @interface CTCTLoginViewController () <UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 - (IBAction)refresh:(id)sender;
 - (IBAction)cancel:(id)sender;
@@ -92,6 +93,22 @@
 {
     if ([self.delegate respondsToSelector:@selector(loginViewControllerDidCancelAuthentication:)])
         [self.delegate loginViewControllerDidCancelAuthentication:self];
+}
+
+- (CGFloat)topOfViewOffset
+{
+    CGFloat top = 0;
+    if ([self respondsToSelector:@selector(topLayoutGuide)])
+    {
+        top = self.topLayoutGuide.length;
+    }
+    return top;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.navBar.frame = CGRectMake(0, [self topOfViewOffset], self.navBar.frame.size.width, self.navBar.frame.size.height);
 }
 
 #pragma mark - Utilities
