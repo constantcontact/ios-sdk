@@ -133,7 +133,7 @@
  */
 @property (nonatomic, strong) NSString *paypalAccountEmail;
 /**
- * The URL for the event home page if one exists, otherwise it points to the event registration page (Read Only)
+ * The URL for the event home page if one exists, otherwise it points to the event registration page
  */
 @property (nonatomic, strong, readonly) NSString *registrationUrl;
 /**

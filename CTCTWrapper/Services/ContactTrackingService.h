@@ -23,6 +23,7 @@
 /**
  * Performs all actions pertaining to Contact Tracking
  *
+ * Please note that activity data is available for 180 days from the time a campaign is sent.
  */
 @interface ContactTrackingService : NSObject
 
@@ -107,7 +108,6 @@
  *
  * @param NSString *accessToken - Constant Contact OAuth2 access token
  * @param NSString *contactId - id of the contact to which we want to see the tracking service
- * @param int limit - (optional) the number of elements returned on one page;
  *
  * @return HttpResponse * - response containing either @"ERROR" or @"data" with the activites of the user sorted by email campaign
  */

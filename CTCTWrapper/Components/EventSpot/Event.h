@@ -40,7 +40,7 @@
  */
 @property (nonatomic, readwrite) int totalRegisteredCount;
 /**
- * Points to the event homepage if configured, otherwise points to the event registration page
+ * The URL for the event home page if one exists, otherwise it points to the event registration page
  */
 @property (nonatomic, strong) NSString *registrationUrl;
 /**
