@@ -89,6 +89,8 @@
 	</dict>
 	<key>endpoints</key>
 	<dict>
+		<key>account_summary</key>
+		<string>account/info</string>
 		<key>event_spot_individual_item_attribute</key>
 		<string>eventspot/events/%@/items/%@/attributes/%@</string>
 		<key>event_spot_item_attribute_collection</key>
