@@ -121,6 +121,9 @@
 		B0CB99A418A28BA800B20974 /* MyLibraryFoldersService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB993F18A28BA800B20974 /* MyLibraryFoldersService.m */; };
 		B0CB99A518A28BA800B20974 /* VerifiedEmailAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB994118A28BA800B20974 /* VerifiedEmailAddresses.m */; };
 		B0CB99A618A28BA800B20974 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB994418A28BA800B20974 /* CTCTGlobal.m */; };
+		C3C031B418AA792F00FE67A1 /* AccountSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C031B118AA792F00FE67A1 /* AccountSummary.m */; };
+		C3C031B518AA792F00FE67A1 /* OrganizationAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C031B318AA792F00FE67A1 /* OrganizationAddresses.m */; };
+		C3C031B818AA793C00FE67A1 /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C031B718AA793C00FE67A1 /* AccountService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -342,6 +345,12 @@
 		B0CB994118A28BA800B20974 /* VerifiedEmailAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedEmailAddresses.m; sourceTree = "<group>"; };
 		B0CB994318A28BA800B20974 /* CTCTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTGlobal.h; sourceTree = "<group>"; };
 		B0CB994418A28BA800B20974 /* CTCTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTGlobal.m; sourceTree = "<group>"; };
+		C3C031B018AA792F00FE67A1 /* AccountSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSummary.h; sourceTree = "<group>"; };
+		C3C031B118AA792F00FE67A1 /* AccountSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSummary.m; sourceTree = "<group>"; };
+		C3C031B218AA792F00FE67A1 /* OrganizationAddresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationAddresses.h; sourceTree = "<group>"; };
+		C3C031B318AA792F00FE67A1 /* OrganizationAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationAddresses.m; sourceTree = "<group>"; };
+		C3C031B618AA793C00FE67A1 /* AccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountService.h; sourceTree = "<group>"; };
+		C3C031B718AA793C00FE67A1 /* AccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +473,7 @@
 		B0CB988118A28BA800B20974 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C3C031AF18AA792F00FE67A1 /* Account */,
 				B0CB988218A28BA800B20974 /* Activites */,
 				B0CB988D18A28BA800B20974 /* Component.h */,
 				B0CB988E18A28BA800B20974 /* Component.m */,
@@ -712,6 +722,8 @@
 		B0CB992F18A28BA800B20974 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C3C031B618AA793C00FE67A1 /* AccountService.h */,
+				C3C031B718AA793C00FE67A1 /* AccountService.m */,
 				B0CB993018A28BA800B20974 /* ActivityService.h */,
 				B0CB993118A28BA800B20974 /* ActivityService.m */,
 				B0CB993218A28BA800B20974 /* CampaignScheduleService.h */,
@@ -741,6 +753,17 @@
 				B0CB994418A28BA800B20974 /* CTCTGlobal.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C3C031AF18AA792F00FE67A1 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C3C031B018AA792F00FE67A1 /* AccountSummary.h */,
+				C3C031B118AA792F00FE67A1 /* AccountSummary.m */,
+				C3C031B218AA792F00FE67A1 /* OrganizationAddresses.h */,
+				C3C031B318AA792F00FE67A1 /* OrganizationAddresses.m */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -890,6 +913,7 @@
 				A3A155F117213B8000392318 /* ScheduleEmailCampaignViewController.m in Sources */,
 				B0CB998518A28BA800B20974 /* RegistrantSectionField.m in Sources */,
 				B0CB998118A28BA800B20974 /* RegistrantPromoCode.m in Sources */,
+				C3C031B818AA793C00FE67A1 /* AccountService.m in Sources */,
 				B0CB997318A28BA800B20974 /* EventItemAttribute.m in Sources */,
 				B0CB995318A28BA800B20974 /* ContactList.m in Sources */,
 				B0CB998018A28BA800B20974 /* RegistrantPaymentSummary.m in Sources */,
@@ -904,6 +928,7 @@
 				B0CB996818A28BA800B20974 /* FeeScopeEnum.m in Sources */,
 				B0CB998F18A28BA800B20974 /* BounceActivity.m in Sources */,
 				B0CB995918A28BA800B20974 /* MessageFooter.m in Sources */,
+				C3C031B418AA792F00FE67A1 /* AccountSummary.m in Sources */,
 				B0CB998318A28BA800B20974 /* RegistrantSaleItem.m in Sources */,
 				B0CB997618A28BA800B20974 /* EventPatch.m in Sources */,
 				B0CB995F18A28BA800B20974 /* EventPatchStatusEnum.m in Sources */,
@@ -913,6 +938,7 @@
 				B0CB994B18A28BA800B20974 /* Activity.m in Sources */,
 				B0CB997B18A28BA800B20974 /* RegistrantFee.m in Sources */,
 				B0CB994518A28BA800B20974 /* CTCTDataStore.m in Sources */,
+				C3C031B518AA792F00FE67A1 /* OrganizationAddresses.m in Sources */,
 				B0CB999E18A28BA800B20974 /* CampaignScheduleService.m in Sources */,
 				B0CB995218A28BA800B20974 /* Contact.m in Sources */,
 			);
