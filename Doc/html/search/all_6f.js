@@ -20,8 +20,12 @@ var searchData=
   ['orderdate',['orderDate',['../interface_registrant_order.html#a84d783d860aee1b0d035f9199a3f4782',1,'RegistrantOrder']]],
   ['orderid',['orderId',['../interface_registrant_order.html#a54fac5e7854276f594ff457ee6a6d7f4',1,'RegistrantOrder']]],
   ['ordertotal',['orderTotal',['../interface_promocode_discount_scope_enum.html#a8339098e01f574bb3540698bb2e16f10',1,'PromocodeDiscountScopeEnum']]],
+  ['organizationaddresses',['OrganizationAddresses',['../interface_organization_addresses.html',1,'OrganizationAddresses'],['../interface_account_summary.html#a1410b07e336863ae3b45eb95a3812211',1,'AccountSummary::organizationAddresses()']]],
+  ['organizationaddresses_2eh',['OrganizationAddresses.h',['../_organization_addresses_8h.html',1,'']]],
+  ['organizationaddresses_2em',['OrganizationAddresses.m',['../_organization_addresses_8m.html',1,'']]],
+  ['organizationaddresswithdictionary_3a',['organizationAddressWithDictionary:',['../interface_organization_addresses.html#ab2d1b5cae1a9e337aa656ac76aa8fafe',1,'OrganizationAddresses']]],
   ['organizationmame',['organizationMame',['../interface_message_footer.html#adf13fd90f483caf3d975eac3ed1c7c41',1,'MessageFooter']]],
-  ['organizationname',['organizationName',['../interface_event_contact.html#a12fda06fc35ef92da9d46cff844cb70a',1,'EventContact']]],
+  ['organizationname',['organizationName',['../interface_account_summary.html#a0d29b2c5bf752a5c303d1ed249462a36',1,'AccountSummary::organizationName()'],['../interface_event_contact.html#a12fda06fc35ef92da9d46cff844cb70a',1,'EventContact::organizationName()']]],
   ['other',['other',['../interface_event_type_enum.html#a513297f544266c08a28169b873aa873e',1,'EventTypeEnum']]],
   ['outdoorsrecreation',['outdoorsRecreation',['../interface_event_type_enum.html#aca903c801d2952410759bf7c8d4a66db',1,'EventTypeEnum']]]
 ];

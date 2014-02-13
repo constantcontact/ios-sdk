@@ -4,6 +4,7 @@ var searchData=
   ['unsubscribereason',['unsubscribeReason',['../interface_all_activites.html#a94ae79e202d0c0abb6fa0ed52aa0f060',1,'AllActivites::unsubscribeReason()'],['../interface_opt_out_activity.html#aa4bb9add818d2fdcc90f612d89ffde4b',1,'OptOutActivity::unsubscribeReason()']]],
   ['unsubscribes',['unsubscribes',['../interface_tracking_summary.html#a60ccd3e839a9cb9d7d2254fb3bee1c78',1,'TrackingSummary']]],
   ['unsubscribesource',['unsubscribeSource',['../interface_all_activites.html#aeb0cd3a32441e539aa470266fae50ecd',1,'AllActivites::unsubscribeSource()'],['../interface_opt_out_activity.html#a60f8ddc41707b7b60ec473e344d0caf7',1,'OptOutActivity::unsubscribeSource()']]],
+  ['updateaccountsummarywithaccestoken_3aandsummary_3a',['updateAccountSummaryWithAccesToken:andSummary:',['../interface_account_service.html#a0c67805cb3c1e657c9fdc418d9b2f6d9',1,'AccountService']]],
   ['updatecampaignwithtoken_3aandemailcampaign_3a',['updateCampaignWithToken:andEmailCampaign:',['../interface_email_campaign_service.html#a7b991803e42de09ba0fba83e969c1d3d',1,'EmailCampaignService']]],
   ['updatecontact_3awithaccesstoken_3aactionbyvisitor_3a',['updateContact:withAccessToken:actionByVisitor:',['../interface_contacts_collection.html#a91193e5ee2abafdc675eec6d8f22e482',1,'ContactsCollection']]],
   ['updatedate',['updateDate',['../interface_event_extended.html#adaa82d2041aeae7da69c37d7a68fd149',1,'EventExtended']]],

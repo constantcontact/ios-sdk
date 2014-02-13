@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['updateaccountsummarywithaccestoken_3aandsummary_3a',['updateAccountSummaryWithAccesToken:andSummary:',['../interface_account_service.html#a0c67805cb3c1e657c9fdc418d9b2f6d9',1,'AccountService']]],
   ['updatecampaignwithtoken_3aandemailcampaign_3a',['updateCampaignWithToken:andEmailCampaign:',['../interface_email_campaign_service.html#a7b991803e42de09ba0fba83e969c1d3d',1,'EmailCampaignService']]],
   ['updatecontact_3awithaccesstoken_3aactionbyvisitor_3a',['updateContact:withAccessToken:actionByVisitor:',['../interface_contacts_collection.html#a91193e5ee2abafdc675eec6d8f22e482',1,'ContactsCollection']]],
   ['updateeventfeewithaccestoken_3awitheventid_3afeeid_3aandeventfee_3a',['updateEventFeeWithAccesToken:withEventId:feeId:andEventFee:',['../interface_event_spot_service.html#a2167c406eb8fac0e4c60468c7c6f0da3',1,'EventSpotService']]],

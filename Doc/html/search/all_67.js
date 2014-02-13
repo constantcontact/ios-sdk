@@ -1,6 +1,7 @@
 var searchData=
 [
   ['gbp',['gbp',['../interface_event_currency_type_enum.html#a3ac80b0d1a1c16c6be4d38a585025548',1,'EventCurrencyTypeEnum']]],
+  ['getaccountsummarywithaccesstoken_3a',['getAccountSummaryWithAccessToken:',['../interface_account_service.html#a54823b9cd970cf3757776535827921b6',1,'AccountService']]],
   ['getactivitessortedbyemailcampaignwithaccesstoken_3acontactid_3a',['getActivitesSortedByEmailCampaignWithAccessToken:contactId:',['../interface_contact_tracking_service.html#a24e1e69423ba5ef7382e793539f95a92',1,'ContactTrackingService']]],
   ['getactiviteswithtoken_3a',['getActivitesWithToken:',['../interface_activity_service.html#a6062c0f0290dbf0d4dacfbf3e05e1f52',1,'ActivityService']]],
   ['getactivitywithtoken_3aandactivityid_3a',['getActivityWithToken:andActivityId:',['../interface_activity_service.html#ad3be3890398246ce83788c523acc2c73',1,'ActivityService']]],
