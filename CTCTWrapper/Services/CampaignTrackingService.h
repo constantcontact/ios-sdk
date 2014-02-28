@@ -21,6 +21,8 @@
 /**
  * Performs all actions pertaining to Constant Contact Campaign Tracking
  *
+ * Please note that campaign tracking data is available for 180 days from the time the campaign was originally sent.
+ * If you resend a campaign, the report data for the resend recipients is available for the same 180 day period as the original send data.
  */
 @interface CampaignTrackingService : NSObject
 /**

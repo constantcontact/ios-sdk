@@ -41,6 +41,17 @@
  */
 +(HttpResponse*)putWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
 
+/**
+ * Function is used to make a Http PATCH request;
+ *
+ *  @param NSString* Url - the request url for the call;
+ *  @param NSArray* Headers - a array of all http headers to send;
+ *  @param NSString* stringData - aditional data to send with request;
+ *
+ *  @return HttpResponse* - The function returns a response that contains the calls returned value;
+ */
++(HttpResponse*)patchWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
+
  /**
  * Function is used to make a Http DELETE request;
  *

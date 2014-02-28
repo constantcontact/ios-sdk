@@ -25,61 +25,107 @@
 		B029C4BB170484A7005B4FE2 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B029C4B8170484A6005B4FE2 /* ContactViewController.xib */; };
 		B029C4BF1704899B005B4FE2 /* ListsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029C4BD1704899A005B4FE2 /* ListsTableViewController.m */; };
 		B029C4C01704899B005B4FE2 /* ListsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B029C4BE1704899B005B4FE2 /* ListsTableViewController.xib */; };
-		B0F397461729376200205B40 /* CTCTDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396E41729376200205B40 /* CTCTDataStore.m */; };
-		B0F397471729376200205B40 /* CTCTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396E61729376200205B40 /* CTCTLoginViewController.m */; };
-		B0F397481729376200205B40 /* CTCTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F396E71729376200205B40 /* CTCTLoginViewController.xib */; };
-		B0F3974A1729376200205B40 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396EC1729376200205B40 /* Collection.m */; };
-		B0F3974B1729376200205B40 /* ContactsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396EE1729376200205B40 /* ContactsCollection.m */; };
-		B0F3974C1729376200205B40 /* ListsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F01729376200205B40 /* ListsCollection.m */; };
-		B0F3974D1729376200205B40 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F41729376200205B40 /* Activity.m */; };
-		B0F3974E1729376200205B40 /* ActivityError.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F61729376200205B40 /* ActivityError.m */; };
-		B0F3974F1729376200205B40 /* AddContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396F81729376200205B40 /* AddContacts.m */; };
-		B0F397501729376300205B40 /* AddContactsImportData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396FA1729376200205B40 /* AddContactsImportData.m */; };
-		B0F397511729376300205B40 /* ExportContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396FC1729376200205B40 /* ExportContacts.m */; };
-		B0F397521729376300205B40 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F396FE1729376200205B40 /* Component.m */; };
-		B0F397531729376300205B40 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397011729376200205B40 /* Address.m */; };
-		B0F397541729376300205B40 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397031729376200205B40 /* Contact.m */; };
-		B0F397551729376300205B40 /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397051729376200205B40 /* ContactList.m */; };
-		B0F397561729376300205B40 /* CustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397071729376200205B40 /* CustomField.m */; };
-		B0F397571729376300205B40 /* EmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397091729376200205B40 /* EmailAddress.m */; };
-		B0F397581729376300205B40 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3970B1729376200205B40 /* Note.m */; };
-		B0F397591729376300205B40 /* ClickThroughDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3970E1729376200205B40 /* ClickThroughDetails.m */; };
-		B0F3975A1729376300205B40 /* EmailCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397101729376200205B40 /* EmailCampaign.m */; };
-		B0F3975B1729376300205B40 /* MessageFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397121729376200205B40 /* MessageFooter.m */; };
-		B0F3975C1729376300205B40 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397141729376200205B40 /* Schedule.m */; };
-		B0F3975D1729376300205B40 /* TestSend.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397161729376200205B40 /* TestSend.m */; };
-		B0F3975E1729376300205B40 /* ResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397181729376200205B40 /* ResultSet.m */; };
-		B0F3975F1729376300205B40 /* BounceActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3971B1729376200205B40 /* BounceActivity.m */; };
-		B0F397601729376300205B40 /* ClickActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3971D1729376200205B40 /* ClickActivity.m */; };
-		B0F397611729376300205B40 /* ForwardActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3971F1729376200205B40 /* ForwardActivity.m */; };
-		B0F397621729376300205B40 /* OpenActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397211729376200205B40 /* OpenActivity.m */; };
-		B0F397631729376300205B40 /* OptOutActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397231729376200205B40 /* OptOutActivity.m */; };
-		B0F397641729376300205B40 /* SendActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397251729376200205B40 /* SendActivity.m */; };
-		B0F397651729376300205B40 /* TrackingActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397271729376200205B40 /* TrackingActivity.m */; };
-		B0F397661729376300205B40 /* TrackingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397291729376200205B40 /* TrackingSummary.m */; };
-		B0F397671729376300205B40 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3972C1729376200205B40 /* Config.m */; };
-		B0F397681729376300205B40 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F3972D1729376200205B40 /* Config.plist */; };
-		B0F397691729376300205B40 /* HttpError.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397311729376200205B40 /* HttpError.m */; };
-		B0F3976A1729376300205B40 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397331729376200205B40 /* HttpRequest.m */; };
-		B0F3976B1729376300205B40 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397351729376200205B40 /* HttpResponse.m */; };
-		B0F3976C1729376300205B40 /* ActivityService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397381729376200205B40 /* ActivityService.m */; };
-		B0F3976D1729376300205B40 /* CampaignScheduleService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3973A1729376200205B40 /* CampaignScheduleService.m */; };
-		B0F3976E1729376300205B40 /* CampaignTrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3973C1729376200205B40 /* CampaignTrackingService.m */; };
-		B0F3976F1729376300205B40 /* ContactTrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3973E1729376200205B40 /* ContactTrackingService.m */; };
-		B0F397701729376300205B40 /* EmailCampaignService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397401729376200205B40 /* EmailCampaignService.m */; };
-		B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397421729376200205B40 /* VerifiedEmailAddresses.m */; };
-		B0F397721729376300205B40 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F397451729376200205B40 /* CTCTGlobal.m */; };
-		C3709BF81827A9170072CA14 /* FileMoved.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BF51827A9170072CA14 /* FileMoved.m */; };
-		C3709BF91827A9170072CA14 /* FileUploadStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BF71827A9170072CA14 /* FileUploadStatus.m */; };
-		C3709C051827A9250072CA14 /* LibraryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BFC1827A9250072CA14 /* LibraryFile.m */; };
-		C3709C061827A9250072CA14 /* LibraryFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709BFE1827A9250072CA14 /* LibraryFolder.m */; };
-		C3709C071827A9250072CA14 /* LibrarySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C001827A9250072CA14 /* LibrarySummary.m */; };
-		C3709C081827A9250072CA14 /* Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C021827A9250072CA14 /* Thumbnail.m */; };
-		C3709C091827A9250072CA14 /* UsageSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C041827A9250072CA14 /* UsageSummary.m */; };
-		C3709C0E1827A9E90072CA14 /* MyLibraryFilesService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C0B1827A9E90072CA14 /* MyLibraryFilesService.m */; };
-		C3709C0F1827A9E90072CA14 /* MyLibraryFoldersService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3709C0D1827A9E90072CA14 /* MyLibraryFoldersService.m */; };
-		C398C0C218101ACA00E54CAE /* AllActivites.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0BF18101ACA00E54CAE /* AllActivites.m */; };
-		C398C0C318101ACA00E54CAE /* EmailSortedActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */; };
+		B0CB981118A28B1C00B20974 /* CTCTDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB974218A28B1B00B20974 /* CTCTDataStore.m */; };
+		B0CB981218A28B1C00B20974 /* CTCTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB974418A28B1B00B20974 /* CTCTLoginViewController.m */; };
+		B0CB981318A28B1C00B20974 /* CTCTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CB974518A28B1B00B20974 /* CTCTLoginViewController.xib */; };
+		B0CB981418A28B1C00B20974 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB974818A28B1B00B20974 /* Collection.m */; };
+		B0CB981518A28B1C00B20974 /* ContactsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB974A18A28B1B00B20974 /* ContactsCollection.m */; };
+		B0CB981618A28B1C00B20974 /* ListsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB974C18A28B1B00B20974 /* ListsCollection.m */; };
+		B0CB981718A28B1C00B20974 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975018A28B1B00B20974 /* Activity.m */; };
+		B0CB981818A28B1C00B20974 /* ActivityError.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975218A28B1B00B20974 /* ActivityError.m */; };
+		B0CB981918A28B1C00B20974 /* AddContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975418A28B1B00B20974 /* AddContacts.m */; };
+		B0CB981A18A28B1C00B20974 /* AddContactsImportData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975618A28B1B00B20974 /* AddContactsImportData.m */; };
+		B0CB981B18A28B1C00B20974 /* ExportContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975818A28B1B00B20974 /* ExportContacts.m */; };
+		B0CB981C18A28B1C00B20974 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975A18A28B1B00B20974 /* Component.m */; };
+		B0CB981D18A28B1C00B20974 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975D18A28B1B00B20974 /* Address.m */; };
+		B0CB981E18A28B1C00B20974 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB975F18A28B1B00B20974 /* Contact.m */; };
+		B0CB981F18A28B1C00B20974 /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976118A28B1B00B20974 /* ContactList.m */; };
+		B0CB982018A28B1C00B20974 /* CustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976318A28B1B00B20974 /* CustomField.m */; };
+		B0CB982118A28B1C00B20974 /* EmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976518A28B1B00B20974 /* EmailAddress.m */; };
+		B0CB982218A28B1C00B20974 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976718A28B1B00B20974 /* Note.m */; };
+		B0CB982318A28B1C00B20974 /* ClickThroughDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976A18A28B1B00B20974 /* ClickThroughDetails.m */; };
+		B0CB982418A28B1C00B20974 /* EmailCampaign.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976C18A28B1B00B20974 /* EmailCampaign.m */; };
+		B0CB982518A28B1C00B20974 /* MessageFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB976E18A28B1B00B20974 /* MessageFooter.m */; };
+		B0CB982618A28B1C00B20974 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977018A28B1B00B20974 /* Schedule.m */; };
+		B0CB982718A28B1C00B20974 /* TestSend.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977218A28B1B00B20974 /* TestSend.m */; };
+		B0CB982818A28B1C00B20974 /* EventCurrencyTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977618A28B1B00B20974 /* EventCurrencyTypeEnum.m */; };
+		B0CB982918A28B1C00B20974 /* EventInformationSectionsEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977818A28B1B00B20974 /* EventInformationSectionsEnum.m */; };
+		B0CB982A18A28B1C00B20974 /* EventPatchOpEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977A18A28B1B00B20974 /* EventPatchOpEnum.m */; };
+		B0CB982B18A28B1C00B20974 /* EventPatchStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977C18A28B1B00B20974 /* EventPatchStatusEnum.m */; };
+		B0CB982C18A28B1C00B20974 /* EventPatchValueEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB977E18A28B1B00B20974 /* EventPatchValueEnum.m */; };
+		B0CB982D18A28B1C00B20974 /* EventPaymentTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978018A28B1B00B20974 /* EventPaymentTypeEnum.m */; };
+		B0CB982E18A28B1C00B20974 /* EventRegistrantAttendanceStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978218A28B1B00B20974 /* EventRegistrantAttendanceStatusEnum.m */; };
+		B0CB982F18A28B1C00B20974 /* EventRegistrantDiscountScopeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978418A28B1B00B20974 /* EventRegistrantDiscountScopeEnum.m */; };
+		B0CB983018A28B1C00B20974 /* EventRegistrantPaymentTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978618A28B1B00B20974 /* EventRegistrantPaymentTypeEnum.m */; };
+		B0CB983118A28B1C00B20974 /* EventRegistrantSectionsFieldTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978818A28B1B00B20974 /* EventRegistrantSectionsFieldTypeEnum.m */; };
+		B0CB983218A28B1C00B20974 /* EventStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978A18A28B1B00B20974 /* EventStatusEnum.m */; };
+		B0CB983318A28B1C00B20974 /* EventTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978C18A28B1B00B20974 /* EventTypeEnum.m */; };
+		B0CB983418A28B1C00B20974 /* FeeScopeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB978E18A28B1B00B20974 /* FeeScopeEnum.m */; };
+		B0CB983518A28B1C00B20974 /* PromocodeCodeTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979018A28B1B00B20974 /* PromocodeCodeTypeEnum.m */; };
+		B0CB983618A28B1C00B20974 /* PromocodeDiscountScopeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979218A28B1B00B20974 /* PromocodeDiscountScopeEnum.m */; };
+		B0CB983718A28B1C00B20974 /* PromocodeDiscountTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979418A28B1B00B20974 /* PromocodeDiscountTypeEnum.m */; };
+		B0CB983818A28B1C00B20974 /* PromocodeStatusEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979618A28B1B00B20974 /* PromocodeStatusEnum.m */; };
+		B0CB983918A28B1C00B20974 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979818A28B1B00B20974 /* Event.m */; };
+		B0CB983A18A28B1C00B20974 /* EventAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979A18A28B1B00B20974 /* EventAddress.m */; };
+		B0CB983B18A28B1C00B20974 /* EventContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979C18A28B1B00B20974 /* EventContact.m */; };
+		B0CB983C18A28B1C00B20974 /* EventExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB979E18A28B1B00B20974 /* EventExtended.m */; };
+		B0CB983D18A28B1C00B20974 /* EventFee.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97A018A28B1B00B20974 /* EventFee.m */; };
+		B0CB983E18A28B1C00B20974 /* EventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97A218A28B1B00B20974 /* EventItem.m */; };
+		B0CB983F18A28B1C00B20974 /* EventItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97A418A28B1B00B20974 /* EventItemAttribute.m */; };
+		B0CB984018A28B1C00B20974 /* EventNotificationOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97A618A28B1B00B20974 /* EventNotificationOptions.m */; };
+		B0CB984118A28B1C00B20974 /* EventOnlineMeeting.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97A818A28B1B00B20974 /* EventOnlineMeeting.m */; };
+		B0CB984218A28B1C00B20974 /* EventPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97AA18A28B1B00B20974 /* EventPatch.m */; };
+		B0CB984318A28B1C00B20974 /* EventPromocode.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97AC18A28B1B00B20974 /* EventPromocode.m */; };
+		B0CB984418A28B1C00B20974 /* EventRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97AE18A28B1B00B20974 /* EventRegistrant.m */; };
+		B0CB984518A28B1C00B20974 /* EventRegistrantExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97B018A28B1B00B20974 /* EventRegistrantExtended.m */; };
+		B0CB984618A28B1C00B20974 /* EventTrackInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97B218A28B1B00B20974 /* EventTrackInformation.m */; };
+		B0CB984718A28B1C00B20974 /* RegistrantFee.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97B418A28B1B00B20974 /* RegistrantFee.m */; };
+		B0CB984818A28B1C00B20974 /* RegistrantGuest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97B618A28B1B00B20974 /* RegistrantGuest.m */; };
+		B0CB984918A28B1C00B20974 /* RegistrantGuestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97B818A28B1C00B20974 /* RegistrantGuestInfo.m */; };
+		B0CB984A18A28B1C00B20974 /* RegistrantGuestSections.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97BA18A28B1C00B20974 /* RegistrantGuestSections.m */; };
+		B0CB984B18A28B1C00B20974 /* RegistrantOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97BC18A28B1C00B20974 /* RegistrantOrder.m */; };
+		B0CB984C18A28B1C00B20974 /* RegistrantPaymentSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97BE18A28B1C00B20974 /* RegistrantPaymentSummary.m */; };
+		B0CB984D18A28B1C00B20974 /* RegistrantPromoCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97C018A28B1C00B20974 /* RegistrantPromoCode.m */; };
+		B0CB984E18A28B1C00B20974 /* RegistrantPromocodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97C218A28B1C00B20974 /* RegistrantPromocodeInfo.m */; };
+		B0CB984F18A28B1C00B20974 /* RegistrantSaleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97C418A28B1C00B20974 /* RegistrantSaleItem.m */; };
+		B0CB985018A28B1C00B20974 /* RegistrantSection.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97C618A28B1C00B20974 /* RegistrantSection.m */; };
+		B0CB985118A28B1C00B20974 /* RegistrantSectionField.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97C818A28B1C00B20974 /* RegistrantSectionField.m */; };
+		B0CB985218A28B1C00B20974 /* FileMoved.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97CB18A28B1C00B20974 /* FileMoved.m */; };
+		B0CB985318A28B1C00B20974 /* FileUploadStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97CD18A28B1C00B20974 /* FileUploadStatus.m */; };
+		B0CB985418A28B1C00B20974 /* LibraryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97D018A28B1C00B20974 /* LibraryFile.m */; };
+		B0CB985518A28B1C00B20974 /* LibraryFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97D218A28B1C00B20974 /* LibraryFolder.m */; };
+		B0CB985618A28B1C00B20974 /* LibrarySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97D418A28B1C00B20974 /* LibrarySummary.m */; };
+		B0CB985718A28B1C00B20974 /* Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97D618A28B1C00B20974 /* Thumbnail.m */; };
+		B0CB985818A28B1C00B20974 /* UsageSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97D818A28B1C00B20974 /* UsageSummary.m */; };
+		B0CB985918A28B1C00B20974 /* ResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97DA18A28B1C00B20974 /* ResultSet.m */; };
+		B0CB985A18A28B1C00B20974 /* AllActivites.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97DD18A28B1C00B20974 /* AllActivites.m */; };
+		B0CB985B18A28B1C00B20974 /* BounceActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97DF18A28B1C00B20974 /* BounceActivity.m */; };
+		B0CB985C18A28B1C00B20974 /* ClickActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97E118A28B1C00B20974 /* ClickActivity.m */; };
+		B0CB985D18A28B1C00B20974 /* EmailSortedActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97E318A28B1C00B20974 /* EmailSortedActivity.m */; };
+		B0CB985E18A28B1C00B20974 /* ForwardActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97E518A28B1C00B20974 /* ForwardActivity.m */; };
+		B0CB985F18A28B1C00B20974 /* OpenActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97E718A28B1C00B20974 /* OpenActivity.m */; };
+		B0CB986018A28B1C00B20974 /* OptOutActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97E918A28B1C00B20974 /* OptOutActivity.m */; };
+		B0CB986118A28B1C00B20974 /* SendActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97EB18A28B1C00B20974 /* SendActivity.m */; };
+		B0CB986218A28B1C00B20974 /* TrackingActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97ED18A28B1C00B20974 /* TrackingActivity.m */; };
+		B0CB986318A28B1C00B20974 /* TrackingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97EF18A28B1C00B20974 /* TrackingSummary.m */; };
+		B0CB986418A28B1C00B20974 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97F218A28B1C00B20974 /* Config.m */; };
+		B0CB986518A28B1C00B20974 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0CB97F318A28B1C00B20974 /* Config.plist */; };
+		B0CB986618A28B1C00B20974 /* HttpError.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97F618A28B1C00B20974 /* HttpError.m */; };
+		B0CB986718A28B1C00B20974 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97F818A28B1C00B20974 /* HttpRequest.m */; };
+		B0CB986818A28B1C00B20974 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97FA18A28B1C00B20974 /* HttpResponse.m */; };
+		B0CB986918A28B1C00B20974 /* ActivityService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97FD18A28B1C00B20974 /* ActivityService.m */; };
+		B0CB986A18A28B1C00B20974 /* CampaignScheduleService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB97FF18A28B1C00B20974 /* CampaignScheduleService.m */; };
+		B0CB986B18A28B1C00B20974 /* CampaignTrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980118A28B1C00B20974 /* CampaignTrackingService.m */; };
+		B0CB986C18A28B1C00B20974 /* ContactTrackingService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980318A28B1C00B20974 /* ContactTrackingService.m */; };
+		B0CB986D18A28B1C00B20974 /* EmailCampaignService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980518A28B1C00B20974 /* EmailCampaignService.m */; };
+		B0CB986E18A28B1C00B20974 /* EventSpotService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980718A28B1C00B20974 /* EventSpotService.m */; };
+		B0CB986F18A28B1C00B20974 /* MyLibraryFilesService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980918A28B1C00B20974 /* MyLibraryFilesService.m */; };
+		B0CB987018A28B1C00B20974 /* MyLibraryFoldersService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980B18A28B1C00B20974 /* MyLibraryFoldersService.m */; };
+		B0CB987118A28B1C00B20974 /* VerifiedEmailAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB980D18A28B1C00B20974 /* VerifiedEmailAddresses.m */; };
+		B0CB987218A28B1C00B20974 /* CTCTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CB981018A28B1C00B20974 /* CTCTGlobal.m */; };
+		C3C031AA18AA783C00FE67A1 /* AccountSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C031A718AA783C00FE67A1 /* AccountSummary.m */; };
+		C3C031AB18AA783C00FE67A1 /* OrganizationAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C031A918AA783C00FE67A1 /* OrganizationAddresses.m */; };
+		C3C031AE18AA785100FE67A1 /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C031AD18AA785100FE67A1 /* AccountService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,114 +156,206 @@
 		B029C4BC1704899A005B4FE2 /* ListsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsTableViewController.h; sourceTree = "<group>"; };
 		B029C4BD1704899A005B4FE2 /* ListsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsTableViewController.m; sourceTree = "<group>"; };
 		B029C4BE1704899B005B4FE2 /* ListsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsTableViewController.xib; sourceTree = "<group>"; };
-		B0F396E31729376200205B40 /* CTCTDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTDataStore.h; sourceTree = "<group>"; };
-		B0F396E41729376200205B40 /* CTCTDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTDataStore.m; sourceTree = "<group>"; };
-		B0F396E51729376200205B40 /* CTCTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTLoginViewController.h; sourceTree = "<group>"; };
-		B0F396E61729376200205B40 /* CTCTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTLoginViewController.m; sourceTree = "<group>"; };
-		B0F396E71729376200205B40 /* CTCTLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTCTLoginViewController.xib; sourceTree = "<group>"; };
-		B0F396EB1729376200205B40 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
-		B0F396EC1729376200205B40 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
-		B0F396ED1729376200205B40 /* ContactsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCollection.h; sourceTree = "<group>"; };
-		B0F396EE1729376200205B40 /* ContactsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCollection.m; sourceTree = "<group>"; };
-		B0F396EF1729376200205B40 /* ListsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsCollection.h; sourceTree = "<group>"; };
-		B0F396F01729376200205B40 /* ListsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsCollection.m; sourceTree = "<group>"; };
-		B0F396F31729376200205B40 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		B0F396F41729376200205B40 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
-		B0F396F51729376200205B40 /* ActivityError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityError.h; sourceTree = "<group>"; };
-		B0F396F61729376200205B40 /* ActivityError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityError.m; sourceTree = "<group>"; };
-		B0F396F71729376200205B40 /* AddContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContacts.h; sourceTree = "<group>"; };
-		B0F396F81729376200205B40 /* AddContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContacts.m; sourceTree = "<group>"; };
-		B0F396F91729376200205B40 /* AddContactsImportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactsImportData.h; sourceTree = "<group>"; };
-		B0F396FA1729376200205B40 /* AddContactsImportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsImportData.m; sourceTree = "<group>"; };
-		B0F396FB1729376200205B40 /* ExportContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportContacts.h; sourceTree = "<group>"; };
-		B0F396FC1729376200205B40 /* ExportContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportContacts.m; sourceTree = "<group>"; };
-		B0F396FD1729376200205B40 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
-		B0F396FE1729376200205B40 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
-		B0F397001729376200205B40 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
-		B0F397011729376200205B40 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
-		B0F397021729376200205B40 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		B0F397031729376200205B40 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		B0F397041729376200205B40 /* ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
-		B0F397051729376200205B40 /* ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
-		B0F397061729376200205B40 /* CustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomField.h; sourceTree = "<group>"; };
-		B0F397071729376200205B40 /* CustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomField.m; sourceTree = "<group>"; };
-		B0F397081729376200205B40 /* EmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddress.h; sourceTree = "<group>"; };
-		B0F397091729376200205B40 /* EmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddress.m; sourceTree = "<group>"; };
-		B0F3970A1729376200205B40 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		B0F3970B1729376200205B40 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		B0F3970D1729376200205B40 /* ClickThroughDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickThroughDetails.h; sourceTree = "<group>"; };
-		B0F3970E1729376200205B40 /* ClickThroughDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickThroughDetails.m; sourceTree = "<group>"; };
-		B0F3970F1729376200205B40 /* EmailCampaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailCampaign.h; sourceTree = "<group>"; };
-		B0F397101729376200205B40 /* EmailCampaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailCampaign.m; sourceTree = "<group>"; };
-		B0F397111729376200205B40 /* MessageFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageFooter.h; sourceTree = "<group>"; };
-		B0F397121729376200205B40 /* MessageFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageFooter.m; sourceTree = "<group>"; };
-		B0F397131729376200205B40 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
-		B0F397141729376200205B40 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
-		B0F397151729376200205B40 /* TestSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSend.h; sourceTree = "<group>"; };
-		B0F397161729376200205B40 /* TestSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSend.m; sourceTree = "<group>"; };
-		B0F397171729376200205B40 /* ResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSet.h; sourceTree = "<group>"; };
-		B0F397181729376200205B40 /* ResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultSet.m; sourceTree = "<group>"; };
-		B0F3971A1729376200205B40 /* BounceActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BounceActivity.h; sourceTree = "<group>"; };
-		B0F3971B1729376200205B40 /* BounceActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BounceActivity.m; sourceTree = "<group>"; };
-		B0F3971C1729376200205B40 /* ClickActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickActivity.h; sourceTree = "<group>"; };
-		B0F3971D1729376200205B40 /* ClickActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickActivity.m; sourceTree = "<group>"; };
-		B0F3971E1729376200205B40 /* ForwardActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardActivity.h; sourceTree = "<group>"; };
-		B0F3971F1729376200205B40 /* ForwardActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardActivity.m; sourceTree = "<group>"; };
-		B0F397201729376200205B40 /* OpenActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenActivity.h; sourceTree = "<group>"; };
-		B0F397211729376200205B40 /* OpenActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenActivity.m; sourceTree = "<group>"; };
-		B0F397221729376200205B40 /* OptOutActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptOutActivity.h; sourceTree = "<group>"; };
-		B0F397231729376200205B40 /* OptOutActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptOutActivity.m; sourceTree = "<group>"; };
-		B0F397241729376200205B40 /* SendActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendActivity.h; sourceTree = "<group>"; };
-		B0F397251729376200205B40 /* SendActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendActivity.m; sourceTree = "<group>"; };
-		B0F397261729376200205B40 /* TrackingActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingActivity.h; sourceTree = "<group>"; };
-		B0F397271729376200205B40 /* TrackingActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingActivity.m; sourceTree = "<group>"; };
-		B0F397281729376200205B40 /* TrackingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingSummary.h; sourceTree = "<group>"; };
-		B0F397291729376200205B40 /* TrackingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingSummary.m; sourceTree = "<group>"; };
-		B0F3972B1729376200205B40 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		B0F3972C1729376200205B40 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
-		B0F3972D1729376200205B40 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		B0F397301729376200205B40 /* HttpError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpError.h; sourceTree = "<group>"; };
-		B0F397311729376200205B40 /* HttpError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpError.m; sourceTree = "<group>"; };
-		B0F397321729376200205B40 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		B0F397331729376200205B40 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		B0F397341729376200205B40 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
-		B0F397351729376200205B40 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
-		B0F397371729376200205B40 /* ActivityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityService.h; sourceTree = "<group>"; };
-		B0F397381729376200205B40 /* ActivityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityService.m; sourceTree = "<group>"; };
-		B0F397391729376200205B40 /* CampaignScheduleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignScheduleService.h; sourceTree = "<group>"; };
-		B0F3973A1729376200205B40 /* CampaignScheduleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignScheduleService.m; sourceTree = "<group>"; };
-		B0F3973B1729376200205B40 /* CampaignTrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignTrackingService.h; sourceTree = "<group>"; };
-		B0F3973C1729376200205B40 /* CampaignTrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignTrackingService.m; sourceTree = "<group>"; };
-		B0F3973D1729376200205B40 /* ContactTrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTrackingService.h; sourceTree = "<group>"; };
-		B0F3973E1729376200205B40 /* ContactTrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTrackingService.m; sourceTree = "<group>"; };
-		B0F3973F1729376200205B40 /* EmailCampaignService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailCampaignService.h; sourceTree = "<group>"; };
-		B0F397401729376200205B40 /* EmailCampaignService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailCampaignService.m; sourceTree = "<group>"; };
-		B0F397411729376200205B40 /* VerifiedEmailAddresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifiedEmailAddresses.h; sourceTree = "<group>"; };
-		B0F397421729376200205B40 /* VerifiedEmailAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedEmailAddresses.m; sourceTree = "<group>"; };
-		B0F397441729376200205B40 /* CTCTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTGlobal.h; sourceTree = "<group>"; };
-		B0F397451729376200205B40 /* CTCTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTGlobal.m; sourceTree = "<group>"; };
-		C3709BF41827A9170072CA14 /* FileMoved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMoved.h; sourceTree = "<group>"; };
-		C3709BF51827A9170072CA14 /* FileMoved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMoved.m; sourceTree = "<group>"; };
-		C3709BF61827A9170072CA14 /* FileUploadStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadStatus.h; sourceTree = "<group>"; };
-		C3709BF71827A9170072CA14 /* FileUploadStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadStatus.m; sourceTree = "<group>"; };
-		C3709BFB1827A9250072CA14 /* LibraryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFile.h; sourceTree = "<group>"; };
-		C3709BFC1827A9250072CA14 /* LibraryFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryFile.m; sourceTree = "<group>"; };
-		C3709BFD1827A9250072CA14 /* LibraryFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFolder.h; sourceTree = "<group>"; };
-		C3709BFE1827A9250072CA14 /* LibraryFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryFolder.m; sourceTree = "<group>"; };
-		C3709BFF1827A9250072CA14 /* LibrarySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrarySummary.h; sourceTree = "<group>"; };
-		C3709C001827A9250072CA14 /* LibrarySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarySummary.m; sourceTree = "<group>"; };
-		C3709C011827A9250072CA14 /* Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thumbnail.h; sourceTree = "<group>"; };
-		C3709C021827A9250072CA14 /* Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thumbnail.m; sourceTree = "<group>"; };
-		C3709C031827A9250072CA14 /* UsageSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageSummary.h; sourceTree = "<group>"; };
-		C3709C041827A9250072CA14 /* UsageSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsageSummary.m; sourceTree = "<group>"; };
-		C3709C0A1827A9E90072CA14 /* MyLibraryFilesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryFilesService.h; sourceTree = "<group>"; };
-		C3709C0B1827A9E90072CA14 /* MyLibraryFilesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLibraryFilesService.m; sourceTree = "<group>"; };
-		C3709C0C1827A9E90072CA14 /* MyLibraryFoldersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryFoldersService.h; sourceTree = "<group>"; };
-		C3709C0D1827A9E90072CA14 /* MyLibraryFoldersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLibraryFoldersService.m; sourceTree = "<group>"; };
-		C398C0BE18101ACA00E54CAE /* AllActivites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActivites.h; sourceTree = "<group>"; };
-		C398C0BF18101ACA00E54CAE /* AllActivites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActivites.m; sourceTree = "<group>"; };
-		C398C0C018101ACA00E54CAE /* EmailSortedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSortedActivity.h; sourceTree = "<group>"; };
-		C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSortedActivity.m; sourceTree = "<group>"; };
+		B0CB974118A28B1B00B20974 /* CTCTDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTDataStore.h; sourceTree = "<group>"; };
+		B0CB974218A28B1B00B20974 /* CTCTDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTDataStore.m; sourceTree = "<group>"; };
+		B0CB974318A28B1B00B20974 /* CTCTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTLoginViewController.h; sourceTree = "<group>"; };
+		B0CB974418A28B1B00B20974 /* CTCTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTLoginViewController.m; sourceTree = "<group>"; };
+		B0CB974518A28B1B00B20974 /* CTCTLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTCTLoginViewController.xib; sourceTree = "<group>"; };
+		B0CB974718A28B1B00B20974 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
+		B0CB974818A28B1B00B20974 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
+		B0CB974918A28B1B00B20974 /* ContactsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsCollection.h; sourceTree = "<group>"; };
+		B0CB974A18A28B1B00B20974 /* ContactsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsCollection.m; sourceTree = "<group>"; };
+		B0CB974B18A28B1B00B20974 /* ListsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsCollection.h; sourceTree = "<group>"; };
+		B0CB974C18A28B1B00B20974 /* ListsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsCollection.m; sourceTree = "<group>"; };
+		B0CB974F18A28B1B00B20974 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		B0CB975018A28B1B00B20974 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		B0CB975118A28B1B00B20974 /* ActivityError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityError.h; sourceTree = "<group>"; };
+		B0CB975218A28B1B00B20974 /* ActivityError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityError.m; sourceTree = "<group>"; };
+		B0CB975318A28B1B00B20974 /* AddContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContacts.h; sourceTree = "<group>"; };
+		B0CB975418A28B1B00B20974 /* AddContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContacts.m; sourceTree = "<group>"; };
+		B0CB975518A28B1B00B20974 /* AddContactsImportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactsImportData.h; sourceTree = "<group>"; };
+		B0CB975618A28B1B00B20974 /* AddContactsImportData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsImportData.m; sourceTree = "<group>"; };
+		B0CB975718A28B1B00B20974 /* ExportContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportContacts.h; sourceTree = "<group>"; };
+		B0CB975818A28B1B00B20974 /* ExportContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportContacts.m; sourceTree = "<group>"; };
+		B0CB975918A28B1B00B20974 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		B0CB975A18A28B1B00B20974 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		B0CB975C18A28B1B00B20974 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		B0CB975D18A28B1B00B20974 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		B0CB975E18A28B1B00B20974 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		B0CB975F18A28B1B00B20974 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		B0CB976018A28B1B00B20974 /* ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
+		B0CB976118A28B1B00B20974 /* ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
+		B0CB976218A28B1B00B20974 /* CustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomField.h; sourceTree = "<group>"; };
+		B0CB976318A28B1B00B20974 /* CustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomField.m; sourceTree = "<group>"; };
+		B0CB976418A28B1B00B20974 /* EmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddress.h; sourceTree = "<group>"; };
+		B0CB976518A28B1B00B20974 /* EmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddress.m; sourceTree = "<group>"; };
+		B0CB976618A28B1B00B20974 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		B0CB976718A28B1B00B20974 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		B0CB976918A28B1B00B20974 /* ClickThroughDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickThroughDetails.h; sourceTree = "<group>"; };
+		B0CB976A18A28B1B00B20974 /* ClickThroughDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickThroughDetails.m; sourceTree = "<group>"; };
+		B0CB976B18A28B1B00B20974 /* EmailCampaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailCampaign.h; sourceTree = "<group>"; };
+		B0CB976C18A28B1B00B20974 /* EmailCampaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailCampaign.m; sourceTree = "<group>"; };
+		B0CB976D18A28B1B00B20974 /* MessageFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageFooter.h; sourceTree = "<group>"; };
+		B0CB976E18A28B1B00B20974 /* MessageFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageFooter.m; sourceTree = "<group>"; };
+		B0CB976F18A28B1B00B20974 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		B0CB977018A28B1B00B20974 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		B0CB977118A28B1B00B20974 /* TestSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSend.h; sourceTree = "<group>"; };
+		B0CB977218A28B1B00B20974 /* TestSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSend.m; sourceTree = "<group>"; };
+		B0CB977518A28B1B00B20974 /* EventCurrencyTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCurrencyTypeEnum.h; sourceTree = "<group>"; };
+		B0CB977618A28B1B00B20974 /* EventCurrencyTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCurrencyTypeEnum.m; sourceTree = "<group>"; };
+		B0CB977718A28B1B00B20974 /* EventInformationSectionsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInformationSectionsEnum.h; sourceTree = "<group>"; };
+		B0CB977818A28B1B00B20974 /* EventInformationSectionsEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInformationSectionsEnum.m; sourceTree = "<group>"; };
+		B0CB977918A28B1B00B20974 /* EventPatchOpEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatchOpEnum.h; sourceTree = "<group>"; };
+		B0CB977A18A28B1B00B20974 /* EventPatchOpEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatchOpEnum.m; sourceTree = "<group>"; };
+		B0CB977B18A28B1B00B20974 /* EventPatchStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatchStatusEnum.h; sourceTree = "<group>"; };
+		B0CB977C18A28B1B00B20974 /* EventPatchStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatchStatusEnum.m; sourceTree = "<group>"; };
+		B0CB977D18A28B1B00B20974 /* EventPatchValueEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatchValueEnum.h; sourceTree = "<group>"; };
+		B0CB977E18A28B1B00B20974 /* EventPatchValueEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatchValueEnum.m; sourceTree = "<group>"; };
+		B0CB977F18A28B1B00B20974 /* EventPaymentTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPaymentTypeEnum.h; sourceTree = "<group>"; };
+		B0CB978018A28B1B00B20974 /* EventPaymentTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPaymentTypeEnum.m; sourceTree = "<group>"; };
+		B0CB978118A28B1B00B20974 /* EventRegistrantAttendanceStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantAttendanceStatusEnum.h; sourceTree = "<group>"; };
+		B0CB978218A28B1B00B20974 /* EventRegistrantAttendanceStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantAttendanceStatusEnum.m; sourceTree = "<group>"; };
+		B0CB978318A28B1B00B20974 /* EventRegistrantDiscountScopeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantDiscountScopeEnum.h; sourceTree = "<group>"; };
+		B0CB978418A28B1B00B20974 /* EventRegistrantDiscountScopeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantDiscountScopeEnum.m; sourceTree = "<group>"; };
+		B0CB978518A28B1B00B20974 /* EventRegistrantPaymentTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantPaymentTypeEnum.h; sourceTree = "<group>"; };
+		B0CB978618A28B1B00B20974 /* EventRegistrantPaymentTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantPaymentTypeEnum.m; sourceTree = "<group>"; };
+		B0CB978718A28B1B00B20974 /* EventRegistrantSectionsFieldTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantSectionsFieldTypeEnum.h; sourceTree = "<group>"; };
+		B0CB978818A28B1B00B20974 /* EventRegistrantSectionsFieldTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantSectionsFieldTypeEnum.m; sourceTree = "<group>"; };
+		B0CB978918A28B1B00B20974 /* EventStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventStatusEnum.h; sourceTree = "<group>"; };
+		B0CB978A18A28B1B00B20974 /* EventStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventStatusEnum.m; sourceTree = "<group>"; };
+		B0CB978B18A28B1B00B20974 /* EventTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTypeEnum.h; sourceTree = "<group>"; };
+		B0CB978C18A28B1B00B20974 /* EventTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTypeEnum.m; sourceTree = "<group>"; };
+		B0CB978D18A28B1B00B20974 /* FeeScopeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeeScopeEnum.h; sourceTree = "<group>"; };
+		B0CB978E18A28B1B00B20974 /* FeeScopeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeeScopeEnum.m; sourceTree = "<group>"; };
+		B0CB978F18A28B1B00B20974 /* PromocodeCodeTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeCodeTypeEnum.h; sourceTree = "<group>"; };
+		B0CB979018A28B1B00B20974 /* PromocodeCodeTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeCodeTypeEnum.m; sourceTree = "<group>"; };
+		B0CB979118A28B1B00B20974 /* PromocodeDiscountScopeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeDiscountScopeEnum.h; sourceTree = "<group>"; };
+		B0CB979218A28B1B00B20974 /* PromocodeDiscountScopeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeDiscountScopeEnum.m; sourceTree = "<group>"; };
+		B0CB979318A28B1B00B20974 /* PromocodeDiscountTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeDiscountTypeEnum.h; sourceTree = "<group>"; };
+		B0CB979418A28B1B00B20974 /* PromocodeDiscountTypeEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeDiscountTypeEnum.m; sourceTree = "<group>"; };
+		B0CB979518A28B1B00B20974 /* PromocodeStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocodeStatusEnum.h; sourceTree = "<group>"; };
+		B0CB979618A28B1B00B20974 /* PromocodeStatusEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocodeStatusEnum.m; sourceTree = "<group>"; };
+		B0CB979718A28B1B00B20974 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		B0CB979818A28B1B00B20974 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		B0CB979918A28B1B00B20974 /* EventAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventAddress.h; sourceTree = "<group>"; };
+		B0CB979A18A28B1B00B20974 /* EventAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventAddress.m; sourceTree = "<group>"; };
+		B0CB979B18A28B1B00B20974 /* EventContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventContact.h; sourceTree = "<group>"; };
+		B0CB979C18A28B1B00B20974 /* EventContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventContact.m; sourceTree = "<group>"; };
+		B0CB979D18A28B1B00B20974 /* EventExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventExtended.h; sourceTree = "<group>"; };
+		B0CB979E18A28B1B00B20974 /* EventExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventExtended.m; sourceTree = "<group>"; };
+		B0CB979F18A28B1B00B20974 /* EventFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventFee.h; sourceTree = "<group>"; };
+		B0CB97A018A28B1B00B20974 /* EventFee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventFee.m; sourceTree = "<group>"; };
+		B0CB97A118A28B1B00B20974 /* EventItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventItem.h; sourceTree = "<group>"; };
+		B0CB97A218A28B1B00B20974 /* EventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventItem.m; sourceTree = "<group>"; };
+		B0CB97A318A28B1B00B20974 /* EventItemAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventItemAttribute.h; sourceTree = "<group>"; };
+		B0CB97A418A28B1B00B20974 /* EventItemAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventItemAttribute.m; sourceTree = "<group>"; };
+		B0CB97A518A28B1B00B20974 /* EventNotificationOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventNotificationOptions.h; sourceTree = "<group>"; };
+		B0CB97A618A28B1B00B20974 /* EventNotificationOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventNotificationOptions.m; sourceTree = "<group>"; };
+		B0CB97A718A28B1B00B20974 /* EventOnlineMeeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventOnlineMeeting.h; sourceTree = "<group>"; };
+		B0CB97A818A28B1B00B20974 /* EventOnlineMeeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventOnlineMeeting.m; sourceTree = "<group>"; };
+		B0CB97A918A28B1B00B20974 /* EventPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPatch.h; sourceTree = "<group>"; };
+		B0CB97AA18A28B1B00B20974 /* EventPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPatch.m; sourceTree = "<group>"; };
+		B0CB97AB18A28B1B00B20974 /* EventPromocode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPromocode.h; sourceTree = "<group>"; };
+		B0CB97AC18A28B1B00B20974 /* EventPromocode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPromocode.m; sourceTree = "<group>"; };
+		B0CB97AD18A28B1B00B20974 /* EventRegistrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrant.h; sourceTree = "<group>"; };
+		B0CB97AE18A28B1B00B20974 /* EventRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrant.m; sourceTree = "<group>"; };
+		B0CB97AF18A28B1B00B20974 /* EventRegistrantExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRegistrantExtended.h; sourceTree = "<group>"; };
+		B0CB97B018A28B1B00B20974 /* EventRegistrantExtended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRegistrantExtended.m; sourceTree = "<group>"; };
+		B0CB97B118A28B1B00B20974 /* EventTrackInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTrackInformation.h; sourceTree = "<group>"; };
+		B0CB97B218A28B1B00B20974 /* EventTrackInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTrackInformation.m; sourceTree = "<group>"; };
+		B0CB97B318A28B1B00B20974 /* RegistrantFee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantFee.h; sourceTree = "<group>"; };
+		B0CB97B418A28B1B00B20974 /* RegistrantFee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantFee.m; sourceTree = "<group>"; };
+		B0CB97B518A28B1B00B20974 /* RegistrantGuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantGuest.h; sourceTree = "<group>"; };
+		B0CB97B618A28B1B00B20974 /* RegistrantGuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantGuest.m; sourceTree = "<group>"; };
+		B0CB97B718A28B1C00B20974 /* RegistrantGuestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantGuestInfo.h; sourceTree = "<group>"; };
+		B0CB97B818A28B1C00B20974 /* RegistrantGuestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantGuestInfo.m; sourceTree = "<group>"; };
+		B0CB97B918A28B1C00B20974 /* RegistrantGuestSections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantGuestSections.h; sourceTree = "<group>"; };
+		B0CB97BA18A28B1C00B20974 /* RegistrantGuestSections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantGuestSections.m; sourceTree = "<group>"; };
+		B0CB97BB18A28B1C00B20974 /* RegistrantOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantOrder.h; sourceTree = "<group>"; };
+		B0CB97BC18A28B1C00B20974 /* RegistrantOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantOrder.m; sourceTree = "<group>"; };
+		B0CB97BD18A28B1C00B20974 /* RegistrantPaymentSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantPaymentSummary.h; sourceTree = "<group>"; };
+		B0CB97BE18A28B1C00B20974 /* RegistrantPaymentSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantPaymentSummary.m; sourceTree = "<group>"; };
+		B0CB97BF18A28B1C00B20974 /* RegistrantPromoCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantPromoCode.h; sourceTree = "<group>"; };
+		B0CB97C018A28B1C00B20974 /* RegistrantPromoCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantPromoCode.m; sourceTree = "<group>"; };
+		B0CB97C118A28B1C00B20974 /* RegistrantPromocodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantPromocodeInfo.h; sourceTree = "<group>"; };
+		B0CB97C218A28B1C00B20974 /* RegistrantPromocodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantPromocodeInfo.m; sourceTree = "<group>"; };
+		B0CB97C318A28B1C00B20974 /* RegistrantSaleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantSaleItem.h; sourceTree = "<group>"; };
+		B0CB97C418A28B1C00B20974 /* RegistrantSaleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantSaleItem.m; sourceTree = "<group>"; };
+		B0CB97C518A28B1C00B20974 /* RegistrantSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantSection.h; sourceTree = "<group>"; };
+		B0CB97C618A28B1C00B20974 /* RegistrantSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantSection.m; sourceTree = "<group>"; };
+		B0CB97C718A28B1C00B20974 /* RegistrantSectionField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrantSectionField.h; sourceTree = "<group>"; };
+		B0CB97C818A28B1C00B20974 /* RegistrantSectionField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrantSectionField.m; sourceTree = "<group>"; };
+		B0CB97CA18A28B1C00B20974 /* FileMoved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMoved.h; sourceTree = "<group>"; };
+		B0CB97CB18A28B1C00B20974 /* FileMoved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMoved.m; sourceTree = "<group>"; };
+		B0CB97CC18A28B1C00B20974 /* FileUploadStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadStatus.h; sourceTree = "<group>"; };
+		B0CB97CD18A28B1C00B20974 /* FileUploadStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadStatus.m; sourceTree = "<group>"; };
+		B0CB97CF18A28B1C00B20974 /* LibraryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFile.h; sourceTree = "<group>"; };
+		B0CB97D018A28B1C00B20974 /* LibraryFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryFile.m; sourceTree = "<group>"; };
+		B0CB97D118A28B1C00B20974 /* LibraryFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFolder.h; sourceTree = "<group>"; };
+		B0CB97D218A28B1C00B20974 /* LibraryFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryFolder.m; sourceTree = "<group>"; };
+		B0CB97D318A28B1C00B20974 /* LibrarySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrarySummary.h; sourceTree = "<group>"; };
+		B0CB97D418A28B1C00B20974 /* LibrarySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarySummary.m; sourceTree = "<group>"; };
+		B0CB97D518A28B1C00B20974 /* Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thumbnail.h; sourceTree = "<group>"; };
+		B0CB97D618A28B1C00B20974 /* Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thumbnail.m; sourceTree = "<group>"; };
+		B0CB97D718A28B1C00B20974 /* UsageSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageSummary.h; sourceTree = "<group>"; };
+		B0CB97D818A28B1C00B20974 /* UsageSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsageSummary.m; sourceTree = "<group>"; };
+		B0CB97D918A28B1C00B20974 /* ResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSet.h; sourceTree = "<group>"; };
+		B0CB97DA18A28B1C00B20974 /* ResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultSet.m; sourceTree = "<group>"; };
+		B0CB97DC18A28B1C00B20974 /* AllActivites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActivites.h; sourceTree = "<group>"; };
+		B0CB97DD18A28B1C00B20974 /* AllActivites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActivites.m; sourceTree = "<group>"; };
+		B0CB97DE18A28B1C00B20974 /* BounceActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BounceActivity.h; sourceTree = "<group>"; };
+		B0CB97DF18A28B1C00B20974 /* BounceActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BounceActivity.m; sourceTree = "<group>"; };
+		B0CB97E018A28B1C00B20974 /* ClickActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickActivity.h; sourceTree = "<group>"; };
+		B0CB97E118A28B1C00B20974 /* ClickActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickActivity.m; sourceTree = "<group>"; };
+		B0CB97E218A28B1C00B20974 /* EmailSortedActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSortedActivity.h; sourceTree = "<group>"; };
+		B0CB97E318A28B1C00B20974 /* EmailSortedActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSortedActivity.m; sourceTree = "<group>"; };
+		B0CB97E418A28B1C00B20974 /* ForwardActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardActivity.h; sourceTree = "<group>"; };
+		B0CB97E518A28B1C00B20974 /* ForwardActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardActivity.m; sourceTree = "<group>"; };
+		B0CB97E618A28B1C00B20974 /* OpenActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenActivity.h; sourceTree = "<group>"; };
+		B0CB97E718A28B1C00B20974 /* OpenActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenActivity.m; sourceTree = "<group>"; };
+		B0CB97E818A28B1C00B20974 /* OptOutActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptOutActivity.h; sourceTree = "<group>"; };
+		B0CB97E918A28B1C00B20974 /* OptOutActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptOutActivity.m; sourceTree = "<group>"; };
+		B0CB97EA18A28B1C00B20974 /* SendActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendActivity.h; sourceTree = "<group>"; };
+		B0CB97EB18A28B1C00B20974 /* SendActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendActivity.m; sourceTree = "<group>"; };
+		B0CB97EC18A28B1C00B20974 /* TrackingActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingActivity.h; sourceTree = "<group>"; };
+		B0CB97ED18A28B1C00B20974 /* TrackingActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingActivity.m; sourceTree = "<group>"; };
+		B0CB97EE18A28B1C00B20974 /* TrackingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingSummary.h; sourceTree = "<group>"; };
+		B0CB97EF18A28B1C00B20974 /* TrackingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingSummary.m; sourceTree = "<group>"; };
+		B0CB97F118A28B1C00B20974 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		B0CB97F218A28B1C00B20974 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		B0CB97F318A28B1C00B20974 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		B0CB97F518A28B1C00B20974 /* HttpError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpError.h; sourceTree = "<group>"; };
+		B0CB97F618A28B1C00B20974 /* HttpError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpError.m; sourceTree = "<group>"; };
+		B0CB97F718A28B1C00B20974 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		B0CB97F818A28B1C00B20974 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		B0CB97F918A28B1C00B20974 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
+		B0CB97FA18A28B1C00B20974 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
+		B0CB97FC18A28B1C00B20974 /* ActivityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityService.h; sourceTree = "<group>"; };
+		B0CB97FD18A28B1C00B20974 /* ActivityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityService.m; sourceTree = "<group>"; };
+		B0CB97FE18A28B1C00B20974 /* CampaignScheduleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignScheduleService.h; sourceTree = "<group>"; };
+		B0CB97FF18A28B1C00B20974 /* CampaignScheduleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignScheduleService.m; sourceTree = "<group>"; };
+		B0CB980018A28B1C00B20974 /* CampaignTrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampaignTrackingService.h; sourceTree = "<group>"; };
+		B0CB980118A28B1C00B20974 /* CampaignTrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampaignTrackingService.m; sourceTree = "<group>"; };
+		B0CB980218A28B1C00B20974 /* ContactTrackingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTrackingService.h; sourceTree = "<group>"; };
+		B0CB980318A28B1C00B20974 /* ContactTrackingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTrackingService.m; sourceTree = "<group>"; };
+		B0CB980418A28B1C00B20974 /* EmailCampaignService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailCampaignService.h; sourceTree = "<group>"; };
+		B0CB980518A28B1C00B20974 /* EmailCampaignService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailCampaignService.m; sourceTree = "<group>"; };
+		B0CB980618A28B1C00B20974 /* EventSpotService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSpotService.h; sourceTree = "<group>"; };
+		B0CB980718A28B1C00B20974 /* EventSpotService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSpotService.m; sourceTree = "<group>"; };
+		B0CB980818A28B1C00B20974 /* MyLibraryFilesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryFilesService.h; sourceTree = "<group>"; };
+		B0CB980918A28B1C00B20974 /* MyLibraryFilesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLibraryFilesService.m; sourceTree = "<group>"; };
+		B0CB980A18A28B1C00B20974 /* MyLibraryFoldersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryFoldersService.h; sourceTree = "<group>"; };
+		B0CB980B18A28B1C00B20974 /* MyLibraryFoldersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLibraryFoldersService.m; sourceTree = "<group>"; };
+		B0CB980C18A28B1C00B20974 /* VerifiedEmailAddresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifiedEmailAddresses.h; sourceTree = "<group>"; };
+		B0CB980D18A28B1C00B20974 /* VerifiedEmailAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifiedEmailAddresses.m; sourceTree = "<group>"; };
+		B0CB980F18A28B1C00B20974 /* CTCTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCTGlobal.h; sourceTree = "<group>"; };
+		B0CB981018A28B1C00B20974 /* CTCTGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCTGlobal.m; sourceTree = "<group>"; };
+		C3C031A618AA783C00FE67A1 /* AccountSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSummary.h; sourceTree = "<group>"; };
+		C3C031A718AA783C00FE67A1 /* AccountSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSummary.m; sourceTree = "<group>"; };
+		C3C031A818AA783C00FE67A1 /* OrganizationAddresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationAddresses.h; sourceTree = "<group>"; };
+		C3C031A918AA783C00FE67A1 /* OrganizationAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationAddresses.m; sourceTree = "<group>"; };
+		C3C031AC18AA785100FE67A1 /* AccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountService.h; sourceTree = "<group>"; };
+		C3C031AD18AA785100FE67A1 /* AccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,7 +402,7 @@
 		B029C40917046F0F005B4FE2 /* CTCTContact */ = {
 			isa = PBXGroup;
 			children = (
-				B0F396E11729376200205B40 /* CTCTWrapper */,
+				B0CB973F18A28B1B00B20974 /* CTCTWrapper */,
 				B029C41217046F0F005B4FE2 /* AppDelegate.h */,
 				B029C41317046F0F005B4FE2 /* AppDelegate.m */,
 				B029C41B17046F0F005B4FE2 /* MainViewController.h */,
@@ -300,232 +438,340 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B0F396E11729376200205B40 /* CTCTWrapper */ = {
+		B0CB973F18A28B1B00B20974 /* CTCTWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				B0F396E21729376200205B40 /* Auth */,
-				B0F396EA1729376200205B40 /* Collections */,
-				B0F396F11729376200205B40 /* Components */,
-				B0F3972A1729376200205B40 /* Config */,
-				B0F3972E1729376200205B40 /* Exceptions */,
-				B0F3972F1729376200205B40 /* HttpRequest */,
-				B0F397361729376200205B40 /* Services */,
-				B0F397431729376200205B40 /* Utilities */,
+				B0CB974018A28B1B00B20974 /* Auth */,
+				B0CB974618A28B1B00B20974 /* Collections */,
+				B0CB974D18A28B1B00B20974 /* Components */,
+				B0CB97F018A28B1C00B20974 /* Config */,
+				B0CB97F418A28B1C00B20974 /* HttpRequest */,
+				B0CB97FB18A28B1C00B20974 /* Services */,
+				B0CB980E18A28B1C00B20974 /* Utilities */,
 			);
 			name = CTCTWrapper;
 			path = ../../../CTCTWrapper;
 			sourceTree = "<group>";
 		};
-		B0F396E21729376200205B40 /* Auth */ = {
+		B0CB974018A28B1B00B20974 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				B0F396E31729376200205B40 /* CTCTDataStore.h */,
-				B0F396E41729376200205B40 /* CTCTDataStore.m */,
-				B0F396E51729376200205B40 /* CTCTLoginViewController.h */,
-				B0F396E61729376200205B40 /* CTCTLoginViewController.m */,
-				B0F396E71729376200205B40 /* CTCTLoginViewController.xib */,
+				B0CB974118A28B1B00B20974 /* CTCTDataStore.h */,
+				B0CB974218A28B1B00B20974 /* CTCTDataStore.m */,
+				B0CB974318A28B1B00B20974 /* CTCTLoginViewController.h */,
+				B0CB974418A28B1B00B20974 /* CTCTLoginViewController.m */,
+				B0CB974518A28B1B00B20974 /* CTCTLoginViewController.xib */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		B0F396EA1729376200205B40 /* Collections */ = {
+		B0CB974618A28B1B00B20974 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				B0F396EB1729376200205B40 /* Collection.h */,
-				B0F396EC1729376200205B40 /* Collection.m */,
-				B0F396ED1729376200205B40 /* ContactsCollection.h */,
-				B0F396EE1729376200205B40 /* ContactsCollection.m */,
-				B0F396EF1729376200205B40 /* ListsCollection.h */,
-				B0F396F01729376200205B40 /* ListsCollection.m */,
+				B0CB974718A28B1B00B20974 /* Collection.h */,
+				B0CB974818A28B1B00B20974 /* Collection.m */,
+				B0CB974918A28B1B00B20974 /* ContactsCollection.h */,
+				B0CB974A18A28B1B00B20974 /* ContactsCollection.m */,
+				B0CB974B18A28B1B00B20974 /* ListsCollection.h */,
+				B0CB974C18A28B1B00B20974 /* ListsCollection.m */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
 		};
-		B0F396F11729376200205B40 /* Components */ = {
+		B0CB974D18A28B1B00B20974 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C3709BFA1827A9250072CA14 /* MyLibraryFolders */,
-				C3709BF31827A9170072CA14 /* MyLibraryFiles */,
-				B0F396F21729376200205B40 /* Activites */,
-				B0F396FD1729376200205B40 /* Component.h */,
-				B0F396FE1729376200205B40 /* Component.m */,
-				B0F396FF1729376200205B40 /* Contacts */,
-				B0F3970C1729376200205B40 /* EmailCampaigns */,
-				B0F397171729376200205B40 /* ResultSet.h */,
-				B0F397181729376200205B40 /* ResultSet.m */,
-				B0F397191729376200205B40 /* Tracking */,
+				C3C031A518AA783C00FE67A1 /* Account */,
+				B0CB974E18A28B1B00B20974 /* Activites */,
+				B0CB975918A28B1B00B20974 /* Component.h */,
+				B0CB975A18A28B1B00B20974 /* Component.m */,
+				B0CB975B18A28B1B00B20974 /* Contacts */,
+				B0CB976818A28B1B00B20974 /* EmailCampaigns */,
+				B0CB977318A28B1B00B20974 /* EventSpot */,
+				B0CB97C918A28B1C00B20974 /* MyLibraryFiles */,
+				B0CB97CE18A28B1C00B20974 /* MyLibraryFolders */,
+				B0CB97D918A28B1C00B20974 /* ResultSet.h */,
+				B0CB97DA18A28B1C00B20974 /* ResultSet.m */,
+				B0CB97DB18A28B1C00B20974 /* Tracking */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		B0F396F21729376200205B40 /* Activites */ = {
+		B0CB974E18A28B1B00B20974 /* Activites */ = {
 			isa = PBXGroup;
 			children = (
-				B0F396F31729376200205B40 /* Activity.h */,
-				B0F396F41729376200205B40 /* Activity.m */,
-				B0F396F51729376200205B40 /* ActivityError.h */,
-				B0F396F61729376200205B40 /* ActivityError.m */,
-				B0F396F71729376200205B40 /* AddContacts.h */,
-				B0F396F81729376200205B40 /* AddContacts.m */,
-				B0F396F91729376200205B40 /* AddContactsImportData.h */,
-				B0F396FA1729376200205B40 /* AddContactsImportData.m */,
-				B0F396FB1729376200205B40 /* ExportContacts.h */,
-				B0F396FC1729376200205B40 /* ExportContacts.m */,
+				B0CB974F18A28B1B00B20974 /* Activity.h */,
+				B0CB975018A28B1B00B20974 /* Activity.m */,
+				B0CB975118A28B1B00B20974 /* ActivityError.h */,
+				B0CB975218A28B1B00B20974 /* ActivityError.m */,
+				B0CB975318A28B1B00B20974 /* AddContacts.h */,
+				B0CB975418A28B1B00B20974 /* AddContacts.m */,
+				B0CB975518A28B1B00B20974 /* AddContactsImportData.h */,
+				B0CB975618A28B1B00B20974 /* AddContactsImportData.m */,
+				B0CB975718A28B1B00B20974 /* ExportContacts.h */,
+				B0CB975818A28B1B00B20974 /* ExportContacts.m */,
 			);
 			path = Activites;
 			sourceTree = "<group>";
 		};
-		B0F396FF1729376200205B40 /* Contacts */ = {
+		B0CB975B18A28B1B00B20974 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				B0F397001729376200205B40 /* Address.h */,
-				B0F397011729376200205B40 /* Address.m */,
-				B0F397021729376200205B40 /* Contact.h */,
-				B0F397031729376200205B40 /* Contact.m */,
-				B0F397041729376200205B40 /* ContactList.h */,
-				B0F397051729376200205B40 /* ContactList.m */,
-				B0F397061729376200205B40 /* CustomField.h */,
-				B0F397071729376200205B40 /* CustomField.m */,
-				B0F397081729376200205B40 /* EmailAddress.h */,
-				B0F397091729376200205B40 /* EmailAddress.m */,
-				B0F3970A1729376200205B40 /* Note.h */,
-				B0F3970B1729376200205B40 /* Note.m */,
+				B0CB975C18A28B1B00B20974 /* Address.h */,
+				B0CB975D18A28B1B00B20974 /* Address.m */,
+				B0CB975E18A28B1B00B20974 /* Contact.h */,
+				B0CB975F18A28B1B00B20974 /* Contact.m */,
+				B0CB976018A28B1B00B20974 /* ContactList.h */,
+				B0CB976118A28B1B00B20974 /* ContactList.m */,
+				B0CB976218A28B1B00B20974 /* CustomField.h */,
+				B0CB976318A28B1B00B20974 /* CustomField.m */,
+				B0CB976418A28B1B00B20974 /* EmailAddress.h */,
+				B0CB976518A28B1B00B20974 /* EmailAddress.m */,
+				B0CB976618A28B1B00B20974 /* Note.h */,
+				B0CB976718A28B1B00B20974 /* Note.m */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
 		};
-		B0F3970C1729376200205B40 /* EmailCampaigns */ = {
+		B0CB976818A28B1B00B20974 /* EmailCampaigns */ = {
 			isa = PBXGroup;
 			children = (
-				B0F3970D1729376200205B40 /* ClickThroughDetails.h */,
-				B0F3970E1729376200205B40 /* ClickThroughDetails.m */,
-				B0F3970F1729376200205B40 /* EmailCampaign.h */,
-				B0F397101729376200205B40 /* EmailCampaign.m */,
-				B0F397111729376200205B40 /* MessageFooter.h */,
-				B0F397121729376200205B40 /* MessageFooter.m */,
-				B0F397131729376200205B40 /* Schedule.h */,
-				B0F397141729376200205B40 /* Schedule.m */,
-				B0F397151729376200205B40 /* TestSend.h */,
-				B0F397161729376200205B40 /* TestSend.m */,
+				B0CB976918A28B1B00B20974 /* ClickThroughDetails.h */,
+				B0CB976A18A28B1B00B20974 /* ClickThroughDetails.m */,
+				B0CB976B18A28B1B00B20974 /* EmailCampaign.h */,
+				B0CB976C18A28B1B00B20974 /* EmailCampaign.m */,
+				B0CB976D18A28B1B00B20974 /* MessageFooter.h */,
+				B0CB976E18A28B1B00B20974 /* MessageFooter.m */,
+				B0CB976F18A28B1B00B20974 /* Schedule.h */,
+				B0CB977018A28B1B00B20974 /* Schedule.m */,
+				B0CB977118A28B1B00B20974 /* TestSend.h */,
+				B0CB977218A28B1B00B20974 /* TestSend.m */,
 			);
 			path = EmailCampaigns;
 			sourceTree = "<group>";
 		};
-		B0F397191729376200205B40 /* Tracking */ = {
+		B0CB977318A28B1B00B20974 /* EventSpot */ = {
 			isa = PBXGroup;
 			children = (
-				C398C0BE18101ACA00E54CAE /* AllActivites.h */,
-				C398C0BF18101ACA00E54CAE /* AllActivites.m */,
-				C398C0C018101ACA00E54CAE /* EmailSortedActivity.h */,
-				C398C0C118101ACA00E54CAE /* EmailSortedActivity.m */,
-				B0F3971A1729376200205B40 /* BounceActivity.h */,
-				B0F3971B1729376200205B40 /* BounceActivity.m */,
-				B0F3971C1729376200205B40 /* ClickActivity.h */,
-				B0F3971D1729376200205B40 /* ClickActivity.m */,
-				B0F3971E1729376200205B40 /* ForwardActivity.h */,
-				B0F3971F1729376200205B40 /* ForwardActivity.m */,
-				B0F397201729376200205B40 /* OpenActivity.h */,
-				B0F397211729376200205B40 /* OpenActivity.m */,
-				B0F397221729376200205B40 /* OptOutActivity.h */,
-				B0F397231729376200205B40 /* OptOutActivity.m */,
-				B0F397241729376200205B40 /* SendActivity.h */,
-				B0F397251729376200205B40 /* SendActivity.m */,
-				B0F397261729376200205B40 /* TrackingActivity.h */,
-				B0F397271729376200205B40 /* TrackingActivity.m */,
-				B0F397281729376200205B40 /* TrackingSummary.h */,
-				B0F397291729376200205B40 /* TrackingSummary.m */,
+				B0CB977418A28B1B00B20974 /* Enums */,
+				B0CB979718A28B1B00B20974 /* Event.h */,
+				B0CB979818A28B1B00B20974 /* Event.m */,
+				B0CB979918A28B1B00B20974 /* EventAddress.h */,
+				B0CB979A18A28B1B00B20974 /* EventAddress.m */,
+				B0CB979B18A28B1B00B20974 /* EventContact.h */,
+				B0CB979C18A28B1B00B20974 /* EventContact.m */,
+				B0CB979D18A28B1B00B20974 /* EventExtended.h */,
+				B0CB979E18A28B1B00B20974 /* EventExtended.m */,
+				B0CB979F18A28B1B00B20974 /* EventFee.h */,
+				B0CB97A018A28B1B00B20974 /* EventFee.m */,
+				B0CB97A118A28B1B00B20974 /* EventItem.h */,
+				B0CB97A218A28B1B00B20974 /* EventItem.m */,
+				B0CB97A318A28B1B00B20974 /* EventItemAttribute.h */,
+				B0CB97A418A28B1B00B20974 /* EventItemAttribute.m */,
+				B0CB97A518A28B1B00B20974 /* EventNotificationOptions.h */,
+				B0CB97A618A28B1B00B20974 /* EventNotificationOptions.m */,
+				B0CB97A718A28B1B00B20974 /* EventOnlineMeeting.h */,
+				B0CB97A818A28B1B00B20974 /* EventOnlineMeeting.m */,
+				B0CB97A918A28B1B00B20974 /* EventPatch.h */,
+				B0CB97AA18A28B1B00B20974 /* EventPatch.m */,
+				B0CB97AB18A28B1B00B20974 /* EventPromocode.h */,
+				B0CB97AC18A28B1B00B20974 /* EventPromocode.m */,
+				B0CB97AD18A28B1B00B20974 /* EventRegistrant.h */,
+				B0CB97AE18A28B1B00B20974 /* EventRegistrant.m */,
+				B0CB97AF18A28B1B00B20974 /* EventRegistrantExtended.h */,
+				B0CB97B018A28B1B00B20974 /* EventRegistrantExtended.m */,
+				B0CB97B118A28B1B00B20974 /* EventTrackInformation.h */,
+				B0CB97B218A28B1B00B20974 /* EventTrackInformation.m */,
+				B0CB97B318A28B1B00B20974 /* RegistrantFee.h */,
+				B0CB97B418A28B1B00B20974 /* RegistrantFee.m */,
+				B0CB97B518A28B1B00B20974 /* RegistrantGuest.h */,
+				B0CB97B618A28B1B00B20974 /* RegistrantGuest.m */,
+				B0CB97B718A28B1C00B20974 /* RegistrantGuestInfo.h */,
+				B0CB97B818A28B1C00B20974 /* RegistrantGuestInfo.m */,
+				B0CB97B918A28B1C00B20974 /* RegistrantGuestSections.h */,
+				B0CB97BA18A28B1C00B20974 /* RegistrantGuestSections.m */,
+				B0CB97BB18A28B1C00B20974 /* RegistrantOrder.h */,
+				B0CB97BC18A28B1C00B20974 /* RegistrantOrder.m */,
+				B0CB97BD18A28B1C00B20974 /* RegistrantPaymentSummary.h */,
+				B0CB97BE18A28B1C00B20974 /* RegistrantPaymentSummary.m */,
+				B0CB97BF18A28B1C00B20974 /* RegistrantPromoCode.h */,
+				B0CB97C018A28B1C00B20974 /* RegistrantPromoCode.m */,
+				B0CB97C118A28B1C00B20974 /* RegistrantPromocodeInfo.h */,
+				B0CB97C218A28B1C00B20974 /* RegistrantPromocodeInfo.m */,
+				B0CB97C318A28B1C00B20974 /* RegistrantSaleItem.h */,
+				B0CB97C418A28B1C00B20974 /* RegistrantSaleItem.m */,
+				B0CB97C518A28B1C00B20974 /* RegistrantSection.h */,
+				B0CB97C618A28B1C00B20974 /* RegistrantSection.m */,
+				B0CB97C718A28B1C00B20974 /* RegistrantSectionField.h */,
+				B0CB97C818A28B1C00B20974 /* RegistrantSectionField.m */,
 			);
-			path = Tracking;
+			path = EventSpot;
 			sourceTree = "<group>";
 		};
-		B0F3972A1729376200205B40 /* Config */ = {
+		B0CB977418A28B1B00B20974 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				B0F3972B1729376200205B40 /* Config.h */,
-				B0F3972C1729376200205B40 /* Config.m */,
-				B0F3972D1729376200205B40 /* Config.plist */,
+				B0CB977518A28B1B00B20974 /* EventCurrencyTypeEnum.h */,
+				B0CB977618A28B1B00B20974 /* EventCurrencyTypeEnum.m */,
+				B0CB977718A28B1B00B20974 /* EventInformationSectionsEnum.h */,
+				B0CB977818A28B1B00B20974 /* EventInformationSectionsEnum.m */,
+				B0CB977918A28B1B00B20974 /* EventPatchOpEnum.h */,
+				B0CB977A18A28B1B00B20974 /* EventPatchOpEnum.m */,
+				B0CB977B18A28B1B00B20974 /* EventPatchStatusEnum.h */,
+				B0CB977C18A28B1B00B20974 /* EventPatchStatusEnum.m */,
+				B0CB977D18A28B1B00B20974 /* EventPatchValueEnum.h */,
+				B0CB977E18A28B1B00B20974 /* EventPatchValueEnum.m */,
+				B0CB977F18A28B1B00B20974 /* EventPaymentTypeEnum.h */,
+				B0CB978018A28B1B00B20974 /* EventPaymentTypeEnum.m */,
+				B0CB978118A28B1B00B20974 /* EventRegistrantAttendanceStatusEnum.h */,
+				B0CB978218A28B1B00B20974 /* EventRegistrantAttendanceStatusEnum.m */,
+				B0CB978318A28B1B00B20974 /* EventRegistrantDiscountScopeEnum.h */,
+				B0CB978418A28B1B00B20974 /* EventRegistrantDiscountScopeEnum.m */,
+				B0CB978518A28B1B00B20974 /* EventRegistrantPaymentTypeEnum.h */,
+				B0CB978618A28B1B00B20974 /* EventRegistrantPaymentTypeEnum.m */,
+				B0CB978718A28B1B00B20974 /* EventRegistrantSectionsFieldTypeEnum.h */,
+				B0CB978818A28B1B00B20974 /* EventRegistrantSectionsFieldTypeEnum.m */,
+				B0CB978918A28B1B00B20974 /* EventStatusEnum.h */,
+				B0CB978A18A28B1B00B20974 /* EventStatusEnum.m */,
+				B0CB978B18A28B1B00B20974 /* EventTypeEnum.h */,
+				B0CB978C18A28B1B00B20974 /* EventTypeEnum.m */,
+				B0CB978D18A28B1B00B20974 /* FeeScopeEnum.h */,
+				B0CB978E18A28B1B00B20974 /* FeeScopeEnum.m */,
+				B0CB978F18A28B1B00B20974 /* PromocodeCodeTypeEnum.h */,
+				B0CB979018A28B1B00B20974 /* PromocodeCodeTypeEnum.m */,
+				B0CB979118A28B1B00B20974 /* PromocodeDiscountScopeEnum.h */,
+				B0CB979218A28B1B00B20974 /* PromocodeDiscountScopeEnum.m */,
+				B0CB979318A28B1B00B20974 /* PromocodeDiscountTypeEnum.h */,
+				B0CB979418A28B1B00B20974 /* PromocodeDiscountTypeEnum.m */,
+				B0CB979518A28B1B00B20974 /* PromocodeStatusEnum.h */,
+				B0CB979618A28B1B00B20974 /* PromocodeStatusEnum.m */,
 			);
-			path = Config;
+			path = Enums;
 			sourceTree = "<group>";
 		};
-		B0F3972E1729376200205B40 /* Exceptions */ = {
+		B0CB97C918A28B1C00B20974 /* MyLibraryFiles */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Exceptions;
-			sourceTree = "<group>";
-		};
-		B0F3972F1729376200205B40 /* HttpRequest */ = {
-			isa = PBXGroup;
-			children = (
-				B0F397301729376200205B40 /* HttpError.h */,
-				B0F397311729376200205B40 /* HttpError.m */,
-				B0F397321729376200205B40 /* HttpRequest.h */,
-				B0F397331729376200205B40 /* HttpRequest.m */,
-				B0F397341729376200205B40 /* HttpResponse.h */,
-				B0F397351729376200205B40 /* HttpResponse.m */,
-			);
-			path = HttpRequest;
-			sourceTree = "<group>";
-		};
-		B0F397361729376200205B40 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				C3709C0A1827A9E90072CA14 /* MyLibraryFilesService.h */,
-				C3709C0B1827A9E90072CA14 /* MyLibraryFilesService.m */,
-				C3709C0C1827A9E90072CA14 /* MyLibraryFoldersService.h */,
-				C3709C0D1827A9E90072CA14 /* MyLibraryFoldersService.m */,
-				B0F397371729376200205B40 /* ActivityService.h */,
-				B0F397381729376200205B40 /* ActivityService.m */,
-				B0F397391729376200205B40 /* CampaignScheduleService.h */,
-				B0F3973A1729376200205B40 /* CampaignScheduleService.m */,
-				B0F3973B1729376200205B40 /* CampaignTrackingService.h */,
-				B0F3973C1729376200205B40 /* CampaignTrackingService.m */,
-				B0F3973D1729376200205B40 /* ContactTrackingService.h */,
-				B0F3973E1729376200205B40 /* ContactTrackingService.m */,
-				B0F3973F1729376200205B40 /* EmailCampaignService.h */,
-				B0F397401729376200205B40 /* EmailCampaignService.m */,
-				B0F397411729376200205B40 /* VerifiedEmailAddresses.h */,
-				B0F397421729376200205B40 /* VerifiedEmailAddresses.m */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		B0F397431729376200205B40 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				B0F397441729376200205B40 /* CTCTGlobal.h */,
-				B0F397451729376200205B40 /* CTCTGlobal.m */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		C3709BF31827A9170072CA14 /* MyLibraryFiles */ = {
-			isa = PBXGroup;
-			children = (
-				C3709BF41827A9170072CA14 /* FileMoved.h */,
-				C3709BF51827A9170072CA14 /* FileMoved.m */,
-				C3709BF61827A9170072CA14 /* FileUploadStatus.h */,
-				C3709BF71827A9170072CA14 /* FileUploadStatus.m */,
+				B0CB97CA18A28B1C00B20974 /* FileMoved.h */,
+				B0CB97CB18A28B1C00B20974 /* FileMoved.m */,
+				B0CB97CC18A28B1C00B20974 /* FileUploadStatus.h */,
+				B0CB97CD18A28B1C00B20974 /* FileUploadStatus.m */,
 			);
 			path = MyLibraryFiles;
 			sourceTree = "<group>";
 		};
-		C3709BFA1827A9250072CA14 /* MyLibraryFolders */ = {
+		B0CB97CE18A28B1C00B20974 /* MyLibraryFolders */ = {
 			isa = PBXGroup;
 			children = (
-				C3709BFB1827A9250072CA14 /* LibraryFile.h */,
-				C3709BFC1827A9250072CA14 /* LibraryFile.m */,
-				C3709BFD1827A9250072CA14 /* LibraryFolder.h */,
-				C3709BFE1827A9250072CA14 /* LibraryFolder.m */,
-				C3709BFF1827A9250072CA14 /* LibrarySummary.h */,
-				C3709C001827A9250072CA14 /* LibrarySummary.m */,
-				C3709C011827A9250072CA14 /* Thumbnail.h */,
-				C3709C021827A9250072CA14 /* Thumbnail.m */,
-				C3709C031827A9250072CA14 /* UsageSummary.h */,
-				C3709C041827A9250072CA14 /* UsageSummary.m */,
+				B0CB97CF18A28B1C00B20974 /* LibraryFile.h */,
+				B0CB97D018A28B1C00B20974 /* LibraryFile.m */,
+				B0CB97D118A28B1C00B20974 /* LibraryFolder.h */,
+				B0CB97D218A28B1C00B20974 /* LibraryFolder.m */,
+				B0CB97D318A28B1C00B20974 /* LibrarySummary.h */,
+				B0CB97D418A28B1C00B20974 /* LibrarySummary.m */,
+				B0CB97D518A28B1C00B20974 /* Thumbnail.h */,
+				B0CB97D618A28B1C00B20974 /* Thumbnail.m */,
+				B0CB97D718A28B1C00B20974 /* UsageSummary.h */,
+				B0CB97D818A28B1C00B20974 /* UsageSummary.m */,
 			);
 			path = MyLibraryFolders;
+			sourceTree = "<group>";
+		};
+		B0CB97DB18A28B1C00B20974 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				B0CB97DC18A28B1C00B20974 /* AllActivites.h */,
+				B0CB97DD18A28B1C00B20974 /* AllActivites.m */,
+				B0CB97DE18A28B1C00B20974 /* BounceActivity.h */,
+				B0CB97DF18A28B1C00B20974 /* BounceActivity.m */,
+				B0CB97E018A28B1C00B20974 /* ClickActivity.h */,
+				B0CB97E118A28B1C00B20974 /* ClickActivity.m */,
+				B0CB97E218A28B1C00B20974 /* EmailSortedActivity.h */,
+				B0CB97E318A28B1C00B20974 /* EmailSortedActivity.m */,
+				B0CB97E418A28B1C00B20974 /* ForwardActivity.h */,
+				B0CB97E518A28B1C00B20974 /* ForwardActivity.m */,
+				B0CB97E618A28B1C00B20974 /* OpenActivity.h */,
+				B0CB97E718A28B1C00B20974 /* OpenActivity.m */,
+				B0CB97E818A28B1C00B20974 /* OptOutActivity.h */,
+				B0CB97E918A28B1C00B20974 /* OptOutActivity.m */,
+				B0CB97EA18A28B1C00B20974 /* SendActivity.h */,
+				B0CB97EB18A28B1C00B20974 /* SendActivity.m */,
+				B0CB97EC18A28B1C00B20974 /* TrackingActivity.h */,
+				B0CB97ED18A28B1C00B20974 /* TrackingActivity.m */,
+				B0CB97EE18A28B1C00B20974 /* TrackingSummary.h */,
+				B0CB97EF18A28B1C00B20974 /* TrackingSummary.m */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		B0CB97F018A28B1C00B20974 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B0CB97F118A28B1C00B20974 /* Config.h */,
+				B0CB97F218A28B1C00B20974 /* Config.m */,
+				B0CB97F318A28B1C00B20974 /* Config.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B0CB97F418A28B1C00B20974 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B0CB97F518A28B1C00B20974 /* HttpError.h */,
+				B0CB97F618A28B1C00B20974 /* HttpError.m */,
+				B0CB97F718A28B1C00B20974 /* HttpRequest.h */,
+				B0CB97F818A28B1C00B20974 /* HttpRequest.m */,
+				B0CB97F918A28B1C00B20974 /* HttpResponse.h */,
+				B0CB97FA18A28B1C00B20974 /* HttpResponse.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		B0CB97FB18A28B1C00B20974 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C3C031AC18AA785100FE67A1 /* AccountService.h */,
+				C3C031AD18AA785100FE67A1 /* AccountService.m */,
+				B0CB97FC18A28B1C00B20974 /* ActivityService.h */,
+				B0CB97FD18A28B1C00B20974 /* ActivityService.m */,
+				B0CB97FE18A28B1C00B20974 /* CampaignScheduleService.h */,
+				B0CB97FF18A28B1C00B20974 /* CampaignScheduleService.m */,
+				B0CB980018A28B1C00B20974 /* CampaignTrackingService.h */,
+				B0CB980118A28B1C00B20974 /* CampaignTrackingService.m */,
+				B0CB980218A28B1C00B20974 /* ContactTrackingService.h */,
+				B0CB980318A28B1C00B20974 /* ContactTrackingService.m */,
+				B0CB980418A28B1C00B20974 /* EmailCampaignService.h */,
+				B0CB980518A28B1C00B20974 /* EmailCampaignService.m */,
+				B0CB980618A28B1C00B20974 /* EventSpotService.h */,
+				B0CB980718A28B1C00B20974 /* EventSpotService.m */,
+				B0CB980818A28B1C00B20974 /* MyLibraryFilesService.h */,
+				B0CB980918A28B1C00B20974 /* MyLibraryFilesService.m */,
+				B0CB980A18A28B1C00B20974 /* MyLibraryFoldersService.h */,
+				B0CB980B18A28B1C00B20974 /* MyLibraryFoldersService.m */,
+				B0CB980C18A28B1C00B20974 /* VerifiedEmailAddresses.h */,
+				B0CB980D18A28B1C00B20974 /* VerifiedEmailAddresses.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0CB980E18A28B1C00B20974 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0CB980F18A28B1C00B20974 /* CTCTGlobal.h */,
+				B0CB981018A28B1C00B20974 /* CTCTGlobal.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C3C031A518AA783C00FE67A1 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C3C031A618AA783C00FE67A1 /* AccountSummary.h */,
+				C3C031A718AA783C00FE67A1 /* AccountSummary.m */,
+				C3C031A818AA783C00FE67A1 /* OrganizationAddresses.h */,
+				C3C031A918AA783C00FE67A1 /* OrganizationAddresses.m */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,9 +832,9 @@
 				B029C42017046F0F005B4FE2 /* MainViewController.xib in Resources */,
 				B029C4BB170484A7005B4FE2 /* ContactViewController.xib in Resources */,
 				B029C4C01704899B005B4FE2 /* ListsTableViewController.xib in Resources */,
+				B0CB981318A28B1C00B20974 /* CTCTLoginViewController.xib in Resources */,
+				B0CB986518A28B1C00B20974 /* Config.plist in Resources */,
 				A3A8CD46171ECBF00048F3C5 /* ContactCustomFieldsViewController.xib in Resources */,
-				B0F397481729376200205B40 /* CTCTLoginViewController.xib in Resources */,
-				B0F397681729376300205B40 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,66 +845,112 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C031AB18AA783C00FE67A1 /* OrganizationAddresses.m in Sources */,
+				B0CB983518A28B1C00B20974 /* PromocodeCodeTypeEnum.m in Sources */,
+				B0CB982818A28B1C00B20974 /* EventCurrencyTypeEnum.m in Sources */,
+				B0CB983318A28B1C00B20974 /* EventTypeEnum.m in Sources */,
+				B0CB981518A28B1C00B20974 /* ContactsCollection.m in Sources */,
 				B029C41017046F0F005B4FE2 /* main.m in Sources */,
+				B0CB983B18A28B1C00B20974 /* EventContact.m in Sources */,
+				B0CB985618A28B1C00B20974 /* LibrarySummary.m in Sources */,
+				B0CB985518A28B1C00B20974 /* LibraryFolder.m in Sources */,
+				B0CB984D18A28B1C00B20974 /* RegistrantPromoCode.m in Sources */,
+				B0CB984018A28B1C00B20974 /* EventNotificationOptions.m in Sources */,
+				B0CB982618A28B1C00B20974 /* Schedule.m in Sources */,
+				B0CB986018A28B1C00B20974 /* OptOutActivity.m in Sources */,
+				B0CB984F18A28B1C00B20974 /* RegistrantSaleItem.m in Sources */,
+				B0CB985918A28B1C00B20974 /* ResultSet.m in Sources */,
+				B0CB985818A28B1C00B20974 /* UsageSummary.m in Sources */,
+				B0CB984918A28B1C00B20974 /* RegistrantGuestInfo.m in Sources */,
+				B0CB983E18A28B1C00B20974 /* EventItem.m in Sources */,
+				B0CB981418A28B1C00B20974 /* Collection.m in Sources */,
+				B0CB983618A28B1C00B20974 /* PromocodeDiscountScopeEnum.m in Sources */,
+				B0CB981D18A28B1C00B20974 /* Address.m in Sources */,
+				B0CB985418A28B1C00B20974 /* LibraryFile.m in Sources */,
+				B0CB981718A28B1C00B20974 /* Activity.m in Sources */,
 				B029C41417046F0F005B4FE2 /* AppDelegate.m in Sources */,
+				B0CB985B18A28B1C00B20974 /* BounceActivity.m in Sources */,
+				B0CB986B18A28B1C00B20974 /* CampaignTrackingService.m in Sources */,
 				B029C41D17046F0F005B4FE2 /* MainViewController.m in Sources */,
+				B0CB986418A28B1C00B20974 /* Config.m in Sources */,
+				B0CB982B18A28B1C00B20974 /* EventPatchStatusEnum.m in Sources */,
 				B029C4B617047C0A005B4FE2 /* LoadingView.m in Sources */,
+				B0CB985E18A28B1C00B20974 /* ForwardActivity.m in Sources */,
+				B0CB982518A28B1C00B20974 /* MessageFooter.m in Sources */,
+				B0CB986218A28B1C00B20974 /* TrackingActivity.m in Sources */,
+				B0CB984B18A28B1C00B20974 /* RegistrantOrder.m in Sources */,
+				B0CB984318A28B1C00B20974 /* EventPromocode.m in Sources */,
+				B0CB981218A28B1C00B20974 /* CTCTLoginViewController.m in Sources */,
+				B0CB982F18A28B1C00B20974 /* EventRegistrantDiscountScopeEnum.m in Sources */,
+				C3C031AE18AA785100FE67A1 /* AccountService.m in Sources */,
+				B0CB984518A28B1C00B20974 /* EventRegistrantExtended.m in Sources */,
+				B0CB984C18A28B1C00B20974 /* RegistrantPaymentSummary.m in Sources */,
+				B0CB983A18A28B1C00B20974 /* EventAddress.m in Sources */,
+				B0CB984E18A28B1C00B20974 /* RegistrantPromocodeInfo.m in Sources */,
+				B0CB984618A28B1C00B20974 /* EventTrackInformation.m in Sources */,
+				B0CB986F18A28B1C00B20974 /* MyLibraryFilesService.m in Sources */,
+				B0CB982118A28B1C00B20974 /* EmailAddress.m in Sources */,
+				B0CB983F18A28B1C00B20974 /* EventItemAttribute.m in Sources */,
+				B0CB981F18A28B1C00B20974 /* ContactList.m in Sources */,
+				B0CB985218A28B1C00B20974 /* FileMoved.m in Sources */,
+				B0CB987218A28B1C00B20974 /* CTCTGlobal.m in Sources */,
+				B0CB982718A28B1C00B20974 /* TestSend.m in Sources */,
+				B0CB983718A28B1C00B20974 /* PromocodeDiscountTypeEnum.m in Sources */,
+				B0CB983118A28B1C00B20974 /* EventRegistrantSectionsFieldTypeEnum.m in Sources */,
+				B0CB986D18A28B1C00B20974 /* EmailCampaignService.m in Sources */,
+				B0CB981918A28B1C00B20974 /* AddContacts.m in Sources */,
+				B0CB986118A28B1C00B20974 /* SendActivity.m in Sources */,
+				B0CB982D18A28B1C00B20974 /* EventPaymentTypeEnum.m in Sources */,
+				B0CB987118A28B1C00B20974 /* VerifiedEmailAddresses.m in Sources */,
+				B0CB985C18A28B1C00B20974 /* ClickActivity.m in Sources */,
+				B0CB981C18A28B1C00B20974 /* Component.m in Sources */,
+				B0CB984418A28B1C00B20974 /* EventRegistrant.m in Sources */,
+				B0CB985A18A28B1C00B20974 /* AllActivites.m in Sources */,
+				B0CB986918A28B1C00B20974 /* ActivityService.m in Sources */,
+				B0CB981618A28B1C00B20974 /* ListsCollection.m in Sources */,
+				B0CB986318A28B1C00B20974 /* TrackingSummary.m in Sources */,
+				B0CB981E18A28B1C00B20974 /* Contact.m in Sources */,
+				B0CB982C18A28B1C00B20974 /* EventPatchValueEnum.m in Sources */,
+				B0CB982A18A28B1C00B20974 /* EventPatchOpEnum.m in Sources */,
+				B0CB984A18A28B1C00B20974 /* RegistrantGuestSections.m in Sources */,
+				B0CB985318A28B1C00B20974 /* FileUploadStatus.m in Sources */,
+				B0CB983818A28B1C00B20974 /* PromocodeStatusEnum.m in Sources */,
+				B0CB983418A28B1C00B20974 /* FeeScopeEnum.m in Sources */,
+				B0CB987018A28B1C00B20974 /* MyLibraryFoldersService.m in Sources */,
+				C3C031AA18AA783C00FE67A1 /* AccountSummary.m in Sources */,
+				B0CB982918A28B1C00B20974 /* EventInformationSectionsEnum.m in Sources */,
+				B0CB982218A28B1C00B20974 /* Note.m in Sources */,
+				B0CB983018A28B1C00B20974 /* EventRegistrantPaymentTypeEnum.m in Sources */,
+				B0CB982E18A28B1C00B20974 /* EventRegistrantAttendanceStatusEnum.m in Sources */,
+				B0CB986618A28B1C00B20974 /* HttpError.m in Sources */,
 				B029C4BA170484A7005B4FE2 /* ContactViewController.m in Sources */,
+				B0CB985018A28B1C00B20974 /* RegistrantSection.m in Sources */,
+				B0CB984218A28B1C00B20974 /* EventPatch.m in Sources */,
+				B0CB986A18A28B1C00B20974 /* CampaignScheduleService.m in Sources */,
+				B0CB986818A28B1C00B20974 /* HttpResponse.m in Sources */,
+				B0CB984718A28B1C00B20974 /* RegistrantFee.m in Sources */,
+				B0CB982018A28B1C00B20974 /* CustomField.m in Sources */,
+				B0CB982418A28B1C00B20974 /* EmailCampaign.m in Sources */,
+				B0CB984818A28B1C00B20974 /* RegistrantGuest.m in Sources */,
 				B029C4BF1704899B005B4FE2 /* ListsTableViewController.m in Sources */,
+				B0CB985D18A28B1C00B20974 /* EmailSortedActivity.m in Sources */,
+				B0CB986718A28B1C00B20974 /* HttpRequest.m in Sources */,
+				B0CB983C18A28B1C00B20974 /* EventExtended.m in Sources */,
 				A3A8CD45171ECBF00048F3C5 /* ContactCustomFieldsViewController.m in Sources */,
-				B0F397461729376200205B40 /* CTCTDataStore.m in Sources */,
-				B0F397471729376200205B40 /* CTCTLoginViewController.m in Sources */,
-				B0F3974A1729376200205B40 /* Collection.m in Sources */,
-				B0F3974B1729376200205B40 /* ContactsCollection.m in Sources */,
-				B0F3974C1729376200205B40 /* ListsCollection.m in Sources */,
-				B0F3974D1729376200205B40 /* Activity.m in Sources */,
-				B0F3974E1729376200205B40 /* ActivityError.m in Sources */,
-				B0F3974F1729376200205B40 /* AddContacts.m in Sources */,
-				B0F397501729376300205B40 /* AddContactsImportData.m in Sources */,
-				B0F397511729376300205B40 /* ExportContacts.m in Sources */,
-				B0F397521729376300205B40 /* Component.m in Sources */,
-				B0F397531729376300205B40 /* Address.m in Sources */,
-				B0F397541729376300205B40 /* Contact.m in Sources */,
-				B0F397551729376300205B40 /* ContactList.m in Sources */,
-				B0F397561729376300205B40 /* CustomField.m in Sources */,
-				B0F397571729376300205B40 /* EmailAddress.m in Sources */,
-				B0F397581729376300205B40 /* Note.m in Sources */,
-				B0F397591729376300205B40 /* ClickThroughDetails.m in Sources */,
-				B0F3975A1729376300205B40 /* EmailCampaign.m in Sources */,
-				B0F3975B1729376300205B40 /* MessageFooter.m in Sources */,
-				B0F3975C1729376300205B40 /* Schedule.m in Sources */,
-				B0F3975D1729376300205B40 /* TestSend.m in Sources */,
-				B0F3975E1729376300205B40 /* ResultSet.m in Sources */,
-				B0F3975F1729376300205B40 /* BounceActivity.m in Sources */,
-				B0F397601729376300205B40 /* ClickActivity.m in Sources */,
-				B0F397611729376300205B40 /* ForwardActivity.m in Sources */,
-				B0F397621729376300205B40 /* OpenActivity.m in Sources */,
-				B0F397631729376300205B40 /* OptOutActivity.m in Sources */,
-				B0F397641729376300205B40 /* SendActivity.m in Sources */,
-				B0F397651729376300205B40 /* TrackingActivity.m in Sources */,
-				B0F397661729376300205B40 /* TrackingSummary.m in Sources */,
-				B0F397671729376300205B40 /* Config.m in Sources */,
-				B0F397691729376300205B40 /* HttpError.m in Sources */,
-				B0F3976A1729376300205B40 /* HttpRequest.m in Sources */,
-				B0F3976B1729376300205B40 /* HttpResponse.m in Sources */,
-				B0F3976C1729376300205B40 /* ActivityService.m in Sources */,
-				B0F3976D1729376300205B40 /* CampaignScheduleService.m in Sources */,
-				B0F3976E1729376300205B40 /* CampaignTrackingService.m in Sources */,
-				B0F3976F1729376300205B40 /* ContactTrackingService.m in Sources */,
-				B0F397701729376300205B40 /* EmailCampaignService.m in Sources */,
-				B0F397711729376300205B40 /* VerifiedEmailAddresses.m in Sources */,
-				B0F397721729376300205B40 /* CTCTGlobal.m in Sources */,
-				C398C0C218101ACA00E54CAE /* AllActivites.m in Sources */,
-				C398C0C318101ACA00E54CAE /* EmailSortedActivity.m in Sources */,
-				C3709BF81827A9170072CA14 /* FileMoved.m in Sources */,
-				C3709BF91827A9170072CA14 /* FileUploadStatus.m in Sources */,
-				C3709C051827A9250072CA14 /* LibraryFile.m in Sources */,
-				C3709C061827A9250072CA14 /* LibraryFolder.m in Sources */,
-				C3709C071827A9250072CA14 /* LibrarySummary.m in Sources */,
-				C3709C081827A9250072CA14 /* Thumbnail.m in Sources */,
-				C3709C091827A9250072CA14 /* UsageSummary.m in Sources */,
-				C3709C0E1827A9E90072CA14 /* MyLibraryFilesService.m in Sources */,
-				C3709C0F1827A9E90072CA14 /* MyLibraryFoldersService.m in Sources */,
+				B0CB982318A28B1C00B20974 /* ClickThroughDetails.m in Sources */,
+				B0CB981118A28B1C00B20974 /* CTCTDataStore.m in Sources */,
+				B0CB984118A28B1C00B20974 /* EventOnlineMeeting.m in Sources */,
+				B0CB981818A28B1C00B20974 /* ActivityError.m in Sources */,
+				B0CB985118A28B1C00B20974 /* RegistrantSectionField.m in Sources */,
+				B0CB986E18A28B1C00B20974 /* EventSpotService.m in Sources */,
+				B0CB981A18A28B1C00B20974 /* AddContactsImportData.m in Sources */,
+				B0CB983D18A28B1C00B20974 /* EventFee.m in Sources */,
+				B0CB981B18A28B1C00B20974 /* ExportContacts.m in Sources */,
+				B0CB986C18A28B1C00B20974 /* ContactTrackingService.m in Sources */,
+				B0CB985718A28B1C00B20974 /* Thumbnail.m in Sources */,
+				B0CB983218A28B1C00B20974 /* EventStatusEnum.m in Sources */,
+				B0CB985F18A28B1C00B20974 /* OpenActivity.m in Sources */,
+				B0CB983918A28B1C00B20974 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

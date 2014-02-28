@@ -19,6 +19,7 @@
     
     MainViewController *main = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:main];
+	nav.navigationBar.translucent = NO;
     
     self.viewController = nav;
     self.window.rootViewController = self.viewController;
