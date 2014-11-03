@@ -16,7 +16,7 @@
 
 @interface FileUploadStatus : NSObject
 
-@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *desc;
 @property (strong, nonatomic) NSString *fileId;
 @property (strong, nonatomic) NSString *status;
 

@@ -35,7 +35,7 @@
 @interface LibraryFile : NSObject
 
 @property (nonatomic, strong) NSString   *createdDate;
-@property (nonatomic, strong) NSString   *description;
+@property (nonatomic, strong) NSString   *desc;
 @property (nonatomic, strong) NSString   *fileType;
 @property (nonatomic, strong) NSString   *folder;
 @property (nonatomic, strong) NSString   *folderId;

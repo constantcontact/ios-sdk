@@ -38,7 +38,7 @@
     //-----token is set up as parameter, but it can also be sent in headers,
     //if it is then you must change the http request method too to acustom it
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
 
     if (response.statusCode == 200)
     {
@@ -75,7 +75,7 @@
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     NSString *jsonString = [list JSON];
     
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:jsonString];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:jsonString];
     
     if (response.statusCode == 201)
     {
@@ -102,7 +102,7 @@
     NSString *httpQuery = [NSString stringWithFormat:endpoint, listId];
 
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -137,7 +137,7 @@
         url = [NSString stringWithFormat:@"%@&limit=%d", url, limit];
     }
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if(response.statusCode == 200)
     {
@@ -168,7 +168,7 @@
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
     NSString *listJSON = [list JSON];
     
-    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:listJSON];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:listJSON];
     
     if (response.statusCode == 200)
     {
@@ -188,7 +188,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
     
-    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     *errors = response.errors;
     

@@ -16,7 +16,7 @@
 // url - request url
 // headers - array of all http headers to send
 // ----------------------------------------------------------------------------------------------------
-+(HttpResponse*)getWithUrl:(NSString*)url andHeaders:(NSArray*)headers
++(HttpResponse*)getWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers
 {
     return [self httpRequestWithUrl:url andMethod:@"GET" andHeaders:headers andStringData:nil];
 }
@@ -27,7 +27,7 @@
 // headers - array of all http headers to send
 // stringData - stringData to send with request
 // ----------------------------------------------------------------------------------------------------
-+(HttpResponse*)postWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData
++(HttpResponse*)postWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData
 {
     return [self httpRequestWithUrl:url andMethod:@"POST" andHeaders:headers andStringData:stringData];
 }
@@ -38,7 +38,7 @@
 // headers - array of all http headers to send
 // stringData - stringData to send with request
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse*)putWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData
++ (HttpResponse*)putWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData
 {
     return [self httpRequestWithUrl:url andMethod:@"PUT" andHeaders:headers andStringData:stringData];
 }
@@ -49,7 +49,7 @@
 // headers - array of all http headers to send
 // stringData - stringData to send with request
 // ----------------------------------------------------------------------------------------------------
-+ (HttpResponse*)patchWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData
++ (HttpResponse*)patchWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData
 {
     return [self httpRequestWithUrl:url andMethod:@"PATCH" andHeaders:headers andStringData:stringData];
 }
@@ -60,7 +60,7 @@
 // headers - array of all http headers to send
 // data - data to send with request
 // ----------------------------------------------------------------------------------------------------
-+(HttpResponse*)deleteWithUrl:(NSString*)url andHeaders:(NSArray*)headers
++(HttpResponse*)deleteWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers
 {
     return [self httpRequestWithUrl:url andMethod:@"DELETE" andHeaders:headers andStringData:nil];
 }
@@ -88,7 +88,7 @@
 // stringData - stringData to send with the request
 // method - the method type of the call (put, get,delete, etc.)
 // ----------------------------------------------------------------------------------------------------
-+(HttpResponse*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method andHeaders:(NSArray*)headers andStringData:(NSString*)stringData
++(HttpResponse*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData
 {
     NSError *error = nil;
     HttpResponse *customResponse = nil;
@@ -109,12 +109,14 @@
     [urlRequest setURL:[NSURL URLWithString:url]];
     [urlRequest setHTTPMethod:method];
     [urlRequest setValue:[NSString stringWithFormat:@"%d", [postData length]] forHTTPHeaderField:@"Content-Length"];
-    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
-    if(headers.count > 0)
+    if (headers.allKeys.count > 0)
     {
-        NSString *authorization = [NSString stringWithFormat:@"Bearer %@",[headers objectAtIndex:0]];
-        [urlRequest setValue:authorization forHTTPHeaderField:@"Authorization"];
+        for (NSString *key in headers.allKeys)
+        {
+            NSString *keyValue = headers[key];
+            [urlRequest setValue:keyValue forHTTPHeaderField:key];
+        }
     }
     
     [urlRequest setHTTPBody:postData];
@@ -397,4 +399,17 @@
     }
     return mime;
 }
+
++ (NSDictionary *)headersWithAccessToken:(NSString *)accessToken
+{
+    NSString *versionString = [Config valueForType:@"config" key:@"x-ctct-request-source"];
+    
+    return @{
+             @"Content-Type" : @"application/json",
+             @"Accept" : @"application/json",
+             @"x-ctct-request-source" : versionString ? versionString : @"",
+             @"Authorization" : [NSString stringWithFormat:@"Bearer %@", accessToken ? accessToken : @""]
+             };
+}
+
 @end

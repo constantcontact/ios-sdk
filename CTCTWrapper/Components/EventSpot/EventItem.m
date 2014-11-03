@@ -16,7 +16,7 @@
         _attributes = [[NSMutableArray alloc] init];
         _defaultQuantityAvailable = 0;
         _defaultQuantityTotal = 0;
-        _description = @"";
+        _desc = @"";
         _eventItemId = @"";
         _name = @"";
         _perRegistrantLimit = 0;
@@ -32,7 +32,7 @@
     {
         _defaultQuantityAvailable = [[Component valueForDictionary:dictionary withKey:@"default_quantity_available"] intValue];
         _defaultQuantityTotal = [[Component valueForDictionary:dictionary withKey:@"default_quantity_total"] intValue];
-        _description = [Component valueForDictionary:dictionary withKey:@"description"];
+        _desc = [Component valueForDictionary:dictionary withKey:@"description"];
         _eventItemId = [Component valueForDictionary:dictionary withKey:@"id"];
         _name = [Component valueForDictionary:dictionary withKey:@"name"];
         _perRegistrantLimit = [[Component valueForDictionary:dictionary withKey:@"per_registrant_limit"] intValue];
@@ -63,7 +63,7 @@
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     
     if(_defaultQuantityTotal)[dict setObject:[NSNumber numberWithInt:_defaultQuantityTotal] forKey:@"default_quantity_total"];
-     if(_description)[dict setObject:_description forKey:@"description"];
+     if(_desc)[dict setObject:_desc forKey:@"description"];
      if(_name)[dict setObject:_name forKey:@"name"];
      if(_perRegistrantLimit)[dict setObject:[NSNumber numberWithInt:_perRegistrantLimit] forKey:@"per_registrant_limit"];
      if(_price)[dict setObject:[NSNumber numberWithDouble:_price] forKey:@"price"];

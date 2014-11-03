@@ -27,7 +27,7 @@
 /**
  * The item description shown on the registration page
  */
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *desc;
 /**
  * Unique ID of the item
  */
