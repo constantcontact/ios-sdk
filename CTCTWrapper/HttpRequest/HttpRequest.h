@@ -17,7 +17,7 @@
  *  
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
- +(HttpResponse*)getWithUrl:(NSString*)url andHeaders:(NSArray*)headers;
+ +(HttpResponse*)getWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers;
 
  /**
   * Function is used to make a Http POST request;
@@ -28,7 +28,7 @@
   *
   *  @return HttpResponse* - The function returns a response that contains the calls returned value;
   */
-+(HttpResponse*)postWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
++(HttpResponse*)postWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData;
 
  /**
  * Function is used to make a Http PUT request;
@@ -39,7 +39,7 @@
  *
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
-+(HttpResponse*)putWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
++(HttpResponse*)putWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData;
 
 /**
  * Function is used to make a Http PATCH request;
@@ -50,7 +50,7 @@
  *
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
-+(HttpResponse*)patchWithUrl:(NSString*)url andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
++(HttpResponse*)patchWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData;
 
  /**
  * Function is used to make a Http DELETE request;
@@ -61,7 +61,7 @@
  *
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
-+(HttpResponse*)deleteWithUrl:(NSString*)url andHeaders:(NSArray*)headers;
++(HttpResponse*)deleteWithUrl:(NSString*)url andHeaders:(NSDictionary*)headers;
 
  /**
  * Function is used to make a Http request;
@@ -73,7 +73,7 @@
  *
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
-+(HttpResponse*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method andHeaders:(NSArray*)headers andStringData:(NSString*)stringData;
++(HttpResponse*)httpRequestWithUrl:(NSString*)url andMethod:(NSString*)method andHeaders:(NSDictionary*)headers andStringData:(NSString*)stringData;
 
 /**
  * Function is used to make a Http multipart request for bulk activityes;
@@ -100,4 +100,13 @@
  *  @return HttpResponse* - The function returns a response that contains the calls returned value;
  */
 + (HttpResponse*)httpMultipartRequestWithUrl:(NSString *)urlString file:(NSString *)fileName folderId:(NSString *)folderId description:(NSString *)description source:(NSString *)source data:(NSData *)data;
+
+/**
+ * Helper function to return required headers for making an http request with constant contact
+ *
+ * @param accessToken - OAuth2 access token to be placed into the Authorization header
+ * @return NSArray - authorization headers
+ */
++ (NSDictionary*)headersWithAccessToken:(NSString*)accessToken;
+
 @end

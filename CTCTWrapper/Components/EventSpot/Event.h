@@ -78,7 +78,7 @@
 /**
  * Provide a brief description of the event that will be visible on the event registration form and landing page
  */
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *desc;
 /**
  * The event filename - not visible to registrants
  */

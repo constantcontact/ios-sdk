@@ -26,7 +26,7 @@
         _createdDate = @"";
         _currencyType = @"";
         _deleteDate = @"";
-        _description = @"";
+        _desc = @"";
         _endDate = @"";
         _googleAnalyticsKey = @"";
         _googleMerchantId = @"";
@@ -77,7 +77,7 @@
         _createdDate = [Component valueForDictionary:dictionary withKey:@"created_date"];
         _currencyType = [Component valueForDictionary:dictionary withKey:@"currency_type"];
         _deleteDate = [Component valueForDictionary:dictionary withKey:@"deleted_date"];
-        _description = [Component valueForDictionary:dictionary withKey:@"description"];
+        _desc = [Component valueForDictionary:dictionary withKey:@"description"];
         _endDate = [Component valueForDictionary:dictionary withKey:@"end_date"];
         _googleAnalyticsKey = [Component valueForDictionary:dictionary withKey:@"google_analytics_key"];
         _googleMerchantId = [Component valueForDictionary:dictionary withKey:@"google_merchant_id"];
@@ -236,7 +236,7 @@
     if([NSNumber numberWithBool:_areRegistrantsPublic] != nil) [dict setObject:[NSNumber numberWithBool:_areRegistrantsPublic] forKey:@"are_registrants_public"];
     if(jsonContact) [dict setObject:jsonContact forKey:@"contact"];
     if(_currencyType) [dict setObject:_currencyType forKey:@"currency_type"];
-    if(_description) [dict setObject:_description forKey:@"description"];
+    if(_desc) [dict setObject:_desc forKey:@"description"];
     if(_endDate) [dict setObject:_endDate forKey:@"end_date"];
     if(_googleAnalyticsKey) [dict setObject:_googleAnalyticsKey forKey:@"google_analytics_key"];
     if(_googleMerchantId) [dict setObject:_googleMerchantId forKey:@"google_merchant_id"];

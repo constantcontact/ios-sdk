@@ -28,7 +28,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -69,7 +69,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -110,7 +110,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
 
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -151,7 +151,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -192,7 +192,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -233,7 +233,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -265,7 +265,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -296,7 +296,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {

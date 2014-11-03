@@ -35,7 +35,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -72,7 +72,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -103,7 +103,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -126,7 +126,7 @@
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     NSString *fileJSON = [file JSON];
     
-    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:fileJSON];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:fileJSON];
     
     if (response.statusCode == 200)
     {
@@ -146,7 +146,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     *errors = response.errors;
     
@@ -186,7 +186,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -216,7 +216,7 @@
     
     NSString * fileArray = [self toJson:arr] ;
     
-    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:fileArray];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:fileArray];
     
     if (response.statusCode == 200)
     {

@@ -15,7 +15,7 @@
     {
         _fileId =  @"";
         _status = @"";
-        _description = @"";
+        _desc = @"";
     }
     
     return self;
@@ -27,7 +27,7 @@
     {
         _fileId = [Component valueForDictionary:dictionary withKey:@"description"];
         _status = [Component valueForDictionary:dictionary withKey:@"file_id"];
-        _description = [Component valueForDictionary:dictionary withKey:@"status"];
+        _desc = [Component valueForDictionary:dictionary withKey:@"status"];
     }
     return self;
 }

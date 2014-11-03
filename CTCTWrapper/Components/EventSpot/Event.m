@@ -31,7 +31,7 @@
         _title = @"";
         _endDate = @"";
         _addresses = [[EventAddress alloc] init];
-        _description = @"";
+        _desc = @"";
         _name = @"";
         _startDate = @"";
     }
@@ -60,7 +60,7 @@
         _title = [Component valueForDictionary:dictionary withKey:@"title"];
         _endDate = [Component valueForDictionary:dictionary withKey:@"end_date"];
        
-        _description = [Component valueForDictionary:dictionary withKey:@"description"];
+        _desc = [Component valueForDictionary:dictionary withKey:@"description"];
         _name = [Component valueForDictionary:dictionary withKey:@"name"];
         _startDate = [Component valueForDictionary:dictionary withKey:@"start_date"];
         
@@ -97,7 +97,7 @@
     if(_deleteDate) [dict setObject:_deleteDate forKey:@"deleted_date"];
     if(_title) [dict setObject:_title forKey:@"title"];
     if(_endDate) [dict setObject:_endDate forKey:@"end_date"];
-    if(_description) [dict setObject:_description forKey:@"description"];
+    if(_desc) [dict setObject:_desc forKey:@"description"];
     if(_name) [dict setObject:_name forKey:@"name"];
     if(_startDate) [dict setObject:_startDate forKey:@"start_date"];
 

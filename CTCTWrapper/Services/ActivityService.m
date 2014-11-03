@@ -18,7 +18,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -48,7 +48,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -70,7 +70,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -98,7 +98,7 @@
     
     NSString *contactsJSON = [addContacts toJson];
     
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:contactsJSON];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:contactsJSON];
     
     if (response.statusCode == 201)
     {
@@ -122,7 +122,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:stringData];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:stringData];
     
     if (response.statusCode == 201)
     {
@@ -146,7 +146,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:stringData];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:stringData];
     
     if (response.statusCode == 201)
     {
@@ -179,7 +179,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:[self toJson:payload]];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:[self toJson:payload]];
     
     if (response.statusCode == 201)
     {
@@ -278,7 +278,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url  andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url  andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {

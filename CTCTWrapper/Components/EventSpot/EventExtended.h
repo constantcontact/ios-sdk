@@ -55,7 +55,7 @@
 /**
  * Provide a brief description of the event that will be visible on the event registration form and landing page
  */
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *desc;
 /**
  * REQUIRED. The event end date, in ISO-8601 format
  */

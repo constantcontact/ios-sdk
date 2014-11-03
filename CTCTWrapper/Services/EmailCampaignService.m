@@ -21,7 +21,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:nil andStringData:campaignJSON];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:campaignJSON];
  
     if (response.statusCode == 201)
     {
@@ -75,7 +75,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -107,7 +107,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if (response.statusCode == 200)
     {
@@ -131,7 +131,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     *errors = response.errors;
        
@@ -150,7 +150,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
     
-    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:nil andStringData:campaignJSON];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:campaignJSON];
     
     if (response.statusCode == 200)
     {

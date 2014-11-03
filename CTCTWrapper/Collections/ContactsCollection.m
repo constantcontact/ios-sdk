@@ -29,7 +29,7 @@
         httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
         
     if(response.statusCode == 200)
     {
@@ -69,7 +69,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@?access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
     
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
 
     if (response.statusCode == 200)
     {
@@ -96,7 +96,7 @@
         httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
 
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if(response.statusCode == 200)
     {
@@ -131,7 +131,7 @@
         httpQuery = [NSString stringWithFormat:@"%@&limit=%d", httpQuery, limit];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if(response.statusCode == 200)
     {
@@ -166,7 +166,7 @@
     NSString *httpQuery = [NSString stringWithFormat:@"modified_since=%@&access_token=%@&api_key=%@",dateString,accessToken,apiKey];
     
     NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
-    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     if(response.statusCode == 200)
     {
@@ -201,9 +201,7 @@
     NSString *url = [NSString stringWithFormat:@"%@%@?%@&access_token=%@&api_key=%@", baseURL, endpoint, httpQuery, accessToken, apiKey];
     NSString *jsonString = [contact JSONForInsert];
     
-    NSArray *headerArray = [NSArray arrayWithObject:accessToken];
-    
-    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:headerArray andStringData:jsonString];
+    HttpResponse *response = [HttpRequest postWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:jsonString];
     
     if (response.statusCode == 200 || response.statusCode == 201)
     {
@@ -227,7 +225,7 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     
     NSString *url = [NSString stringWithFormat:@"%@%@&access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
-    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     *errors = response.errors;
     
@@ -249,7 +247,7 @@
     
     NSString *url = [NSString stringWithFormat:@"%@%@&access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
     
-    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     *errors = response.errors;
     
@@ -270,7 +268,7 @@
     NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
     NSString *url = [NSString stringWithFormat:@"%@%@&access_token=%@&api_key=%@", baseURL, httpQuery,accessToken,apiKey];
     
-    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:nil];
+    HttpResponse *response = [HttpRequest deleteWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
     
     *errors = response.errors;
     
@@ -294,9 +292,7 @@
     
     NSString *jsonString = [contact JSONForUpdate];
     
-    NSArray *headerArray = [NSArray arrayWithObject:accessToken];
-    
-    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:headerArray andStringData:jsonString];
+    HttpResponse *response = [HttpRequest putWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken] andStringData:jsonString];
     
     if (response.statusCode == 200)
     {

@@ -14,7 +14,7 @@
     if (self = [super init])
     {
         _createdDate = @"";
-        _description = @"";
+        _desc = @"";
         _fileType = @"";
         _folder = @"";
         _folderId = @"";
@@ -39,7 +39,7 @@
     if (self = [super init])
     {
         _createdDate = [Component valueForDictionary:dictionary withKey:@"created_date"];
-        _description = [Component valueForDictionary:dictionary withKey:@"description"];
+        _desc = [Component valueForDictionary:dictionary withKey:@"description"];
         _fileType = [Component valueForDictionary:dictionary withKey:@"file_type"];
         _folder = [Component valueForDictionary:dictionary withKey:@"folder"];
         _folderId = [Component valueForDictionary:dictionary withKey:@"folder_id"];
@@ -69,7 +69,7 @@
 {
     return [NSDictionary dictionaryWithObjectsAndKeys:
             _folderId, @"folder_id",
-            _description, @"description",
+            _desc, @"description",
             _name, @"name",
             nil];
 }
