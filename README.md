@@ -15,6 +15,12 @@ In order to use the Constant Contact SDK you have to follow these steps:
 	Add to targets: "<yourProjectName>"
 	Destination:     "Copy items into destination group's folder(if needed)"
 
+## Documentation
+
+The Javadoc is hosted at http://constantcontact.github.io/java-sdk
+
+API Documentation is located at http://developer.constantcontact.com/docs/developer-guides/api-documentation-index.html
+
 ## Usage
 
 1) Include the following code in the file you wish to use the SDK:
