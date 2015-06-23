@@ -25,6 +25,9 @@
 @property (nonatomic, strong) NSString *companyName;
 @property (nonatomic, strong) NSString *workPhone;
 @property (nonatomic, strong) NSString *homePhone;
+@property (nonatomic, strong) NSString *birthdayDay;
+@property (nonatomic, strong) NSString *birthdayMonth;
+@property (nonatomic, strong) NSDate *aniversary;
 
 @property (nonatomic, strong) NSMutableArray *emailAddresses;
 @property (nonatomic, strong) NSMutableArray *addresses;

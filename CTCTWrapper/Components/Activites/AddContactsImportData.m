@@ -7,6 +7,8 @@
 
 #import "AddContactsImportData.h"
 
+static NSString * const kDateFormat = @"MM/dd/YYYY";
+
 @implementation AddContactsImportData
 
 - (id)init
@@ -33,6 +35,9 @@
 {
     
     self = [super init];
+	
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	dateFormatter.dateFormat = kDateFormat;
     
     _firstName = [Component valueForDictionary:dictionary withKey:@"first_name"];
     _middleName = [Component valueForDictionary:dictionary withKey:@"middle_name"];
@@ -41,6 +46,9 @@
     _companyName = [Component valueForDictionary:dictionary withKey:@"company_name"];
     _workPhone = [Component valueForDictionary:dictionary withKey:@"work_phone"];
     _homePhone = [Component valueForDictionary:dictionary withKey:@"home_phone"];
+	_birthdayDay = [Component valueForDictionary:dictionary withKey:@"birthday_day"];
+	_birthdayMonth = [Component valueForDictionary:dictionary withKey:@"birthday_month"];
+	_aniversary = [dateFormatter dateFromString:[Component valueForDictionary:dictionary withKey:@"anniversary"]];
 
     
     _emailAddresses = [[NSMutableArray alloc] init];
@@ -108,18 +116,23 @@
 
 - (id) proxyForJson
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 _firstName, @"first_name",
-                                 _middleName, @"middle_name",
-                                 _lastName,@"last_name",
-                                 _jobTitle,@"job_title",
-                                 _companyName,@"company_name",
-                                 _workPhone,@"work_phone",
-                                 _homePhone,@"home_phone",
-                                 _emailAddresses,@"email_addresses",
-                                 [self addressesForJson],@"addresses",
-                                 [self fieldsForJson],@"custom_fields",
-                                 nil];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	dateFormatter.dateFormat = kDateFormat;
+	
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	if (_firstName.length > 0) dict[@"first_name"] = _firstName;
+	if (_middleName.length > 0) dict[@"middle_name"] = _middleName;
+	if (_lastName.length > 0) dict[@"last_name"] = _lastName;
+	if (_jobTitle.length > 0) dict[@"job_title"] = _jobTitle;
+	if (_companyName.length > 0) dict[@"company_name"] = _companyName;
+	if (_workPhone.length > 0) dict[@"work_phone"] = _workPhone;
+	if (_homePhone.length > 0) dict[@"home_phone"] = _homePhone;
+	if (_birthdayDay.length > 0) dict[@"birthday_day"] = _birthdayDay;
+	if (_birthdayMonth) dict[@"birthday_month"] = _birthdayMonth;
+	if (_aniversary) dict[@"anniversary"] = [dateFormatter stringFromDate:_aniversary];
+	if (_emailAddresses) dict[@"email_addresses"] = _emailAddresses;
+	dict[@"addresses"] = [self addressesForJson];
+	dict[@"custom_fields"] = [self fieldsForJson];
     
     return dict;
 }
