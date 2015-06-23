@@ -31,6 +31,7 @@
 {
     if (self = [super init])
     {
+		_companyLogo = [Component valueForDictionary:dictionary withKey:@"company_logo"];
         _countryCode = [Component valueForDictionary:dictionary withKey:@"country_code"];
         _email = [Component valueForDictionary:dictionary withKey:@"email"];
         _firstName = [Component valueForDictionary:dictionary withKey:@"first_name"];
@@ -79,16 +80,17 @@
     }
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
-    
-    if(_countryCode)[dict setObject:_countryCode forKey:@"country_code"];
-    if(_email)[dict setObject:_email forKey:@"email"];
-    if(_firstName)[dict setObject:_firstName forKey:@"first_name"];
-    if(_lastName)[dict setObject:_lastName forKey:@"last_name"];
-    if(_organizationName)[dict setObject:_organizationName forKey:@"organization_name"];
-    if(_phone)[dict setObject:_phone forKey:@"phone"];
-    if(_stateCode)[dict setObject:_stateCode forKey:@"state_code"];
-    if(_website)[dict setObject:_website forKey:@"website"];
-    if(jsonAddressArray.count > 0) [dict setObject:jsonAddressArray forKey:@"organization_addresses"];
+	
+    if (_countryCode)[dict setObject:_countryCode forKey:@"country_code"];
+    if (_email)[dict setObject:_email forKey:@"email"];
+    if (_firstName)[dict setObject:_firstName forKey:@"first_name"];
+    if (_lastName)[dict setObject:_lastName forKey:@"last_name"];
+    if (_organizationName)[dict setObject:_organizationName forKey:@"organization_name"];
+    if (_phone)[dict setObject:_phone forKey:@"phone"];
+    if (_stateCode)[dict setObject:_stateCode forKey:@"state_code"];
+    if (_website)[dict setObject:_website forKey:@"website"];
+    if (jsonAddressArray.count > 0) [dict setObject:jsonAddressArray forKey:@"organization_addresses"];
+	if (_companyLogo) dict[@"company_logo"] = _companyLogo;
     
     return dict;
 }
