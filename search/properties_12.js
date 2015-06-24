@@ -7,7 +7,7 @@ var searchData=
   ['sectionfields',['sectionFields',['../interface_registrant_guest_sections.html#a458710e32a6254327d761e78710f964b',1,'RegistrantGuestSections']]],
   ['sections',['sections',['../interface_event_registrant_extended.html#a7b647d9f6dfae455fdbdb06ef1ceaa48',1,'EventRegistrantExtended']]],
   ['sek',['sek',['../interface_event_currency_type_enum.html#abd7ee958a0734fd626a172b36809a85e',1,'EventCurrencyTypeEnum']]],
-  ['senddate',['sendDate',['../interface_send_activity.html#ae36769174b1db462665442e41de83890',1,'SendActivity']]],
+  ['senddate',['sendDate',['../interface_all_activites.html#ae7a0135c65162d89e07b417ce8246301',1,'AllActivites::sendDate()'],['../interface_send_activity.html#ae36769174b1db462665442e41de83890',1,'SendActivity::sendDate()']]],
   ['sends',['sends',['../interface_tracking_summary.html#af19c3ebbfee6e05a5d972f68cbd9459a',1,'TrackingSummary']]],
   ['senttocontactlists',['sentToContactLists',['../interface_email_campaign.html#ae9419aa69a528b574124f5e9cafe4b54',1,'EmailCampaign']]],
   ['sgd',['sgd',['../interface_event_currency_type_enum.html#a68201fdbd68342accf6707c2c1ab1aa1',1,'EventCurrencyTypeEnum']]],
