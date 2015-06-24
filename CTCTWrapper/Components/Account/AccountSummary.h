@@ -13,6 +13,10 @@
 @interface AccountSummary : NSObject
 
 /**
+ * URL to the logo associated with the account if the account owner has provided one. No value is returned if user has not added a logo.
+ */
+@property (nonatomic, strong) NSString *companyLogo;
+/**
  * Standard 2 letter ISO 3166-1 code of the country associated with the account owner
  */
 @property (nonatomic, strong) NSString *countryCode;
