@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *line2;
 @property (nonatomic, strong) NSString *line3;
 @property (nonatomic, strong) NSString *postalCode;
+@property (nonatomic, strong) NSString *state;
 @property (nonatomic, strong) NSString *stateCode;
 @property (nonatomic, strong) NSString *subPostalCode;
 @property (nonatomic, strong) NSString *stateProvince;
