@@ -11,6 +11,7 @@
 #import "ResultSet.h"
 #import "HttpRequest.h"
 #import "Contact.h"
+#import "EmailCampaignPreview.h"
 
 /**
  * Performs all actions pertaining to Constant Contact Campaigns
@@ -89,5 +90,16 @@
  * @return HttpResponse * - response containing either errors or data with the Campaign that was updated
  */
 + (HttpResponse *)updateCampaignWithToken:(NSString *)accessToken andEmailCampaign:(EmailCampaign *)emailCampaign;
+
+
+/**
+ * Get preview for an Email Campaign
+ *
+ * @param NSString *accessToken - Constant Contact OAuth2 access token
+ * @param NSString *campaignId - id of the email campaign
+ *
+ * @return HttpResponse *-  response containing the EmailCampaignPreview object
+ */
++ (HttpResponse*)getEmailCampaignPreviewWithToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId;
 
 @end

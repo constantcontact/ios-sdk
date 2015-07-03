@@ -161,4 +161,27 @@
     return response;
 }
 
++ (HttpResponse*)getEmailCampaignPreviewWithToken:(NSString *)accessToken andCampaignId:(NSString *)campaignId
+{
+    if (campaignId.length == 0)
+        campaignId = @"0";
+ 
+    NSString *baseURL = [Config valueForType:@"endpoints" key:@"base_url"];
+    NSString *endpoint =[NSString stringWithFormat:[Config valueForType:@"endpoints" key:@"campaign_preview"], campaignId];
+    
+    NSString *apiKey = [Config valueForType:@"config" key:@"api_key"];
+    NSString *httpQuery = [NSString stringWithFormat:@"access_token=%@&api_key=%@", accessToken, apiKey];
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@?%@", baseURL, endpoint, httpQuery];
+    
+    HttpResponse *response = [HttpRequest getWithUrl:url andHeaders:[HttpRequest headersWithAccessToken:accessToken]];
+    
+    if (response.statusCode == 200)
+    {
+        EmailCampaignPreview *emailCampaignPreview = [EmailCampaignPreview emailCampaignPreviewWithDictionary:response.data];
+        [response replaceDataWithNewData:emailCampaignPreview];
+    }
+    
+    return response;
+}
 @end
