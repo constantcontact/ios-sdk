@@ -21,6 +21,7 @@
         _line2 = @"";
         _line3 = @"";
         _postalCode = @"";
+        _state = @"";
         _stateCode = @"";
         _subPostalCode = @"";
         _stateProvince = @"";
@@ -41,6 +42,7 @@
         _line2 = [Component valueForDictionary:dictionary withKey:@"line2"];
         _line3 = [Component valueForDictionary:dictionary withKey:@"line3"];
         _postalCode = [Component valueForDictionary:dictionary withKey:@"postal_code"];
+        _state = [Component valueForDictionary:dictionary withKey:@"state"];
         _stateCode = [Component valueForDictionary:dictionary withKey:@"state_code"];
         _subPostalCode = [Component valueForDictionary:dictionary withKey:@"sub_postal_code"];
         _stateProvince = [Component valueForDictionary:dictionary withKey:@"state_province"];
@@ -65,6 +67,7 @@
             _line2, @"line2",
             _line3, @"line3",
             _postalCode, @"postal_code",
+            _state = @"state",
             _stateCode, @"state_code",
             _subPostalCode, @"sub_postal_code",
             nil];

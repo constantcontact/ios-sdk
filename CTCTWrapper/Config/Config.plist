@@ -11,7 +11,7 @@
 		<key>api_key</key>
 		<string></string>
 		<key>x-ctct-request-source</key>
-		<string>sdk.ios.2.0.0</string>
+		<string>sdk.ios.2.1.0</string>
 	</dict>
 	<key>errors</key>
 	<dict>
@@ -175,6 +175,8 @@
 		<string>emailmarketing/campaigns/%@/schedules/%@</string>
 		<key>campaign_test_sends</key>
 		<string>emailmarketing/campaigns/%@/tests</string>
+		<key>campaign_preview</key>
+		<string>emailmarketing/campaigns/%@/preview</string>
 		<key>campaign_tracking_opens</key>
 		<string>emailmarketing/campaigns/%@/tracking/opens</string>
 		<key>campaign_tracking_sends</key>
